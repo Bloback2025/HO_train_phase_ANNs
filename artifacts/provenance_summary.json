@@ -1,0 +1,11 @@
+{
+  "accessed_columns": [
+    "f0",
+    "f2"
+  ],
+  "sample_indexes_hash": "sha256:RECONSTRUCTED",
+  "accessed_columns_hash": "sha256:RECONSTRUCTED",
+  "ts": "2025-11-02T17:53:02.9470046+11:00",
+  "transform_code_hash": "sha256:RECONSTRUCTED",
+  "transform_id": "RECONSTRUCTED_PLACEHOLDER"
+}

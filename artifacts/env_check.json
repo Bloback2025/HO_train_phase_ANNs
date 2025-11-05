@@ -1,0 +1,29 @@
+{
+  "timestamp": "2025-11-05T16:38:11.6336308+11:00",
+  "python": {
+    "found": true,
+    "executable": "python",
+    "version": "3.11.9",
+    "sufficient": true
+  },
+  "packages": {
+    "hashlib": {
+      "installed": true
+    },
+    "numpy": {
+      "installed": true,
+      "version": "2.3.4"
+    },
+    "pandas": {
+      "installed": true,
+      "version": "2.3.3"
+    },
+    "torch": {
+      "installed": true,
+      "cpu_only": true,
+      "version": "2.9.0+cpu",
+      "cuda_available": false
+    }
+  },
+  "ok": true
+}
