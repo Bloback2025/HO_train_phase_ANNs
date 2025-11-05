@@ -1,0 +1,6 @@
+{
+  ""approved_code_hashes"": [],
+  ""SANDBOX_IMAGE_SHA"": ""REPLACE_ME"",
+  ""SANDBOX_BUILD_RECIPE_SHA"": ""REPLACE_ME"",
+  ""seccomp_profile_sha256"": ""REPLACE_ME""
+}
