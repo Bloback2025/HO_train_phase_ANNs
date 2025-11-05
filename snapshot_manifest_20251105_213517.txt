@@ -1,0 +1,7 @@
+SnapshotFile: ANN_TEST_SUITE_snapshot_20251105_213228.zip
+SnapshotPath: C:\Users\loweb\AI_Financial_Sims\ANN_TEST_SUITE\ANN_TEST_SUITE_snapshot_20251105_213228.zip
+SnapshotSHA256: CB2D34F12036862CED5B7880C63A85D007D0F8F31F1E24BD10FB10984192BEC9
+ManifestCreated: 20251105_213517
+GitBranch: master
+GitLatestCommit: f71ee0d 2025-11-05 16:54:57 +1100 loweb chore: add project sources, CI, examples and repo tools
+WorkingDirectory: C:\Users\loweb\AI_Financial_Sims\ANN_TEST_SUITE
