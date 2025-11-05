@@ -1,0 +1,9 @@
+name: Verifier Smoke (placeholder)
+on: [push]
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Placeholder
+        run: echo 'Replace with real workflow steps'

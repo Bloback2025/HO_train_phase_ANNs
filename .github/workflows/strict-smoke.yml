@@ -1,0 +1,9 @@
+name: Strict Smoke (placeholder)
+on: [push]
+jobs:
+  strict:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Placeholder strict
+        run: echo 'Replace with strict workflow steps'
