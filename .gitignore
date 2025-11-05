@@ -20,3 +20,4 @@ ENV/
 artifacts/*.pth
 artifacts/*.bin
 artifacts/*.tar
+ANN_TEST_SUITE_snapshot_*.zip
