@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+
+# virtualenvs and caches
+.venv/
+.venv_*/
+*.venv/
+venv/
+env/
+ENV/
+.venv_py311/
+# keep a tiny marker for the venv instead of the full tree
+.venv_py311_marker
+
+# artifacts (keep as desired, but avoid bulky binaries)
+artifacts/*.pth
+artifacts/*.bin
+artifacts/*.tar

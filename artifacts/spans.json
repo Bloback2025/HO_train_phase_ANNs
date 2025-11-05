@@ -1,0 +1,11 @@
+{
+  "spans": [
+    {
+      "confidence": 0.0,
+      "span_type": "placeholder",
+      "reason": "RECONSTRUCTED_PLACEHOLDER",
+      "end_ts": "2025-11-01T00:00:31Z",
+      "start_ts": "2025-11-01T00:00:00Z"
+    }
+  ]
+}
