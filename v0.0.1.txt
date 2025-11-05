@@ -1,0 +1,6 @@
+object f71ee0d19eb11e8c5d72f15f8d8fe2d08517011f
+type commit
+tag v0.0.1
+tagger loweb <loweb@localhost> 1762322255 +1100
+
+snapshot: record env and initial sources
