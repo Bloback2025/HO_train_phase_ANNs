@@ -28,3 +28,4 @@ artifacts/*.pth
 artifacts/*.bin
 artifacts/*.tar
 >>>>>>> 357df1d (env: record working Python 3.11 venv marker and env_check artifacts)
+ANN_TEST_SUITE_snapshot_*.zip
