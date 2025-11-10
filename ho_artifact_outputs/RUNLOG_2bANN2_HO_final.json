@@ -1,7 +1,7 @@
 {
   "run_id": "2bANN2_HO_RUN_20251109T181801",
   "datetime": "2025-11-09T18:18:01.8605386+11:00",
-  "model_file": "2bANN2_HO_model.keras",
+  "model_file": null,
   "model_hash": "DF1F24C0C3DD69FFBE169D3D0BF13FAEBA9FA1E18F333ADA690AFC36116162A2",
   "ordered_feature_names": [
     "Date",
@@ -63,6 +63,9 @@
     "target_processing": "none",
     "replaced_from": "train_phase2b2_HO.py",
     "lineage_confirmed_at": "2025-11-10T07:05:19.291872Z",
-    "target_processing_written_at": "2025-11-10T07:10:05.431670Z"
-  }
+    "target_processing_written_at": "2025-11-10T07:10:05.43167Z"
+  },
+  "retired_models": [
+    "2bANN2_HO_model_v5.1_heavy_20251029_130659.keras"
+  ]
 }
