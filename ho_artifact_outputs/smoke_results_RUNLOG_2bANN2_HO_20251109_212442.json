@@ -1,0 +1,25 @@
+{
+  "model_path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\2bANN2_HO_model.keras",
+  "sha256": "e462009adc5d763961c89107928b32cba59586225ac6c97c649f9387c48c9877",
+  "size": 243886,
+  "input_shape": "(None, 4)",
+  "preds": [
+    [
+      75.17951965332031
+    ],
+    [
+      85.3593978881836
+    ],
+    [
+      59.7678337097168
+    ],
+    [
+      55.252315521240234
+    ],
+    [
+      57.622032165527344
+    ]
+  ],
+  "run_started": "2025-11-10T21:45:21+1100",
+  "notes": "Silent smoke-run deterministic prediction (5 samples, seed 42)"
+}
