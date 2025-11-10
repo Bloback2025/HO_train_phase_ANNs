@@ -1,0 +1,12 @@
+{
+  "exported_at": "2025-11-10T22:28:38.6277583+11:00",
+  "runlog_tag": "smoke-run-2bANN2-HO-288f4d1",
+  "smoke_commit": "c80575ce640b89a2ed4279d1ccfc7a26415b0539",
+  "model_sha256": "e462009adc5d763961c89107928b32cba59586225ac6c97c649f9387c48c9877",
+  "archive_path": "D:\\secure-archive\\smoke_results_RUNLOG_2bANN2_HO_20251109_212442.json",
+  "archive_sha256": "49F5DC417554C75CA808DABB6586CA6147392CBE2956B7F2546CEE088E321F7E",
+  "artifact_tag": "2bANN.2_HO",
+  "runlog_commit": "288f4d1bde1ab87aa6e0d3010ad2f181c587ad0b",
+  "project": "ANN_TEST_SUITE",
+  "notes": "Audit summary: RUNLOG commit, smoke commit, annotated tag, and off-repo archive"
+}
