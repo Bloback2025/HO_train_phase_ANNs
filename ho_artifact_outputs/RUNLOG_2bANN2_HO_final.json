@@ -1,7 +1,7 @@
 {
   "run_id": "2bANN2_HO_RUN_20251109T181801",
   "datetime": "2025-11-09T18:18:01.8605386+11:00",
-  "model_file": "2bANN2_HO_model.keras",
+  "model_file": "C:\\\\Users\\\\Newph\\\\AI Financial Sims\\\\HO\\\\HO 1st time 5980\\\\2bAWD_HO_model.keras",
   "model_hash": "DF1F24C0C3DD69FFBE169D3D0BF13FAEBA9FA1E18F333ADA690AFC36116162A2",
   "ordered_feature_names": [
     "Date",
