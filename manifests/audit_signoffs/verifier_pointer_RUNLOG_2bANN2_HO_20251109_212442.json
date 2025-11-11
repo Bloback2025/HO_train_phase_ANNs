@@ -1,0 +1,23 @@
+{
+  "pointer_id": "verifier_pointer_RUNLOG_2bANN2_HO_20251109_212442",
+  "manifest_path": "manifests/compliant_manifest_RUNLOG_2bANN2_HO_20251109_212442_verified.json",
+  "manifest_commit": "1827ac5",
+  "manifest_timestamp": "2025-11-09T21:24:42Z",
+  "artifact_path": "ho_artifact_outputs/2bANN2_HO_model.keras",
+  "artifact_note": "artifact committed/pointer only; full binary archived externally",
+  "verifier_canonical_path": "C:\\Temp\\verifier_after_manifest_update.txt",
+  "verifier_archival_name": "verifier_after_manifest_update_20251111_E462009A.txt",
+  "verifier_computed_sha256": "E462009ADC5D763961C89107928B32CBA59586225AC6C97C649F9387C48C9877",
+  "verifier_result": "PASS",
+  "audited_by": "automated-verifier",
+  "audit_timestamp": "2025-11-11T00:00:00Z",
+  "archive_location": "\\\\external-archive\\handover\\2025-11-11\\verifier_after_manifest_update_20251111_E462009A.txt",
+  "notes": "Full verifier log archived externally. Repo contains only this pointer JSON and the updated manifest. Do not modify the external archive; use this pointer for retrieval.",
+  "provenance_fields": {
+    "tf_keras_version": "keras-unknown",
+    "training_script_commit": "1827ac5",
+    "dataset_digest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+    "training_command": "export PYTHONHASHSEED=0 ; export SEED=0 ; export TF_DETERMINISTIC=1 ; python scripts/2bANN.2HO.py --manifest-out manifests/compliant_manifest_RUNLOG_2bANN2_HO_20251109_212442_verified.json --closure",
+    "rng_seed": "0"
+  }
+}
