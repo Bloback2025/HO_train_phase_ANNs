@@ -1,7 +1,7 @@
 # Alias: train_ann__deprecated_to_2bANN2_HO.py
 # DEPRECATED_ALIAS: maps legacy calls to canonical_train_2bANN2_HO.py
-# CREATED_AT: 20251112_175350
-# REMEDIATION_BRANCH: remediation/canonical_train_2bANN2_HO_20251112_175350
+# CREATED_AT: 20251112_175654
+# REMEDIATION_BRANCH: remediation/canonical_train_2bANN2_HO_20251112_175654
 # REASON: emergency remediation for missing train_ann.py placeholder
 import sys, subprocess, os
 target = os.path.join(os.path.dirname(__file__), 'canonical_train_2bANN2_HO.py')
