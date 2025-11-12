@@ -1,0 +1,576 @@
+{
+  "name": "20251112_175350_parseonly",
+  "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\run_outputs\\20251112_175350_parseonly",
+  "sha256": null,
+  "length": 1,
+  "mtime": "2025-11-12T06:53:50.5439943Z",
+  "found_at": "2025-11-12T06:53:50.5439943Z",
+  "retired_at": "2025-11-12T21:11:07.7515269+11:00",
+  "retired_by": "loweb",
+  "status": "retired",
+  "reason": "ephemeral development outputs retired by policy"
+}
+{
+  "name": "20251112_175350_smoke_e1",
+  "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\run_outputs\\20251112_175350_smoke_e1",
+  "sha256": null,
+  "length": 1,
+  "mtime": "2025-11-12T06:53:50.7092071Z",
+  "found_at": "2025-11-12T06:53:50.7092071Z",
+  "retired_at": "2025-11-12T21:11:07.7711287+11:00",
+  "retired_by": "loweb",
+  "status": "retired",
+  "reason": "ephemeral development outputs retired by policy"
+}
+{
+  "name": "20251112_175350_smoke_e2",
+  "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\run_outputs\\20251112_175350_smoke_e2",
+  "sha256": null,
+  "length": 1,
+  "mtime": "2025-11-12T06:53:50.7675275Z",
+  "found_at": "2025-11-12T06:53:50.7675275Z",
+  "retired_at": "2025-11-12T21:11:07.7826045+11:00",
+  "retired_by": "loweb",
+  "status": "retired",
+  "reason": "ephemeral development outputs retired by policy"
+}
+{
+  "name": "20251112_175350_smokenotrain",
+  "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\run_outputs\\20251112_175350_smokenotrain",
+  "sha256": null,
+  "length": 1,
+  "mtime": "2025-11-12T06:53:50.6439933Z",
+  "found_at": "2025-11-12T06:53:50.6439933Z",
+  "retired_at": "2025-11-12T21:11:07.7996323+11:00",
+  "retired_by": "loweb",
+  "status": "retired",
+  "reason": "ephemeral development outputs retired by policy"
+}
+{
+  "name": "20251112_175654_parseonly",
+  "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\run_outputs\\20251112_175654_parseonly",
+  "sha256": null,
+  "length": 1,
+  "mtime": "2025-11-12T06:56:55.0385489Z",
+  "found_at": "2025-11-12T06:56:55.0385489Z",
+  "retired_at": "2025-11-12T21:11:07.8093314+11:00",
+  "retired_by": "loweb",
+  "status": "retired",
+  "reason": "ephemeral development outputs retired by policy"
+}
+{
+  "name": "20251112_175654_smoke_e1",
+  "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\run_outputs\\20251112_175654_smoke_e1",
+  "sha256": null,
+  "length": 1,
+  "mtime": "2025-11-12T06:56:55.1571752Z",
+  "found_at": "2025-11-12T06:56:55.1571752Z",
+  "retired_at": "2025-11-12T21:11:07.8178715+11:00",
+  "retired_by": "loweb",
+  "status": "retired",
+  "reason": "ephemeral development outputs retired by policy"
+}
+{
+  "name": "20251112_175654_smoke_e2",
+  "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\run_outputs\\20251112_175654_smoke_e2",
+  "sha256": null,
+  "length": 1,
+  "mtime": "2025-11-12T06:56:55.2143821Z",
+  "found_at": "2025-11-12T06:56:55.2143821Z",
+  "retired_at": "2025-11-12T21:11:07.8262756+11:00",
+  "retired_by": "loweb",
+  "status": "retired",
+  "reason": "ephemeral development outputs retired by policy"
+}
+{
+  "name": "20251112_175654_smokenotrain",
+  "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\run_outputs\\20251112_175654_smokenotrain",
+  "sha256": null,
+  "length": 1,
+  "mtime": "2025-11-12T06:56:55.0931772Z",
+  "found_at": "2025-11-12T06:56:55.0931772Z",
+  "retired_at": "2025-11-12T21:11:07.8346742+11:00",
+  "retired_by": "loweb",
+  "status": "retired",
+  "reason": "ephemeral development outputs retired by policy"
+}
+{
+  "name": "20251112_175716_git_push.log",
+  "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\run_outputs\\20251112_175716_git_push.log",
+  "sha256": "792278294EDEC8F87CE19CCD01156A48FBCABB240F890305ED21BC80F07A0855",
+  "length": 807,
+  "mtime": "2025-11-12T06:58:44.6967515Z",
+  "found_at": "2025-11-12T06:58:44.6967515Z",
+  "retired_at": "2025-11-12T21:11:07.8528035+11:00",
+  "retired_by": "loweb",
+  "status": "retired",
+  "reason": "ephemeral development outputs retired by policy"
+}
+{
+  "name": "20251112_175716_parseonly",
+  "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\run_outputs\\20251112_175716_parseonly",
+  "sha256": null,
+  "length": 1,
+  "mtime": "2025-11-12T06:57:16.6610430Z",
+  "found_at": "2025-11-12T06:57:16.6610430Z",
+  "retired_at": "2025-11-12T21:11:07.8608388+11:00",
+  "retired_by": "loweb",
+  "status": "retired",
+  "reason": "ephemeral development outputs retired by policy"
+}
+{
+  "name": "20251112_175716_smoke_e1",
+  "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\run_outputs\\20251112_175716_smoke_e1",
+  "sha256": null,
+  "length": 1,
+  "mtime": "2025-11-12T06:57:16.7800431Z",
+  "found_at": "2025-11-12T06:57:16.7800431Z",
+  "retired_at": "2025-11-12T21:11:07.8697728+11:00",
+  "retired_by": "loweb",
+  "status": "retired",
+  "reason": "ephemeral development outputs retired by policy"
+}
+{
+  "name": "20251112_175716_smoke_e2",
+  "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\run_outputs\\20251112_175716_smoke_e2",
+  "sha256": null,
+  "length": 1,
+  "mtime": "2025-11-12T06:57:16.8354448Z",
+  "found_at": "2025-11-12T06:57:16.8354448Z",
+  "retired_at": "2025-11-12T21:11:07.8782977+11:00",
+  "retired_by": "loweb",
+  "status": "retired",
+  "reason": "ephemeral development outputs retired by policy"
+}
+{
+  "name": "20251112_175716_smokenotrain",
+  "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\run_outputs\\20251112_175716_smokenotrain",
+  "sha256": null,
+  "length": 1,
+  "mtime": "2025-11-12T06:57:16.7230432Z",
+  "found_at": "2025-11-12T06:57:16.7230432Z",
+  "retired_at": "2025-11-12T21:11:07.8870340+11:00",
+  "retired_by": "loweb",
+  "status": "retired",
+  "reason": "ephemeral development outputs retired by policy"
+}
+{
+  "name": "20251112-165755",
+  "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\run_outputs\\20251112-165755",
+  "sha256": null,
+  "length": 1,
+  "mtime": "2025-11-12T05:57:56.1730436Z",
+  "found_at": "2025-11-12T05:57:56.1730436Z",
+  "retired_at": "2025-11-12T21:11:07.8955013+11:00",
+  "retired_by": "loweb",
+  "status": "retired",
+  "reason": "ephemeral development outputs retired by policy"
+}
+{
+  "name": "20251112-165824",
+  "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\run_outputs\\20251112-165824",
+  "sha256": null,
+  "length": 1,
+  "mtime": "2025-11-12T05:58:25.1477132Z",
+  "found_at": "2025-11-12T05:58:25.1477132Z",
+  "retired_at": "2025-11-12T21:11:07.9042852+11:00",
+  "retired_by": "loweb",
+  "status": "retired",
+  "reason": "ephemeral development outputs retired by policy"
+}
+{
+  "name": "20251112-165958",
+  "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\run_outputs\\20251112-165958",
+  "sha256": null,
+  "length": 1,
+  "mtime": "2025-11-12T05:59:58.2882191Z",
+  "found_at": "2025-11-12T05:59:58.2882191Z",
+  "retired_at": "2025-11-12T21:11:07.9130368+11:00",
+  "retired_by": "loweb",
+  "status": "retired",
+  "reason": "ephemeral development outputs retired by policy"
+}
+{
+  "name": "20251112-170158",
+  "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\run_outputs\\20251112-170158",
+  "sha256": null,
+  "length": 1,
+  "mtime": "2025-11-12T06:01:58.1676213Z",
+  "found_at": "2025-11-12T06:01:58.1676213Z",
+  "retired_at": "2025-11-12T21:11:07.9214699+11:00",
+  "retired_by": "loweb",
+  "status": "retired",
+  "reason": "ephemeral development outputs retired by policy"
+}
+{
+  "name": "20251112-170208",
+  "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\run_outputs\\20251112-170208",
+  "sha256": null,
+  "length": 1,
+  "mtime": "2025-11-12T06:02:08.3946831Z",
+  "found_at": "2025-11-12T06:02:08.3946831Z",
+  "retired_at": "2025-11-12T21:11:07.9309892+11:00",
+  "retired_by": "loweb",
+  "status": "retired",
+  "reason": "ephemeral development outputs retired by policy"
+}
+{
+  "name": "run_manifest.txt",
+  "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\run_outputs\\20251112_175350_parseonly\\run_manifest.txt",
+  "sha256": "96B824530ABF2209F613C036959C66199521DBDBF5FBDC235A1657C6550FFFCD",
+  "length": 234,
+  "mtime": "2025-11-12T06:53:50.8996058Z",
+  "found_at": "2025-11-12T21:16:20.8096198+11:00",
+  "retired_at": "2025-11-12T21:16:20.8104554+11:00",
+  "retired_by": "DESKTOP-OODJQVE\\loweb",
+  "status": "retired",
+  "reason": "Ephemeral development outputs retired by policy"
+}
+{
+  "name": "runner.log",
+  "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\run_outputs\\20251112_175350_parseonly\\runner.log",
+  "sha256": "BE1CA1CAE8C5F94BE5B05B78C92E10D8EFC92EB56C581F7335B5DDF5353AEEFD",
+  "length": 218,
+  "mtime": "2025-11-12T06:53:50.5939938Z",
+  "found_at": "2025-11-12T21:16:20.8150385+11:00",
+  "retired_at": "2025-11-12T21:16:20.8150956+11:00",
+  "retired_by": "DESKTOP-OODJQVE\\loweb",
+  "status": "retired",
+  "reason": "Ephemeral development outputs retired by policy"
+}
+{
+  "name": "run_manifest.txt",
+  "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\run_outputs\\20251112_175350_smoke_e1\\run_manifest.txt",
+  "sha256": "6E7FDE1879759A4E1917B3AE71D1994996D8718F6B32555899D133CD9A089285",
+  "length": 233,
+  "mtime": "2025-11-12T06:53:50.9786051Z",
+  "found_at": "2025-11-12T21:16:20.8200850+11:00",
+  "retired_at": "2025-11-12T21:16:20.8201530+11:00",
+  "retired_by": "DESKTOP-OODJQVE\\loweb",
+  "status": "retired",
+  "reason": "Ephemeral development outputs retired by policy"
+}
+{
+  "name": "runner.log",
+  "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\run_outputs\\20251112_175350_smoke_e1\\runner.log",
+  "sha256": "BE1CA1CAE8C5F94BE5B05B78C92E10D8EFC92EB56C581F7335B5DDF5353AEEFD",
+  "length": 218,
+  "mtime": "2025-11-12T06:53:50.717206Z",
+  "found_at": "2025-11-12T21:16:20.8250764+11:00",
+  "retired_at": "2025-11-12T21:16:20.8251441+11:00",
+  "retired_by": "DESKTOP-OODJQVE\\loweb",
+  "status": "retired",
+  "reason": "Ephemeral development outputs retired by policy"
+}
+{
+  "name": "run_manifest.txt",
+  "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\run_outputs\\20251112_175350_smoke_e2\\run_manifest.txt",
+  "sha256": "E740FC85BAC77BEB1FB9A7FC66617A7FAEDB2C06D57F35EC16856BBCBE9E49D5",
+  "length": 233,
+  "mtime": "2025-11-12T06:53:51.0173713Z",
+  "found_at": "2025-11-12T21:16:20.8297753+11:00",
+  "retired_at": "2025-11-12T21:16:20.8298501+11:00",
+  "retired_by": "DESKTOP-OODJQVE\\loweb",
+  "status": "retired",
+  "reason": "Ephemeral development outputs retired by policy"
+}
+{
+  "name": "runner.log",
+  "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\run_outputs\\20251112_175350_smoke_e2\\runner.log",
+  "sha256": "BE1CA1CAE8C5F94BE5B05B78C92E10D8EFC92EB56C581F7335B5DDF5353AEEFD",
+  "length": 218,
+  "mtime": "2025-11-12T06:53:50.7755287Z",
+  "found_at": "2025-11-12T21:16:20.8345212+11:00",
+  "retired_at": "2025-11-12T21:16:20.8345872+11:00",
+  "retired_by": "DESKTOP-OODJQVE\\loweb",
+  "status": "retired",
+  "reason": "Ephemeral development outputs retired by policy"
+}
+{
+  "name": "run_manifest.txt",
+  "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\run_outputs\\20251112_175350_smokenotrain\\run_manifest.txt",
+  "sha256": "8DEA0A46C8A4538D420F151A28BB8828CF1204CEDBC4302078CC61CB9339A036",
+  "length": 237,
+  "mtime": "2025-11-12T06:53:50.9396049Z",
+  "found_at": "2025-11-12T21:16:20.8391541+11:00",
+  "retired_at": "2025-11-12T21:16:20.8392208+11:00",
+  "retired_by": "DESKTOP-OODJQVE\\loweb",
+  "status": "retired",
+  "reason": "Ephemeral development outputs retired by policy"
+}
+{
+  "name": "runner.log",
+  "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\run_outputs\\20251112_175350_smokenotrain\\runner.log",
+  "sha256": "BE1CA1CAE8C5F94BE5B05B78C92E10D8EFC92EB56C581F7335B5DDF5353AEEFD",
+  "length": 218,
+  "mtime": "2025-11-12T06:53:50.6529939Z",
+  "found_at": "2025-11-12T21:16:20.8535536+11:00",
+  "retired_at": "2025-11-12T21:16:20.8536123+11:00",
+  "retired_by": "DESKTOP-OODJQVE\\loweb",
+  "status": "retired",
+  "reason": "Ephemeral development outputs retired by policy"
+}
+{
+  "name": "run_manifest.txt",
+  "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\run_outputs\\20251112_175654_parseonly\\run_manifest.txt",
+  "sha256": "9E85EA1C901878F8E788AE7C28CC91B7A174BADC748326D6D9672B7AD8042219",
+  "length": 234,
+  "mtime": "2025-11-12T06:56:55.2525303Z",
+  "found_at": "2025-11-12T21:16:20.8582364+11:00",
+  "retired_at": "2025-11-12T21:16:20.8583004+11:00",
+  "retired_by": "DESKTOP-OODJQVE\\loweb",
+  "status": "retired",
+  "reason": "Ephemeral development outputs retired by policy"
+}
+{
+  "name": "runner.log",
+  "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\run_outputs\\20251112_175654_parseonly\\runner.log",
+  "sha256": "BE1CA1CAE8C5F94BE5B05B78C92E10D8EFC92EB56C581F7335B5DDF5353AEEFD",
+  "length": 218,
+  "mtime": "2025-11-12T06:56:55.052549Z",
+  "found_at": "2025-11-12T21:16:20.8631135+11:00",
+  "retired_at": "2025-11-12T21:16:20.8631813+11:00",
+  "retired_by": "DESKTOP-OODJQVE\\loweb",
+  "status": "retired",
+  "reason": "Ephemeral development outputs retired by policy"
+}
+{
+  "name": "run_manifest.txt",
+  "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\run_outputs\\20251112_175654_smoke_e1\\run_manifest.txt",
+  "sha256": "E9F53EC6C2847BB25D757A5A0D618ED85259E9AEE18E397FAA7DB166FDFA8BE5",
+  "length": 233,
+  "mtime": "2025-11-12T06:56:55.3310393Z",
+  "found_at": "2025-11-12T21:16:20.8677671+11:00",
+  "retired_at": "2025-11-12T21:16:20.8678279+11:00",
+  "retired_by": "DESKTOP-OODJQVE\\loweb",
+  "status": "retired",
+  "reason": "Ephemeral development outputs retired by policy"
+}
+{
+  "name": "runner.log",
+  "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\run_outputs\\20251112_175654_smoke_e1\\runner.log",
+  "sha256": "BE1CA1CAE8C5F94BE5B05B78C92E10D8EFC92EB56C581F7335B5DDF5353AEEFD",
+  "length": 218,
+  "mtime": "2025-11-12T06:56:55.1647313Z",
+  "found_at": "2025-11-12T21:16:20.8722202+11:00",
+  "retired_at": "2025-11-12T21:16:20.8722812+11:00",
+  "retired_by": "DESKTOP-OODJQVE\\loweb",
+  "status": "retired",
+  "reason": "Ephemeral development outputs retired by policy"
+}
+{
+  "name": "run_manifest.txt",
+  "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\run_outputs\\20251112_175654_smoke_e2\\run_manifest.txt",
+  "sha256": "8027718C33F6BBBD70305196BC2F1345339115C040E134BD6F375DE2620C9092",
+  "length": 233,
+  "mtime": "2025-11-12T06:56:55.3625302Z",
+  "found_at": "2025-11-12T21:16:20.8769172+11:00",
+  "retired_at": "2025-11-12T21:16:20.8769773+11:00",
+  "retired_by": "DESKTOP-OODJQVE\\loweb",
+  "status": "retired",
+  "reason": "Ephemeral development outputs retired by policy"
+}
+{
+  "name": "runner.log",
+  "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\run_outputs\\20251112_175654_smoke_e2\\runner.log",
+  "sha256": "BE1CA1CAE8C5F94BE5B05B78C92E10D8EFC92EB56C581F7335B5DDF5353AEEFD",
+  "length": 218,
+  "mtime": "2025-11-12T06:56:55.220369Z",
+  "found_at": "2025-11-12T21:16:20.8813591+11:00",
+  "retired_at": "2025-11-12T21:16:20.8814134+11:00",
+  "retired_by": "DESKTOP-OODJQVE\\loweb",
+  "status": "retired",
+  "reason": "Ephemeral development outputs retired by policy"
+}
+{
+  "name": "run_manifest.txt",
+  "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\run_outputs\\20251112_175654_smokenotrain\\run_manifest.txt",
+  "sha256": "56D1D15A6CBC3C5FC18C396749A3C5B5FBFE0A81F1F16376140468FB11D28F1C",
+  "length": 237,
+  "mtime": "2025-11-12T06:56:55.2835288Z",
+  "found_at": "2025-11-12T21:16:20.8857401+11:00",
+  "retired_at": "2025-11-12T21:16:20.8857918+11:00",
+  "retired_by": "DESKTOP-OODJQVE\\loweb",
+  "status": "retired",
+  "reason": "Ephemeral development outputs retired by policy"
+}
+{
+  "name": "runner.log",
+  "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\run_outputs\\20251112_175654_smokenotrain\\runner.log",
+  "sha256": "BE1CA1CAE8C5F94BE5B05B78C92E10D8EFC92EB56C581F7335B5DDF5353AEEFD",
+  "length": 218,
+  "mtime": "2025-11-12T06:56:55.1088815Z",
+  "found_at": "2025-11-12T21:16:20.8898853+11:00",
+  "retired_at": "2025-11-12T21:16:20.8899339+11:00",
+  "retired_by": "DESKTOP-OODJQVE\\loweb",
+  "status": "retired",
+  "reason": "Ephemeral development outputs retired by policy"
+}
+{
+  "name": "20251112_175716_git_push.log",
+  "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\run_outputs\\retired\\20251112_211107\\20251112_175716_git_push.log",
+  "sha256": "792278294EDEC8F87CE19CCD01156A48FBCABB240F890305ED21BC80F07A0855",
+  "length": 807,
+  "mtime": "2025-11-12T06:58:44.6967515Z",
+  "found_at": "2025-11-12T21:16:20.8929468+11:00",
+  "retired_at": "2025-11-12T21:16:20.8929906+11:00",
+  "retired_by": "DESKTOP-OODJQVE\\loweb",
+  "status": "retired",
+  "reason": "Ephemeral development outputs retired by policy"
+}
+{
+  "name": "20251112_175716_git_push.log",
+  "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\run_outputs\\20251112_175716_git_push.log",
+  "sha256": "792278294EDEC8F87CE19CCD01156A48FBCABB240F890305ED21BC80F07A0855",
+  "length": 807,
+  "mtime": "2025-11-12T06:58:44.6967515Z",
+  "found_at": "2025-11-12T21:16:20.8974300+11:00",
+  "retired_at": "2025-11-12T21:16:20.8974808+11:00",
+  "retired_by": "DESKTOP-OODJQVE\\loweb",
+  "status": "retired",
+  "reason": "Ephemeral development outputs retired by policy"
+}
+{
+  "name": "run_manifest.txt",
+  "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\run_outputs\\20251112_175716_parseonly\\run_manifest.txt",
+  "sha256": "219AB14F389690A7DE10136ABE681784E2113B53B8A0C0906CC88928A403A5A7",
+  "length": 234,
+  "mtime": "2025-11-12T06:57:16.884377Z",
+  "found_at": "2025-11-12T21:16:20.9018555+11:00",
+  "retired_at": "2025-11-12T21:16:20.9019120+11:00",
+  "retired_by": "DESKTOP-OODJQVE\\loweb",
+  "status": "retired",
+  "reason": "Ephemeral development outputs retired by policy"
+}
+{
+  "name": "runner.log",
+  "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\run_outputs\\20251112_175716_parseonly\\runner.log",
+  "sha256": "BE1CA1CAE8C5F94BE5B05B78C92E10D8EFC92EB56C581F7335B5DDF5353AEEFD",
+  "length": 218,
+  "mtime": "2025-11-12T06:57:16.6720425Z",
+  "found_at": "2025-11-12T21:16:20.9064840+11:00",
+  "retired_at": "2025-11-12T21:16:20.9065502+11:00",
+  "retired_by": "DESKTOP-OODJQVE\\loweb",
+  "status": "retired",
+  "reason": "Ephemeral development outputs retired by policy"
+}
+{
+  "name": "run_manifest.txt",
+  "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\run_outputs\\20251112_175716_smoke_e1\\run_manifest.txt",
+  "sha256": "15557576F9B238A827A66480B0774C0053120CDF549B50AA01860ABD183FE66E",
+  "length": 233,
+  "mtime": "2025-11-12T06:57:16.9573765Z",
+  "found_at": "2025-11-12T21:16:20.9114505+11:00",
+  "retired_at": "2025-11-12T21:16:20.9115197+11:00",
+  "retired_by": "DESKTOP-OODJQVE\\loweb",
+  "status": "retired",
+  "reason": "Ephemeral development outputs retired by policy"
+}
+{
+  "name": "runner.log",
+  "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\run_outputs\\20251112_175716_smoke_e1\\runner.log",
+  "sha256": "BE1CA1CAE8C5F94BE5B05B78C92E10D8EFC92EB56C581F7335B5DDF5353AEEFD",
+  "length": 218,
+  "mtime": "2025-11-12T06:57:16.7860436Z",
+  "found_at": "2025-11-12T21:16:20.9160630+11:00",
+  "retired_at": "2025-11-12T21:16:20.9161239+11:00",
+  "retired_by": "DESKTOP-OODJQVE\\loweb",
+  "status": "retired",
+  "reason": "Ephemeral development outputs retired by policy"
+}
+{
+  "name": "run_manifest.txt",
+  "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\run_outputs\\20251112_175716_smoke_e2\\run_manifest.txt",
+  "sha256": "827DC33C24FCEA2043463E0CD34A58BA6C1F868F499012D81A423FE41DE32BD0",
+  "length": 233,
+  "mtime": "2025-11-12T06:57:16.9933764Z",
+  "found_at": "2025-11-12T21:16:20.9207237+11:00",
+  "retired_at": "2025-11-12T21:16:20.9207861+11:00",
+  "retired_by": "DESKTOP-OODJQVE\\loweb",
+  "status": "retired",
+  "reason": "Ephemeral development outputs retired by policy"
+}
+{
+  "name": "runner.log",
+  "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\run_outputs\\20251112_175716_smoke_e2\\runner.log",
+  "sha256": "BE1CA1CAE8C5F94BE5B05B78C92E10D8EFC92EB56C581F7335B5DDF5353AEEFD",
+  "length": 218,
+  "mtime": "2025-11-12T06:57:16.8414452Z",
+  "found_at": "2025-11-12T21:16:20.9252190+11:00",
+  "retired_at": "2025-11-12T21:16:20.9252813+11:00",
+  "retired_by": "DESKTOP-OODJQVE\\loweb",
+  "status": "retired",
+  "reason": "Ephemeral development outputs retired by policy"
+}
+{
+  "name": "run_manifest.txt",
+  "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\run_outputs\\20251112_175716_smokenotrain\\run_manifest.txt",
+  "sha256": "FBC78258F1456E86B50B5C93E0D01843E6AF4C0A9C8314DCEB069BBFCB11CB68",
+  "length": 237,
+  "mtime": "2025-11-12T06:57:16.921377Z",
+  "found_at": "2025-11-12T21:16:20.9299312+11:00",
+  "retired_at": "2025-11-12T21:16:20.9299845+11:00",
+  "retired_by": "DESKTOP-OODJQVE\\loweb",
+  "status": "retired",
+  "reason": "Ephemeral development outputs retired by policy"
+}
+{
+  "name": "runner.log",
+  "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\run_outputs\\20251112_175716_smokenotrain\\runner.log",
+  "sha256": "BE1CA1CAE8C5F94BE5B05B78C92E10D8EFC92EB56C581F7335B5DDF5353AEEFD",
+  "length": 218,
+  "mtime": "2025-11-12T06:57:16.7300447Z",
+  "found_at": "2025-11-12T21:16:20.9343559+11:00",
+  "retired_at": "2025-11-12T21:16:20.9344129+11:00",
+  "retired_by": "DESKTOP-OODJQVE\\loweb",
+  "status": "retired",
+  "reason": "Ephemeral development outputs retired by policy"
+}
+{
+  "name": "runner.log",
+  "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\run_outputs\\20251112-165755\\runner.log",
+  "sha256": "10691BC686350251B01A1FF0FC3589B20309DC0DB4BEE792E13BFB5C6B7AA692",
+  "length": 1600,
+  "mtime": "2025-11-12T05:57:56.1990834Z",
+  "found_at": "2025-11-12T21:16:20.9388690+11:00",
+  "retired_at": "2025-11-12T21:16:20.9389256+11:00",
+  "retired_by": "DESKTOP-OODJQVE\\loweb",
+  "status": "retired",
+  "reason": "Ephemeral development outputs retired by policy"
+}
+{
+  "name": "runner.log",
+  "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\run_outputs\\20251112-165824\\runner.log",
+  "sha256": "E2BAEB4D00EF2014FD0E30363FD90049F53CC39B9533D43564BF3921DF0F4101",
+  "length": 1054,
+  "mtime": "2025-11-12T05:58:25.1557191Z",
+  "found_at": "2025-11-12T21:16:20.9432104+11:00",
+  "retired_at": "2025-11-12T21:16:20.9432624+11:00",
+  "retired_by": "DESKTOP-OODJQVE\\loweb",
+  "status": "retired",
+  "reason": "Ephemeral development outputs retired by policy"
+}
+{
+  "name": "runner.log",
+  "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\run_outputs\\20251112-165958\\runner.log",
+  "sha256": "FC9683779453D325887EF5AEF4EF851CB5218CFB8494BC7D7173BA36CD4B9DFD",
+  "length": 188,
+  "mtime": "2025-11-12T05:59:58.3276206Z",
+  "found_at": "2025-11-12T21:16:20.9478592+11:00",
+  "retired_at": "2025-11-12T21:16:20.9479225+11:00",
+  "retired_by": "DESKTOP-OODJQVE\\loweb",
+  "status": "retired",
+  "reason": "Ephemeral development outputs retired by policy"
+}
+{
+  "name": "runner.log",
+  "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\run_outputs\\20251112-170208\\runner.log",
+  "sha256": "FC9683779453D325887EF5AEF4EF851CB5218CFB8494BC7D7173BA36CD4B9DFD",
+  "length": 188,
+  "mtime": "2025-11-12T06:02:08.3986962Z",
+  "found_at": "2025-11-12T21:16:20.9523172+11:00",
+  "retired_at": "2025-11-12T21:16:20.9523714+11:00",
+  "retired_by": "DESKTOP-OODJQVE\\loweb",
+  "status": "retired",
+  "reason": "Ephemeral development outputs retired by policy"
+}

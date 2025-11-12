@@ -1,0 +1,8 @@
+2025-11-09 00:01:23.360638: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-11-09 00:01:25.053459: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+RUN_ERROR: feature_fallback_failed name 'args' is not defined
+Traceback (most recent call last):
+  File "C:\Users\loweb\AI_Financial_Sims\HO\HO 1st time 5080\deterministic_inference.py", line 63, in <module>
+    _csv_path_for_infer = getattr(args, "csv", "./hoxnc_full.csv")
+                                  ^^^^
+NameError: name 'args' is not defined

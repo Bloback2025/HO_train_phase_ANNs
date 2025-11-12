@@ -1,0 +1,182 @@
+[
+  {
+    "name": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\run_outputs\\20251112_175350_parseonly\\run_manifest.txt",
+    "sha256": "96B824530ABF2209F613C036959C66199521DBDBF5FBDC235A1657C6550FFFCD",
+    "length": 234,
+    "mtime": "2025-11-12T06:53:50.8996058Z"
+  },
+  {
+    "name": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\run_outputs\\20251112_175350_parseonly\\runner.log",
+    "sha256": "BE1CA1CAE8C5F94BE5B05B78C92E10D8EFC92EB56C581F7335B5DDF5353AEEFD",
+    "length": 218,
+    "mtime": "2025-11-12T06:53:50.5939938Z"
+  },
+  {
+    "name": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\run_outputs\\20251112_175350_smoke_e1\\run_manifest.txt",
+    "sha256": "6E7FDE1879759A4E1917B3AE71D1994996D8718F6B32555899D133CD9A089285",
+    "length": 233,
+    "mtime": "2025-11-12T06:53:50.9786051Z"
+  },
+  {
+    "name": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\run_outputs\\20251112_175350_smoke_e1\\runner.log",
+    "sha256": "BE1CA1CAE8C5F94BE5B05B78C92E10D8EFC92EB56C581F7335B5DDF5353AEEFD",
+    "length": 218,
+    "mtime": "2025-11-12T06:53:50.7172060Z"
+  },
+  {
+    "name": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\run_outputs\\20251112_175350_smoke_e2\\run_manifest.txt",
+    "sha256": "E740FC85BAC77BEB1FB9A7FC66617A7FAEDB2C06D57F35EC16856BBCBE9E49D5",
+    "length": 233,
+    "mtime": "2025-11-12T06:53:51.0173713Z"
+  },
+  {
+    "name": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\run_outputs\\20251112_175350_smoke_e2\\runner.log",
+    "sha256": "BE1CA1CAE8C5F94BE5B05B78C92E10D8EFC92EB56C581F7335B5DDF5353AEEFD",
+    "length": 218,
+    "mtime": "2025-11-12T06:53:50.7755287Z"
+  },
+  {
+    "name": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\run_outputs\\20251112_175350_smokenotrain\\run_manifest.txt",
+    "sha256": "8DEA0A46C8A4538D420F151A28BB8828CF1204CEDBC4302078CC61CB9339A036",
+    "length": 237,
+    "mtime": "2025-11-12T06:53:50.9396049Z"
+  },
+  {
+    "name": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\run_outputs\\20251112_175350_smokenotrain\\runner.log",
+    "sha256": "BE1CA1CAE8C5F94BE5B05B78C92E10D8EFC92EB56C581F7335B5DDF5353AEEFD",
+    "length": 218,
+    "mtime": "2025-11-12T06:53:50.6529939Z"
+  },
+  {
+    "name": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\run_outputs\\20251112_175654_parseonly\\run_manifest.txt",
+    "sha256": "9E85EA1C901878F8E788AE7C28CC91B7A174BADC748326D6D9672B7AD8042219",
+    "length": 234,
+    "mtime": "2025-11-12T06:56:55.2525303Z"
+  },
+  {
+    "name": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\run_outputs\\20251112_175654_parseonly\\runner.log",
+    "sha256": "BE1CA1CAE8C5F94BE5B05B78C92E10D8EFC92EB56C581F7335B5DDF5353AEEFD",
+    "length": 218,
+    "mtime": "2025-11-12T06:56:55.0525490Z"
+  },
+  {
+    "name": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\run_outputs\\20251112_175654_smoke_e1\\run_manifest.txt",
+    "sha256": "E9F53EC6C2847BB25D757A5A0D618ED85259E9AEE18E397FAA7DB166FDFA8BE5",
+    "length": 233,
+    "mtime": "2025-11-12T06:56:55.3310393Z"
+  },
+  {
+    "name": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\run_outputs\\20251112_175654_smoke_e1\\runner.log",
+    "sha256": "BE1CA1CAE8C5F94BE5B05B78C92E10D8EFC92EB56C581F7335B5DDF5353AEEFD",
+    "length": 218,
+    "mtime": "2025-11-12T06:56:55.1647313Z"
+  },
+  {
+    "name": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\run_outputs\\20251112_175654_smoke_e2\\run_manifest.txt",
+    "sha256": "8027718C33F6BBBD70305196BC2F1345339115C040E134BD6F375DE2620C9092",
+    "length": 233,
+    "mtime": "2025-11-12T06:56:55.3625302Z"
+  },
+  {
+    "name": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\run_outputs\\20251112_175654_smoke_e2\\runner.log",
+    "sha256": "BE1CA1CAE8C5F94BE5B05B78C92E10D8EFC92EB56C581F7335B5DDF5353AEEFD",
+    "length": 218,
+    "mtime": "2025-11-12T06:56:55.2203690Z"
+  },
+  {
+    "name": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\run_outputs\\20251112_175654_smokenotrain\\run_manifest.txt",
+    "sha256": "56D1D15A6CBC3C5FC18C396749A3C5B5FBFE0A81F1F16376140468FB11D28F1C",
+    "length": 237,
+    "mtime": "2025-11-12T06:56:55.2835288Z"
+  },
+  {
+    "name": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\run_outputs\\20251112_175654_smokenotrain\\runner.log",
+    "sha256": "BE1CA1CAE8C5F94BE5B05B78C92E10D8EFC92EB56C581F7335B5DDF5353AEEFD",
+    "length": 218,
+    "mtime": "2025-11-12T06:56:55.1088815Z"
+  },
+  {
+    "name": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\run_outputs\\retired\\20251112_211107\\20251112_175716_git_push.log",
+    "sha256": "792278294EDEC8F87CE19CCD01156A48FBCABB240F890305ED21BC80F07A0855",
+    "length": 807,
+    "mtime": "2025-11-12T06:58:44.6967515Z"
+  },
+  {
+    "name": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\run_outputs\\20251112_175716_git_push.log",
+    "sha256": "792278294EDEC8F87CE19CCD01156A48FBCABB240F890305ED21BC80F07A0855",
+    "length": 807,
+    "mtime": "2025-11-12T06:58:44.6967515Z"
+  },
+  {
+    "name": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\run_outputs\\20251112_175716_parseonly\\run_manifest.txt",
+    "sha256": "219AB14F389690A7DE10136ABE681784E2113B53B8A0C0906CC88928A403A5A7",
+    "length": 234,
+    "mtime": "2025-11-12T06:57:16.8843770Z"
+  },
+  {
+    "name": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\run_outputs\\20251112_175716_parseonly\\runner.log",
+    "sha256": "BE1CA1CAE8C5F94BE5B05B78C92E10D8EFC92EB56C581F7335B5DDF5353AEEFD",
+    "length": 218,
+    "mtime": "2025-11-12T06:57:16.6720425Z"
+  },
+  {
+    "name": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\run_outputs\\20251112_175716_smoke_e1\\run_manifest.txt",
+    "sha256": "15557576F9B238A827A66480B0774C0053120CDF549B50AA01860ABD183FE66E",
+    "length": 233,
+    "mtime": "2025-11-12T06:57:16.9573765Z"
+  },
+  {
+    "name": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\run_outputs\\20251112_175716_smoke_e1\\runner.log",
+    "sha256": "BE1CA1CAE8C5F94BE5B05B78C92E10D8EFC92EB56C581F7335B5DDF5353AEEFD",
+    "length": 218,
+    "mtime": "2025-11-12T06:57:16.7860436Z"
+  },
+  {
+    "name": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\run_outputs\\20251112_175716_smoke_e2\\run_manifest.txt",
+    "sha256": "827DC33C24FCEA2043463E0CD34A58BA6C1F868F499012D81A423FE41DE32BD0",
+    "length": 233,
+    "mtime": "2025-11-12T06:57:16.9933764Z"
+  },
+  {
+    "name": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\run_outputs\\20251112_175716_smoke_e2\\runner.log",
+    "sha256": "BE1CA1CAE8C5F94BE5B05B78C92E10D8EFC92EB56C581F7335B5DDF5353AEEFD",
+    "length": 218,
+    "mtime": "2025-11-12T06:57:16.8414452Z"
+  },
+  {
+    "name": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\run_outputs\\20251112_175716_smokenotrain\\run_manifest.txt",
+    "sha256": "FBC78258F1456E86B50B5C93E0D01843E6AF4C0A9C8314DCEB069BBFCB11CB68",
+    "length": 237,
+    "mtime": "2025-11-12T06:57:16.9213770Z"
+  },
+  {
+    "name": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\run_outputs\\20251112_175716_smokenotrain\\runner.log",
+    "sha256": "BE1CA1CAE8C5F94BE5B05B78C92E10D8EFC92EB56C581F7335B5DDF5353AEEFD",
+    "length": 218,
+    "mtime": "2025-11-12T06:57:16.7300447Z"
+  },
+  {
+    "name": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\run_outputs\\20251112-165755\\runner.log",
+    "sha256": "10691BC686350251B01A1FF0FC3589B20309DC0DB4BEE792E13BFB5C6B7AA692",
+    "length": 1600,
+    "mtime": "2025-11-12T05:57:56.1990834Z"
+  },
+  {
+    "name": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\run_outputs\\20251112-165824\\runner.log",
+    "sha256": "E2BAEB4D00EF2014FD0E30363FD90049F53CC39B9533D43564BF3921DF0F4101",
+    "length": 1054,
+    "mtime": "2025-11-12T05:58:25.1557191Z"
+  },
+  {
+    "name": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\run_outputs\\20251112-165958\\runner.log",
+    "sha256": "FC9683779453D325887EF5AEF4EF851CB5218CFB8494BC7D7173BA36CD4B9DFD",
+    "length": 188,
+    "mtime": "2025-11-12T05:59:58.3276206Z"
+  },
+  {
+    "name": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\run_outputs\\20251112-170208\\runner.log",
+    "sha256": "FC9683779453D325887EF5AEF4EF851CB5218CFB8494BC7D7173BA36CD4B9DFD",
+    "length": 188,
+    "mtime": "2025-11-12T06:02:08.3986962Z"
+  }
+]

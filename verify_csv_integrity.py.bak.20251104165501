@@ -1,0 +1,83 @@
+﻿# verify_csv_integrity.py
+# Purpose: Verify CSV paths, headers, hashes, date ranges, and test label integrity for HO model runs
+
+import os
+import hashlib
+import pandas as pd
+import numpy as np
+import json
+
+# --- Config: update these paths if needed ---
+TRAIN_CSV = r"C:\Users\loweb\AI_Financial_Sims\HO\HO 1st time 5080\hoxnc_training.csv"
+VAL_CSV   = r"C:\Users\loweb\AI_Financial_Sims\HO\HO 1st time 5080\hoxnc_validation.csv"
+TEST_CSV  = r"C:\Users\loweb\AI_Financial_Sims\HO\HO 1st time 5080\hoxnc_testing.csv"
+MANIFEST  = "ho2bann_manifest.json"
+
+# --- SHA256 utility ---
+def sha256(path):
+    h = hashlib.sha256()
+    with open(path, "rb") as f:
+        for b in iter(lambda: f.read(8192), b""):
+    h.update(b)
+    return h.hexdigest()
+
+    # --- File checks ---
+def check_file(path, label):
+    p_abs = os.path.abspath(path)
+    exists = os.path.exists(p_abs)
+    size = os.path.getsize(p_abs) if exists else 0
+    hashval = sha256(p_abs) if exists else "N/A"
+    print(f"{label}: {p_abs}\n  Exists: {exists}\n  Size: {size} bytes\n  SHA256: {hashval}\n")
+    return p_abs, hashval
+
+    # --- Header and date range checks ---
+def inspect_csv(path, label):
+    df = pd.read_csv(path, parse_dates=["Date"])
+    df.columns = df.columns.str.strip().str.capitalize()
+    print(f"{label} Columns: {df.columns.tolist()}")
+    print(f"{label} Date Range: {df['Date'].min()} to {df['Date'].max()} ({len(df)} rows)")
+    print(f"{label} Head:\n{df.head(3).to_dict(orient='list')}")
+    print(f"{label} Tail:\n{df.tail(3).to_dict(orient='list')}\n")
+    return df
+
+# --- Manifest check ---
+def inspect_manifest(path):
+    if not os.path.exists(path):
+        print("Manifest not found.")
+return
+    with open(path, "r") as f:
+        m = json.load(f)
+print("Manifest keys:", list(m.keys()))
+    for k in ("paths", "hashes", "date_ranges", "counts", "closure"):
+        print(f"{k}: {m.get(k, 'Missing')}")
+print()
+
+# --- Test label diagnostics ---
+def test_label_outliers(df_test):
+    close = df_test["Close"].values.astype(float)
+print(f"Test Close Stats:\n  Min: {np.min(close)}\n  Max: {np.max(close)}\n  Median: {np.median(close)}\n")
+prev = close[:-1]
+nextc = close[1:]
+errors = np.abs(prev - nextc)
+idx = np.argsort(-errors)[:20]
+print("Top 20 Adjacent Persistence Errors:")
+    for i in idx:
+        print(f"  Row {i}: Prev={prev[i]:.2f}, Next={nextc[i]:.2f}, AbsErr={errors[i]:.2f}")
+print()
+
+# --- Run all checks ---
+print("=== FILE INTEGRITY CHECK ===")
+train_path, train_hash = check_file(TRAIN_CSV, "TRAIN")
+val_path, val_hash     = check_file(VAL_CSV, "VAL")
+test_path, test_hash   = check_file(TEST_CSV, "TEST")
+
+print("=== HEADER + DATE RANGE CHECK ===")
+df_train = inspect_csv(TRAIN_CSV, "TRAIN")
+df_val   = inspect_csv(VAL_CSV, "VAL")
+df_test  = inspect_csv(TEST_CSV, "TEST")
+
+print("=== MANIFEST CHECK ===")
+inspect_manifest(MANIFEST)
+
+print("=== TEST LABEL OUTLIER DIAGNOSTICS ===")
+test_label_outliers(df_test)

@@ -1,0 +1,8 @@
+{
+  "backup": ".\\hoxnc_training.with_base_and_lags.manifest.json.bak.20251108-234832",
+  "manifest": ".\\hoxnc_training.with_base_and_lags.manifest.json",
+  "time": "20251108-234832",
+  "feature_count": 0,
+  "feature_sample": "",
+  "csv_used": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\hoxnc_full.tmp.20251108-234528.csv"
+}

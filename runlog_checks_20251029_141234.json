@@ -1,0 +1,58 @@
+{
+  "timestamp": "2025-10-29T14:12:34.3927459+11:00",
+  "environment": {
+    "TF_ENABLE_ONEDNN_OPTS": "0",
+    "TF_CPP_MIN_LOG_LEVEL": "2",
+    "PYTHONHASHSEED": "0",
+    "cwd": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080",
+    "powershell_user": "loweb",
+    "os": "Microsoft Windows 11 Pro"
+  },
+  "checks": [
+    {
+      "script": "check_shapes_and_samples.py",
+      "found": true,
+      "stdout": "",
+      "stderr": "python: can't open file 'C:\\\\Windows\\\\system32\\\\check_shapes_and_samples.py': [Errno 2] No such file or directory",
+      "json": null,
+      "exit_code": 2,
+      "duration_seconds": 0.071
+    },
+    {
+      "script": "recompute_r2_and_metrics.py",
+      "found": true,
+      "stdout": "",
+      "stderr": "python: can't open file 'C:\\\\Windows\\\\system32\\\\recompute_r2_and_metrics.py': [Errno 2] No such file or directory",
+      "json": null,
+      "exit_code": 2,
+      "duration_seconds": 0.056
+    },
+    {
+      "script": "inspect_target_variance.py",
+      "found": true,
+      "stdout": "",
+      "stderr": "python: can't open file 'C:\\\\Windows\\\\system32\\\\inspect_target_variance.py': [Errno 2] No such file or directory",
+      "json": null,
+      "exit_code": 2,
+      "duration_seconds": 0.057
+    },
+    {
+      "script": "inspect_splits_dates.py",
+      "found": true,
+      "stdout": "",
+      "stderr": "python: can't open file 'C:\\\\Windows\\\\system32\\\\inspect_splits_dates.py': [Errno 2] No such file or directory",
+      "json": null,
+      "exit_code": 2,
+      "duration_seconds": 0.055
+    },
+    {
+      "script": "sanity_correlations.py",
+      "found": true,
+      "stdout": "",
+      "stderr": "python: can't open file 'C:\\\\Windows\\\\system32\\\\sanity_correlations.py': [Errno 2] No such file or directory",
+      "json": null,
+      "exit_code": 2,
+      "duration_seconds": 0.056
+    }
+  ]
+}

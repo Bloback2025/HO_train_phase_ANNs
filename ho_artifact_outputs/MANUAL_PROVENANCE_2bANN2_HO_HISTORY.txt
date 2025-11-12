@@ -1,0 +1,4 @@
+2025-11-10T07:10:05Z  PATCH: appended audit-safe target_processing writer to 2bANN2.HO.py; RUNLOG updated to record lineage from train_phase2b2_HO.py; target_processing set to none.
+Files: ho_artifact_outputs/RUNLOG_2bANN2_HO_final.json; 2bANN2.HO.py
+Commit: fdfc8fd54975c9022694cfc57ee48ca3f32754b5
+Tag: 2025-11-10_2bANN2_targetprocessing

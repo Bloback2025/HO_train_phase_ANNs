@@ -1,0 +1,4 @@
+  File ".\canonical_train_2bANN2_HO.py", line 37
+    f.write(f\"{k}: {v}\\n\")
+              ^
+SyntaxError: unexpected character after line continuation character

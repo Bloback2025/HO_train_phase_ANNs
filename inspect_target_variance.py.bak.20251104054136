@@ -1,0 +1,57 @@
+# inspect_target_variance.py
+# Prints mean, std, var and normalized RMSE for y_true
+import os, json, importlib.util
+import numpy as np
+from tensorflow import keras
+from bootstrap_ho_paths_and_patch import train_path, val_path, test_path, BASE_DIR
+
+# dynamic import of training module
+module_path = os.path.join(BASE_DIR, "train_phase2b2_HO_v5_heavy_v5.1.py")
+spec = importlib.util.spec_from_file_location("train_v5_1_module", module_path)
+train_mod = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(train_mod)
+
+load_csv = train_mod.load_csv
+shift_forward = train_mod.shift_forward
+mu = train_mod.mu
+sigma = train_mod.sigma
+rmse_func = getattr(train_mod, "rmse", None)
+
+dates_train, X_train, y_train = load_csv(train_path)
+dates_val,   X_val,   y_val   = load_csv(val_path)
+dates_test,  X_test,  y_test  = load_csv(test_path)
+
+X_train_s, y_train_s = shift_forward(X_train, y_train)
+X_val_s,   y_val_s   = shift_forward(X_val,   y_val)
+X_test_s,  y_test_s  = shift_forward(X_test,  y_test)
+
+y_true = y_test_s[1:]
+mean = float(np.mean(y_true))
+std = float(np.std(y_true))
+var = float(np.var(y_true))
+
+X_test_n = (X_test_s - mu) / sigma
+
+files = [f for f in os.listdir(BASE_DIR) if f.startswith("2bANN2_HO_model_v5.1_heavy_") and f.endswith(".keras")]
+files.sort(reverse=True)
+if files and rmse_func is not None:
+    try:
+        model = keras.models.load_model(os.path.join(BASE_DIR, files[0]))
+        y_pred = model.predict(X_test_n, verbose=0).reshape(-1)
+        y_pred_aligned = y_pred[1:]
+        rmse_val = float(rmse_func(y_true, y_pred_aligned))
+        normalized_rmse = float(rmse_val / std) if std != 0 else None
+    except Exception:
+        rmse_val = None
+        normalized_rmse = None
+else:
+    rmse_val = None
+    normalized_rmse = None
+
+print(json.dumps({
+    "mean": mean,
+    "std": std,
+    "var": var,
+    "rmse_aligned": rmse_val,
+    "rmse_over_std": normalized_rmse
+}, indent=2))

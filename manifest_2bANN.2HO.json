@@ -1,0 +1,31 @@
+{
+  "manifest_id": "2bANN.2_HO",
+  "created": "2025-11-03T22:54:59.2960688+11:00",
+  "features": [
+    "Open",
+    "High",
+    "Low",
+    "Close",
+    "Open_lag1",
+    "High_lag1",
+    "Low_lag1",
+    "Close_lag1",
+    "Open_lag2",
+    "High_lag2",
+    "Low_lag2",
+    "Close_lag2",
+    "Open_lag3",
+    "High_lag3",
+    "Low_lag3",
+    "Close_lag3",
+    "Open_lag4",
+    "High_lag4",
+    "Low_lag4",
+    "Close_lag4",
+    "Open_lag5",
+    "High_lag5",
+    "Low_lag5",
+    "Close_lag5"
+  ],
+  "target": "Close_t+1"
+}

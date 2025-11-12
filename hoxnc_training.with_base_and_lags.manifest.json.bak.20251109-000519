@@ -1,0 +1,8 @@
+{
+  "header": "Date,Open,High,Low,Close,Date_epoch,Date_dow,Open_lag1,High_lag1,Low_lag1,Close_lag1,Open_lag2,High_lag2,Low_lag2,Close_lag2,Open_lag3,High_lag3,Low_lag3,Close_lag3,Open_lag4,High_lag4,Low_lag4,Close_lag4,Open_lag5,High_lag5,Low_lag5,Close_lag5,Open_lag6,High_lag6,Low_lag6,Close_lag6",
+  "rowCount": 4517,
+  "timestamp": "2025-11-08T11:50:07.195347+11:00",
+  "filename": "hoxnc_training.with_base_and_lags.csv",
+  "sha256": "2F7CDEAA26DC79661664A513408BAC37341FE6B46CEE1970867CBAC9D24F869E",
+  "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\hoxnc_training.with_base_and_lags.csv"
+}

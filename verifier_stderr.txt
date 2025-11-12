@@ -1,0 +1,5 @@
+C:\Users\loweb\AI_Financial_Sims\HO\HO 1st time 5080\verify-manifest-and-sha256.ps1 : FAILED: error computing 
+SHA256 for C:\Users\loweb\AI_Financial_Sims\HO\HO 1st time 5080\2bANN2_HO_model.keras
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,verify-manifest-and-sha256.ps1
+ 

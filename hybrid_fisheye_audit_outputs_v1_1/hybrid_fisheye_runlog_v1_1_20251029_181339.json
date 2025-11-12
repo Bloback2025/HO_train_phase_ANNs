@@ -1,0 +1,97 @@
+{
+  "timestamp": "20251029_181339",
+  "outdir": "hybrid_fisheye_audit_outputs_v1_1",
+  "files": {
+    "train_csv": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\hoxnc_training.csv",
+    "val_csv": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\hoxnc_validation.csv",
+    "test_csv": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\hoxnc_testing.csv",
+    "train_sha256": "04cc097bd744e1262ad885596c79c34d167f0a8e04b4d2dda919edb149709186",
+    "val_sha256": "39389b5d46fde2f372171501b61d3300f0c9913cfe0a2c783b792566bb1b07b9",
+    "test_sha256": "d7e75485054836422f7f4311def959ccd01bcdaba614326f16e3ac2be89c216a"
+  },
+  "scaling": {
+    "mean": [
+      [
+        59.174495697021484,
+        59.8367919921875,
+        58.56606674194336,
+        59.190547943115234
+      ]
+    ],
+    "std": [
+      [
+        15.260684967041016,
+        15.337506294250488,
+        15.159025192260742,
+        15.259431838989258
+      ]
+    ]
+  },
+  "run_flags": {
+    "run_name": "HybridAudit_v1_1_pretrain_ON_ctx128",
+    "pretrain_enabled": true,
+    "context_len": 128,
+    "learn_rate_pre": 0.001,
+    "learn_rate_ft": 0.0001,
+    "dropout": 0.3,
+    "l2w": 0.0003,
+    "batch_pre": 64,
+    "batch_ft": 128,
+    "epochs_pre": 30,
+    "epochs_ft": 60
+  },
+  "metrics_csv": "hybrid_fisheye_audit_outputs_v1_1\\hybrid_fisheye_metrics_v1_1_20251029_181339.csv",
+  "model_path": "hybrid_fisheye_audit_outputs_v1_1\\HybridAudit_v1_1_pretrain_ON_ctx128_model_v1_1_20251029_181339.keras",
+  "metrics": {
+    "rmse_naive_val": 0.17031924426555634,
+    "mae_naive_val": 0.13152407109737396,
+    "r2_naive_val": 0.9189988970756531,
+    "rmse_naive_test": 0.1917993128299713,
+    "mae_naive_test": 0.13784125447273254,
+    "r2_naive_test": 0.9958183765411377,
+    "rmse_model_forced_val": 1.0795975923538208,
+    "mae_model_forced_val": 0.9398611187934875,
+    "r2_model_forced_val": -2.2545230388641357,
+    "rmse_model_forced_test": 3.497159004211426,
+    "mae_model_forced_test": 2.3578779697418213,
+    "r2_model_forced_test": -0.39021408557891846,
+    "rmse_model_g30_val": 0.17031924426555634,
+    "mae_model_g30_val": 0.13152407109737396,
+    "r2_model_g30_val": 0.9189988970756531,
+    "abstention_g30_val": 1.0,
+    "rmse_model_g30_test": 0.195196732878685,
+    "mae_model_g30_test": 0.14127248525619507,
+    "r2_model_g30_test": 0.9956689476966858,
+    "abstention_g30_test": 0.9374492282696995,
+    "rmse_model_g10_val": 1.0795975923538208,
+    "mae_model_g10_val": 0.9398611187934875,
+    "r2_model_g10_val": -2.2545230388641357,
+    "abstention_g10_val": 0.0,
+    "rmse_model_g10_test": 3.497159004211426,
+    "mae_model_g10_test": 2.3578779697418213,
+    "r2_model_g10_test": -0.39021408557891846,
+    "abstention_g10_test": 0.0,
+    "coverage_val_q10_q90": 0.4051724137931034,
+    "coverage_test_q10_q90": 0.5085296506904955,
+    "brier_val": 0.004265184979885817,
+    "brier_test": 0.008460273034870625,
+    "dm_val_forced_vs_persistence": 16.691068649291992,
+    "dm_test_forced_vs_persistence": 30.81121826171875,
+    "coverage_val_1sigma": 0.28448275862068967,
+    "coverage_val_2sigma": 0.8189655172413793,
+    "sharpness_val_mean_sigma": 0.700981080532074,
+    "coverage_test_1sigma": 0.4614134849715678,
+    "coverage_test_2sigma": 0.5662063363119415,
+    "sharpness_test_mean_sigma": 0.6783003211021423,
+    "context_len": 128,
+    "seed": 77,
+    "pretrain_enabled": true,
+    "dropout": 0.3,
+    "l2w": 0.0003,
+    "epochs_pre": 30,
+    "epochs_ft": 60,
+    "batch_pre": 64,
+    "batch_ft": 128
+  },
+  "closure": "sealed"
+}

@@ -1,0 +1,6 @@
+usage: canonical_train_2bANN2_HO.py [-h] --train-file TRAIN_FILE
+                                    --outdir OUTDIR [--epochs EPOCHS]
+                                    [--batch-size BATCH_SIZE] [--seed SEED]
+                                    [--checkpoint CHECKPOINT]
+                                    [--smoke-parse-only] [--smoke-no-train]
+canonical_train_2bANN2_HO.py: error: unrecognized arguments: --smoke_parse_only

@@ -1,0 +1,8 @@
+{
+  "feature_sample": "Open,High,Low,Close",
+  "target": "Close_t+1",
+  "backup": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\hoxnc_training.with_base_and_lags.manifest.json.bak.20251109-000519",
+  "manifest": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\hoxnc_training.with_base_and_lags.manifest.json",
+  "feature_count": 4,
+  "time": "20251109-000519"
+}

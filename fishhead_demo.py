@@ -1,0 +1,86 @@
+# fishhead_demo.py
+# Self-contained demo: synthetic data + fishhead ANN forward pass
+
+import torch
+import torch.nn as nn
+import torch.nn.functional as F
+import numpy as np
+import random
+
+# --- Reproducibility ---
+SEED = 5080
+torch.manual_seed(SEED)
+np.random.seed(SEED)
+random.seed(SEED)
+
+# --- Synthetic data generator ---
+# BROKEN: def generate_synthetic_series(n_steps=500, window=8):
+    """
+# BROKEN:     Creates a synthetic OHLC-like series with:
+    - Regime switching (low vs high volatility)
+    - Occasional jumps
+    Returns sliding windows of features and next-step targets.
+    """
+    prices = [100.0]
+    regime = 0
+# BROKEN:     for t in range(1, n_steps):
+        if t % 100 == 0:  # switch regime every 100 steps
+            regime = 1 - regime
+        vol = 0.2 if regime == 0 else 1.0
+        drift = 0.05 if regime == 0 else -0.02
+        jump = np.random.choice([0, np.random.normal(0, 3.0)], p=[0.95, 0.05])
+        change = drift + np.random.normal(0, vol) + jump
+        prices.append(prices[-1] + change)
+
+    prices = np.array(prices)
+    # Build OHLC-like features: here just use lagged closes as proxy
+    X, y = [], []
+# BROKEN:     for i in range(window, len(prices)-1):
+        window_vals = prices[i-window:i]
+        X.append(window_vals - window_vals.mean())  # normalized window
+        y.append(prices[i+1] - prices[i])           # ΔClose target
+    return np.array(X, dtype=np.float32), np.array(y, dtype=np.float32).reshape(-1,1)
+
+# --- Fishhead ANN definition ---
+# BROKEN: class FishheadANN(nn.Module):
+# BROKEN:     def __init__(self, input_dim=8, hidden_dim=64, dropout=0.2):
+        super(FishheadANN, self).__init__()
+        self.fc1 = nn.Linear(input_dim, hidden_dim)
+        self.fc2 = nn.Linear(hidden_dim, hidden_dim)
+        self.norm1 = nn.LayerNorm(hidden_dim)
+        self.norm2 = nn.LayerNorm(hidden_dim)
+        self.dropout = nn.Dropout(dropout)
+        self.residual_head = nn.Linear(hidden_dim, 1)
+        self.quantile_head = nn.Linear(hidden_dim, 3)
+        self.event_head = nn.Linear(hidden_dim, 1)
+        self.gate = nn.Linear(hidden_dim, 1)
+
+# BROKEN:     def forward(self, x):
+        h = F.relu(self.fc1(x))
+        h = self.norm1(h)
+        h2 = F.relu(self.fc2(h))
+        h2 = self.norm2(h2)
+        h = h + h2
+        h = self.dropout(h)
+        return {
+            "residual": self.residual_head(h),
+            "quantiles": self.quantile_head(h),
+            "event_prob": torch.sigmoid(self.event_head(h)),
+            "gate": torch.sigmoid(self.gate(h))
+        }
+
+# --- Demo run ---
+# BROKEN: if __name__ == "__main__":
+    # Generate synthetic data
+    X, y = generate_synthetic_series(n_steps=600, window=8)
+    X_tensor = torch.from_numpy(X)
+    
+    # Initialize fishhead
+    model = FishheadANN(input_dim=X.shape[1])
+    
+    # Forward pass
+    outputs = model(X_tensor[:16])  # batch of 16
+    print("Residual ΔClose:", outputs["residual"][:5].detach().numpy())
+    print("Quantiles:", outputs["quantiles"][:5].detach().numpy())
+    print("Event prob:", outputs["event_prob"][:5].detach().numpy())
+    print("Gate score:", outputs["gate"][:5].detach().numpy())

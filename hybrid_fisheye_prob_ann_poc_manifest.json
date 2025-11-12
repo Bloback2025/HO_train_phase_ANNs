@@ -1,0 +1,11 @@
+{
+  "run": "hybrid_fisheye_prob_ann_poc",
+  "mae_model": 0.907829999923706,
+  "mae_pers": 0.1379416435956955,
+  "dm": 37.35896682739258,
+  "cal": {
+    "coverage_1.0sigma": 0.6351132686084142,
+    "coverage_2.0sigma": 0.9344660194174758,
+    "sharpness_mean_sigma": 1.282869577407837
+  }
+}

@@ -1,0 +1,333 @@
+# hybrid_fisheye_prob_ann_v1.1_audit_2025-10-25.py
+# Complete, self-contained run: deterministic CSV loader, manifesting, MAE pretrain,
+# probabilistic fine-tune (Gaussian NLL), persistence baseline comparison, diagnostics.
+
+import os
+import json
+import hashlib
+import time
+import random
+import numpy as np
+import pandas as pd
+import tensorflow as tf
+from tensorflow.keras import layers, models, regularizers
+from scipy import stats
+
+# ---------------------------
+# Reproducibility
+# ---------------------------
+SEED = 77
+os.environ["TF_DETERMINISTIC_OPS"] = "1"
+tf.keras.utils.set_random_seed(SEED)
+random.seed(SEED)
+np.random.seed(SEED)
+
+# ---------------------------
+# Deterministic CSV loader
+# ---------------------------
+def load_df(path, date_fmt="%d-%b-%y"):
+    df = pd.read_csv(path)
+    df.columns = df.columns.str.strip().str.capitalize()
+    required = ["Date", "Open", "High", "Low", "Close"]
+    missing = [c for c in required if c not in df.columns]
+    if missing:
+        raise ValueError(f"Missing required columns: {missing}")
+    df["Date"] = pd.to_datetime(df["Date"].astype(str), format=date_fmt)
+    df = df.sort_values("Date").reset_index(drop=True)
+    return df
+
+# ---------------------------
+# Hash helpers
+# ---------------------------
+def file_sha256(path, chunk_size=1 << 20):
+    h = hashlib.sha256()
+    with open(path, "rb") as f:
+        while True:
+            b = f.read(chunk_size)
+            if not b:
+                break
+            h.update(b)
+    return h.hexdigest()
+
+def df_sha256(df):
+    h = hashlib.sha256()
+    h.update(",".join(df.columns).encode("utf-8"))
+    h.update(df.to_numpy().tobytes())
+    return h.hexdigest()
+
+# ---------------------------
+# Config / paths
+# ---------------------------
+RUN_NAME = "hybrid_fisheye_prob_ann_v1.1_audit_2025-10-25"
+
+train_csv = r"C:\Users\loweb\AI_Financial_Sims\HO\HO 1st time 5080\hoxnc_training.csv"
+val_csv   = r"C:\Users\loweb\AI_Financial_Sims\HO\HO 1st time 5080\hoxnc_validation.csv"
+test_csv  = r"C:\Users\loweb\AI_Financial_Sims\HO\HO 1st time 5080\hoxnc_testing.csv"
+
+# ---------------------------
+# Load data
+# ---------------------------
+df_train = load_df(train_csv, date_fmt="%d-%b-%y")
+df_val   = load_df(val_csv,   date_fmt="%d-%b-%y")
+df_test  = load_df(test_csv,  date_fmt="%d-%b-%y")
+
+# date head diagnostic
+date_checks_head = [
+    {"split": "train", "dates_head": [str(d) for d in df_train["Date"].head(12).tolist()]},
+    {"split": "val",   "dates_head": [str(d) for d in df_val["Date"].head(12).tolist()]},
+    {"split": "test",  "dates_head": [str(d) for d in df_test["Date"].head(12).tolist()]},
+]
+
+# ---------------------------
+# Hyperparameters
+# ---------------------------
+CONTEXT_LEN = 128
+FEATURES_PER_T = 4
+EMBED_DIM = 64
+ATTN_DIM = 128
+ATTN_HEADS = 4
+DROPOUT = 0.2
+L2W = 1e-4
+EPOCHS_P1 = 16
+EPOCHS_P2 = 16
+BATCH = 64
+LR = 1e-3
+
+# ---------------------------
+# Sequence builder
+# ---------------------------
+def build_sequences(df, context_len=CONTEXT_LEN):
+    ohlc = df[["Open", "High", "Low", "Close"]].to_numpy(dtype=np.float32)
+    dates = df["Date"].to_numpy()
+    X, y, meta = [], [], []
+    for i in range(context_len, len(ohlc) - 1):
+        ctx = ohlc[i - context_len:i]                     # shape (context_len, 4)
+        target = ohlc[i, 3]                               # next-step Close (row i)
+        X.append(ctx)
+        y.append(target)
+        meta.append({
+            "window_end_date": str(pd.Timestamp(dates[i - 1])),
+            "target_date": str(pd.Timestamp(dates[i])),
+            "window_last_close": float(ohlc[i - 1, 3]),
+            "target_close": float(ohlc[i, 3]),
+            "persistence_close": float(ohlc[i - 1, 3])
+        })
+    return np.asarray(X, dtype=np.float32), np.asarray(y, dtype=np.float32), meta
+
+X_train, y_train, meta_train = build_sequences(df_train)
+X_val,   y_val,   meta_val   = build_sequences(df_val)
+X_test,  y_test,  meta_test  = build_sequences(df_test)
+
+# ---------------------------
+# Model components
+# ---------------------------
+def fisheye_block(x, embed_dim=EMBED_DIM, attn_dim=ATTN_DIM, dropout=DROPOUT, l2=L2W):
+    # x: [B, T, F]
+    x = layers.Dense(embed_dim, activation="relu", kernel_regularizer=regularizers.l2(l2))(x)
+    weights = layers.Dense(1, activation="linear")(x)                # [B,T,1]
+    attn_scores = layers.Softmax(axis=1)(weights)                   # [B,T,1]
+    x_focused = x * attn_scores                                      # [B,T,E]
+    x_proj = layers.Dense(attn_dim, activation="relu", kernel_regularizer=regularizers.l2(l2))(x_focused)
+    x_proj = layers.Dropout(dropout)(x_proj)
+    x_vec = layers.GlobalAveragePooling1D()(x_proj)
+    return x_vec
+
+def probabilistic_head(x, l2=L2W):
+    mu = layers.Dense(1, activation="linear", kernel_regularizer=regularizers.l2(l2), name="mu")(x)
+    log_var = layers.Dense(1, activation="linear", kernel_regularizer=regularizers.l2(l2), name="log_var")(x)
+    return mu, log_var
+
+def gaussian_nll(y_true, mu, log_var, eps=1e-6):
+    var = tf.exp(log_var) + eps
+    return 0.5 * (tf.math.log(var) + tf.square(y_true - mu) / var)
+
+def build_model(context_len=CONTEXT_LEN, feat_dim=FEATURES_PER_T):
+    inputs = layers.Input(shape=(context_len, feat_dim), name="context")
+    x = fisheye_block(inputs)
+    mu, log_var = probabilistic_head(x)
+    model = models.Model(inputs=inputs, outputs=[mu, log_var], name=RUN_NAME)
+    return model
+
+# ---------------------------
+# Build and run
+# ---------------------------
+model = build_model()
+# Phase 1 model (mu only) for MAE pretrain
+model_p1 = models.Model(inputs=model.inputs, outputs=model.get_layer("mu").output, name=f"{RUN_NAME}_p1")
+model_p1.compile(optimizer=tf.keras.optimizers.Adam(LR), loss="mae")
+hist_p1 = model_p1.fit(
+    X_train, y_train,
+    validation_data=(X_val, y_val),
+    epochs=EPOCHS_P1,
+    batch_size=BATCH,
+    verbose=1
+)
+
+# Transfer weights where names match
+for layer in model.layers:
+    try:
+        src = model_p1.get_layer(layer.name)
+        layer.set_weights(src.get_weights())
+    except Exception:
+        pass
+
+# Phase 2: probabilistic fine-tune using custom train loop
+optimizer = tf.keras.optimizers.Adam(LR)
+
+@tf.function
+def train_step(xb, yb):
+    with tf.GradientTape() as tape:
+        mu_pred, log_var_pred = model(xb, training=True)
+        nll = tf.reduce_mean(gaussian_nll(yb, mu_pred, log_var_pred))
+        reg_losses = tf.add_n(model.losses) if model.losses else 0.0
+        loss = nll + reg_losses
+    grads = tape.gradient(loss, model.trainable_variables)
+    optimizer.apply_gradients(zip(grads, model.trainable_variables))
+    return loss, nll
+
+@tf.function
+def val_step(xb, yb):
+    mu_pred, log_var_pred = model(xb, training=False)
+    nll = tf.reduce_mean(gaussian_nll(yb, mu_pred, log_var_pred))
+    reg_losses = tf.add_n(model.losses) if model.losses else 0.0
+    loss = nll + reg_losses
+    return loss, nll
+
+def run_epoch(X, y, step_fn, batch=BATCH):
+    n = X.shape[0]
+    idx = tf.range(n)
+    idx = tf.random.shuffle(idx)
+    losses = []
+    for i in range(0, n, batch):
+        sel = idx[i:i+batch]
+        l, nll = step_fn(tf.gather(X, sel), tf.gather(y, sel))
+        losses.append(l)
+    return float(tf.reduce_mean(losses))
+
+train_losses_p2, val_losses_p2 = [], []
+for e in range(EPOCHS_P2):
+    tl = run_epoch(X_train, y_train, train_step, batch=BATCH)
+    vl, _ = val_step(X_val, y_val)
+    train_losses_p2.append(tl)
+    val_losses_p2.append(float(vl))
+    print(f"Prob epoch {e+1}/{EPOCHS_P2} - loss: {tl:.4f} - val_loss: {vl:.4f}")
+
+# ---------------------------
+# Predict and diagnostics
+# ---------------------------
+mu_test, log_var_test = model.predict(X_test, verbose=0)
+# ensure shapes: (N,1) -> (N,)
+mu_test = np.asarray(mu_test).reshape(-1)
+log_var_test = np.asarray(log_var_test).reshape(-1)
+
+# diagnostic head (first 16)
+diagnostic_head = []
+for i in range(min(16, len(meta_test))):
+    diagnostic_head.append({
+        "window_end_date": meta_test[i]["window_end_date"],
+        "target_date": meta_test[i]["target_date"],
+        "window_last_close": meta_test[i]["window_last_close"],
+        "target_close": meta_test[i]["target_close"],
+        "persistence_close": meta_test[i]["persistence_close"],
+        "mu": float(mu_test[i]),
+        "log_var": float(log_var_test[i]),
+    })
+
+# ---------------------------
+# Persistence baseline comparison (MAE + paired t-test)
+# ---------------------------
+persistence = np.array([m["persistence_close"] for m in meta_test], dtype=np.float32)
+targets = np.array([m["target_close"] for m in meta_test], dtype=np.float32)
+model_mu = mu_test.astype(np.float32)
+
+mae_persistence = float(np.mean(np.abs(targets - persistence)))
+mae_model = float(np.mean(np.abs(targets - model_mu)))
+mae_improvement = float(mae_persistence - mae_model)
+rel_improvement = float(mae_improvement / mae_persistence) if mae_persistence != 0 else float("nan")
+
+err_p = np.abs(targets - persistence)
+err_m = np.abs(targets - model_mu)
+t_stat, p_val = stats.ttest_rel(err_p, err_m)
+
+persistence_comparison = {
+    "persistence_mae": mae_persistence,
+    "model_mae": mae_model,
+    "absolute_improvement": mae_improvement,
+    "relative_improvement": rel_improvement,
+    "paired_ttest_t": float(t_stat),
+    "paired_ttest_p": float(p_val)
+}
+
+# ---------------------------
+# Final metrics and manifest
+# ---------------------------
+final_train_loss = float(train_losses_p2[-1]) if train_losses_p2 else float(hist_p1.history["loss"][-1])
+final_val_loss = float(val_losses_p2[-1]) if val_losses_p2 else float(hist_p1.history["val_loss"][-1])
+nll_test = float(np.mean(0.5 * (np.log(np.exp(log_var_test) + 1e-6) + ((targets - mu_test) ** 2) / (np.exp(log_var_test) + 1e-6))))
+
+manifest = {
+    "run_name": RUN_NAME,
+    "params": {
+        "date_fmt": "%d-%b-%y",
+        "context_len": CONTEXT_LEN,
+        "features_per_t": FEATURES_PER_T,
+        "embed_dim": EMBED_DIM,
+        "attn_dim": ATTN_DIM,
+        "attn_heads": ATTN_HEADS,
+        "dropout": DROPOUT,
+        "l2_weight": L2W,
+        "seed": SEED,
+        "epochs_p1": EPOCHS_P1,
+        "epochs_p2": EPOCHS_P2,
+        "batch": BATCH,
+        "lr": LR
+    },
+    "files": {
+        "train_path": train_csv,
+        "val_path": val_csv,
+        "test_path": test_csv,
+        "train_sha256": file_sha256(train_csv),
+        "val_sha256": file_sha256(val_csv),
+        "test_sha256": file_sha256(test_csv),
+        "df_train_sha256": df_sha256(df_train),
+        "df_val_sha256": df_sha256(df_val),
+        "df_test_sha256": df_sha256(df_test),
+    },
+    "metrics": {
+        "final_train_loss": final_train_loss,
+        "final_val_loss": final_val_loss,
+        "test_nll": nll_test,
+        "persistence_comparison": persistence_comparison
+    },
+    "debug_checks": {
+        "date_checks_head": date_checks_head,
+        "diagnostic_head": diagnostic_head
+    },
+    "provenance": {
+        "timestamp": time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()),
+        "python_version": f"{os.sys.version.split()[0]}",
+        "numpy": np.__version__,
+        "pandas": pd.__version__,
+        "tensorflow": tf.__version__
+    }
+}
+
+manifest_filename = f"{RUN_NAME}_manifest.json"
+with open(manifest_filename, "w", encoding="utf-8") as f:
+    json.dump(manifest, f, indent=2)
+
+summary = {
+    "run": RUN_NAME,
+    "epochs_p1": EPOCHS_P1,
+    "epochs_p2": EPOCHS_P2,
+    "context_len": CONTEXT_LEN,
+    "final_train_loss": manifest["metrics"]["final_train_loss"],
+    "final_val_loss": manifest["metrics"]["final_val_loss"],
+    "test_nll": manifest["metrics"]["test_nll"],
+    "persistence_model_mae": manifest["metrics"]["persistence_comparison"]["model_mae"],
+    "persistence_baseline_mae": manifest["metrics"]["persistence_comparison"]["persistence_mae"],
+    "paired_ttest_p": manifest["metrics"]["persistence_comparison"]["paired_ttest_p"],
+    "manifest": manifest_filename
+}
+
+print(summary)

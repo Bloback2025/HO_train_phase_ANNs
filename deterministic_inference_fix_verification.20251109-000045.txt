@@ -1,0 +1,130 @@
+VERIFICATION: deterministic_inference.py lines 1..127 of 127 total
+================================================================================
+   1: import json, argparse
+   2: from pathlib import Path
+   3: import pandas as pd
+   4: import numpy as np
+   5: import tensorflow as tf
+   6: from sklearn.metrics import mean_absolute_error, r2_score
+   7: 
+   8: def ensure_lags(df: pd.DataFrame, base_cols, max_lag: int):
+   9:     for col in base_cols:
+  10:         if col not in df.columns:
+  11:             raise ValueError(f"Missing base column: {col}")
+  12:         for k in range(1, max_lag + 1):
+  13:             lag_col = f"{col}_lag{k}"
+  14:             if lag_col not in df.columns:
+  15:                 df[lag_col] = df[col].shift(k)
+  16:     return df
+  17: 
+  18: def ensure_target(df: pd.DataFrame, base_close="Close", target_col="Close_t+1"):
+  19:     if target_col not in df.columns:
+  20:         if base_close not in df.columns:
+  21:             raise ValueError(f"Missing base column for target: {base_close}")
+  22:         df[target_col] = df[base_close].shift(-1)
+  23:     return df
+  24: 
+  25: def chronological_split(X, y, test_frac=0.15):
+  26:     n = len(X)
+  27:     test_n = int(round(test_frac * n))
+  28:     if test_n <= 0:
+  29:         return X, pd.DataFrame(columns=X.columns), y, pd.Series(dtype=float)
+  30:     return X.iloc[:-test_n], X.iloc[-test_n:], y.iloc[:-test_n], y.iloc[-test_n:]
+  31: 
+  32: def main():
+  33:     ap = argparse.ArgumentParser()
+  34:     ap.add_argument("--manifest", required=True)
+  35:     ap.add_argument("--csv", default="./hoxnc_full.csv")
+  36:     ap.add_argument("--model", default="./models/best.keras")
+  37:     ap.add_argument("--test_frac", type=float, default=0.15)
+  38:     args = ap.parse_args()
+  39: 
+  40:     # Deterministic run log markers
+  41:     print("RUN_LOG: start", Path(args.csv).name); 
+  42:     try:
+  43:         man = json.loads(Path(args.manifest).read_text(encoding="utf-8"))
+  44:     except Exception as e:
+  45:         print("RUN_ERROR: manifest_load_failed", str(e)); raise
+  46: 
+  47:     features = man.get("features", [])
+  48:     target = man.get("target", "Close_t+1")
+  49: 
+  50:     base_cols = ["Open", "High", "Low", "Close"]
+  51:     max_lag = 0
+  52:     if any("_lag" in f for f in features):
+  53:         try:
+  54:             max_lag = max(int(f.split("_lag")[-1]) for f in features if "_lag" in f)
+  55:         except Exception:
+  56:             max_lag = 0
+  57: 
+  58:     df = pd.read_csv(args.csv)
+  59: ### FEATURES_FALLBACK_AND_SELECTIVE_DROPNA_v1 ###
+  60: # If manifest.features is empty, derive conservative feature list from CSV header (exclude Date and target)
+  61: try:
+  62:     if not locals().get('features'):
+  63:         _csv_path_for_infer = getattr(args, "csv", "./hoxnc_full.csv")
+  64:         try:
+  65:             _imported_df_head = pd.read_csv(_csv_path_for_infer, nrows=1)
+  66:             csv_cols = list(_imported_df_head.columns)
+  67:         except Exception:
+  68:             csv_cols = []
+  69:         # decide target name
+  70:         _target_name = target if target else "Close_t+1"
+  71:         # conservative features: all CSV columns except Date and target
+  72:         features = [c for c in csv_cols if c not in ("Date", _target_name)]
+  73:         # if still empty, fallback to base_cols with lags up to max_lag if present
+  74:         if not features:
+  75:             features = []
+  76:             for base in ["Open","High","Low","Close"]:
+  77:                 for k in range(1, max(1, max_lag)+1):
+  78:                     features.append(f"{base}_lag{k}")
+  79:             # if that also yields empty, at least include Close for sanity
+  80:             if not features:
+  81:                 if "Close" in csv_cols:
+  82:                     features = ["Close"]
+  83: except Exception as __e:
+  84:     print("RUN_ERROR: feature_fallback_failed", str(__e)); raise
+  85: 
+  86: # Replace global dropna() with selective drop on features + target to avoid removing rows unnecessarily
+  87: try:
+  88:     _required_cols = list(features) + ([target] if target else [])
+  89:     # keep only rows that have at least required columns present (non-null)
+  90:     df = df.dropna(axis=0, subset=_required_cols).reset_index(drop=True)
+  91: except Exception as __e:
+  92:     print("RUN_ERROR: selective_dropna_failed", str(__e)); raise
+  93: ### END FEATURES_FALLBACK_AND_SELECTIVE_DROPNA_v1 ###
+  94: 
+  95:     # Build engineered inputs
+  96:     df = ensure_lags(df, base_cols, max_lag)
+  97:     df = ensure_target(df, base_close="Close", target_col=target)
+  98: 
+  99:     # Drop NaNs from shifting and align
+ 100:     df = df.dropna().reset_index(drop=True)
+ 101: 
+ 102:     # Select features exactly in manifest order
+ 103:     missing = [c for c in features if c not in df.columns]
+ 104:     if missing:
+ 105:         print("RUN_ERROR: missing_after_lag_construction", missing)
+ 106:         raise ValueError(f"Missing columns after lag construction: {missing}")
+ 107: 
+ 108:     X = df[features].astype(float)
+ 109:     y = df[target].astype(float)
+ 110: 
+ 111:     X_train, X_test, y_train, y_test = chronological_split(X, y, test_frac=args.test_frac)
+ 112: 
+ 113:     model = tf.keras.models.load_model(args.model)
+ 114:     y_pred = model.predict(X_test, verbose=0).reshape(-1)
+ 115: 
+ 116:     # Metrics
+ 117:     mae = mean_absolute_error(y_test, y_pred) if len(y_test) > 0 else float("nan")
+ 118:     r2  = r2_score(y_test, y_pred) if len(y_test) > 0 else float("nan")
+ 119:     print(f"[METRICS] test_mae={mae:.6f} r2_ann={r2:.6f}")
+ 120: 
+ 121:     # Final marker
+ 122:     print("RUN_COMPLETE: SUCCESS")
+ 123: 
+ 124: if __name__ == "__main__":
+ 125:     main()
+ 126: 
+ 127: 
+

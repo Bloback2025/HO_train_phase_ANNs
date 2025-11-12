@@ -1,0 +1,61 @@
+{
+  "timestamp": "20251029_174320",
+  "outdir": "fishhead_synth_audit_outputs_v1_0",
+  "splits": {
+    "train": [
+      0,
+      3567
+    ],
+    "val": [
+      3587,
+      4769
+    ],
+    "test": [
+      4779,
+      5963
+    ]
+  },
+  "metrics_csv": "fishhead_synth_audit_outputs_v1_0\\fishhead_synth_metrics_v1_0_20251029_174320.csv",
+  "model_path": "fishhead_synth_audit_outputs_v1_0\\fishhead_synth_model_v1_0_20251029_174320.pt",
+  "metrics": {
+    "rmse_naive_val": 0.8650235506942081,
+    "mae_naive_val": 0.525980532169342,
+    "r2_naive_val": -4.303455352783203e-05,
+    "rmse_naive_test": 0.8195764054621502,
+    "mae_naive_test": 0.5512750744819641,
+    "r2_naive_test": -0.0013457536697387695,
+    "rmse_fish_forced_val": 0.8780463186833004,
+    "mae_fish_forced_val": 0.5495573282241821,
+    "r2_fish_forced_val": -0.0303804874420166,
+    "rmse_fish_forced_test": 0.83025194928619,
+    "mae_fish_forced_test": 0.5676121711730957,
+    "r2_fish_forced_test": -0.027602076530456543,
+    "rmse_fish_g30_val": 0.8657028273427118,
+    "mae_fish_g30_val": 0.5281050205230713,
+    "r2_fish_g30_val": -0.001614212989807129,
+    "abstention_g30_val": 0.9661590524534687,
+    "rmse_fish_g30_test": 0.8197650354140225,
+    "mae_fish_g30_test": 0.5508050918579102,
+    "r2_fish_g30_test": -0.0018067359924316406,
+    "abstention_g30_test": 0.9569256756756757,
+    "rmse_fish_g10_val": 0.8692192813556918,
+    "mae_fish_g10_val": 0.533553957939148,
+    "r2_fish_g10_val": -0.009767770767211914,
+    "abstention_g10_val": 0.6979695431472082,
+    "rmse_fish_g10_test": 0.8269834387642021,
+    "mae_fish_g10_test": 0.558251142501831,
+    "r2_fish_g10_test": -0.019527077674865723,
+    "abstention_g10_test": 0.6427364864864865,
+    "coverage_val_q10_q90": 0.7884940778341794,
+    "coverage_test_q10_q90": 0.793918918918919,
+    "brier_val": 0.1880392702097043,
+    "brier_test": 0.19955143560851657,
+    "n_train": 3567,
+    "n_val": 1182,
+    "n_test": 1184,
+    "window": 32,
+    "event_rel_threshold": 0.015,
+    "purge_steps": 10,
+    "embargo_steps": 10
+  }
+}

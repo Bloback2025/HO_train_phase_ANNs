@@ -1,0 +1,66 @@
+{
+  "run_id": 1761291638,
+  "date_utc": "2025-10-24 07:40:38",
+  "script": "hybrid_fisheye_prob_ann_patch_run.py",
+  "run_name": "RunPatch_auxMAE_clipSigma_ctx128",
+  "seed": 77,
+  "flags": {
+    "pretrain_enabled": true,
+    "context_len": 128,
+    "lr_pre": 0.001,
+    "lr_ft": 0.0001,
+    "dropout": 0.3,
+    "l2": 0.0003,
+    "mask_ratio": 0.15,
+    "mlp_widths": [
+      256,
+      256,
+      128
+    ],
+    "aux_mae_alpha": 0.1,
+    "logsigma_clip": [
+      -5.0,
+      2.0
+    ]
+  },
+  "files": {
+    "train_csv": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\hoxnc_training.csv",
+    "val_csv": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\hoxnc_validation.csv",
+    "test_csv": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\hoxnc_testing.csv",
+    "train_sha256": "04cc097bd744e1262ad885596c79c34d167f0a8e04b4d2dda919edb149709186",
+    "val_sha256": "39389b5d46fde2f372171501b61d3300f0c9913cfe0a2c783b792566bb1b07b9",
+    "test_sha256": "d7e75485054836422f7f4311def959ccd01bcdaba614326f16e3ac2be89c216a"
+  },
+  "date_ranges": {
+    "train_min": "1982-01-06 00:00:00",
+    "train_max": "1999-12-30 00:00:00",
+    "val_min": "2000-01-04 00:00:00",
+    "val_max": "2000-12-29 00:00:00",
+    "test_min": "2001-01-02 00:00:00",
+    "test_max": "2006-06-16 00:00:00"
+  },
+  "metrics_scaled": {
+    "mae_model": 2.4242043495178223,
+    "mae_persistence": 0.1379416435956955,
+    "dm_stat_abs_error": 31.5340576171875
+  },
+  "metrics_original": {
+    "mae_model": 36.99198532104492,
+    "mae_persistence": 2.1049108505249023
+  },
+  "calibration": {
+    "coverage_1.0sigma": 0.5469255663430421,
+    "coverage_2.0sigma": 0.6286407766990292,
+    "sharpness_mean_sigma": 1.200435757637024
+  },
+  "pretrain": {
+    "enabled": true,
+    "last_val_loss": 0.032327648252248764,
+    "epochs_run": 30
+  },
+  "finetune": {
+    "last_val_loss": 1.455931544303894,
+    "epochs_run": 9
+  },
+  "closure": "sealed"
+}

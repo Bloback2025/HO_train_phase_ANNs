@@ -1,0 +1,43 @@
+{
+  "run_id": 1761287094,
+  "date_utc": "2025-10-24 06:24:54",
+  "script": "HO_run_delta.py",
+  "seed": 5080,
+  "context_len": 64,
+  "paths": {
+    "train_csv": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\hoxnc_training.csv",
+    "val_csv": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\hoxnc_validation.csv",
+    "test_csv": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\hoxnc_testing.csv"
+  },
+  "date_ranges": {
+    "train_min": "1982-01-06 00:00:00",
+    "train_max": "1999-12-30 00:00:00",
+    "val_min": "2000-01-04 00:00:00",
+    "val_max": "2000-12-29 00:00:00",
+    "test_min": "2001-01-02 00:00:00",
+    "test_max": "2006-06-16 00:00:00"
+  },
+  "counts": {
+    "train_rows": 4523,
+    "val_rows": 249,
+    "test_rows": 1364
+  },
+  "hashes": {
+    "train_sha256": "04cc097bd744e1262ad885596c79c34d167f0a8e04b4d2dda919edb149709186",
+    "val_sha256": "39389b5d46fde2f372171501b61d3300f0c9913cfe0a2c783b792566bb1b07b9",
+    "test_sha256": "d7e75485054836422f7f4311def959ccd01bcdaba614326f16e3ac2be89c216a"
+  },
+  "metrics_scaled": {
+    "mae_model_scaled": 0.9930469393730164,
+    "mae_persistence_scaled": 0.13533219695091248,
+    "keras_eval_scaled": [
+      2.930124044418335,
+      0.9930469393730164
+    ]
+  },
+  "metrics_original": {
+    "mae_model_orig": 15.153335571289062,
+    "mae_persistence_orig": 2.0650923252105713
+  },
+  "closure": "sealed"
+}

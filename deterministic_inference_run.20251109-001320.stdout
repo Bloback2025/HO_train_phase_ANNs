@@ -1,0 +1,14 @@
+2025-11-09 00:13:20.930350: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-11-09 00:13:22.643601: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+RUN_LOG: start hoxnc_full.csv
+RUN_ERROR: selective_dropna_failed ['Close_t+1']
+Traceback (most recent call last):
+  File "C:\Users\loweb\AI_Financial_Sims\HO\HO 1st time 5080\deterministic_inference.py", line 125, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\loweb\AI_Financial_Sims\HO\HO 1st time 5080\deterministic_inference.py", line 90, in main
+    df = df.dropna(axis=0, subset=_required_cols).reset_index(drop=True)
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\loweb\AI_Financial_Sims\PyLibs\Lib\site-packages\pandas\core\frame.py", line 6692, in dropna
+    raise KeyError(np.array(subset)[check].tolist())
+KeyError: ['Close_t+1']

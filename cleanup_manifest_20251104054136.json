@@ -1,0 +1,4551 @@
+{
+  "timestamp": "20251104054136",
+  "host_cwd": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080",
+  "files": [
+    {
+      "path": "1_compute_metrics.py",
+      "orig_hash": "8927279bba1c1f8f7921404eab62aef30c0f671e4f0f86e02245b1d4445330f9",
+      "post_hash": "8927279bba1c1f8f7921404eab62aef30c0f671e4f0f86e02245b1d4445330f9",
+      "actions": []
+    },
+    {
+      "path": "2_inspect_validation.py",
+      "orig_hash": "0716efcce1f6cf03d8b82f8b181334921fc520d4fc270a1745a9dcda5808ce6e",
+      "post_hash": "635572ac5eb9d0e2ba2ad232a0916f92520cf6bb258fa5fd702950e0654426c8",
+      "bak": "2_inspect_validation.py.bak.20251104054136",
+      "actions": [
+        {
+          "line": 12,
+          "action": "commented_broken_line",
+          "orig": "if \"y_true\" in df.columns:"
+        },
+        {
+          "line": 15,
+          "action": "commented_broken_line",
+          "orig": "else:"
+        }
+      ]
+    },
+    {
+      "path": "3_join_and_metrics.py",
+      "orig_hash": "4dd2447f82181d32f9dc532fa448c25a43cdd99d158a9f01e15ebd20b0ca3b31",
+      "post_hash": "7658853a2a53d250d52c2de121318425f358a18f3a8454d4435c01be1f1c4356",
+      "bak": "3_join_and_metrics.py.bak.20251104054136",
+      "actions": [
+        {
+          "line": 18,
+          "action": "commented_broken_line",
+          "orig": "if \"Close\" not in val.columns:"
+        }
+      ]
+    },
+    {
+      "path": "3_run_row_metrics.py",
+      "orig_hash": "38615ffc85cf476ccb77a2039488b1740a932808cd93bfb0be4e9c770a4cd2e3",
+      "post_hash": "38615ffc85cf476ccb77a2039488b1740a932808cd93bfb0be4e9c770a4cd2e3",
+      "actions": []
+    },
+    {
+      "path": "4_parse_dates_validate.py",
+      "orig_hash": "d4acf4ea84f17708f70facfae3fae8b6028836f9640a45d5e1bbd7325f243eaa",
+      "post_hash": "157898666f8f86ceeead8e5f3e56846ef48c7e0eb6654afa356b943782ddabf9",
+      "bak": "4_parse_dates_validate.py.bak.20251104054136",
+      "actions": [
+        {
+          "line": 8,
+          "action": "commented_broken_line",
+          "orig": "def try_parse(s):"
+        },
+        {
+          "line": 9,
+          "action": "commented_broken_line",
+          "orig": "    try:"
+        },
+        {
+          "line": 16,
+          "action": "commented_broken_line",
+          "orig": "            if y < 1950:"
+        },
+        {
+          "line": 19,
+          "action": "commented_broken_line",
+          "orig": "    except Exception as e:"
+        },
+        {
+          "line": 26,
+          "action": "commented_broken_line",
+          "orig": "for i, r in sample.iterrows():"
+        },
+        {
+          "line": 38,
+          "action": "commented_broken_line",
+          "orig": "if n_parsed:"
+        },
+        {
+          "line": 43,
+          "action": "commented_broken_line",
+          "orig": "else:"
+        },
+        {
+          "line": 49,
+          "action": "commented_broken_line",
+          "orig": "for v in failed:"
+        }
+      ]
+    },
+    {
+      "path": "audit_fishhead_all.py",
+      "orig_hash": "f7742ceef5d353b89399a97513cf46999c3483d335769e16468a5fa111390fe3",
+      "post_hash": "8f28fcaff7a420545011d1181b39f41fed982860087b179aa69f64d15ba850ad",
+      "bak": "audit_fishhead_all.py.bak.20251104054136",
+      "actions": [
+        {
+          "line": 19,
+          "action": "commented_broken_line",
+          "orig": "def make_windows(X, y, window=128):"
+        },
+        {
+          "line": 22,
+          "action": "commented_broken_line",
+          "orig": "    for i in range(n_samples - window):"
+        },
+        {
+          "line": 39,
+          "action": "commented_broken_line",
+          "orig": "if not model_files:"
+        },
+        {
+          "line": 43,
+          "action": "commented_broken_line",
+          "orig": "for fname in model_files:"
+        }
+      ]
+    },
+    {
+      "path": "bootstrap_ho_paths_and_patch.py",
+      "orig_hash": "bf06a3ab70a7b334ce386412b9212bfecf9a51a48248821816bb0913d7bd4c24",
+      "post_hash": "e4e20329e4f89e3be4524c787d9c07e42cb04af395d7befa52066a3c86ba140e",
+      "bak": "bootstrap_ho_paths_and_patch.py.bak.20251104054136",
+      "actions": [
+        {
+          "line": 12,
+          "action": "commented_broken_line",
+          "orig": "def check_files_exist():"
+        },
+        {
+          "line": 13,
+          "action": "commented_broken_line",
+          "orig": "    for f in [train_path, val_path, test_path]:"
+        },
+        {
+          "line": 14,
+          "action": "commented_broken_line",
+          "orig": "        if not os.path.exists(f):"
+        }
+      ]
+    },
+    {
+      "path": "bottom_block.py",
+      "orig_hash": "3cfaad79ec120719a82f9598dc70bd126560697757e2f5fd885c25367cace2a8",
+      "post_hash": "2c70dc42c0bcfca22e4255bd0c17122343e785f8168572a93053da4bd58a1f77",
+      "bak": "bottom_block.py.bak.20251104054136",
+      "actions": [
+        {
+          "line": 1,
+          "action": "commented_broken_line",
+          "orig": "if __name__ == \"__main__\":"
+        }
+      ]
+    },
+    {
+      "path": "check_shapes_and_samples.py",
+      "orig_hash": "7d7b60cc9b31b37077bacc837e940043552c5bb6a2a22112e4c3ef37b2c67866",
+      "post_hash": "2aef7670d78927533d1ebc01ff652ec832840e673a5a20c6523a109511f82bc1",
+      "bak": "check_shapes_and_samples.py.bak.20251104054136",
+      "actions": [
+        {
+          "line": 30,
+          "action": "commented_broken_line",
+          "orig": "def safe_load_latest_model(base_dir):"
+        },
+        {
+          "line": 33,
+          "action": "commented_broken_line",
+          "orig": "    if not files:"
+        },
+        {
+          "line": 35,
+          "action": "commented_broken_line",
+          "orig": "    try:"
+        },
+        {
+          "line": 37,
+          "action": "commented_broken_line",
+          "orig": "    except Exception:"
+        },
+        {
+          "line": 41,
+          "action": "commented_broken_line",
+          "orig": "if model is None:"
+        },
+        {
+          "line": 43,
+          "action": "commented_broken_line",
+          "orig": "else:"
+        }
+      ]
+    },
+    {
+      "path": "cleanup_fix.py",
+      "orig_hash": "c3202d68ad11b8c99a2a8335aea7294cc412e1e13afb6dcf9e3b9598adfd66b5",
+      "post_hash": "6841fb18003fddfb75080e1ed70944847c84e480f88b00d1fd94713ac775de47",
+      "bak": "cleanup_fix.py.bak.20251104054136",
+      "actions": [
+        {
+          "line": 11,
+          "action": "commented_broken_line",
+          "orig": "for dirpath,dirs,files in os.walk(root):"
+        },
+        {
+          "line": 12,
+          "action": "commented_broken_line",
+          "orig": "    if any(p in dirpath.lower() for p in ['.git', 'venv', 'env', 'build', '__pycache__']):"
+        },
+        {
+          "line": 14,
+          "action": "commented_broken_line",
+          "orig": "    for f in files:"
+        },
+        {
+          "line": 15,
+          "action": "commented_broken_line",
+          "orig": "        if f.endswith('.py'):"
+        },
+        {
+          "line": 18,
+          "action": "commented_broken_line",
+          "orig": "for path in py_files:"
+        },
+        {
+          "line": 19,
+          "action": "commented_broken_line",
+          "orig": "    try:"
+        },
+        {
+          "line": 20,
+          "action": "commented_broken_line",
+          "orig": "        with io.open(path,'rb') as fh:"
+        },
+        {
+          "line": 31,
+          "action": "commented_broken_line",
+          "orig": "        for i,l in enumerate(lines):"
+        },
+        {
+          "line": 33,
+          "action": "commented_broken_line",
+          "orig": "            if (stripped.startswith('(') or ('temporary' in stripped and not stripped.startswith('#')) or re.match(r'^[^#\\n]*\\:\\s*$', stripped)):"
+        },
+        {
+          "line": 37,
+          "action": "commented_broken_line",
+          "orig": "            else:"
+        },
+        {
+          "line": 39,
+          "action": "commented_broken_line",
+          "orig": "                if m:"
+        },
+        {
+          "line": 43,
+          "action": "commented_broken_line",
+          "orig": "                    if target != n:"
+        },
+        {
+          "line": 48,
+          "action": "commented_broken_line",
+          "orig": "        if changed:"
+        },
+        {
+          "line": 50,
+          "action": "commented_broken_line",
+          "orig": "            with io.open(bak,'wb') as fh:"
+        },
+        {
+          "line": 52,
+          "action": "commented_broken_line",
+          "orig": "            with io.open(path,'w',encoding='utf-8') as fh:"
+        },
+        {
+          "line": 56,
+          "action": "commented_broken_line",
+          "orig": "        else:"
+        },
+        {
+          "line": 58,
+          "action": "commented_broken_line",
+          "orig": "    except Exception as e:"
+        },
+        {
+          "line": 62,
+          "action": "commented_broken_line",
+          "orig": "with io.open(mf,'w',encoding='utf-8') as fh:"
+        },
+        {
+          "line": 68,
+          "action": "commented_broken_line",
+          "orig": "for f in manifest['files']:"
+        },
+        {
+          "line": 70,
+          "action": "commented_broken_line",
+          "orig": "    try:"
+        },
+        {
+          "line": 72,
+          "action": "commented_broken_line",
+          "orig": "    except Exception as e:"
+        },
+        {
+          "line": 75,
+          "action": "commented_broken_line",
+          "orig": "if failures:"
+        },
+        {
+          "line": 77,
+          "action": "commented_broken_line",
+          "orig": "    for fr in failures:"
+        },
+        {
+          "line": 80,
+          "action": "commented_broken_line",
+          "orig": "else:"
+        }
+      ]
+    },
+    {
+      "path": "clean_and_patch.py",
+      "orig_hash": "c7501c46b1a7f7ebc6f9c56cf7e3434c710eb6b2baac9a655ec90518404d224e",
+      "post_hash": "96585507273df7dc5073651a5e3c504115b86f8e2296eaf72aa56f8385ce4c9b",
+      "bak": "clean_and_patch.py.bak.20251104054136",
+      "actions": [
+        {
+          "line": 3,
+          "action": "commented_broken_line",
+          "orig": "with io.open(fname, \"r\", encoding=\"utf-8\") as f:"
+        },
+        {
+          "line": 16,
+          "action": "commented_broken_line",
+          "orig": "insert_line = \"\\\\1\\n# Audit linear adjust (temporary): scale preds to target distribution\\ny_pred = y_pred * 0.040473742800370395 + -0.6212534896704118\\n\""
+        },
+        {
+          "line": 18,
+          "action": "commented_broken_line",
+          "orig": "for pat in patterns:"
+        },
+        {
+          "line": 20,
+          "action": "commented_broken_line",
+          "orig": "    if n:"
+        },
+        {
+          "line": 24,
+          "action": "commented_broken_line",
+          "orig": "if not patched:"
+        },
+        {
+          "line": 26,
+          "action": "commented_broken_line",
+          "orig": "else:"
+        },
+        {
+          "line": 27,
+          "action": "commented_broken_line",
+          "orig": "    with io.open(fname, \"w\", encoding=\"utf-8\") as f:"
+        }
+      ]
+    },
+    {
+      "path": "clean_file.py",
+      "orig_hash": "eca12c5fc58a0420aaf495bc04c7a49c9ec6fd66818993986185e533d1e4351c",
+      "post_hash": "eca12c5fc58a0420aaf495bc04c7a49c9ec6fd66818993986185e533d1e4351c",
+      "actions": []
+    },
+    {
+      "path": "compute_metrics.py",
+      "orig_hash": "8927279bba1c1f8f7921404eab62aef30c0f671e4f0f86e02245b1d4445330f9",
+      "post_hash": "8927279bba1c1f8f7921404eab62aef30c0f671e4f0f86e02245b1d4445330f9",
+      "actions": []
+    },
+    {
+      "path": "Default.py",
+      "orig_hash": "f9774492947de9305e6f93c69980887f2aedd0dfb930c74afcf6f0ea8ff767bc",
+      "post_hash": "2598481dce471ce01f0eb5e6d313577bd137912ee9a1af6c456c1ef172f66ce7",
+      "bak": "Default.py.bak.20251104054136",
+      "actions": [
+        {
+          "line": 42,
+          "action": "commented_broken_line",
+          "orig": "def sha256_str(s: str) -> str:"
+        },
+        {
+          "line": 45,
+          "action": "commented_broken_line",
+          "orig": "def write_json(path: str, obj: dict):"
+        },
+        {
+          "line": 46,
+          "action": "commented_broken_line",
+          "orig": "    with open(path, \"w\") as f:"
+        },
+        {
+          "line": 49,
+          "action": "commented_broken_line",
+          "orig": "def now_utc_iso() -> str:"
+        },
+        {
+          "line": 52,
+          "action": "commented_broken_line",
+          "orig": "def metrics_mae_rmse(y_true, y_pred):"
+        },
+        {
+          "line": 58,
+          "action": "commented_broken_line",
+          "orig": "def fisheye_encoder(seq_in):"
+        },
+        {
+          "line": 60,
+          "action": "normalize_indent",
+          "orig_leading_spaces": 21,
+          "new_leading_spaces": 20
+        },
+        {
+          "line": 68,
+          "action": "normalize_indent",
+          "orig_leading_spaces": 37,
+          "new_leading_spaces": 36
+        },
+        {
+          "line": 79,
+          "action": "commented_broken_line",
+          "orig": "def build_masked_autoencoder():"
+        },
+        {
+          "line": 85,
+          "action": "commented_broken_line",
+          "orig": "def build_prob_forecaster():"
+        },
+        {
+          "line": 91,
+          "action": "commented_broken_line",
+          "orig": "    for w in MLP_WIDTHS:"
+        },
+        {
+          "line": 99,
+          "action": "commented_broken_line",
+          "orig": "def nll_gaussian(y_true, y_pred):"
+        },
+        {
+          "line": 106,
+          "action": "commented_broken_line",
+          "orig": "def make_synth_ohlc(N, T, vol_kernel=VOL_KERNEL):"
+        },
+        {
+          "line": 111,
+          "action": "commented_broken_line",
+          "orig": "    for i in range(N):"
+        },
+        {
+          "line": 126,
+          "action": "commented_broken_line",
+          "orig": "def make_mask_with_edge_emphasis(seqs, base_ratio=MASK_RATIO):"
+        },
+        {
+          "line": 136,
+          "action": "commented_broken_line",
+          "orig": "def pretrain_autoencoder(mae_model, seqs):"
+        },
+        {
+          "line": 145,
+          "action": "normalize_indent",
+          "orig_leading_spaces": 25,
+          "new_leading_spaces": 24
+        },
+        {
+          "line": 148,
+          "action": "commented_broken_line",
+          "orig": "def finetune_prob_forecaster(model, X_seq, y_next):"
+        },
+        {
+          "line": 154,
+          "action": "normalize_indent",
+          "orig_leading_spaces": 21,
+          "new_leading_spaces": 20
+        },
+        {
+          "line": 158,
+          "action": "commented_broken_line",
+          "orig": "def persistence_baseline_metrics(X_seq, y_next):"
+        },
+        {
+          "line": 163,
+          "action": "commented_broken_line",
+          "orig": "def sample_gaussian(model, X_seq, n_samples=50):"
+        },
+        {
+          "line": 180,
+          "action": "commented_broken_line",
+          "orig": "if __name__ == \"__main__\":"
+        }
+      ]
+    },
+    {
+      "path": "deterministic_inference.py",
+      "orig_hash": "4eb6f872c08b53b39996e045562b21654f9e79c62fdb8120abb914af84ddd209",
+      "post_hash": "b094159802548c1faf142931a58fab91ee835b363fd4608a6747f79f6c9f3cf4",
+      "bak": "deterministic_inference.py.bak.20251104054136",
+      "actions": [
+        {
+          "line": 7,
+          "action": "commented_broken_line",
+          "orig": "def ensure_lags(df: pd.DataFrame, base_cols, max_lag: int):"
+        },
+        {
+          "line": 8,
+          "action": "commented_broken_line",
+          "orig": "    for col in base_cols:"
+        },
+        {
+          "line": 9,
+          "action": "commented_broken_line",
+          "orig": "        if col not in df.columns:"
+        },
+        {
+          "line": 11,
+          "action": "commented_broken_line",
+          "orig": "        for k in range(1, max_lag + 1):"
+        },
+        {
+          "line": 13,
+          "action": "commented_broken_line",
+          "orig": "            if lag_col not in df.columns:"
+        },
+        {
+          "line": 17,
+          "action": "commented_broken_line",
+          "orig": "def ensure_target(df: pd.DataFrame, base_close=\"Close\", target_col=\"Close_t+1\"):"
+        },
+        {
+          "line": 18,
+          "action": "commented_broken_line",
+          "orig": "    if target_col not in df.columns:"
+        },
+        {
+          "line": 19,
+          "action": "commented_broken_line",
+          "orig": "        if base_close not in df.columns:"
+        },
+        {
+          "line": 24,
+          "action": "commented_broken_line",
+          "orig": "def chronological_split(X, y, test_frac=0.15):"
+        },
+        {
+          "line": 29,
+          "action": "commented_broken_line",
+          "orig": "def main():"
+        },
+        {
+          "line": 55,
+          "action": "commented_broken_line",
+          "orig": "    if missing:"
+        },
+        {
+          "line": 75,
+          "action": "commented_broken_line",
+          "orig": "if __name__ == \"__main__\":"
+        }
+      ]
+    },
+    {
+      "path": "diag_features.py",
+      "orig_hash": "6f80539cd773fcb3b7133f3f85eef9fa709ebef6fdff8dd098a490cf93c956ab",
+      "post_hash": "6f80539cd773fcb3b7133f3f85eef9fa709ebef6fdff8dd098a490cf93c956ab",
+      "actions": []
+    },
+    {
+      "path": "diag_scale_vs_target.py",
+      "orig_hash": "09bc1de94185b6b87fcbdff708ec3c0911603b20def6125ccc3b0fefd7435d8d",
+      "post_hash": "9011d384d53e31e82179e45ec3074d430a3b4f3c2e386626797525672179f508",
+      "bak": "diag_scale_vs_target.py.bak.20251104054136",
+      "actions": [
+        {
+          "line": 14,
+          "action": "commented_broken_line",
+          "orig": "if mask.sum()>2:"
+        },
+        {
+          "line": 18,
+          "action": "commented_broken_line",
+          "orig": "else:"
+        }
+      ]
+    },
+    {
+      "path": "diag_scale_vs_target_afterlags.py",
+      "orig_hash": "1072d1c62e846d9cc4eb544247c6c0f6db27b615c9b4a89d2219f2c302de068c",
+      "post_hash": "77164eca9973af5c1ac7f9215b33e999553831b516cccff07c808789a0c738fa",
+      "bak": "diag_scale_vs_target_afterlags.py.bak.20251104054136",
+      "actions": [
+        {
+          "line": 11,
+          "action": "commented_broken_line",
+          "orig": "if mask.sum()>2:"
+        },
+        {
+          "line": 14,
+          "action": "commented_broken_line",
+          "orig": "else:"
+        }
+      ]
+    },
+    {
+      "path": "diag_target.py",
+      "orig_hash": "6cd4bfc6e8a7a66b54121af86f3adb5eaae5f96cebe2be2c7b262cfcf07a7908",
+      "post_hash": "6cd4bfc6e8a7a66b54121af86f3adb5eaae5f96cebe2be2c7b262cfcf07a7908",
+      "actions": []
+    },
+    {
+      "path": "fishhead_demo.py",
+      "orig_hash": "d3d02d62ef85d1287ea0c64a05da9b39736e18fc4fd2d2c5db61e2f9c76705da",
+      "post_hash": "ddd3534655e72170aacf334acfb563cb60af0e095b660dadc5d615f5c205acbf",
+      "bak": "fishhead_demo.py.bak.20251104054136",
+      "actions": [
+        {
+          "line": 17,
+          "action": "commented_broken_line",
+          "orig": "def generate_synthetic_series(n_steps=500, window=8):"
+        },
+        {
+          "line": 19,
+          "action": "commented_broken_line",
+          "orig": "    Creates a synthetic OHLC-like series with:"
+        },
+        {
+          "line": 26,
+          "action": "commented_broken_line",
+          "orig": "    for t in range(1, n_steps):"
+        },
+        {
+          "line": 38,
+          "action": "commented_broken_line",
+          "orig": "    for i in range(window, len(prices)-1):"
+        },
+        {
+          "line": 45,
+          "action": "commented_broken_line",
+          "orig": "class FishheadANN(nn.Module):"
+        },
+        {
+          "line": 46,
+          "action": "commented_broken_line",
+          "orig": "    def __init__(self, input_dim=8, hidden_dim=64, dropout=0.2):"
+        },
+        {
+          "line": 58,
+          "action": "commented_broken_line",
+          "orig": "    def forward(self, x):"
+        },
+        {
+          "line": 73,
+          "action": "commented_broken_line",
+          "orig": "if __name__ == \"__main__\":"
+        }
+      ]
+    },
+    {
+      "path": "fishhead_financial_synthetic_audit_v1_0_20251029.py",
+      "orig_hash": "ce52665898467f605a23088f885a196d322f95ab89c4294562287f7ad0f7f5ba",
+      "post_hash": "f80e15d6ffbb19043f51b6f37e0ed63503c3a72d583c94f570c5849dfaef0268",
+      "bak": "fishhead_financial_synthetic_audit_v1_0_20251029.py.bak.20251104054136",
+      "actions": [
+        {
+          "line": 41,
+          "action": "commented_broken_line",
+          "orig": "def set_seeds(seed=SEED):"
+        },
+        {
+          "line": 54,
+          "action": "commented_broken_line",
+          "orig": "):"
+        },
+        {
+          "line": 59,
+          "action": "commented_broken_line",
+          "orig": "    for t in range(1, n_steps):"
+        },
+        {
+          "line": 60,
+          "action": "commented_broken_line",
+          "orig": "        if t % 250 == 0:"
+        },
+        {
+          "line": 70,
+          "action": "commented_broken_line",
+          "orig": "def make_dataset_from_prices(prices: np.ndarray, window=WINDOW, event_rel_threshold=EVENT_REL_THRESHOLD):"
+        },
+        {
+          "line": 72,
+          "action": "commented_broken_line",
+          "orig": "    for i in range(window, len(prices)-5):"
+        },
+        {
+          "line": 85,
+          "action": "commented_broken_line",
+          "orig": "def contiguous_splits(n, fracs=(TRAIN_FRAC, VAL_FRAC, TEST_FRAC), purge=PURGE_STEPS, embargo=EMBARGO_STEPS):"
+        },
+        {
+          "line": 97,
+          "action": "commented_broken_line",
+          "orig": "class FishheadANN(nn.Module):"
+        },
+        {
+          "line": 98,
+          "action": "commented_broken_line",
+          "orig": "    def __init__(self, input_dim=WINDOW, hidden=96, dropout=0.1):"
+        },
+        {
+          "line": 109,
+          "action": "commented_broken_line",
+          "orig": "    def forward(self, x):"
+        },
+        {
+          "line": 120,
+          "action": "commented_broken_line",
+          "orig": "def quantile_loss(preds, target, qs=[0.1,0.5,0.9]):"
+        },
+        {
+          "line": 122,
+          "action": "commented_broken_line",
+          "orig": "    for i,q in enumerate(qs):"
+        },
+        {
+          "line": 130,
+          "action": "commented_broken_line",
+          "orig": "def coverage_rate(q_lo, q_hi, y_true):"
+        },
+        {
+          "line": 134,
+          "action": "commented_broken_line",
+          "orig": "def masked_point_metrics(y_true, y_pred, mask, fallback):"
+        },
+        {
+          "line": 144,
+          "action": "commented_broken_line",
+          "orig": "def run():"
+        },
+        {
+          "line": 149,
+          "action": "commented_broken_line",
+          "orig": "    (t0,t1), (v0,v1), (s0,s1) = contiguous_splits(n)"
+        },
+        {
+          "line": 159,
+          "action": "commented_broken_line",
+          "orig": "    for epoch in range(epochs):"
+        },
+        {
+          "line": 169,
+          "action": "commented_broken_line",
+          "orig": "        if (epoch+1) % 10 == 0:"
+        },
+        {
+          "line": 173,
+          "action": "commented_broken_line",
+          "orig": "    with torch.no_grad():"
+        },
+        {
+          "line": 204,
+          "action": "commented_broken_line",
+          "orig": "    def regime_metrics(y_true, y_pred, gate_scores, gate_thresh, fallback):"
+        },
+        {
+          "line": 280,
+          "action": "commented_broken_line",
+          "orig": "    with open(runlog_path, \"w\") as f:"
+        },
+        {
+          "line": 318,
+          "action": "commented_broken_line",
+          "orig": "if __name__ == \"__main__\":"
+        }
+      ]
+    },
+    {
+      "path": "fishhead_financial_synthetic_demo.py",
+      "orig_hash": "ad037dee83e2e3f610757299df11616d9052388e21160ff87c529789a1a55aa6",
+      "post_hash": "dfb01a0355fcb6c4fa4bc56fcf10d8a543555bbc4d2728990edb6fbbdb49e26f",
+      "bak": "fishhead_financial_synthetic_demo.py.bak.20251104054136",
+      "actions": [
+        {
+          "line": 43,
+          "action": "commented_broken_line",
+          "orig": "):"
+        },
+        {
+          "line": 47,
+          "action": "commented_broken_line",
+          "orig": "    for t in range(1, n_steps):"
+        },
+        {
+          "line": 48,
+          "action": "commented_broken_line",
+          "orig": "        if t % 250 == 0:"
+        },
+        {
+          "line": 60,
+          "action": "commented_broken_line",
+          "orig": "    for i in range(window, len(prices)-5):"
+        },
+        {
+          "line": 75,
+          "action": "commented_broken_line",
+          "orig": "class FishheadANN(nn.Module):"
+        },
+        {
+          "line": 76,
+          "action": "commented_broken_line",
+          "orig": "    def __init__(self, input_dim=8, hidden_dim=64, dropout=0.2):"
+        },
+        {
+          "line": 88,
+          "action": "commented_broken_line",
+          "orig": "    def forward(self, x):"
+        },
+        {
+          "line": 103,
+          "action": "commented_broken_line",
+          "orig": "def quantile_loss(preds, target, quantiles=[0.1,0.5,0.9]):"
+        },
+        {
+          "line": 105,
+          "action": "commented_broken_line",
+          "orig": "    for i,q in enumerate(quantiles):"
+        },
+        {
+          "line": 111,
+          "action": "commented_broken_line",
+          "orig": "if __name__ == \"__main__\":"
+        },
+        {
+          "line": 120,
+          "action": "commented_broken_line",
+          "orig": "    for epoch in range(20):"
+        },
+        {
+          "line": 131,
+          "action": "commented_broken_line",
+          "orig": "        if (epoch+1) % 5 == 0:"
+        },
+        {
+          "line": 136,
+          "action": "commented_broken_line",
+          "orig": "    with torch.no_grad():"
+        }
+      ]
+    },
+    {
+      "path": "fishhead_financial_synthetic_demo_with_indicators.py",
+      "orig_hash": "fbd5b509258f744f5134fbc617765853ffa3c3b8df9a3ffdde2f6b63cbaae228",
+      "post_hash": "b1c37370b623c97409389412cc0fc7bbed2797b132b57295b07099e05bd44252",
+      "bak": "fishhead_financial_synthetic_demo_with_indicators.py.bak.20251104054136",
+      "actions": [
+        {
+          "line": 35,
+          "action": "commented_broken_line",
+          "orig": "):"
+        },
+        {
+          "line": 39,
+          "action": "commented_broken_line",
+          "orig": "    for t in range(1, n_steps):"
+        },
+        {
+          "line": 40,
+          "action": "commented_broken_line",
+          "orig": "        if t % 250 == 0:"
+        },
+        {
+          "line": 52,
+          "action": "commented_broken_line",
+          "orig": "    for i in range(window, len(prices)-5):"
+        },
+        {
+          "line": 67,
+          "action": "commented_broken_line",
+          "orig": "class FishheadANN(nn.Module):"
+        },
+        {
+          "line": 68,
+          "action": "commented_broken_line",
+          "orig": "    def __init__(self, input_dim=8, hidden_dim=64, dropout=0.2):"
+        },
+        {
+          "line": 80,
+          "action": "commented_broken_line",
+          "orig": "    def forward(self, x):"
+        },
+        {
+          "line": 95,
+          "action": "commented_broken_line",
+          "orig": "def quantile_loss(preds, target, quantiles=[0.1,0.5,0.9]):"
+        },
+        {
+          "line": 97,
+          "action": "commented_broken_line",
+          "orig": "    for i,q in enumerate(quantiles):"
+        },
+        {
+          "line": 103,
+          "action": "commented_broken_line",
+          "orig": "if __name__ == \"__main__\":"
+        },
+        {
+          "line": 112,
+          "action": "commented_broken_line",
+          "orig": "    for epoch in range(20):"
+        },
+        {
+          "line": 123,
+          "action": "commented_broken_line",
+          "orig": "        if (epoch+1) % 5 == 0:"
+        },
+        {
+          "line": 128,
+          "action": "commented_broken_line",
+          "orig": "    with torch.no_grad():"
+        },
+        {
+          "line": 163,
+          "action": "commented_broken_line",
+          "orig": "    with open(\"fishhead_synthetic_manifest.json\", \"w\") as f:"
+        },
+        {
+          "line": 167,
+          "action": "commented_broken_line",
+          "orig": "    with open(\"fishhead_synthetic_manifest.json\", \"w\") as f:"
+        }
+      ]
+    },
+    {
+      "path": "fishhead_financial_synthetic_full_demo.py",
+      "orig_hash": "2e9f78fd6a97f411a247ff83b95ebf2e040152fa48cacea01ea4f9d4e3779d72",
+      "post_hash": "882c1dffa8b6f35dc27b140a7efc5f3c909f5a0c70c21e6f390ea182900f66b7",
+      "bak": "fishhead_financial_synthetic_full_demo.py.bak.20251104054136",
+      "actions": [
+        {
+          "line": 41,
+          "action": "commented_broken_line",
+          "orig": "):"
+        },
+        {
+          "line": 45,
+          "action": "commented_broken_line",
+          "orig": "    for t in range(1, n_steps):"
+        },
+        {
+          "line": 46,
+          "action": "commented_broken_line",
+          "orig": "        if t % 250 == 0:"
+        },
+        {
+          "line": 58,
+          "action": "commented_broken_line",
+          "orig": "    for i in range(window, len(prices)-5):"
+        },
+        {
+          "line": 73,
+          "action": "commented_broken_line",
+          "orig": "class FishheadANN(nn.Module):"
+        },
+        {
+          "line": 74,
+          "action": "commented_broken_line",
+          "orig": "    def __init__(self, input_dim=8, hidden_dim=64, dropout=0.2):"
+        },
+        {
+          "line": 86,
+          "action": "commented_broken_line",
+          "orig": "    def forward(self, x):"
+        },
+        {
+          "line": 101,
+          "action": "commented_broken_line",
+          "orig": "def quantile_loss(preds, target, quantiles=[0.1,0.5,0.9]):"
+        },
+        {
+          "line": 103,
+          "action": "commented_broken_line",
+          "orig": "    for i,q in enumerate(quantiles):"
+        },
+        {
+          "line": 109,
+          "action": "commented_broken_line",
+          "orig": "if __name__ == \"__main__\":"
+        },
+        {
+          "line": 118,
+          "action": "commented_broken_line",
+          "orig": "    for epoch in range(20):"
+        },
+        {
+          "line": 129,
+          "action": "commented_broken_line",
+          "orig": "        if (epoch+1) % 5 == 0:"
+        },
+        {
+          "line": 134,
+          "action": "commented_broken_line",
+          "orig": "    with torch.no_grad():"
+        }
+      ]
+    },
+    {
+      "path": "fishhead_ho_audit_v5_1.py",
+      "orig_hash": "2447ceb40e68579c0c7a2afe67527a44820904e7fcf419b2b62ab865962d2762",
+      "post_hash": "d7d6cd5b6db9bf79a2e0b0c000c2224330ef8d169f4003fb62e204d0abb4ec53",
+      "bak": "fishhead_ho_audit_v5_1.py.bak.20251104054136",
+      "actions": [
+        {
+          "line": 43,
+          "action": "commented_broken_line",
+          "orig": "def set_seeds(seed=SEED):"
+        },
+        {
+          "line": 46,
+          "action": "commented_broken_line",
+          "orig": "def load_ho_csv(path=CSV_PATH):"
+        },
+        {
+          "line": 47,
+          "action": "commented_broken_line",
+          "orig": "    if not os.path.exists(path):"
+        },
+        {
+          "line": 56,
+          "action": "commented_broken_line",
+          "orig": "def make_dataset_from_close(close: np.ndarray, window=WINDOW, event_thresh=EVENT_REL_THRESHOLD):"
+        },
+        {
+          "line": 64,
+          "action": "commented_broken_line",
+          "orig": "    for i in range(window, len(close)-1):"
+        },
+        {
+          "line": 78,
+          "action": "commented_broken_line",
+          "orig": "def contiguous_splits(n, fracs=(TRAIN_FRAC, VAL_FRAC, TEST_FRAC), purge=PURGE_STEPS, embargo=EMBARGO_STEPS):"
+        },
+        {
+          "line": 90,
+          "action": "commented_broken_line",
+          "orig": "class FishheadANN(nn.Module):"
+        },
+        {
+          "line": 91,
+          "action": "commented_broken_line",
+          "orig": "    def __init__(self, input_dim=WINDOW, hidden=96, dropout=0.1):"
+        },
+        {
+          "line": 102,
+          "action": "commented_broken_line",
+          "orig": "    def forward(self, x):"
+        },
+        {
+          "line": 113,
+          "action": "commented_broken_line",
+          "orig": "def quantile_loss(preds, target, qs=[0.1,0.5,0.9]):"
+        },
+        {
+          "line": 115,
+          "action": "commented_broken_line",
+          "orig": "    for i,q in enumerate(qs):"
+        },
+        {
+          "line": 123,
+          "action": "commented_broken_line",
+          "orig": "def coverage_rate(q_lo, q_hi, y_true):"
+        },
+        {
+          "line": 127,
+          "action": "commented_broken_line",
+          "orig": "def mape_safe(y_true, y_pred, eps=1e-6):"
+        },
+        {
+          "line": 135,
+          "action": "commented_broken_line",
+          "orig": "def run():"
+        },
+        {
+          "line": 143,
+          "action": "commented_broken_line",
+          "orig": "    (t0,t1), (v0,v1), (s0,s1) = contiguous_splits(n)"
+        },
+        {
+          "line": 155,
+          "action": "commented_broken_line",
+          "orig": "    for epoch in range(epochs):"
+        },
+        {
+          "line": 165,
+          "action": "commented_broken_line",
+          "orig": "        if (epoch+1) % 10 == 0:"
+        },
+        {
+          "line": 170,
+          "action": "commented_broken_line",
+          "orig": "    with torch.no_grad():"
+        },
+        {
+          "line": 275,
+          "action": "normalize_indent",
+          "orig_leading_spaces": 27,
+          "new_leading_spaces": 24
+        },
+        {
+          "line": 276,
+          "action": "normalize_indent",
+          "orig_leading_spaces": 15,
+          "new_leading_spaces": 12
+        },
+        {
+          "line": 288,
+          "action": "commented_broken_line",
+          "orig": "    with open(runlog_path, \"w\") as f:"
+        },
+        {
+          "line": 333,
+          "action": "commented_broken_line",
+          "orig": "if __name__ == \"__main__\":"
+        }
+      ]
+    },
+    {
+      "path": "fishhead_ho_audit_v5_2_20251029.py",
+      "orig_hash": "835d19695d58edda825c37dbcb234ab8438b7217382c8066a7604eddf59f18f7",
+      "post_hash": "bdd85ecdafde7762591365e8f0824dbf68dec6f966edc334ead2b6ef9060f81a",
+      "bak": "fishhead_ho_audit_v5_2_20251029.py.bak.20251104054136",
+      "actions": [
+        {
+          "line": 43,
+          "action": "commented_broken_line",
+          "orig": "def set_seeds(seed=SEED):"
+        },
+        {
+          "line": 46,
+          "action": "commented_broken_line",
+          "orig": "def load_ho_csv(path=CSV_PATH):"
+        },
+        {
+          "line": 54,
+          "action": "commented_broken_line",
+          "orig": "def make_dataset_from_close(close: np.ndarray, window=WINDOW, event_thresh=EVENT_REL_THRESHOLD):"
+        },
+        {
+          "line": 56,
+          "action": "commented_broken_line",
+          "orig": "    for i in range(window, len(close)-1):"
+        },
+        {
+          "line": 70,
+          "action": "commented_broken_line",
+          "orig": "def contiguous_splits(n, fracs=(TRAIN_FRAC, VAL_FRAC, TEST_FRAC), purge=PURGE_STEPS, embargo=EMBARGO_STEPS):"
+        },
+        {
+          "line": 82,
+          "action": "commented_broken_line",
+          "orig": "class FishheadANN(nn.Module):"
+        },
+        {
+          "line": 83,
+          "action": "commented_broken_line",
+          "orig": "    def __init__(self, input_dim=WINDOW, hidden=96, dropout=0.1):"
+        },
+        {
+          "line": 94,
+          "action": "commented_broken_line",
+          "orig": "    def forward(self, x):"
+        },
+        {
+          "line": 105,
+          "action": "commented_broken_line",
+          "orig": "def quantile_loss(preds, target, qs=[0.1,0.5,0.9]):"
+        },
+        {
+          "line": 107,
+          "action": "commented_broken_line",
+          "orig": "    for i,q in enumerate(qs):"
+        },
+        {
+          "line": 115,
+          "action": "commented_broken_line",
+          "orig": "def coverage_rate(q_lo, q_hi, y_true):"
+        },
+        {
+          "line": 119,
+          "action": "commented_broken_line",
+          "orig": "def mape_safe(y_true, y_pred, eps=1e-6):"
+        },
+        {
+          "line": 126,
+          "action": "commented_broken_line",
+          "orig": "def run():"
+        },
+        {
+          "line": 133,
+          "action": "commented_broken_line",
+          "orig": "    (t0,t1), (v0,v1), (s0,s1) = contiguous_splits(n)"
+        },
+        {
+          "line": 143,
+          "action": "commented_broken_line",
+          "orig": "    for epoch in range(epochs):"
+        },
+        {
+          "line": 153,
+          "action": "commented_broken_line",
+          "orig": "        if (epoch+1) % 10 == 0:"
+        },
+        {
+          "line": 157,
+          "action": "commented_broken_line",
+          "orig": "    with torch.no_grad():"
+        },
+        {
+          "line": 268,
+          "action": "commented_broken_line",
+          "orig": "    with open(runlog_path, \"w\") as f:"
+        },
+        {
+          "line": 307,
+          "action": "commented_broken_line",
+          "orig": "if __name__ == \"__main__\":"
+        }
+      ]
+    },
+    {
+      "path": "fishhead_ho_audit_v5_3_20251029.py",
+      "orig_hash": "ff73dcd708cb29c8289008d844353c3d576c640ed4e918128daa0708b636c689",
+      "post_hash": "692fecf5fa14ae053914ab304653cdcdbc3420f067d3b883f8219325f2151e80",
+      "bak": "fishhead_ho_audit_v5_3_20251029.py.bak.20251104054136",
+      "actions": [
+        {
+          "line": 43,
+          "action": "commented_broken_line",
+          "orig": "def set_seeds(seed=SEED):"
+        },
+        {
+          "line": 46,
+          "action": "commented_broken_line",
+          "orig": "def load_ho_csv(path=CSV_PATH):"
+        },
+        {
+          "line": 54,
+          "action": "commented_broken_line",
+          "orig": "def make_dataset_from_close(close: np.ndarray, window=WINDOW, event_thresh=EVENT_REL_THRESHOLD):"
+        },
+        {
+          "line": 56,
+          "action": "commented_broken_line",
+          "orig": "    for i in range(window, len(close)-1):"
+        },
+        {
+          "line": 68,
+          "action": "commented_broken_line",
+          "orig": "def contiguous_splits(n, fracs=(TRAIN_FRAC, VAL_FRAC, TEST_FRAC), purge=PURGE_STEPS, embargo=EMBARGO_STEPS):"
+        },
+        {
+          "line": 80,
+          "action": "commented_broken_line",
+          "orig": "class FishheadANN(nn.Module):"
+        },
+        {
+          "line": 81,
+          "action": "commented_broken_line",
+          "orig": "    def __init__(self, input_dim=WINDOW, hidden=96, dropout=0.1):"
+        },
+        {
+          "line": 92,
+          "action": "commented_broken_line",
+          "orig": "    def forward(self, x):"
+        },
+        {
+          "line": 103,
+          "action": "commented_broken_line",
+          "orig": "def quantile_loss(preds, target, qs=[0.1,0.5,0.9]):"
+        },
+        {
+          "line": 105,
+          "action": "commented_broken_line",
+          "orig": "    for i,q in enumerate(qs):"
+        },
+        {
+          "line": 113,
+          "action": "commented_broken_line",
+          "orig": "def coverage_rate(q_lo, q_hi, y_true):"
+        },
+        {
+          "line": 117,
+          "action": "commented_broken_line",
+          "orig": "def mape_safe(y_true, y_pred, eps=1e-6):"
+        },
+        {
+          "line": 121,
+          "action": "commented_broken_line",
+          "orig": "def masked_point_metrics(y_true, y_pred, mask, fallback):"
+        },
+        {
+          "line": 135,
+          "action": "commented_broken_line",
+          "orig": "def run():"
+        },
+        {
+          "line": 142,
+          "action": "commented_broken_line",
+          "orig": "    (t0,t1), (v0,v1), (s0,s1) = contiguous_splits(n)"
+        },
+        {
+          "line": 152,
+          "action": "commented_broken_line",
+          "orig": "    for epoch in range(epochs):"
+        },
+        {
+          "line": 162,
+          "action": "commented_broken_line",
+          "orig": "        if (epoch+1) % 10 == 0:"
+        },
+        {
+          "line": 166,
+          "action": "commented_broken_line",
+          "orig": "    with torch.no_grad():"
+        },
+        {
+          "line": 197,
+          "action": "commented_broken_line",
+          "orig": "    def regime_metrics(y_true, y_pred, gate_scores, gate_thresh, fallback):"
+        },
+        {
+          "line": 274,
+          "action": "commented_broken_line",
+          "orig": "    with open(runlog_path, \"w\") as f:"
+        },
+        {
+          "line": 300,
+          "action": "commented_broken_line",
+          "orig": "if __name__ == \"__main__\":"
+        }
+      ]
+    },
+    {
+      "path": "fishhead_ho_poc.py",
+      "orig_hash": "c1317f129fb424ed745fb765ec4c40431519879b3471457fab43a7c1b4a4497d",
+      "post_hash": "a9c6ce93512b61373ea8059c10707bf7d0d653fab98af35fcd7143b2e1a80ed2",
+      "bak": "fishhead_ho_poc.py.bak.20251104054136",
+      "actions": [
+        {
+          "line": 39,
+          "action": "commented_broken_line",
+          "orig": "def set_seeds(seed=SEED):"
+        },
+        {
+          "line": 42,
+          "action": "commented_broken_line",
+          "orig": "def load_ho_csv(path=CSV_PATH):"
+        },
+        {
+          "line": 50,
+          "action": "commented_broken_line",
+          "orig": "def make_dataset_from_close(close: np.ndarray, window=WINDOW, event_thresh=EVENT_REL_THRESHOLD):"
+        },
+        {
+          "line": 57,
+          "action": "commented_broken_line",
+          "orig": "    for i in range(window, len(close)-1):"
+        },
+        {
+          "line": 71,
+          "action": "commented_broken_line",
+          "orig": "def contiguous_splits(n, fracs=(TRAIN_FRAC, VAL_FRAC, TEST_FRAC), purge=PURGE_STEPS, embargo=EMBARGO_STEPS):"
+        },
+        {
+          "line": 84,
+          "action": "commented_broken_line",
+          "orig": "class FishheadANN(nn.Module):"
+        },
+        {
+          "line": 85,
+          "action": "commented_broken_line",
+          "orig": "    def __init__(self, input_dim=WINDOW, hidden=96, dropout=0.1):"
+        },
+        {
+          "line": 96,
+          "action": "commented_broken_line",
+          "orig": "    def forward(self, x):"
+        },
+        {
+          "line": 107,
+          "action": "commented_broken_line",
+          "orig": "def quantile_loss(preds, target, qs=[0.1,0.5,0.9]):"
+        },
+        {
+          "line": 109,
+          "action": "commented_broken_line",
+          "orig": "    for i,q in enumerate(qs):"
+        },
+        {
+          "line": 117,
+          "action": "commented_broken_line",
+          "orig": "def coverage_rate(q_lo, q_hi, y_true):"
+        },
+        {
+          "line": 121,
+          "action": "commented_broken_line",
+          "orig": "def run():"
+        },
+        {
+          "line": 129,
+          "action": "commented_broken_line",
+          "orig": "    (t0,t1), (v0,v1), (s0,s1) = contiguous_splits(n)"
+        },
+        {
+          "line": 141,
+          "action": "commented_broken_line",
+          "orig": "    for epoch in range(epochs):"
+        },
+        {
+          "line": 151,
+          "action": "commented_broken_line",
+          "orig": "        if (epoch+1) % 10 == 0:"
+        },
+        {
+          "line": 156,
+          "action": "commented_broken_line",
+          "orig": "    with torch.no_grad():"
+        },
+        {
+          "line": 263,
+          "action": "commented_broken_line",
+          "orig": "if __name__ == \"__main__\":"
+        }
+      ]
+    },
+    {
+      "path": "fishhead_ho_poc_split.py",
+      "orig_hash": "aedd4f34ffb3d6548b7e8a818243892a5739b3d6ea9fe4476ec2fbff50ac1357",
+      "post_hash": "0380b7664e3964768b4c26c87c5890bd28425d5d4145ebe1049d5768d54afd75",
+      "bak": "fishhead_ho_poc_split.py.bak.20251104054136",
+      "actions": [
+        {
+          "line": 5,
+          "action": "commented_broken_line",
+          "orig": "Features:"
+        },
+        {
+          "line": 12,
+          "action": "commented_broken_line",
+          "orig": "Usage:"
+        },
+        {
+          "line": 13,
+          "action": "normalize_indent",
+          "orig_leading_spaces": 2,
+          "new_leading_spaces": 0
+        },
+        {
+          "line": 54,
+          "action": "commented_broken_line",
+          "orig": "def ensure_outdir(outdir: Path) -> None:"
+        },
+        {
+          "line": 58,
+          "action": "commented_broken_line",
+          "orig": "def atomic_write(path: Path, content: str) -> None:"
+        },
+        {
+          "line": 61,
+          "action": "commented_broken_line",
+          "orig": "    with tmp.open(\"w\", encoding=\"utf-8\", newline=\"\") as fh:"
+        },
+        {
+          "line": 66,
+          "action": "commented_broken_line",
+          "orig": "def append_metrics_row(outpath: Path, rowdict: Dict[str, Any]) -> None:"
+        },
+        {
+          "line": 74,
+          "action": "commented_broken_line",
+          "orig": "    try:"
+        },
+        {
+          "line": 75,
+          "action": "commented_broken_line",
+          "orig": "        with tmp.open(\"w\", encoding=\"utf-8\", newline=\"\") as tf:"
+        },
+        {
+          "line": 77,
+          "action": "commented_broken_line",
+          "orig": "            if write_header:"
+        },
+        {
+          "line": 81,
+          "action": "commented_broken_line",
+          "orig": "        if write_header:"
+        },
+        {
+          "line": 83,
+          "action": "commented_broken_line",
+          "orig": "        else:"
+        },
+        {
+          "line": 84,
+          "action": "commented_broken_line",
+          "orig": "            with tmp.open(\"r\", encoding=\"utf-8\", newline=\"\") as tf, outpath.open(\"a\", encoding=\"utf-8\", newline=\"\") as df:"
+        },
+        {
+          "line": 87,
+          "action": "commented_broken_line",
+          "orig": "    except PermissionError:"
+        },
+        {
+          "line": 91,
+          "action": "commented_broken_line",
+          "orig": "        with fallback.open(\"a\", encoding=\"utf-8\", newline=\"\") as ff:"
+        },
+        {
+          "line": 93,
+          "action": "commented_broken_line",
+          "orig": "            if write_header_fb:"
+        },
+        {
+          "line": 96,
+          "action": "commented_broken_line",
+          "orig": "        try:"
+        },
+        {
+          "line": 98,
+          "action": "commented_broken_line",
+          "orig": "        except Exception:"
+        },
+        {
+          "line": 103,
+          "action": "commented_broken_line",
+          "orig": "def write_val_outputs(outpath: Path, rows: Iterable[Dict[str, Any]]) -> None:"
+        },
+        {
+          "line": 109,
+          "action": "commented_broken_line",
+          "orig": "    if not rows:"
+        },
+        {
+          "line": 117,
+          "action": "commented_broken_line",
+          "orig": "    with tmp.open(\"w\", encoding=\"utf-8\", newline=\"\") as tf:"
+        },
+        {
+          "line": 120,
+          "action": "commented_broken_line",
+          "orig": "        for r in rows:"
+        },
+        {
+          "line": 128,
+          "action": "commented_broken_line",
+          "orig": "class Predictor:"
+        },
+        {
+          "line": 136,
+          "action": "commented_broken_line",
+          "orig": "    def __init__(self, model_path: Optional[str] = None, device: str = \"cpu\", debug: bool = False):"
+        },
+        {
+          "line": 145,
+          "action": "commented_broken_line",
+          "orig": "    def _load_model(self) -> None:"
+        },
+        {
+          "line": 156,
+          "action": "commented_broken_line",
+          "orig": "    if not model_path_attr:"
+        },
+        {
+          "line": 168,
+          "action": "commented_broken_line",
+          "orig": "    try:"
+        },
+        {
+          "line": 169,
+          "action": "commented_broken_line",
+          "orig": "        if ext.lower() in (\".pt\", \".pth\"):"
+        },
+        {
+          "line": 173,
+          "action": "commented_broken_line",
+          "orig": "            if isinstance(ckpt, dict) and \"state_dict\" in ckpt:"
+        },
+        {
+          "line": 177,
+          "action": "commented_broken_line",
+          "orig": "            try:"
+        },
+        {
+          "line": 179,
+          "action": "commented_broken_line",
+          "orig": "            except Exception:"
+        },
+        {
+          "line": 181,
+          "action": "commented_broken_line",
+          "orig": "    except Exception as e_torch:"
+        },
+        {
+          "line": 183,
+          "action": "commented_broken_line",
+          "orig": "        try:"
+        },
+        {
+          "line": 186,
+          "action": "commented_broken_line",
+          "orig": "        except Exception as e_joblib:"
+        },
+        {
+          "line": 191,
+          "action": "commented_broken_line",
+          "orig": "    if os.path.exists(scaler_path):"
+        },
+        {
+          "line": 192,
+          "action": "commented_broken_line",
+          "orig": "        try:"
+        },
+        {
+          "line": 194,
+          "action": "commented_broken_line",
+          "orig": "        except Exception:"
+        },
+        {
+          "line": 198,
+          "action": "commented_broken_line",
+          "orig": "    if os.path.exists(features_path):"
+        },
+        {
+          "line": 199,
+          "action": "commented_broken_line",
+          "orig": "        try:"
+        },
+        {
+          "line": 201,
+          "action": "commented_broken_line",
+          "orig": "            with open(features_path, \"r\", encoding=\"utf-8\") as fh:"
+        },
+        {
+          "line": 203,
+          "action": "commented_broken_line",
+          "orig": "        except Exception:"
+        },
+        {
+          "line": 210,
+          "action": "commented_broken_line",
+          "orig": "    def predict(self, X: pd.DataFrame) -> np.ndarray:"
+        },
+        {
+          "line": 214,
+          "action": "commented_broken_line",
+          "orig": "        if self._model is None:"
+        },
+        {
+          "line": 216,
+          "action": "commented_broken_line",
+          "orig": "        if self._backend == \"torch\":"
+        },
+        {
+          "line": 221,
+          "action": "commented_broken_line",
+          "orig": "            if self._feature_cols:"
+        },
+        {
+          "line": 223,
+          "action": "commented_broken_line",
+          "orig": "                if missing:"
+        },
+        {
+          "line": 226,
+          "action": "commented_broken_line",
+          "orig": "            else:"
+        },
+        {
+          "line": 230,
+          "action": "commented_broken_line",
+          "orig": "                if not cols:"
+        },
+        {
+          "line": 234,
+          "action": "commented_broken_line",
+          "orig": "            if self._scaler is not None:"
+        },
+        {
+          "line": 235,
+          "action": "commented_broken_line",
+          "orig": "                try:"
+        },
+        {
+          "line": 237,
+          "action": "commented_broken_line",
+          "orig": "                except Exception as e:"
+        },
+        {
+          "line": 243,
+          "action": "commented_broken_line",
+          "orig": "            with torch.no_grad():"
+        },
+        {
+          "line": 246,
+          "action": "commented_broken_line",
+          "orig": "            if isinstance(out, tuple):"
+        },
+        {
+          "line": 248,
+          "action": "commented_broken_line",
+          "orig": "            try:"
+        },
+        {
+          "line": 250,
+          "action": "commented_broken_line",
+          "orig": "            except Exception:"
+        },
+        {
+          "line": 253,
+          "action": "commented_broken_line",
+          "orig": "        elif self._backend == \"sklearn\":"
+        },
+        {
+          "line": 256,
+          "action": "commented_broken_line",
+          "orig": "            if self._feature_cols:"
+        },
+        {
+          "line": 258,
+          "action": "commented_broken_line",
+          "orig": "            else:"
+        },
+        {
+          "line": 261,
+          "action": "commented_broken_line",
+          "orig": "            if self._scaler is not None:"
+        },
+        {
+          "line": 263,
+          "action": "commented_broken_line",
+          "orig": "            try:"
+        },
+        {
+          "line": 265,
+          "action": "commented_broken_line",
+          "orig": "            except Exception as e:"
+        },
+        {
+          "line": 268,
+          "action": "commented_broken_line",
+          "orig": "        else:"
+        },
+        {
+          "line": 270,
+          "action": "commented_broken_line",
+          "orig": "            if \"y\" in X.columns:"
+        },
+        {
+          "line": 273,
+          "action": "commented_broken_line",
+          "orig": "            else:"
+        },
+        {
+          "line": 276,
+          "action": "commented_broken_line",
+          "orig": "        if len(preds) < len(X):"
+        },
+        {
+          "line": 278,
+          "action": "commented_broken_line",
+          "orig": "        elif len(preds) > len(X):"
+        },
+        {
+          "line": 287,
+          "action": "commented_broken_line",
+          "orig": "def compute_error_metrics(y_true: np.ndarray, y_pred: np.ndarray) -> Dict[str, float]:"
+        },
+        {
+          "line": 292,
+          "action": "commented_broken_line",
+          "orig": "    if mask.sum() == 0:"
+        },
+        {
+          "line": 311,
+          "action": "commented_broken_line",
+          "orig": ") -> int:"
+        },
+        {
+          "line": 317,
+          "action": "commented_broken_line",
+          "orig": "    if not input_csv.exists():"
+        },
+        {
+          "line": 321,
+          "action": "commented_broken_line",
+          "orig": "    if df.empty:"
+        },
+        {
+          "line": 344,
+          "action": "commented_broken_line",
+          "orig": "    try:"
+        },
+        {
+          "line": 347,
+          "action": "commented_broken_line",
+          "orig": "    except Exception:"
+        },
+        {
+          "line": 352,
+          "action": "commented_broken_line",
+          "orig": "    if target_col:"
+        },
+        {
+          "line": 356,
+          "action": "commented_broken_line",
+          "orig": "    else:"
+        },
+        {
+          "line": 385,
+          "action": "commented_broken_line",
+          "orig": "    for i in range(len(X)):"
+        },
+        {
+          "line": 428,
+          "action": "commented_broken_line",
+          "orig": "def parse_args(argv: Optional[List[str]] = None) -> argparse.Namespace:"
+        },
+        {
+          "line": 439,
+          "action": "commented_broken_line",
+          "orig": "if __name__ == \"__main__\":"
+        }
+      ]
+    },
+    {
+      "path": "fishhead_pure_model_event_config_demo.py",
+      "orig_hash": "bbfabedd3e06f9faa5cc171e6e9abc9b9c3263a088691a24b17e867b2b1c9e2d",
+      "post_hash": "092051214ca75bbcfeba89b6330718522f951a1f341f0e91783e60dfbe592f33",
+      "bak": "fishhead_pure_model_event_config_demo.py.bak.20251104054136",
+      "actions": [
+        {
+          "line": 35,
+          "action": "commented_broken_line",
+          "orig": "def generate_series(n_steps=N_STEPS, seed=SEED):"
+        },
+        {
+          "line": 38,
+          "action": "commented_broken_line",
+          "orig": "    for t in range(1, n_steps):"
+        },
+        {
+          "line": 49,
+          "action": "commented_broken_line",
+          "orig": "def make_dataset(prices, window=WINDOW, horizon=EVENT_HORIZON_STEPS, rel_thresh=EVENT_REL_THRESHOLD, baseline=EVENT_BASELINE):"
+        },
+        {
+          "line": 51,
+          "action": "commented_broken_line",
+          "orig": "    for i in range(window, len(prices) - horizon):"
+        },
+        {
+          "line": 58,
+          "action": "commented_broken_line",
+          "orig": "        if baseline == \"close_to_close\":"
+        },
+        {
+          "line": 61,
+          "action": "commented_broken_line",
+          "orig": "        elif baseline == \"peak_to_trough\":"
+        },
+        {
+          "line": 65,
+          "action": "commented_broken_line",
+          "orig": "        else:"
+        },
+        {
+          "line": 75,
+          "action": "commented_broken_line",
+          "orig": "class FishheadANN(nn.Module):"
+        },
+        {
+          "line": 76,
+          "action": "commented_broken_line",
+          "orig": "    def __init__(self, input_dim=WINDOW, hidden_dim=64, dropout=0.2):"
+        },
+        {
+          "line": 87,
+          "action": "commented_broken_line",
+          "orig": "    def forward(self, x):"
+        },
+        {
+          "line": 98,
+          "action": "commented_broken_line",
+          "orig": "def quantile_loss(preds, target, qs=[0.1,0.5,0.9]):"
+        },
+        {
+          "line": 100,
+          "action": "commented_broken_line",
+          "orig": "    for i,q in enumerate(qs):"
+        },
+        {
+          "line": 106,
+          "action": "commented_broken_line",
+          "orig": "def contiguous_splits(n, fractions=SPLIT):"
+        },
+        {
+          "line": 111,
+          "action": "commented_broken_line",
+          "orig": "def run():"
+        },
+        {
+          "line": 115,
+          "action": "commented_broken_line",
+          "orig": "    (t0,t1), (v0,v1), (s0,s1) = contiguous_splits(n)"
+        },
+        {
+          "line": 125,
+          "action": "commented_broken_line",
+          "orig": "    for epoch in range(25):"
+        },
+        {
+          "line": 135,
+          "action": "commented_broken_line",
+          "orig": "        if (epoch+1) % 5 == 0:"
+        },
+        {
+          "line": 140,
+          "action": "commented_broken_line",
+          "orig": "    with torch.no_grad():"
+        },
+        {
+          "line": 166,
+          "action": "commented_broken_line",
+          "orig": "    def pinball(q_pred, y_true, q=0.5):"
+        },
+        {
+          "line": 169,
+          "action": "commented_broken_line",
+          "orig": "    def coverage(q_lo, q_hi, y_true):"
+        },
+        {
+          "line": 172,
+          "action": "commented_broken_line",
+          "orig": "    def brier(y_true, p):"
+        },
+        {
+          "line": 181,
+          "action": "commented_broken_line",
+          "orig": "    with open(os.path.join(OUTDIR, \"pure_metrics_val.csv\"), \"w\", newline=\"\") as f:"
+        },
+        {
+          "line": 184,
+          "action": "commented_broken_line",
+          "orig": "if __name__ == \"__main__\":"
+        }
+      ]
+    },
+    {
+      "path": "fishhead_train_demo.py",
+      "orig_hash": "5bdf1436b94b81ca0da0188826851df862621222b55a33ffac2f21aba8c00673",
+      "post_hash": "a6ae65c8ad67237e9851877738186b27d0fb80209cf4ca8e064530b575db53c9",
+      "bak": "fishhead_train_demo.py.bak.20251104054136",
+      "actions": [
+        {
+          "line": 18,
+          "action": "commented_broken_line",
+          "orig": "def generate_synthetic_series(n_steps=800, window=8):"
+        },
+        {
+          "line": 21,
+          "action": "commented_broken_line",
+          "orig": "    for t in range(1, n_steps):"
+        },
+        {
+          "line": 22,
+          "action": "commented_broken_line",
+          "orig": "        if t % 100 == 0:"
+        },
+        {
+          "line": 32,
+          "action": "commented_broken_line",
+          "orig": "    for i in range(window, len(prices)-5):"
+        },
+        {
+          "line": 47,
+          "action": "commented_broken_line",
+          "orig": "class FishheadANN(nn.Module):"
+        },
+        {
+          "line": 48,
+          "action": "commented_broken_line",
+          "orig": "    def __init__(self, input_dim=8, hidden_dim=64, dropout=0.2):"
+        },
+        {
+          "line": 60,
+          "action": "commented_broken_line",
+          "orig": "    def forward(self, x):"
+        },
+        {
+          "line": 75,
+          "action": "commented_broken_line",
+          "orig": "def quantile_loss(preds, target, quantiles=[0.1,0.5,0.9]):"
+        },
+        {
+          "line": 77,
+          "action": "commented_broken_line",
+          "orig": "    for i,q in enumerate(quantiles):"
+        },
+        {
+          "line": 83,
+          "action": "commented_broken_line",
+          "orig": "if __name__ == \"__main__\":"
+        },
+        {
+          "line": 107,
+          "action": "commented_broken_line",
+          "orig": "        if (epoch+1) % 2 == 0:"
+        },
+        {
+          "line": 109,
+          "action": "normalize_indent",
+          "orig_leading_spaces": 18,
+          "new_leading_spaces": 16
+        },
+        {
+          "line": 110,
+          "action": "normalize_indent",
+          "orig_leading_spaces": 18,
+          "new_leading_spaces": 16
+        },
+        {
+          "line": 114,
+          "action": "commented_broken_line",
+          "orig": "    with torch.no_grad():"
+        }
+      ]
+    },
+    {
+      "path": "fishhead_train_plot_demo.py",
+      "orig_hash": "9511cd0f4692fca77fc0f8cb9c8a445cf914dc05da40cd4176a59659dc354978",
+      "post_hash": "c3562e6e9eee2de76a786f3030a32a904e2c9f704020705ae5d8dc5bd0ac64c4",
+      "bak": "fishhead_train_plot_demo.py.bak.20251104054136",
+      "actions": [
+        {
+          "line": 21,
+          "action": "commented_broken_line",
+          "orig": "def generate_synthetic_series(n_steps=800, window=8):"
+        },
+        {
+          "line": 24,
+          "action": "commented_broken_line",
+          "orig": "    for t in range(1, n_steps):"
+        },
+        {
+          "line": 25,
+          "action": "commented_broken_line",
+          "orig": "        if t % 100 == 0:"
+        },
+        {
+          "line": 35,
+          "action": "commented_broken_line",
+          "orig": "    for i in range(window, len(prices)-5):"
+        },
+        {
+          "line": 50,
+          "action": "commented_broken_line",
+          "orig": "class FishheadANN(nn.Module):"
+        },
+        {
+          "line": 51,
+          "action": "commented_broken_line",
+          "orig": "    def __init__(self, input_dim=8, hidden_dim=64, dropout=0.2):"
+        },
+        {
+          "line": 63,
+          "action": "commented_broken_line",
+          "orig": "    def forward(self, x):"
+        },
+        {
+          "line": 78,
+          "action": "commented_broken_line",
+          "orig": "def quantile_loss(preds, target, quantiles=[0.1,0.5,0.9]):"
+        },
+        {
+          "line": 80,
+          "action": "commented_broken_line",
+          "orig": "    for i,q in enumerate(quantiles):"
+        },
+        {
+          "line": 86,
+          "action": "commented_broken_line",
+          "orig": "if __name__ == \"__main__\":"
+        },
+        {
+          "line": 95,
+          "action": "commented_broken_line",
+          "orig": "    for epoch in range(15):"
+        },
+        {
+          "line": 106,
+          "action": "commented_broken_line",
+          "orig": "        if (epoch+1) % 5 == 0:"
+        },
+        {
+          "line": 111,
+          "action": "commented_broken_line",
+          "orig": "    with torch.no_grad():"
+        }
+      ]
+    },
+    {
+      "path": "fishhead_vs_naive_demo.py",
+      "orig_hash": "3007afe34b860c1ab29c2c186dd9e810a6d9807028d29a7a8ac0707f5c9900fb",
+      "post_hash": "e60b2bc0fbb468a52191ceba00eb24a4d645b021077962c5b889b8aa888a461a",
+      "bak": "fishhead_vs_naive_demo.py.bak.20251104054136",
+      "actions": [
+        {
+          "line": 13,
+          "action": "commented_broken_line",
+          "orig": "def generate_series(n=1200, seed=5080):"
+        },
+        {
+          "line": 16,
+          "action": "commented_broken_line",
+          "orig": "    for t in range(1, n):"
+        },
+        {
+          "line": 24,
+          "action": "commented_broken_line",
+          "orig": "def make_dataset(prices, window=8):"
+        },
+        {
+          "line": 26,
+          "action": "commented_broken_line",
+          "orig": "    for i in range(window, len(prices)-1):"
+        },
+        {
+          "line": 34,
+          "action": "commented_broken_line",
+          "orig": "class FishheadANN(nn.Module):"
+        },
+        {
+          "line": 35,
+          "action": "commented_broken_line",
+          "orig": "    def __init__(self, input_dim=8, hidden=64):"
+        },
+        {
+          "line": 45,
+          "action": "commented_broken_line",
+          "orig": "    def forward(self, x):"
+        },
+        {
+          "line": 56,
+          "action": "commented_broken_line",
+          "orig": "def quantile_loss(preds, target, qs=[0.1,0.5,0.9]):"
+        },
+        {
+          "line": 58,
+          "action": "commented_broken_line",
+          "orig": "    for i,q in enumerate(qs):"
+        },
+        {
+          "line": 64,
+          "action": "commented_broken_line",
+          "orig": "if __name__ == \"__main__\":"
+        },
+        {
+          "line": 74,
+          "action": "commented_broken_line",
+          "orig": "    for epoch in range(20):"
+        },
+        {
+          "line": 82,
+          "action": "commented_broken_line",
+          "orig": "        if (epoch+1) % 5 == 0:"
+        },
+        {
+          "line": 86,
+          "action": "commented_broken_line",
+          "orig": "    with torch.no_grad():"
+        }
+      ]
+    },
+    {
+      "path": "fishhead_with_gate_tuner.py",
+      "orig_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "post_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "actions": []
+    },
+    {
+      "path": "gatetuner_train.py",
+      "orig_hash": "0bdaf22f607fedb79c0a1c58cd10e886be8aad12782c0855f2d43f786066b0c9",
+      "post_hash": "35c456c237afdb0b195729b8a197dad651071a1e879bc3cb49e088254bf40604",
+      "bak": "gatetuner_train.py.bak.20251104054136",
+      "actions": [
+        {
+          "line": 27,
+          "action": "commented_broken_line",
+          "orig": "def file_hash(path):"
+        },
+        {
+          "line": 34,
+          "action": "commented_broken_line",
+          "orig": "def brier_score(y_true, y_prob):"
+        },
+        {
+          "line": 39,
+          "action": "commented_broken_line",
+          "orig": "class GateTuner(nn.Module):"
+        },
+        {
+          "line": 40,
+          "action": "commented_broken_line",
+          "orig": "    def __init__(self, input_dim=len(INPUT_COLS), hidden=HIDDEN):"
+        },
+        {
+          "line": 45,
+          "action": "commented_broken_line",
+          "orig": "    def forward(self, x):"
+        },
+        {
+          "line": 51,
+          "action": "commented_broken_line",
+          "orig": "def run():"
+        },
+        {
+          "line": 68,
+          "action": "commented_broken_line",
+          "orig": "    for epoch in range(EPOCHS):"
+        },
+        {
+          "line": 76,
+          "action": "commented_broken_line",
+          "orig": "        if (epoch+1) % 50 == 0:"
+        },
+        {
+          "line": 80,
+          "action": "commented_broken_line",
+          "orig": "    with torch.no_grad():"
+        },
+        {
+          "line": 88,
+          "action": "commented_broken_line",
+          "orig": "    for t in ts:"
+        },
+        {
+          "line": 146,
+          "action": "commented_broken_line",
+          "orig": "if __name__ == \"__main__\":"
+        }
+      ]
+    },
+    {
+      "path": "gate_tuner_demo.py",
+      "orig_hash": "861a04ed09d8c074f6e04ae3d5fcb19b68b009efde5de6092527a3824e19621c",
+      "post_hash": "2824b53e559e9c8b7db94344763543d8d87485fd86b8d3ad61223d5c7e238cf6",
+      "bak": "gate_tuner_demo.py.bak.20251104054136",
+      "actions": [
+        {
+          "line": 12,
+          "action": "commented_broken_line",
+          "orig": "class GateTuner(nn.Module):"
+        },
+        {
+          "line": 13,
+          "action": "commented_broken_line",
+          "orig": "    def __init__(self, input_dim=3, hidden=16):"
+        },
+        {
+          "line": 17,
+          "action": "commented_broken_line",
+          "orig": "    def forward(self, x):"
+        },
+        {
+          "line": 22,
+          "action": "commented_broken_line",
+          "orig": "def train_gate_tuner(q_preds, gate_scores, y_true, event_probs, epochs=50):"
+        },
+        {
+          "line": 40,
+          "action": "commented_broken_line",
+          "orig": "    for epoch in range(epochs):"
+        },
+        {
+          "line": 48,
+          "action": "commented_broken_line",
+          "orig": "        if (epoch+1) % 10 == 0:"
+        }
+      ]
+    },
+    {
+      "path": "gate_tuner_integration.py",
+      "orig_hash": "0a38f0be17dbc52248564488de749036fda9b22030f634a0a93eb301e42df570",
+      "post_hash": "141dc3ce435651384d55f4765c6e3bac7fe476fe8bfeb789c33bdcca5e3f9e7d",
+      "bak": "gate_tuner_integration.py.bak.20251104054136",
+      "actions": [
+        {
+          "line": 15,
+          "action": "commented_broken_line",
+          "orig": "class GateTuner(nn.Module):"
+        },
+        {
+          "line": 16,
+          "action": "commented_broken_line",
+          "orig": "    def __init__(self, input_dim=3, hidden=16):"
+        },
+        {
+          "line": 20,
+          "action": "commented_broken_line",
+          "orig": "    def forward(self, x):"
+        },
+        {
+          "line": 25,
+          "action": "commented_broken_line",
+          "orig": "def train_gate_tuner(q_preds, gate_scores, y_true, event_probs, epochs=50):"
+        },
+        {
+          "line": 44,
+          "action": "commented_broken_line",
+          "orig": "    for epoch in range(epochs):"
+        },
+        {
+          "line": 52,
+          "action": "commented_broken_line",
+          "orig": "        if (epoch+1) % 10 == 0:"
+        }
+      ]
+    },
+    {
+      "path": "ho_manifest.py",
+      "orig_hash": "c7fa8bfabf477a7e2e1a657c382720ebfd9dcb8d11891cdc5b0d4398bdd1675e",
+      "post_hash": "c5e77ad3484d42f1ceeb4025112f68ae2ad88f6298413df6abdecf3b9725c481",
+      "bak": "ho_manifest.py.bak.20251104054136",
+      "actions": [
+        {
+          "line": 4,
+          "action": "commented_broken_line",
+          "orig": "def sha256_file(path):"
+        },
+        {
+          "line": 6,
+          "action": "commented_broken_line",
+          "orig": "    with open(path, \"rb\") as f:"
+        },
+        {
+          "line": 7,
+          "action": "commented_broken_line",
+          "orig": "        for chunk in iter(lambda: f.read(8192), b\"\"):"
+        },
+        {
+          "line": 18,
+          "action": "commented_broken_line",
+          "orig": "):"
+        },
+        {
+          "line": 43,
+          "action": "commented_broken_line",
+          "orig": "    with open(manifest_path, \"w\") as f:"
+        }
+      ]
+    },
+    {
+      "path": "HO_run_delta.py",
+      "orig_hash": "62f7d980a5a4cdfb566548b7d2b15aa7a7e5c84d746ae499776fe55105cfd741",
+      "post_hash": "d3d855c23fe9846a302be739a3bf8c30c962f343970b7fe29f1a68656b6644d4",
+      "bak": "HO_run_delta.py.bak.20251104054136",
+      "actions": [
+        {
+          "line": 39,
+          "action": "commented_broken_line",
+          "orig": "def sha256_file(path):"
+        },
+        {
+          "line": 41,
+          "action": "commented_broken_line",
+          "orig": "    with open(path, \"rb\") as f:"
+        },
+        {
+          "line": 42,
+          "action": "commented_broken_line",
+          "orig": "        for chunk in iter(lambda: f.read(8192), b\"\"):"
+        },
+        {
+          "line": 46,
+          "action": "commented_broken_line",
+          "orig": "def load_df_with_normalized_columns(path):"
+        },
+        {
+          "line": 69,
+          "action": "commented_broken_line",
+          "orig": "def df_to_ohlc_array(df):"
+        },
+        {
+          "line": 83,
+          "action": "commented_broken_line",
+          "orig": "if min_rows < 5:"
+        },
+        {
+          "line": 93,
+          "action": "commented_broken_line",
+          "orig": "def scale(arr):"
+        },
+        {
+          "line": 96,
+          "action": "commented_broken_line",
+          "orig": "def unscale_close(v_scaled):"
+        },
+        {
+          "line": 107,
+          "action": "commented_broken_line",
+          "orig": "def make_sequences(arr, context_len):"
+        },
+        {
+          "line": 109,
+          "action": "commented_broken_line",
+          "orig": "    if N <= 0:"
+        },
+        {
+          "line": 122,
+          "action": "commented_broken_line",
+          "orig": "if not np.allclose(ytmp[0,0], tmp[CONTEXT_LEN,3]):"
+        },
+        {
+          "line": 131,
+          "action": "commented_broken_line",
+          "orig": "def ensure_ok(X, y, name):"
+        },
+        {
+          "line": 132,
+          "action": "commented_broken_line",
+          "orig": "    if not isinstance(X, np.ndarray) or not isinstance(y, np.ndarray):"
+        },
+        {
+          "line": 134,
+          "action": "commented_broken_line",
+          "orig": "    if X.ndim != 3 or X.shape[1:] != (CONTEXT_LEN, 4):"
+        },
+        {
+          "line": 136,
+          "action": "commented_broken_line",
+          "orig": "    if y.ndim != 2 or y.shape[1] != 1:"
+        },
+        {
+          "line": 138,
+          "action": "commented_broken_line",
+          "orig": "    if X.dtype != np.float32 or y.dtype != np.float32:"
+        },
+        {
+          "line": 217,
+          "action": "commented_broken_line",
+          "orig": "with open(\"ho2bann_manifest.json\", \"w\") as f:"
+        }
+      ]
+    },
+    {
+      "path": "ho_structure_significance_harness.py",
+      "orig_hash": "963d1f8e3aac8576d5f2b61d6b56194ed3c054b5925dd1f0a6c8ab7f5d90a0c3",
+      "post_hash": "8d266f35d97cf6558eb78035ca2d2729bb2794a4f21fbaa202ebfca362822c11",
+      "bak": "ho_structure_significance_harness.py.bak.20251104054136",
+      "actions": [
+        {
+          "line": 26,
+          "action": "commented_broken_line",
+          "orig": "def sha256_file(path: str) -> str:"
+        },
+        {
+          "line": 28,
+          "action": "commented_broken_line",
+          "orig": "    with open(path, \"rb\") as f:"
+        },
+        {
+          "line": 29,
+          "action": "commented_broken_line",
+          "orig": "        for chunk in iter(lambda: f.read(8192), b\"\"):"
+        },
+        {
+          "line": 33,
+          "action": "commented_broken_line",
+          "orig": "def code_hash() -> str:"
+        },
+        {
+          "line": 35,
+          "action": "commented_broken_line",
+          "orig": "    if os.path.isfile(p):"
+        },
+        {
+          "line": 39,
+          "action": "commented_broken_line",
+          "orig": "def ensure_dir(d: str) -> None:"
+        },
+        {
+          "line": 42,
+          "action": "commented_broken_line",
+          "orig": "def atomic_write_json(path: str, obj: Any) -> None:"
+        },
+        {
+          "line": 45,
+          "action": "commented_broken_line",
+          "orig": "    try:"
+        },
+        {
+          "line": 46,
+          "action": "commented_broken_line",
+          "orig": "        with os.fdopen(fd, \"w\") as f:"
+        },
+        {
+          "line": 51,
+          "action": "commented_broken_line",
+          "orig": "    finally:"
+        },
+        {
+          "line": 52,
+          "action": "commented_broken_line",
+          "orig": "        if os.path.exists(tmp):"
+        },
+        {
+          "line": 53,
+          "action": "commented_broken_line",
+          "orig": "            try:"
+        },
+        {
+          "line": 55,
+          "action": "commented_broken_line",
+          "orig": "            except Exception:"
+        },
+        {
+          "line": 58,
+          "action": "commented_broken_line",
+          "orig": "def atomic_write_text(path: str, text: str) -> None:"
+        },
+        {
+          "line": 61,
+          "action": "commented_broken_line",
+          "orig": "    try:"
+        },
+        {
+          "line": 62,
+          "action": "commented_broken_line",
+          "orig": "        with os.fdopen(fd, \"w\") as f:"
+        },
+        {
+          "line": 67,
+          "action": "commented_broken_line",
+          "orig": "    finally:"
+        },
+        {
+          "line": 68,
+          "action": "commented_broken_line",
+          "orig": "        if os.path.exists(tmp):"
+        },
+        {
+          "line": 69,
+          "action": "commented_broken_line",
+          "orig": "            try:"
+        },
+        {
+          "line": 71,
+          "action": "commented_broken_line",
+          "orig": "            except Exception:"
+        },
+        {
+          "line": 74,
+          "action": "commented_broken_line",
+          "orig": "def _to_native(x: Any) -> Any:"
+        },
+        {
+          "line": 75,
+          "action": "commented_broken_line",
+          "orig": "    if isinstance(x, dict):"
+        },
+        {
+          "line": 77,
+          "action": "commented_broken_line",
+          "orig": "    if isinstance(x, list):"
+        },
+        {
+          "line": 79,
+          "action": "commented_broken_line",
+          "orig": "    if isinstance(x, tuple):"
+        },
+        {
+          "line": 81,
+          "action": "commented_broken_line",
+          "orig": "    if isinstance(x, (np.integer,)):"
+        },
+        {
+          "line": 83,
+          "action": "commented_broken_line",
+          "orig": "    if isinstance(x, (np.floating,)):"
+        },
+        {
+          "line": 86,
+          "action": "commented_broken_line",
+          "orig": "    if isinstance(x, float):"
+        },
+        {
+          "line": 90,
+          "action": "commented_broken_line",
+          "orig": "def seeded_from_run(run_id: str, trial_index: int) -> int:"
+        },
+        {
+          "line": 99,
+          "action": "commented_broken_line",
+          "orig": "def metrics_pair(y_true: np.ndarray, y_pred: np.ndarray) -> Dict[str, float]:"
+        },
+        {
+          "line": 101,
+          "action": "commented_broken_line",
+          "orig": "    if n == 0:"
+        },
+        {
+          "line": 111,
+          "action": "commented_broken_line",
+          "orig": "    if ss_tot > 0:"
+        },
+        {
+          "line": 122,
+          "action": "commented_broken_line",
+          "orig": "def persistence_forecast(y: np.ndarray, horizon: int = 1) -> np.ndarray:"
+        },
+        {
+          "line": 124,
+          "action": "commented_broken_line",
+          "orig": "    if len(y) <= horizon:"
+        },
+        {
+          "line": 128,
+          "action": "commented_broken_line",
+          "orig": "def toy_fishhead_predict(X: pd.DataFrame, col: str, seed: int) -> np.ndarray:"
+        },
+        {
+          "line": 133,
+          "action": "commented_broken_line",
+          "orig": "    if features.shape[1] == 0:"
+        },
+        {
+          "line": 145,
+          "action": "commented_broken_line",
+          "orig": "def run_bootstrap(df: pd.DataFrame, col: str, trials: int, run_id: str, out_dir: str) -> Dict[str, Any]:"
+        },
+        {
+          "line": 148,
+          "action": "commented_broken_line",
+          "orig": "    for t in range(trials):"
+        },
+        {
+          "line": 153,
+          "action": "commented_broken_line",
+          "orig": "        if col not in sample.columns:"
+        },
+        {
+          "line": 157,
+          "action": "commented_broken_line",
+          "orig": "        if len(y) < 2:"
+        },
+        {
+          "line": 163,
+          "action": "commented_broken_line",
+          "orig": "        if L <= 0:"
+        },
+        {
+          "line": 189,
+          "action": "commented_broken_line",
+          "orig": "    if diffs_rmse:"
+        },
+        {
+          "line": 199,
+          "action": "commented_broken_line",
+          "orig": "    else:"
+        },
+        {
+          "line": 203,
+          "action": "commented_broken_line",
+          "orig": "def run_permutation(df: pd.DataFrame, col: str, permutations: int, run_id: str, out_dir: str, block: int = 1) -> Dict[str, Any]:"
+        },
+        {
+          "line": 205,
+          "action": "commented_broken_line",
+          "orig": "    for p in range(permutations):"
+        },
+        {
+          "line": 210,
+          "action": "commented_broken_line",
+          "orig": "        if block <= 1:"
+        },
+        {
+          "line": 212,
+          "action": "commented_broken_line",
+          "orig": "        else:"
+        },
+        {
+          "line": 220,
+          "action": "commented_broken_line",
+          "orig": "        if len(y) < 2:"
+        },
+        {
+          "line": 225,
+          "action": "commented_broken_line",
+          "orig": "        if L <= 0:"
+        },
+        {
+          "line": 235,
+          "action": "commented_broken_line",
+          "orig": "    if diffs:"
+        },
+        {
+          "line": 243,
+          "action": "commented_broken_line",
+          "orig": "    else:"
+        },
+        {
+          "line": 247,
+          "action": "commented_broken_line",
+          "orig": "def run_ablation(df: pd.DataFrame, col: str, features: List[str], runs_per_feature: int, run_id: str, out_dir: str) -> Dict[str, Any]:"
+        },
+        {
+          "line": 249,
+          "action": "commented_broken_line",
+          "orig": "    for i, feat in enumerate(features):"
+        },
+        {
+          "line": 251,
+          "action": "commented_broken_line",
+          "orig": "        for t in range(runs_per_feature):"
+        },
+        {
+          "line": 254,
+          "action": "commented_broken_line",
+          "orig": "            if feat in sample.columns:"
+        },
+        {
+          "line": 256,
+          "action": "commented_broken_line",
+          "orig": "            if col not in sample.columns or len(sample) < 2:"
+        },
+        {
+          "line": 262,
+          "action": "commented_broken_line",
+          "orig": "            if L <= 0:"
+        },
+        {
+          "line": 269,
+          "action": "commented_broken_line",
+          "orig": "        if diffs:"
+        },
+        {
+          "line": 283,
+          "action": "commented_broken_line",
+          "orig": "def run_stability(df: pd.DataFrame, col: str, variations: int, run_id: str, out_dir: str) -> Dict[str, Any]:"
+        },
+        {
+          "line": 285,
+          "action": "commented_broken_line",
+          "orig": "    for v in range(variations):"
+        },
+        {
+          "line": 290,
+          "action": "commented_broken_line",
+          "orig": "        if numcols:"
+        },
+        {
+          "line": 293,
+          "action": "commented_broken_line",
+          "orig": "        if col not in sample.columns or len(sample) < 2:"
+        },
+        {
+          "line": 299,
+          "action": "commented_broken_line",
+          "orig": "        if L <= 0:"
+        },
+        {
+          "line": 307,
+          "action": "commented_broken_line",
+          "orig": "    if diffs:"
+        },
+        {
+          "line": 314,
+          "action": "commented_broken_line",
+          "orig": "    else:"
+        },
+        {
+          "line": 322,
+          "action": "commented_broken_line",
+          "orig": "def rewrite_manifest(manifest_path: str, record: Dict[str, Any]) -> None:"
+        },
+        {
+          "line": 326,
+          "action": "commented_broken_line",
+          "orig": "def parse_args() -> argparse.Namespace:"
+        },
+        {
+          "line": 339,
+          "action": "commented_broken_line",
+          "orig": "def resolve_paths(args: argparse.Namespace) -> Tuple[str, str]:"
+        },
+        {
+          "line": 348,
+          "action": "commented_broken_line",
+          "orig": "    if not csv_path:"
+        },
+        {
+          "line": 354,
+          "action": "commented_broken_line",
+          "orig": "def main() -> None:"
+        },
+        {
+          "line": 356,
+          "action": "commented_broken_line",
+          "orig": "    try:"
+        },
+        {
+          "line": 358,
+          "action": "commented_broken_line",
+          "orig": "    except FileNotFoundError as e:"
+        },
+        {
+          "line": 390,
+          "action": "commented_broken_line",
+          "orig": "    try:"
+        },
+        {
+          "line": 391,
+          "action": "commented_broken_line",
+          "orig": "        if args.mode in (\"bootstrap\", \"all\"):"
+        },
+        {
+          "line": 396,
+          "action": "commented_broken_line",
+          "orig": "        if args.mode in (\"permute\", \"all\"):"
+        },
+        {
+          "line": 401,
+          "action": "commented_broken_line",
+          "orig": "        if args.mode in (\"ablate\", \"all\"):"
+        },
+        {
+          "line": 402,
+          "action": "commented_broken_line",
+          "orig": "            if args.features:"
+        },
+        {
+          "line": 404,
+          "action": "commented_broken_line",
+          "orig": "            else:"
+        },
+        {
+          "line": 411,
+          "action": "commented_broken_line",
+          "orig": "        if args.mode in (\"stability\", \"all\"):"
+        },
+        {
+          "line": 416,
+          "action": "commented_broken_line",
+          "orig": "    except Exception as e:"
+        },
+        {
+          "line": 447,
+          "action": "commented_broken_line",
+          "orig": "if __name__ == \"__main__\":"
+        }
+      ]
+    },
+    {
+      "path": "hybrid_fisheye_prob_ann.py",
+      "orig_hash": "009a2d35ab79b0b69b146b00b23218882b7d4267f8ffd042df1e3da8286f45b8",
+      "post_hash": "559e8b650436131ceeb5920d208a6382aad72d5e02072a01bb66d8b0fb4dd931",
+      "bak": "hybrid_fisheye_prob_ann.py.bak.20251104054136",
+      "actions": [
+        {
+          "line": 20,
+          "action": "commented_broken_line",
+          "orig": "def file_sha256(path, chunk_size=1 << 20):"
+        },
+        {
+          "line": 22,
+          "action": "commented_broken_line",
+          "orig": "    with open(path, \"rb\") as f:"
+        },
+        {
+          "line": 23,
+          "action": "commented_broken_line",
+          "orig": "        while True:"
+        },
+        {
+          "line": 25,
+          "action": "commented_broken_line",
+          "orig": "            if not b:"
+        },
+        {
+          "line": 32,
+          "action": "commented_broken_line",
+          "orig": "if _missing:"
+        },
+        {
+          "line": 34,
+          "action": "commented_broken_line",
+          "orig": "for _p in _paths:"
+        },
+        {
+          "line": 76,
+          "action": "commented_broken_line",
+          "orig": "def load_df(path, date_fmt=DATE_FMT):"
+        },
+        {
+          "line": 81,
+          "action": "commented_broken_line",
+          "orig": "    if missing_cols:"
+        },
+        {
+          "line": 83,
+          "action": "commented_broken_line",
+          "orig": "    try:"
+        },
+        {
+          "line": 85,
+          "action": "commented_broken_line",
+          "orig": "    except Exception:"
+        },
+        {
+          "line": 104,
+          "action": "commented_broken_line",
+          "orig": "def build_sequences(df, context_len=CONTEXT_LEN):"
+        },
+        {
+          "line": 108,
+          "action": "commented_broken_line",
+          "orig": "    for i in range(context_len, len(ohlc) - 1):"
+        },
+        {
+          "line": 130,
+          "action": "commented_broken_line",
+          "orig": "def _to_residuals(y_arr, meta):"
+        },
+        {
+          "line": 132,
+          "action": "commented_broken_line",
+          "orig": "    for i, v in enumerate(y_arr):"
+        },
+        {
+          "line": 162,
+          "action": "commented_broken_line",
+          "orig": "def pooled_encoder(x, embed_dim=EMBED_DIM, dropout=DROPOUT, l2=L2W):"
+        },
+        {
+          "line": 171,
+          "action": "commented_broken_line",
+          "orig": "def probabilistic_head(x, l2=L2W, init_bias=None, logvar_init=-3.0):"
+        },
+        {
+          "line": 174,
+          "action": "normalize_indent",
+          "orig_leading_spaces": 22,
+          "new_leading_spaces": 20
+        },
+        {
+          "line": 176,
+          "action": "normalize_indent",
+          "orig_leading_spaces": 31,
+          "new_leading_spaces": 28
+        },
+        {
+          "line": 180,
+          "action": "commented_broken_line",
+          "orig": "def stabilized_log_var_tf(log_var_raw):"
+        },
+        {
+          "line": 184,
+          "action": "commented_broken_line",
+          "orig": "def gaussian_nll(y_true, mu, log_var_raw, eps=1e-6):"
+        },
+        {
+          "line": 189,
+          "action": "commented_broken_line",
+          "orig": "def build_model(context_len=CONTEXT_LEN, feat_dim=FEATURES_PER_T, init_bias=None):"
+        },
+        {
+          "line": 215,
+          "action": "commented_broken_line",
+          "orig": "for layer in model.layers:"
+        },
+        {
+          "line": 216,
+          "action": "commented_broken_line",
+          "orig": "    try:"
+        },
+        {
+          "line": 219,
+          "action": "commented_broken_line",
+          "orig": "    except Exception:"
+        },
+        {
+          "line": 246,
+          "action": "commented_broken_line",
+          "orig": "with open(f\"{RUN_NAME}_mu_only_interim.json\", \"w\", encoding=\"utf-8\") as _f:"
+        },
+        {
+          "line": 252,
+          "action": "commented_broken_line",
+          "orig": "if EPOCHS_P2 > 0:"
+        },
+        {
+          "line": 256,
+          "action": "commented_broken_line",
+          "orig": "    def train_step(xb, yb):"
+        },
+        {
+          "line": 258,
+          "action": "commented_broken_line",
+          "orig": "        with tf.GradientTape() as tape:"
+        },
+        {
+          "line": 268,
+          "action": "commented_broken_line",
+          "orig": "    def val_step(xb, yb):"
+        },
+        {
+          "line": 275,
+          "action": "commented_broken_line",
+          "orig": "    def run_epoch(X, y, step_fn, batch=BATCH):"
+        },
+        {
+          "line": 280,
+          "action": "commented_broken_line",
+          "orig": "        for i in range(0, n, batch):"
+        },
+        {
+          "line": 288,
+          "action": "commented_broken_line",
+          "orig": "    for e in range(EPOCHS_P2):"
+        },
+        {
+          "line": 295,
+          "action": "commented_broken_line",
+          "orig": "        if e >= 2 and val_losses_p2[-1] > min(val_losses_p2[:-2]):"
+        },
+        {
+          "line": 309,
+          "action": "commented_broken_line",
+          "orig": "def _stabilize_logvar_np(raw):"
+        },
+        {
+          "line": 324,
+          "action": "commented_broken_line",
+          "orig": "for i in range(min(16, len(meta_test))):"
+        },
+        {
+          "line": 424,
+          "action": "commented_broken_line",
+          "orig": "with open(manifest_filename, \"w\", encoding=\"utf-8\") as f:"
+        }
+      ]
+    },
+    {
+      "path": "hybrid_fisheye_prob_ann_audit_v1_1_20251029.py",
+      "orig_hash": "81532c748c26b652dac5892a485444d6f4a63073a28461834f5b0d0caf09362b",
+      "post_hash": "dd1df213f3ab03d8fe6f5a682280f2736c5eed4faa8c0c5589b09c6e0a9b8028",
+      "bak": "hybrid_fisheye_prob_ann_audit_v1_1_20251029.py.bak.20251104054136",
+      "actions": [
+        {
+          "line": 57,
+          "action": "commented_broken_line",
+          "orig": "def sha256_file(path):"
+        },
+        {
+          "line": 59,
+          "action": "commented_broken_line",
+          "orig": "    with open(path, \"rb\") as f:"
+        },
+        {
+          "line": 60,
+          "action": "commented_broken_line",
+          "orig": "        for b in iter(lambda: f.read(8192), b\"\"):"
+        },
+        {
+          "line": 64,
+          "action": "commented_broken_line",
+          "orig": "def write_manifest(meta: dict, path: str):"
+        },
+        {
+          "line": 65,
+          "action": "commented_broken_line",
+          "orig": "    with open(path, \"w\") as f:"
+        },
+        {
+          "line": 68,
+          "action": "commented_broken_line",
+          "orig": "def load_df(path):"
+        },
+        {
+          "line": 75,
+          "action": "commented_broken_line",
+          "orig": "def df_to_arr(df):"
+        },
+        {
+          "line": 78,
+          "action": "commented_broken_line",
+          "orig": "def scale_with_train_stats(train_arr, val_arr, test_arr):"
+        },
+        {
+          "line": 84,
+          "action": "commented_broken_line",
+          "orig": "def make_sequences(arr, context_len):"
+        },
+        {
+          "line": 86,
+          "action": "commented_broken_line",
+          "orig": "    if N <= 0:"
+        },
+        {
+          "line": 100,
+          "action": "commented_broken_line",
+          "orig": "def rmse(y_true, y_pred):"
+        },
+        {
+          "line": 103,
+          "action": "commented_broken_line",
+          "orig": "def mae(y_true, y_pred):"
+        },
+        {
+          "line": 106,
+          "action": "commented_broken_line",
+          "orig": "def r2(y_true, y_pred):"
+        },
+        {
+          "line": 113,
+          "action": "commented_broken_line",
+          "orig": "def dm_test(e_model, e_pers):"
+        },
+        {
+          "line": 122,
+          "action": "commented_broken_line",
+          "orig": "def fisheye_encoder(seq_in):"
+        },
+        {
+          "line": 124,
+          "action": "normalize_indent",
+          "orig_leading_spaces": 21,
+          "new_leading_spaces": 20
+        },
+        {
+          "line": 127,
+          "action": "normalize_indent",
+          "orig_leading_spaces": 26,
+          "new_leading_spaces": 24
+        },
+        {
+          "line": 140,
+          "action": "commented_broken_line",
+          "orig": "def build_masked_autoencoder(context_len):"
+        },
+        {
+          "line": 146,
+          "action": "commented_broken_line",
+          "orig": "def pretrain_autoencoder(mae_model, seqs, epochs=EPOCHS_PRE):"
+        },
+        {
+          "line": 157,
+          "action": "normalize_indent",
+          "orig_leading_spaces": 25,
+          "new_leading_spaces": 24
+        },
+        {
+          "line": 161,
+          "action": "commented_broken_line",
+          "orig": "def nll_gaussian(y_true, y_pred):"
+        },
+        {
+          "line": 168,
+          "action": "commented_broken_line",
+          "orig": "def build_prob_forecaster(context_len):"
+        },
+        {
+          "line": 174,
+          "action": "commented_broken_line",
+          "orig": "    for w in MLP_WIDTHS:"
+        },
+        {
+          "line": 185,
+          "action": "commented_broken_line",
+          "orig": "def finetune_prob_forecaster(model, X_seq, y_next, ev, epochs=EPOCHS_FT):"
+        },
+        {
+          "line": 195,
+          "action": "normalize_indent",
+          "orig_leading_spaces": 18,
+          "new_leading_spaces": 16
+        },
+        {
+          "line": 196,
+          "action": "normalize_indent",
+          "orig_leading_spaces": 18,
+          "new_leading_spaces": 16
+        },
+        {
+          "line": 198,
+          "action": "normalize_indent",
+          "orig_leading_spaces": 21,
+          "new_leading_spaces": 20
+        },
+        {
+          "line": 199,
+          "action": "normalize_indent",
+          "orig_leading_spaces": 21,
+          "new_leading_spaces": 20
+        },
+        {
+          "line": 200,
+          "action": "normalize_indent",
+          "orig_leading_spaces": 21,
+          "new_leading_spaces": 20
+        },
+        {
+          "line": 206,
+          "action": "commented_broken_line",
+          "orig": "def calibration_coverage(mu, sigma, y, bands=(1.0, 2.0)):"
+        },
+        {
+          "line": 208,
+          "action": "commented_broken_line",
+          "orig": "    for k in bands:"
+        },
+        {
+          "line": 223,
+          "action": "commented_broken_line",
+          "orig": "if __name__ == \"__main__\":"
+        },
+        {
+          "line": 252,
+          "action": "commented_broken_line",
+          "orig": "    if PRETRAIN_ENABLED:"
+        },
+        {
+          "line": 283,
+          "action": "commented_broken_line",
+          "orig": "    def regime_metrics(y_true, mu, gate, thresh, fallback):"
+        },
+        {
+          "line": 310,
+          "action": "commented_broken_line",
+          "orig": "    def brier(y_true_prob, y_pred_prob):"
+        }
+      ]
+    },
+    {
+      "path": "hybrid_fisheye_prob_ann_patch_fix.py",
+      "orig_hash": "200aca4c3745ca8a2915c8b6fdbd820a0bc0c5d256565804ac6f831b7042a526",
+      "post_hash": "e398ca740d1e4052cd3fe2a74b9477f390a3343296345c6e95a559104808a65b",
+      "bak": "hybrid_fisheye_prob_ann_patch_fix.py.bak.20251104054136",
+      "actions": [
+        {
+          "line": 56,
+          "action": "commented_broken_line",
+          "orig": "def sha256_file(path):"
+        },
+        {
+          "line": 58,
+          "action": "commented_broken_line",
+          "orig": "    with open(path, \"rb\") as f:"
+        },
+        {
+          "line": 59,
+          "action": "commented_broken_line",
+          "orig": "        for b in iter(lambda: f.read(8192), b\"\"):"
+        },
+        {
+          "line": 63,
+          "action": "commented_broken_line",
+          "orig": "def write_manifest(meta: dict, path: str):"
+        },
+        {
+          "line": 64,
+          "action": "commented_broken_line",
+          "orig": "    with open(path, \"w\") as f:"
+        },
+        {
+          "line": 67,
+          "action": "commented_broken_line",
+          "orig": "def load_df(path):"
+        },
+        {
+          "line": 74,
+          "action": "commented_broken_line",
+          "orig": "def df_to_arr(df):"
+        },
+        {
+          "line": 77,
+          "action": "commented_broken_line",
+          "orig": "def scale_with_train_stats(train_arr, val_arr, test_arr):"
+        },
+        {
+          "line": 83,
+          "action": "commented_broken_line",
+          "orig": "def make_sequences(arr, context_len):"
+        },
+        {
+          "line": 85,
+          "action": "commented_broken_line",
+          "orig": "    if N <= 0:"
+        },
+        {
+          "line": 93,
+          "action": "commented_broken_line",
+          "orig": "def dm_test(e_model, e_pers):"
+        },
+        {
+          "line": 97,
+          "action": "commented_broken_line",
+          "orig": "    if var_d == 0:"
+        },
+        {
+          "line": 103,
+          "action": "commented_broken_line",
+          "orig": "def fisheye_encoder(seq_in):"
+        },
+        {
+          "line": 105,
+          "action": "normalize_indent",
+          "orig_leading_spaces": 21,
+          "new_leading_spaces": 20
+        },
+        {
+          "line": 108,
+          "action": "normalize_indent",
+          "orig_leading_spaces": 26,
+          "new_leading_spaces": 24
+        },
+        {
+          "line": 122,
+          "action": "commented_broken_line",
+          "orig": "def build_masked_autoencoder(context_len):"
+        },
+        {
+          "line": 128,
+          "action": "commented_broken_line",
+          "orig": "def pretrain_autoencoder(mae_model, seqs, epochs=EPOCHS_PRE):"
+        },
+        {
+          "line": 139,
+          "action": "normalize_indent",
+          "orig_leading_spaces": 25,
+          "new_leading_spaces": 24
+        },
+        {
+          "line": 143,
+          "action": "commented_broken_line",
+          "orig": "def nll_gaussian(y_true, y_pred):"
+        },
+        {
+          "line": 150,
+          "action": "commented_broken_line",
+          "orig": "def mae_mu_loss(y_true, y_pred):"
+        },
+        {
+          "line": 154,
+          "action": "commented_broken_line",
+          "orig": "def build_prob_forecaster_clipped(context_len):"
+        },
+        {
+          "line": 160,
+          "action": "commented_broken_line",
+          "orig": "    for w in MLP_WIDTHS:"
+        },
+        {
+          "line": 166,
+          "action": "normalize_indent",
+          "orig_leading_spaces": 38,
+          "new_leading_spaces": 36
+        },
+        {
+          "line": 170,
+          "action": "commented_broken_line",
+          "orig": "def finetune_prob_forecaster_aux(model, X_seq, y_next, epochs=EPOCHS_FT, alpha=AUX_MAE_ALPHA):"
+        },
+        {
+          "line": 176,
+          "action": "commented_broken_line",
+          "orig": "    def combined_loss(y_true, y_pred):"
+        },
+        {
+          "line": 181,
+          "action": "normalize_indent",
+          "orig_leading_spaces": 21,
+          "new_leading_spaces": 20
+        },
+        {
+          "line": 185,
+          "action": "commented_broken_line",
+          "orig": "def calibration_coverage(mu, sigma, y, bands=(1.0,2.0)):"
+        },
+        {
+          "line": 187,
+          "action": "commented_broken_line",
+          "orig": "    for k in bands:"
+        },
+        {
+          "line": 193,
+          "action": "commented_broken_line",
+          "orig": "def persistence_pred_scaled(X_seq):"
+        },
+        {
+          "line": 197,
+          "action": "commented_broken_line",
+          "orig": "if __name__ == \"__main__\":"
+        },
+        {
+          "line": 226,
+          "action": "commented_broken_line",
+          "orig": "    for i in range(min(10, len(X_test))):"
+        },
+        {
+          "line": 238,
+          "action": "commented_broken_line",
+          "orig": "    for i in range(min(10, len(X_test))):"
+        },
+        {
+          "line": 254,
+          "action": "commented_broken_line",
+          "orig": "    if PRETRAIN_ENABLED:"
+        },
+        {
+          "line": 261,
+          "action": "commented_broken_line",
+          "orig": "    if INIT_MU_BIAS_TO_PERSIST:"
+        },
+        {
+          "line": 263,
+          "action": "commented_broken_line",
+          "orig": "        try:"
+        },
+        {
+          "line": 269,
+          "action": "commented_broken_line",
+          "orig": "        except Exception as e:"
+        },
+        {
+          "line": 300,
+          "action": "commented_broken_line",
+          "orig": "    for i in range(min(20, len(mu))):"
+        }
+      ]
+    },
+    {
+      "path": "hybrid_fisheye_prob_ann_patch_run.py",
+      "orig_hash": "4dc5b5224bd85ae4749954fb835a7c1b00c9d14622096aad8b4ccb0dfca445e6",
+      "post_hash": "1177e36d01cb9b14c48fd7d9d4488414ecc686f4ce82ab5f8bfecc94a80b387c",
+      "bak": "hybrid_fisheye_prob_ann_patch_run.py.bak.20251104054136",
+      "actions": [
+        {
+          "line": 54,
+          "action": "commented_broken_line",
+          "orig": "def sha256_file(path):"
+        },
+        {
+          "line": 56,
+          "action": "commented_broken_line",
+          "orig": "    with open(path, \"rb\") as f:"
+        },
+        {
+          "line": 57,
+          "action": "commented_broken_line",
+          "orig": "        for b in iter(lambda: f.read(8192), b\"\"):"
+        },
+        {
+          "line": 61,
+          "action": "commented_broken_line",
+          "orig": "def write_manifest(meta: dict, path: str):"
+        },
+        {
+          "line": 62,
+          "action": "commented_broken_line",
+          "orig": "    with open(path, \"w\") as f:"
+        },
+        {
+          "line": 65,
+          "action": "commented_broken_line",
+          "orig": "def load_df(path):"
+        },
+        {
+          "line": 72,
+          "action": "commented_broken_line",
+          "orig": "def df_to_arr(df):"
+        },
+        {
+          "line": 75,
+          "action": "commented_broken_line",
+          "orig": "def scale_with_train_stats(train_arr, val_arr, test_arr):"
+        },
+        {
+          "line": 81,
+          "action": "commented_broken_line",
+          "orig": "def make_sequences(arr, context_len):"
+        },
+        {
+          "line": 83,
+          "action": "commented_broken_line",
+          "orig": "    if N <= 0:"
+        },
+        {
+          "line": 91,
+          "action": "commented_broken_line",
+          "orig": "def dm_test(e_model, e_pers):"
+        },
+        {
+          "line": 99,
+          "action": "commented_broken_line",
+          "orig": "def fisheye_encoder(seq_in):"
+        },
+        {
+          "line": 101,
+          "action": "normalize_indent",
+          "orig_leading_spaces": 21,
+          "new_leading_spaces": 20
+        },
+        {
+          "line": 104,
+          "action": "normalize_indent",
+          "orig_leading_spaces": 26,
+          "new_leading_spaces": 24
+        },
+        {
+          "line": 118,
+          "action": "commented_broken_line",
+          "orig": "def build_masked_autoencoder(context_len):"
+        },
+        {
+          "line": 124,
+          "action": "commented_broken_line",
+          "orig": "def pretrain_autoencoder(mae_model, seqs, epochs=EPOCHS_PRE):"
+        },
+        {
+          "line": 135,
+          "action": "normalize_indent",
+          "orig_leading_spaces": 25,
+          "new_leading_spaces": 24
+        },
+        {
+          "line": 139,
+          "action": "commented_broken_line",
+          "orig": "def nll_gaussian(y_true, y_pred):"
+        },
+        {
+          "line": 146,
+          "action": "commented_broken_line",
+          "orig": "def mae_mu_loss(y_true, y_pred):"
+        },
+        {
+          "line": 150,
+          "action": "commented_broken_line",
+          "orig": "def build_prob_forecaster_clipped(context_len):"
+        },
+        {
+          "line": 156,
+          "action": "commented_broken_line",
+          "orig": "    for w in MLP_WIDTHS:"
+        },
+        {
+          "line": 163,
+          "action": "normalize_indent",
+          "orig_leading_spaces": 38,
+          "new_leading_spaces": 36
+        },
+        {
+          "line": 167,
+          "action": "commented_broken_line",
+          "orig": "def finetune_prob_forecaster_aux(model, X_seq, y_next, epochs=EPOCHS_FT):"
+        },
+        {
+          "line": 175,
+          "action": "commented_broken_line",
+          "orig": "    def combined_loss(y_true, y_pred):"
+        },
+        {
+          "line": 180,
+          "action": "normalize_indent",
+          "orig_leading_spaces": 21,
+          "new_leading_spaces": 20
+        },
+        {
+          "line": 184,
+          "action": "commented_broken_line",
+          "orig": "def calibration_coverage(mu, sigma, y, bands=(1.0, 2.0)):"
+        },
+        {
+          "line": 186,
+          "action": "commented_broken_line",
+          "orig": "    for k in bands:"
+        },
+        {
+          "line": 192,
+          "action": "commented_broken_line",
+          "orig": "def persistence_pred_scaled(X_seq):"
+        },
+        {
+          "line": 196,
+          "action": "commented_broken_line",
+          "orig": "if __name__ == \"__main__\":"
+        },
+        {
+          "line": 225,
+          "action": "commented_broken_line",
+          "orig": "    for i in range(5):"
+        },
+        {
+          "line": 232,
+          "action": "commented_broken_line",
+          "orig": "    if PRETRAIN_ENABLED:"
+        },
+        {
+          "line": 261,
+          "action": "commented_broken_line",
+          "orig": "    for i in range(min(20, len(mu))):"
+        },
+        {
+          "line": 263,
+          "action": "normalize_indent",
+          "orig_leading_spaces": 14,
+          "new_leading_spaces": 12
+        },
+        {
+          "line": 264,
+          "action": "normalize_indent",
+          "orig_leading_spaces": 14,
+          "new_leading_spaces": 12
+        },
+        {
+          "line": 265,
+          "action": "normalize_indent",
+          "orig_leading_spaces": 14,
+          "new_leading_spaces": 12
+        },
+        {
+          "line": 266,
+          "action": "normalize_indent",
+          "orig_leading_spaces": 14,
+          "new_leading_spaces": 12
+        },
+        {
+          "line": 267,
+          "action": "normalize_indent",
+          "orig_leading_spaces": 14,
+          "new_leading_spaces": 12
+        },
+        {
+          "line": 268,
+          "action": "normalize_indent",
+          "orig_leading_spaces": 14,
+          "new_leading_spaces": 12
+        },
+        {
+          "line": 269,
+          "action": "normalize_indent",
+          "orig_leading_spaces": 14,
+          "new_leading_spaces": 12
+        }
+      ]
+    },
+    {
+      "path": "hybrid_fisheye_prob_ann_poc.py",
+      "orig_hash": "fe971d6772e1e00f51816f7e66ddc83a5bd986a714ad7a9b34c24fe3b7863b8b",
+      "post_hash": "571fb5c22f19782a757f8f4ab50a99e50841190ab3d43d99422e0bdf467c5e65",
+      "bak": "hybrid_fisheye_prob_ann_poc.py.bak.20251104054136",
+      "actions": [
+        {
+          "line": 48,
+          "action": "commented_broken_line",
+          "orig": "def sha256_file(path):"
+        },
+        {
+          "line": 50,
+          "action": "commented_broken_line",
+          "orig": "    with open(path, \"rb\") as f:"
+        },
+        {
+          "line": 51,
+          "action": "commented_broken_line",
+          "orig": "        for b in iter(lambda: f.read(8192), b\"\"):"
+        },
+        {
+          "line": 55,
+          "action": "commented_broken_line",
+          "orig": "def write_manifest(meta: dict, path: str):"
+        },
+        {
+          "line": 56,
+          "action": "commented_broken_line",
+          "orig": "    with open(path, \"w\") as f:"
+        },
+        {
+          "line": 59,
+          "action": "commented_broken_line",
+          "orig": "def load_df(path):"
+        },
+        {
+          "line": 66,
+          "action": "commented_broken_line",
+          "orig": "def df_to_arr(df):"
+        },
+        {
+          "line": 69,
+          "action": "commented_broken_line",
+          "orig": "def scale_with_train_stats(train_arr, val_arr, test_arr):"
+        },
+        {
+          "line": 75,
+          "action": "commented_broken_line",
+          "orig": "def make_sequences(arr, context_len):"
+        },
+        {
+          "line": 77,
+          "action": "commented_broken_line",
+          "orig": "    if N <= 0:"
+        },
+        {
+          "line": 85,
+          "action": "commented_broken_line",
+          "orig": "def dm_test(e_model, e_pers):"
+        },
+        {
+          "line": 93,
+          "action": "commented_broken_line",
+          "orig": "def fisheye_encoder(seq_in):"
+        },
+        {
+          "line": 95,
+          "action": "normalize_indent",
+          "orig_leading_spaces": 21,
+          "new_leading_spaces": 20
+        },
+        {
+          "line": 98,
+          "action": "normalize_indent",
+          "orig_leading_spaces": 26,
+          "new_leading_spaces": 24
+        },
+        {
+          "line": 112,
+          "action": "commented_broken_line",
+          "orig": "def build_masked_autoencoder(context_len):"
+        },
+        {
+          "line": 118,
+          "action": "commented_broken_line",
+          "orig": "def pretrain_autoencoder(mae_model, seqs, epochs=EPOCHS_PRE):"
+        },
+        {
+          "line": 129,
+          "action": "normalize_indent",
+          "orig_leading_spaces": 25,
+          "new_leading_spaces": 24
+        },
+        {
+          "line": 133,
+          "action": "commented_broken_line",
+          "orig": "def nll_gaussian(y_true, y_pred):"
+        },
+        {
+          "line": 140,
+          "action": "commented_broken_line",
+          "orig": "def build_prob_forecaster(context_len):"
+        },
+        {
+          "line": 146,
+          "action": "commented_broken_line",
+          "orig": "    for w in MLP_WIDTHS:"
+        },
+        {
+          "line": 154,
+          "action": "commented_broken_line",
+          "orig": "def finetune_prob_forecaster(model, X_seq, y_next, epochs=EPOCHS_FT):"
+        },
+        {
+          "line": 161,
+          "action": "normalize_indent",
+          "orig_leading_spaces": 21,
+          "new_leading_spaces": 20
+        },
+        {
+          "line": 165,
+          "action": "commented_broken_line",
+          "orig": "def calibration_coverage(mu, sigma, y, bands=(1.0, 2.0)):"
+        },
+        {
+          "line": 167,
+          "action": "commented_broken_line",
+          "orig": "    for k in bands:"
+        },
+        {
+          "line": 178,
+          "action": "commented_broken_line",
+          "orig": "if __name__ == \"__main__\":"
+        },
+        {
+          "line": 207,
+          "action": "commented_broken_line",
+          "orig": "    if PRETRAIN_ENABLED:"
+        }
+      ]
+    },
+    {
+      "path": "hybrid_fisheye_prob_ann_v1.1_audit_2025-10-25.py",
+      "orig_hash": "a55aebb1dc9ed7191845ffbada2db324cb2b40e94254bd9c6e398c91ba142cba",
+      "post_hash": "e976927031a8a205e3c5ebb028de479a5722ddb1567ff81b6e734907355fc65e",
+      "bak": "hybrid_fisheye_prob_ann_v1.1_audit_2025-10-25.py.bak.20251104054136",
+      "actions": [
+        {
+          "line": 28,
+          "action": "commented_broken_line",
+          "orig": "def load_df(path, date_fmt=\"%d-%b-%y\"):"
+        },
+        {
+          "line": 33,
+          "action": "commented_broken_line",
+          "orig": "    if missing:"
+        },
+        {
+          "line": 42,
+          "action": "commented_broken_line",
+          "orig": "def file_sha256(path, chunk_size=1 << 20):"
+        },
+        {
+          "line": 44,
+          "action": "commented_broken_line",
+          "orig": "    with open(path, \"rb\") as f:"
+        },
+        {
+          "line": 45,
+          "action": "commented_broken_line",
+          "orig": "        while True:"
+        },
+        {
+          "line": 47,
+          "action": "commented_broken_line",
+          "orig": "            if not b:"
+        },
+        {
+          "line": 52,
+          "action": "commented_broken_line",
+          "orig": "def df_sha256(df):"
+        },
+        {
+          "line": 99,
+          "action": "commented_broken_line",
+          "orig": "def build_sequences(df, context_len=CONTEXT_LEN):"
+        },
+        {
+          "line": 103,
+          "action": "commented_broken_line",
+          "orig": "    for i in range(context_len, len(ohlc) - 1):"
+        },
+        {
+          "line": 124,
+          "action": "commented_broken_line",
+          "orig": "def fisheye_block(x, embed_dim=EMBED_DIM, attn_dim=ATTN_DIM, dropout=DROPOUT, l2=L2W):"
+        },
+        {
+          "line": 135,
+          "action": "commented_broken_line",
+          "orig": "def probabilistic_head(x, l2=L2W):"
+        },
+        {
+          "line": 140,
+          "action": "commented_broken_line",
+          "orig": "def gaussian_nll(y_true, mu, log_var, eps=1e-6):"
+        },
+        {
+          "line": 144,
+          "action": "commented_broken_line",
+          "orig": "def build_model(context_len=CONTEXT_LEN, feat_dim=FEATURES_PER_T):"
+        },
+        {
+          "line": 167,
+          "action": "commented_broken_line",
+          "orig": "for layer in model.layers:"
+        },
+        {
+          "line": 168,
+          "action": "commented_broken_line",
+          "orig": "    try:"
+        },
+        {
+          "line": 171,
+          "action": "commented_broken_line",
+          "orig": "    except Exception:"
+        },
+        {
+          "line": 178,
+          "action": "commented_broken_line",
+          "orig": "def train_step(xb, yb):"
+        },
+        {
+          "line": 179,
+          "action": "commented_broken_line",
+          "orig": "    with tf.GradientTape() as tape:"
+        },
+        {
+          "line": 189,
+          "action": "commented_broken_line",
+          "orig": "def val_step(xb, yb):"
+        },
+        {
+          "line": 196,
+          "action": "commented_broken_line",
+          "orig": "def run_epoch(X, y, step_fn, batch=BATCH):"
+        },
+        {
+          "line": 201,
+          "action": "commented_broken_line",
+          "orig": "    for i in range(0, n, batch):"
+        },
+        {
+          "line": 208,
+          "action": "commented_broken_line",
+          "orig": "for e in range(EPOCHS_P2):"
+        },
+        {
+          "line": 225,
+          "action": "commented_broken_line",
+          "orig": "for i in range(min(16, len(meta_test))):"
+        },
+        {
+          "line": 316,
+          "action": "commented_broken_line",
+          "orig": "with open(manifest_filename, \"w\", encoding=\"utf-8\") as f:"
+        }
+      ]
+    },
+    {
+      "path": "inspect_alignment.py",
+      "orig_hash": "a02f50924bfbc13cc109424f7fdecd6ed72cf50dca0d4cc2a2461f62a402c0e3",
+      "post_hash": "b62e8639328762487eb6da019ae9239583fbc9395de87a9cd9267916cfcf0ff2",
+      "bak": "inspect_alignment.py.bak.20251104054136",
+      "actions": [
+        {
+          "line": 19,
+          "action": "commented_broken_line",
+          "orig": "def make_windows(X, y, window=128):"
+        },
+        {
+          "line": 22,
+          "action": "commented_broken_line",
+          "orig": "    for i in range(n_samples - window):"
+        },
+        {
+          "line": 41,
+          "action": "commented_broken_line",
+          "orig": "if not model_files:"
+        }
+      ]
+    },
+    {
+      "path": "inspect_metrics.py",
+      "orig_hash": "b8402c8bffc6e1639a61d055ece2b27935983b00e7b184e7d53c029e93c506f8",
+      "post_hash": "26cb5441bc682995ea9d7c2fa4716aa3dbf3516d6fdafb0acb74a2499293d298",
+      "bak": "inspect_metrics.py.bak.20251104054136",
+      "actions": [
+        {
+          "line": 11,
+          "action": "commented_broken_line",
+          "orig": "if c_model and c_persist:"
+        }
+      ]
+    },
+    {
+      "path": "inspect_splits_dates.py",
+      "orig_hash": "90159d4f5abd19e51f0516229bc561c06d74614867f87b456bf4ca64b6efb234",
+      "post_hash": "90159d4f5abd19e51f0516229bc561c06d74614867f87b456bf4ca64b6efb234",
+      "actions": []
+    },
+    {
+      "path": "inspect_target_variance.py",
+      "orig_hash": "5cbac503909de880afacd20461b8d09aedd27ac19382f9fcf2a53bf2f95522e0",
+      "post_hash": "2ada94a160ef062c4565938f0a42c0f98620cfd64c5bba2dfc4b976ee580101b",
+      "bak": "inspect_target_variance.py.bak.20251104054136",
+      "actions": [
+        {
+          "line": 37,
+          "action": "commented_broken_line",
+          "orig": "if files and rmse_func is not None:"
+        },
+        {
+          "line": 38,
+          "action": "commented_broken_line",
+          "orig": "    try:"
+        },
+        {
+          "line": 44,
+          "action": "commented_broken_line",
+          "orig": "    except Exception:"
+        },
+        {
+          "line": 47,
+          "action": "commented_broken_line",
+          "orig": "else:"
+        }
+      ]
+    },
+    {
+      "path": "make_test_lags.py",
+      "orig_hash": "89a296c510c3cc0d6205827637d75ca46cc9a1125d6e8bff5954d181bc5f7129",
+      "post_hash": "0fd5d2009bb37ce947e811d0042147e00231e0567d7f48651e4a22413221ad7b",
+      "bak": "make_test_lags.py.bak.20251104054136",
+      "actions": [
+        {
+          "line": 5,
+          "action": "commented_broken_line",
+          "orig": "for lagged in sorted([c for c in features if \"_lag\" in c]):"
+        },
+        {
+          "line": 8,
+          "action": "commented_broken_line",
+          "orig": "    if lagged not in df.columns and base in df.columns:"
+        }
+      ]
+    },
+    {
+      "path": "make_test_target.py",
+      "orig_hash": "da63eaf103c20ff72fe78ac90dabe9858b842985c864b7115d85f59225d8c4d9",
+      "post_hash": "b1344db505f367dc0416e88c9a39bb0a83a94e065bd740bc75753d896220145f",
+      "bak": "make_test_target.py.bak.20251104054136",
+      "actions": [
+        {
+          "line": 3,
+          "action": "commented_broken_line",
+          "orig": "if \"Close_t+1\" not in df.columns and \"Close\" in df.columns:"
+        },
+        {
+          "line": 7,
+          "action": "commented_broken_line",
+          "orig": "else:"
+        }
+      ]
+    },
+    {
+      "path": "make_test_trim.py",
+      "orig_hash": "9572bd4cf146fc479b7e3140c8890b70eefc70a2ebb6e25f4be89b0303a15979",
+      "post_hash": "9572bd4cf146fc479b7e3140c8890b70eefc70a2ebb6e25f4be89b0303a15979",
+      "actions": []
+    },
+    {
+      "path": "metrics_2bANN2_run3439c642.py",
+      "orig_hash": "391bea0a477c79b1dff805b3d20f75dc5153e3299cc697f08da8718ea0c7b19d",
+      "post_hash": "a82fce87d145c5e5b21c0bd86393c00d4a403ce0124254ff79a26fc4f4003fcf",
+      "bak": "metrics_2bANN2_run3439c642.py.bak.20251104054136",
+      "actions": [
+        {
+          "line": 36,
+          "action": "commented_broken_line",
+          "orig": "with open(metrics_path, mode='w', newline='') as file:"
+        }
+      ]
+    },
+    {
+      "path": "patch_pred.py",
+      "orig_hash": "f79813914324196a3e868fbe07d597cb851301cf26671a219fddefed6689282c",
+      "post_hash": "164cddc147fcf89325166fce7cef7d69cbbb1cdd3f48e029a6e79ff677798349",
+      "bak": "patch_pred.py.bak.20251104054136",
+      "actions": [
+        {
+          "line": 3,
+          "action": "commented_broken_line",
+          "orig": "with io.open(fname, \"r\", encoding=\"utf-8\") as f:"
+        },
+        {
+          "line": 6,
+          "action": "commented_broken_line",
+          "orig": "if pattern in s:"
+        },
+        {
+          "line": 7,
+          "action": "commented_broken_line",
+          "orig": "    insert = pattern + \"\\n# Audit linear adjust (temporary): scale preds to target distribution\\npred = pred * 0.040473742800370395 + -0.6212534896704118\\n\""
+        },
+        {
+          "line": 9,
+          "action": "commented_broken_line",
+          "orig": "    with io.open(fname, \"w\", encoding=\"utf-8\") as f:"
+        },
+        {
+          "line": 12,
+          "action": "commented_broken_line",
+          "orig": "else:"
+        }
+      ]
+    },
+    {
+      "path": "recompute_r2_and_metrics.py",
+      "orig_hash": "708df1c777ec26f3e7f6daad1ef646daec5a9da57b64ff9da8bed45f4635f6c2",
+      "post_hash": "2ff7ea09bed84470fd1ee34f54e45b47e00d0a452bfa77ffa508a2c9f2b3667b",
+      "bak": "recompute_r2_and_metrics.py.bak.20251104054136",
+      "actions": [
+        {
+          "line": 20,
+          "action": "commented_broken_line",
+          "orig": "def rmse(a, b):"
+        },
+        {
+          "line": 23,
+          "action": "commented_broken_line",
+          "orig": "def mape_pct(y_true, y_pred):"
+        },
+        {
+          "line": 38,
+          "action": "commented_broken_line",
+          "orig": "if not files:"
+        }
+      ]
+    },
+    {
+      "path": "recom_1.py",
+      "orig_hash": "a36705126b53b5ce31bad15dc6cbf79cd25a152c99fefdacfa3146975473308c",
+      "post_hash": "a36705126b53b5ce31bad15dc6cbf79cd25a152c99fefdacfa3146975473308c",
+      "actions": []
+    },
+    {
+      "path": "sanity_correlations.py",
+      "orig_hash": "0e8a90cccfb02eb9c5886899b605ac3ca39e84208152c69fb022f272416f7b46",
+      "post_hash": "c24808270ece78e52a187f3f3839ae5fc39d509f3f66bef07e49561adaa88898",
+      "bak": "sanity_correlations.py.bak.20251104054136",
+      "actions": [
+        {
+          "line": 31,
+          "action": "commented_broken_line",
+          "orig": "if not files:"
+        }
+      ]
+    },
+    {
+      "path": "train_phase2b2_5080_HO.py",
+      "orig_hash": "d2e9eabaaddb8022a87dadd7fca70f407dac9d5d7d15d6390cb4979df5eb4723",
+      "post_hash": "7a81481bd2d02b4e886f0ca70dbff46271747155744bbf2b9cac3a96bdaadd25",
+      "bak": "train_phase2b2_5080_HO.py.bak.20251104054136",
+      "actions": [
+        {
+          "line": 21,
+          "action": "commented_broken_line",
+          "orig": "def load_ho_csv(path):"
+        },
+        {
+          "line": 38,
+          "action": "commented_broken_line",
+          "orig": "def evaluate_predictions(y_true, y_pred):"
+        },
+        {
+          "line": 47,
+          "action": "commented_broken_line",
+          "orig": "def plot_predictions(dates, y_true, y_pred, title=\"ANN Predictions vs Actual\"):"
+        },
+        {
+          "line": 48,
+          "action": "commented_broken_line",
+          "orig": "    try:"
+        },
+        {
+          "line": 50,
+          "action": "commented_broken_line",
+          "orig": "    except ImportError:"
+        },
+        {
+          "line": 66,
+          "action": "commented_broken_line",
+          "orig": "def hash_file(path):"
+        },
+        {
+          "line": 68,
+          "action": "commented_broken_line",
+          "orig": "    with open(path, \"rb\") as f:"
+        },
+        {
+          "line": 69,
+          "action": "commented_broken_line",
+          "orig": "        for chunk in iter(lambda: f.read(8192), b\"\"):"
+        },
+        {
+          "line": 73,
+          "action": "commented_broken_line",
+          "orig": "def log_run(meta):"
+        },
+        {
+          "line": 76,
+          "action": "commented_broken_line",
+          "orig": "    with open(log_name, \"w\") as f:"
+        }
+      ]
+    },
+    {
+      "path": "train_phase2b2_HO.py",
+      "orig_hash": "d2e9eabaaddb8022a87dadd7fca70f407dac9d5d7d15d6390cb4979df5eb4723",
+      "post_hash": "7a81481bd2d02b4e886f0ca70dbff46271747155744bbf2b9cac3a96bdaadd25",
+      "bak": "train_phase2b2_HO.py.bak.20251104054136",
+      "actions": [
+        {
+          "line": 21,
+          "action": "commented_broken_line",
+          "orig": "def load_ho_csv(path):"
+        },
+        {
+          "line": 38,
+          "action": "commented_broken_line",
+          "orig": "def evaluate_predictions(y_true, y_pred):"
+        },
+        {
+          "line": 47,
+          "action": "commented_broken_line",
+          "orig": "def plot_predictions(dates, y_true, y_pred, title=\"ANN Predictions vs Actual\"):"
+        },
+        {
+          "line": 48,
+          "action": "commented_broken_line",
+          "orig": "    try:"
+        },
+        {
+          "line": 50,
+          "action": "commented_broken_line",
+          "orig": "    except ImportError:"
+        },
+        {
+          "line": 66,
+          "action": "commented_broken_line",
+          "orig": "def hash_file(path):"
+        },
+        {
+          "line": 68,
+          "action": "commented_broken_line",
+          "orig": "    with open(path, \"rb\") as f:"
+        },
+        {
+          "line": 69,
+          "action": "commented_broken_line",
+          "orig": "        for chunk in iter(lambda: f.read(8192), b\"\"):"
+        },
+        {
+          "line": 73,
+          "action": "commented_broken_line",
+          "orig": "def log_run(meta):"
+        },
+        {
+          "line": 76,
+          "action": "commented_broken_line",
+          "orig": "    with open(log_name, \"w\") as f:"
+        }
+      ]
+    },
+    {
+      "path": "train_phase2b2_HO_reinstated.py",
+      "orig_hash": "3eebea5483c839522e28a780d1bcfb2453b65d1e174c3556b2813510c44ba11a",
+      "post_hash": "5bb0a7f8c5d6804e4263b5b6ffd6749d234bd55e0046d9b30d3ec0a51a082da0",
+      "bak": "train_phase2b2_HO_reinstated.py.bak.20251104054136",
+      "actions": [
+        {
+          "line": 1,
+          "action": "commented_broken_line",
+          "orig": "def helper():"
+        },
+        {
+          "line": 4,
+          "action": "commented_broken_line",
+          "orig": "def make_feature(df):"
+        },
+        {
+          "line": 2008,
+          "action": "commented_broken_line",
+          "orig": "def other():"
+        }
+      ]
+    },
+    {
+      "path": "train_phase2b2_HO_v2.py",
+      "orig_hash": "58f252a7f343fbbb3638892d4b7f113581f066750f1e3382a59e4c019819b93b",
+      "post_hash": "ce5274c8aca9dd82e821b146f68073208343f57a92512834efad27e383bab323",
+      "bak": "train_phase2b2_HO_v2.py.bak.20251104054136",
+      "actions": [
+        {
+          "line": 14,
+          "action": "commented_broken_line",
+          "orig": "def hash_file(path):"
+        },
+        {
+          "line": 16,
+          "action": "commented_broken_line",
+          "orig": "    with open(path, \"rb\") as f:"
+        },
+        {
+          "line": 17,
+          "action": "commented_broken_line",
+          "orig": "        for chunk in iter(lambda: f.read(8192), b\"\"):"
+        },
+        {
+          "line": 22,
+          "action": "commented_broken_line",
+          "orig": "def load_dataset(path):"
+        },
+        {
+          "line": 93,
+          "action": "commented_broken_line",
+          "orig": "with open(log_file, \"w\") as f:"
+        }
+      ]
+    },
+    {
+      "path": "train_phase2b2_HO_v3_forecast.py",
+      "orig_hash": "9670d11321e8913f647d3c41d639220fee3c07fd7c0d072894cc5a8226b89c47",
+      "post_hash": "438a943af78d755cc1d6352574e422784974d010c8af724eb0430d49bf1011ed",
+      "bak": "train_phase2b2_HO_v3_forecast.py.bak.20251104054136",
+      "actions": [
+        {
+          "line": 14,
+          "action": "commented_broken_line",
+          "orig": "def hash_file(path):"
+        },
+        {
+          "line": 16,
+          "action": "commented_broken_line",
+          "orig": "    with open(path, \"rb\") as f:"
+        },
+        {
+          "line": 17,
+          "action": "commented_broken_line",
+          "orig": "        for chunk in iter(lambda: f.read(8192), b\"\"):"
+        },
+        {
+          "line": 22,
+          "action": "commented_broken_line",
+          "orig": "def load_dataset(path):"
+        },
+        {
+          "line": 98,
+          "action": "commented_broken_line",
+          "orig": "with open(log_file, \"w\") as f:"
+        }
+      ]
+    },
+    {
+      "path": "train_phase2b2_HO_v5_heavy.py",
+      "orig_hash": "6d14eede2e8e052d1ac37f93d67dfe73c588e1e99b9074d814169cbcf9c00722",
+      "post_hash": "b13e3b7808434beb975da71a29f4ac3b9b28f64bea496690da76bda1bb057266",
+      "bak": "train_phase2b2_HO_v5_heavy.py.bak.20251104054136",
+      "actions": [
+        {
+          "line": 27,
+          "action": "commented_broken_line",
+          "orig": "def sha256(path):"
+        },
+        {
+          "line": 29,
+          "action": "commented_broken_line",
+          "orig": "    with open(path, \"rb\") as f:"
+        },
+        {
+          "line": 30,
+          "action": "commented_broken_line",
+          "orig": "        for chunk in iter(lambda: f.read(8192), b\"\"):"
+        },
+        {
+          "line": 35,
+          "action": "commented_broken_line",
+          "orig": "def load_csv(path):"
+        },
+        {
+          "line": 49,
+          "action": "commented_broken_line",
+          "orig": "def shift_forward(X, y):"
+        },
+        {
+          "line": 62,
+          "action": "commented_broken_line",
+          "orig": "def build_model(input_dim=3):"
+        },
+        {
+          "line": 118,
+          "action": "commented_broken_line",
+          "orig": "def diebold_mariano(e1, e2):"
+        },
+        {
+          "line": 150,
+          "action": "normalize_indent",
+          "orig_leading_spaces": 18,
+          "new_leading_spaces": 16
+        },
+        {
+          "line": 164,
+          "action": "commented_broken_line",
+          "orig": "with open(log_file, \"w\") as f:"
+        },
+        {
+          "line": 168,
+          "action": "commented_broken_line",
+          "orig": "def pct_delta(a, b):"
+        }
+      ]
+    },
+    {
+      "path": "train_phase2b2_HO_v5_heavy_v5.1.py",
+      "orig_hash": "78decad2f85bc45f8c9c82af5e496d89c735370e8eae8b74d21e05f2f5d6d5de",
+      "post_hash": "41d6384067af935fd594fb3b8c7ebf50a74d598f03eb5f6d6b9d7c72e63bdd20",
+      "bak": "train_phase2b2_HO_v5_heavy_v5.1.py.bak.20251104054136",
+      "actions": [
+        {
+          "line": 28,
+          "action": "commented_broken_line",
+          "orig": "def sha256(path):"
+        },
+        {
+          "line": 30,
+          "action": "commented_broken_line",
+          "orig": "    with open(path, \"rb\") as f:"
+        },
+        {
+          "line": 31,
+          "action": "commented_broken_line",
+          "orig": "        for chunk in iter(lambda: f.read(8192), b\"\"):"
+        },
+        {
+          "line": 36,
+          "action": "commented_broken_line",
+          "orig": "def load_csv(path):"
+        },
+        {
+          "line": 50,
+          "action": "commented_broken_line",
+          "orig": "def shift_forward(X, y):"
+        },
+        {
+          "line": 65,
+          "action": "commented_broken_line",
+          "orig": "def build_model(input_dim=3):"
+        },
+        {
+          "line": 107,
+          "action": "commented_broken_line",
+          "orig": "def rmse(a, b):"
+        },
+        {
+          "line": 110,
+          "action": "commented_broken_line",
+          "orig": "def mape_pct(y_true, y_pred):"
+        },
+        {
+          "line": 139,
+          "action": "commented_broken_line",
+          "orig": "def diebold_mariano(e1, e2):"
+        },
+        {
+          "line": 194,
+          "action": "commented_broken_line",
+          "orig": "with open(log_file, \"w\") as f:"
+        },
+        {
+          "line": 207,
+          "action": "commented_broken_line",
+          "orig": "try:"
+        },
+        {
+          "line": 208,
+          "action": "commented_broken_line",
+          "orig": "    if not os.path.exists(csv_path):"
+        },
+        {
+          "line": 210,
+          "action": "commented_broken_line",
+          "orig": "    else:"
+        },
+        {
+          "line": 212,
+          "action": "commented_broken_line",
+          "orig": "except Exception as e:"
+        },
+        {
+          "line": 216,
+          "action": "commented_broken_line",
+          "orig": "def pct_delta(a, b):"
+        }
+      ]
+    },
+    {
+      "path": "verify_csv_integrity.py",
+      "orig_hash": "8f36802141c3fdc99ae4abcb4aa7acf1e6d4810ce83e28730d8c0d438c0702f9",
+      "post_hash": "f355828bf39b2ab0d353216b84ae9514e2e7ff926ed5c73b17328ed77a6e4450",
+      "bak": "verify_csv_integrity.py.bak.20251104054136",
+      "actions": [
+        {
+          "line": 17,
+          "action": "commented_broken_line",
+          "orig": "def sha256(path):"
+        },
+        {
+          "line": 19,
+          "action": "commented_broken_line",
+          "orig": "    with open(path, \"rb\") as f:"
+        },
+        {
+          "line": 20,
+          "action": "commented_broken_line",
+          "orig": "        for b in iter(lambda: f.read(8192), b\"\"):"
+        },
+        {
+          "line": 25,
+          "action": "commented_broken_line",
+          "orig": "def check_file(path, label):"
+        },
+        {
+          "line": 34,
+          "action": "commented_broken_line",
+          "orig": "def inspect_csv(path, label):"
+        },
+        {
+          "line": 44,
+          "action": "commented_broken_line",
+          "orig": "def inspect_manifest(path):"
+        },
+        {
+          "line": 45,
+          "action": "commented_broken_line",
+          "orig": "    if not os.path.exists(path):"
+        },
+        {
+          "line": 48,
+          "action": "commented_broken_line",
+          "orig": "    with open(path, \"r\") as f:"
+        },
+        {
+          "line": 51,
+          "action": "commented_broken_line",
+          "orig": "    for k in (\"paths\", \"hashes\", \"date_ranges\", \"counts\", \"closure\"):"
+        },
+        {
+          "line": 56,
+          "action": "commented_broken_line",
+          "orig": "def test_label_outliers(df_test):"
+        },
+        {
+          "line": 64,
+          "action": "commented_broken_line",
+          "orig": "    for i in idx:"
+        }
+      ]
+    },
+    {
+      "path": "what_a_cunt_u_are_1.py",
+      "orig_hash": "1f3c8baaea84f45006126b592e3f68f132ff40345abbefa846094820cfea8836",
+      "post_hash": "1f3c8baaea84f45006126b592e3f68f132ff40345abbefa846094820cfea8836",
+      "actions": []
+    }
+  ]
+}

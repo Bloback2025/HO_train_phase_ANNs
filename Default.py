@@ -1,0 +1,260 @@
+# default.py
+# Date: 2025-10-24
+# Purpose: Hybrid fish-eye self-supervised ANN + probabilistic head
+#          Synthetic OHLC with volatility clustering, edge-emphasis masking
+#          EarlyStopping/ModelCheckpoint/CSVLogger, calibration diagnostics,
+#          persistence baseline, audit artifacts
+
+import os, json, hashlib, time, random
+from datetime import datetime, timezone
+import numpy as np
+import tensorflow as tf
+from tensorflow.keras import layers, models, callbacks, regularizers
+
+# ===== Reproducibility =====
+SEED = 77
+os.environ["TF_DETERMINISTIC_OPS"] = "1"
+tf.keras.utils.set_random_seed(SEED)
+random.seed(SEED)
+np.random.seed(SEED)
+
+# ===== Config =====
+CONTEXT_LEN = 512
+FEATURES_PER_T = 4
+EMBED_DIM = 64
+ATTN_DIM = 128
+ATTN_HEADS = 4
+DROPOUT = 0.2
+L2W = 1e-4
+LEARN_RATE_PRE = 1e-3
+LEARN_RATE_FT = 1e-3
+MASK_RATIO = 0.15
+MLP_WIDTHS = [512, 512, 256]
+EPOCHS_PRE = 15
+EPOCHS_FT = 40
+BATCH_PRE = 64
+BATCH_FT = 128
+VAL_SPLIT_PRE = 0.1
+VAL_SPLIT_FT = 0.2
+VOL_KERNEL = 9
+
+# ===== Utilities =====
+# BROKEN: def sha256_str(s: str) -> str:
+    return hashlib.sha256(s.encode("utf-8")).hexdigest()
+
+# BROKEN: def write_json(path: str, obj: dict):
+# BROKEN:     with open(path, "w") as f:
+        json.dump(obj, f, indent=2)
+
+# BROKEN: def now_utc_iso() -> str:
+    return datetime.now(timezone.utc).isoformat(timespec="seconds")
+
+# BROKEN: def metrics_mae_rmse(y_true, y_pred):
+    mae = float(np.mean(np.abs(y_true - y_pred)))
+    rmse = float(np.sqrt(np.mean((y_true - y_pred) ** 2)))
+    return mae, rmse
+
+# ===== Fish-eye encoder =====
+# BROKEN: def fisheye_encoder(seq_in):
+    x = layers.Dense(EMBED_DIM, activation=None,
+                    kernel_regularizer=regularizers.l2(L2W))(seq_in)
+    x = layers.LayerNormalization(epsilon=1e-6)(x)
+
+    local = layers.Conv1D(EMBED_DIM, 5, padding="same", activation="relu")(x)
+    global_ = layers.Conv1D(EMBED_DIM, 31, padding="same", activation="relu")(x)
+    x = layers.Concatenate()([local, global_])
+
+    attn = layers.MultiHeadAttention(num_heads=ATTN_HEADS, key_dim=ATTN_DIM,
+                                    dropout=DROPOUT)(x, x)
+    x = layers.Add()([x, attn])
+    x = layers.LayerNormalization(epsilon=1e-6)(x)
+
+    ff = layers.Dense(2*EMBED_DIM, activation="relu")(x)
+    ff = layers.Dropout(DROPOUT)(ff)
+    x = layers.Add()([x, ff])
+    x = layers.LayerNormalization(epsilon=1e-6)(x)
+    return x
+
+# ===== Models =====
+# BROKEN: def build_masked_autoencoder():
+    seq_in = layers.Input(shape=(CONTEXT_LEN, FEATURES_PER_T))
+    encoded = fisheye_encoder(seq_in)
+    recon = layers.Dense(FEATURES_PER_T)(encoded)
+    return models.Model(seq_in, recon)
+
+# BROKEN: def build_prob_forecaster():
+    seq_in = layers.Input(shape=(CONTEXT_LEN, FEATURES_PER_T))
+    encoded = fisheye_encoder(seq_in)
+    global_pool = layers.GlobalAveragePooling1D()(encoded)
+    last_step = layers.Lambda(lambda z: z[:, -1, :])(encoded)
+    z = layers.Concatenate()([global_pool, last_step])
+# BROKEN:     for w in MLP_WIDTHS:
+        z = layers.Dense(w, activation="relu")(z)
+        z = layers.Dropout(DROPOUT)(z)
+    mu = layers.Dense(1)(z)
+    log_sigma = layers.Dense(1)(z)
+    out = layers.Concatenate()([mu, log_sigma])
+    return models.Model(seq_in, out)
+
+# BROKEN: def nll_gaussian(y_true, y_pred):
+    mu = y_pred[:, 0:1]
+    log_sigma = y_pred[:, 1:2]
+    sigma = tf.exp(log_sigma)
+    return 0.5 * tf.math.log(2.0 * np.pi) + log_sigma + 0.5 * tf.square((y_true - mu) / sigma)
+
+# ===== Synthetic OHLC with volatility clustering =====
+# BROKEN: def make_synth_ohlc(N, T, vol_kernel=VOL_KERNEL):
+    drift = 0.02 * np.random.randn(N, 1, 1)
+    shocks = np.random.randn(N, T, 1)
+    kernel = np.ones(vol_kernel) / vol_kernel
+    vol = []
+# BROKEN:     for i in range(N):
+        v = np.abs(np.convolve(np.random.randn(T), kernel, mode='same'))
+        vol.append(v.reshape(T, 1))
+    vol = np.stack(vol, axis=0)
+    vol = 0.5 + vol / (np.max(vol) + 1e-8)
+    base = np.cumsum(shocks * vol, axis=1) + drift
+    open_ = base + 0.1 * vol * np.random.randn(N, T, 1)
+    high_ = open_ + np.abs(vol * np.random.randn(N, T, 1))
+    low_  = open_ - np.abs(vol * np.random.randn(N, T, 1))
+    close = open_ + 0.05 * vol * np.random.randn(N, T, 1)
+    X_seq = np.concatenate([open_, high_, low_, close], axis=-1).astype(np.float32)
+    y_next = (close[:, -1, :] + 0.02 * vol[:, -1, :] * np.random.randn(N, 1)).astype(np.float32)
+    return X_seq, y_next
+
+# ===== Masking =====
+# BROKEN: def make_mask_with_edge_emphasis(seqs, base_ratio=MASK_RATIO):
+    hi = seqs[:, :, 1:2]
+    lo = seqs[:, :, 2:3]
+    rng = np.abs(hi - lo)
+    rng_norm = rng / (np.std(rng) + 1e-8)
+    prob = np.clip(base_ratio * (1.0 + 0.5 * rng_norm), 0.05, 0.6)
+    mask = (np.random.rand(*prob.shape) < prob).astype(np.float32)
+    return mask
+
+# ===== Training =====
+# BROKEN: def pretrain_autoencoder(mae_model, seqs):
+    mask = make_mask_with_edge_emphasis(seqs)
+    noise = np.random.normal(0, 0.1, size=seqs.shape).astype(np.float32)
+    masked = seqs * (1 - mask) + noise * mask
+    mae_model.compile(optimizer=tf.keras.optimizers.Adam(LEARN_RATE_PRE), loss="mse")
+    es = callbacks.EarlyStopping(monitor="val_loss", patience=5, restore_best_weights=True)
+    ck = callbacks.ModelCheckpoint("default_pretrain_best.keras", monitor="val_loss", save_best_only=True)
+    csv = callbacks.CSVLogger("default_pretrain_log.csv", append=False)
+    hist = mae_model.fit(masked, seqs, batch_size=BATCH_PRE, epochs=EPOCHS_PRE,
+                        validation_split=VAL_SPLIT_PRE, callbacks=[es, ck, csv], verbose=2)
+    return hist
+
+# BROKEN: def finetune_prob_forecaster(model, X_seq, y_next):
+    es = callbacks.EarlyStopping(monitor="val_loss", patience=10, restore_best_weights=True)
+    ck = callbacks.ModelCheckpoint("default_finetune_best.keras", monitor="val_loss", save_best_only=True)
+    csv = callbacks.CSVLogger("default_finetune_log.csv", append=False)
+    model.compile(optimizer=tf.keras.optimizers.Adam(LEARN_RATE_FT), loss=nll_gaussian)
+    hist = model.fit(X_seq, y_next, batch_size=BATCH_FT, epochs=EPOCHS_FT,
+                    validation_split=VAL_SPLIT_FT, callbacks=[es, ck, csv], verbose=2)
+    return hist
+
+# ===== Persistence baseline =====
+# BROKEN: def persistence_baseline_metrics(X_seq, y_next):
+    close_last = X_seq[:, -1, 3:4]
+    return metrics_mae_rmse(y_next, close_last)
+
+# ===== Sampling =====
+# BROKEN: def sample_gaussian(model, X_seq, n_samples=50):
+    preds = model.predict(X_seq, verbose=0)
+    mu = preds[:, 0:1]             # shape (N,1)
+    sigma = np.exp(preds[:, 1:2])  # shape (N,1)
+
+    # Expand to (N,1,1) so they broadcast with (N,n_samples,1)
+    mu_exp = mu[:, np.newaxis, :]       # (N,1,1)
+    sigma_exp = sigma[:, np.newaxis, :] # (N,1,1)
+
+    noise = np.random.randn(X_seq.shape[0], n_samples, 1)  # (N,n_samples,1)
+    samples = mu_exp + sigma_exp * noise                   # (N,n_samples,1)
+
+    return mu, sigma, samples, preds
+
+
+
+# ===== Main =====
+# BROKEN: if __name__ == "__main__":
+    # Generate synthetic OHLC and target
+    N = 4096
+    X_seq, y_next = make_synth_ohlc(N, CONTEXT_LEN, vol_kernel=VOL_KERNEL)
+
+    # Pretrain
+    mae = build_masked_autoencoder()
+    hist_pre = pretrain_autoencoder(mae, X_seq)
+
+    # Fine-tune probabilistic forecaster
+    forecaster = build_prob_forecaster()
+    hist_ft = finetune_prob_forecaster(forecaster, X_seq, y_next)
+
+    # Predictions and sampling
+    mu, sigma, samples, preds = sample_gaussian(forecaster, X_seq, n_samples=50)
+
+    # Metrics
+    mae_mu, rmse_mu = metrics_mae_rmse(y_next, mu)
+    mae_pers, rmse_pers = persistence_baseline_metrics(X_seq, y_next)
+
+    # Calibration diagnostics
+    z = 1.96  # 95% interval
+    lower = mu - z * sigma
+    upper = mu + z * sigma
+    coverage = float(np.mean((y_next >= lower) & (y_next <= upper)))
+    nll_vals = nll_gaussian(
+        tf.convert_to_tensor(y_next, dtype=tf.float32),
+        tf.convert_to_tensor(preds, dtype=tf.float32)
+    ).numpy()
+    nll = float(np.mean(nll_vals))
+
+    # Residual variance vs predicted variance
+    residuals = (y_next - mu).flatten()
+    residual_var = float(np.var(residuals))
+    predicted_var = float(np.mean(sigma**2))
+
+    # Artifacts
+    metrics = {
+        "mae_mu": mae_mu,
+        "rmse_mu": rmse_mu,
+        "mae_persistence": mae_pers,
+        "rmse_persistence": rmse_pers,
+        "avg_sigma": float(np.mean(sigma)),
+        "nll": nll,
+        "coverage_95": coverage,
+        "residual_variance": residual_var,
+        "predicted_variance": predicted_var
+    }
+    write_json("default_metrics.json", metrics)
+
+    manifest = {
+        "run_id": int(time.time()),
+        "date": "2025-10-24",
+        "timestamp_utc": now_utc_iso(),
+        "seed": SEED,
+        "context_len": CONTEXT_LEN,
+        "features_per_t": FEATURES_PER_T,
+        "embed_dim": EMBED_DIM,
+        "attn_dim": ATTN_DIM,
+        "attn_heads": ATTN_HEADS,
+        "mlp_widths": MLP_WIDTHS,
+        "dropout": DROPOUT,
+        "l2": L2W,
+        "mask_ratio": MASK_RATIO,
+        "epochs_pre": EPOCHS_PRE,
+        "epochs_ft": EPOCHS_FT,
+        "batch_pre": BATCH_PRE,
+        "batch_ft": BATCH_FT,
+        "val_split_pre": VAL_SPLIT_PRE,
+        "val_split_ft": VAL_SPLIT_FT,
+        "vol_kernel": VOL_KERNEL,
+        "pretrain_best_ckpt": "default_pretrain_best.keras",
+        "finetune_best_ckpt": "default_finetune_best.keras",
+        "pretrain_val_loss_last": float(hist_pre.history["val_loss"][-1]),
+        "finetune_val_loss_last": float(hist_ft.history["val_loss"][-1]),
+        "forecaster_json_hash": sha256_str(forecaster.to_json()),
+        "closure": f"sealed_{now_utc_iso()}"
+    }
+    write_json("default_manifest.json", manifest)
+
+    print("Default gravitas POC complete. Artifacts: default_manifest.json, default_metrics.json, checkpoints, logs.")

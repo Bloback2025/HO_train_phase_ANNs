@@ -1,0 +1,1021 @@
+{
+  "run_id": null,
+  "repo_tag": null,
+  "artifacts": [
+    {
+      "role": "canonical_data",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\artifact_report.csv",
+      "filename": "artifact_report.csv",
+      "size_bytes": 26082,
+      "sha256": "B78107ACFFEF4D6418211D9DC9864A0D72F9B4C58D1E3002EF345A90A7445BF9"
+    },
+    {
+      "role": "canonical_data",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\audit_ledger.csv",
+      "filename": "audit_ledger.csv",
+      "size_bytes": 4874,
+      "sha256": "D5E0902BB5D9608FD1B8317F0D464CB83489DDF8E3B2423F525B4E400D34A430"
+    },
+    {
+      "role": "canonical_data",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\default_finetune_log.csv",
+      "filename": "default_finetune_log.csv",
+      "size_bytes": 642,
+      "sha256": "ADA9FBA79E6BE5DDC962716B2129AC3E96D4C6578F71BC5C926BC376F9E1607B"
+    },
+    {
+      "role": "canonical_data",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\default_pretrain_log.csv",
+      "filename": "default_pretrain_log.csv",
+      "size_bytes": 642,
+      "sha256": "54CA79B1306070066A497BFD12EDC29CB5407744E4D0A77E655DFD10094BBC6E"
+    },
+    {
+      "role": "canonical_data",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\fishhead_run_manifest.csv",
+      "filename": "fishhead_run_manifest.csv",
+      "size_bytes": 591,
+      "sha256": "01FA5158861116573205EE4D36EC04B78B9A8FC19A5DCE0C9164B994467A8FBA"
+    },
+    {
+      "role": "canonical_data",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\ho2bann_gru_log.csv",
+      "filename": "ho2bann_gru_log.csv",
+      "size_bytes": 3548,
+      "sha256": "379BC53E99D120ACD77C527D9A062C44623A158F398B398EFC20BD98291F282D"
+    },
+    {
+      "role": "canonical_data",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\ho2bann_log.csv",
+      "filename": "ho2bann_log.csv",
+      "size_bytes": 1487,
+      "sha256": "3C4F802B7FEDA56B505D684E1A1EAA12027F9BC7E4C161B0C279B9857130099E"
+    },
+    {
+      "role": "canonical_data",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\hoxnc_full.csv",
+      "filename": "hoxnc_full.csv",
+      "size_bytes": 198508,
+      "sha256": "0364F0B3E5B8CD158A8D2796215D70C73FCBE24A5FCE1750B24C094BC4CB5F73"
+    },
+    {
+      "role": "canonical_data",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\hoxnc_testing.csv",
+      "filename": "hoxnc_testing.csv",
+      "size_bytes": 44928,
+      "sha256": "D7E75485054836422F7F4311DEF959CCD01BCDABA614326F16E3AC2BE89C216A"
+    },
+    {
+      "role": "canonical_data",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\hoxnc_training.csv",
+      "filename": "hoxnc_training.csv",
+      "size_bytes": 145598,
+      "sha256": "04CC097BD744E1262AD885596C79C34D167F0A8E04B4D2DDA919EDB149709186"
+    },
+    {
+      "role": "canonical_data",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\hoxnc_validation.csv",
+      "filename": "hoxnc_validation.csv",
+      "size_bytes": 8035,
+      "sha256": "39389B5D46FDE2F372171501B61D3300F0C9913CFE0A2C783B792566BB1B07B9"
+    },
+    {
+      "role": "canonical_data",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\metrics_2bANN2_run3439c642.csv",
+      "filename": "metrics_2bANN2_run3439c642.csv",
+      "size_bytes": 299,
+      "sha256": "A7692BD30CB14F208876F41B19C67DC483F99204AB7AAF074EFE39D62297CC01"
+    },
+    {
+      "role": "canonical_data",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\pure_metrics_val.csv",
+      "filename": "pure_metrics_val.csv",
+      "size_bytes": 3918,
+      "sha256": "9C694462942074043E543E577EF3A88676BAA77C324CDA73CCD4800A89A38099"
+    },
+    {
+      "role": "canonical_data",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\RunA_pretrain_ON_ctx128_forecaster_log.csv",
+      "filename": "RunA_pretrain_ON_ctx128_forecaster_log.csv",
+      "size_bytes": 669,
+      "sha256": "D5C4ECDEB0A1B017DFD1B37BFACC20F689C4BC07BE3F3C49B92F28ACF049BCAF"
+    },
+    {
+      "role": "canonical_data",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\RunA_pretrain_ON_ctx128_mae_log.csv",
+      "filename": "RunA_pretrain_ON_ctx128_mae_log.csv",
+      "size_bytes": 2034,
+      "sha256": "70C9970DF2962519AFC29D06CF2690E2BF9ACF892DAE7F47C44C2949618F58B8"
+    },
+    {
+      "role": "canonical_data",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\RunFix_non_destructive_ctx128_forecaster_log.csv",
+      "filename": "RunFix_non_destructive_ctx128_forecaster_log.csv",
+      "size_bytes": 605,
+      "sha256": "4444C6A67D8E3DBF40CEF2E104B2494C7AD542DAFCE714C462D83AB5C6C32DCC"
+    },
+    {
+      "role": "canonical_data",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\RunFix_non_destructive_ctx128_mae_log.csv",
+      "filename": "RunFix_non_destructive_ctx128_mae_log.csv",
+      "size_bytes": 2034,
+      "sha256": "70C9970DF2962519AFC29D06CF2690E2BF9ACF892DAE7F47C44C2949618F58B8"
+    },
+    {
+      "role": "canonical_data",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\RunPatch_auxMAE_clipSigma_ctx128_forecaster_log.csv",
+      "filename": "RunPatch_auxMAE_clipSigma_ctx128_forecaster_log.csv",
+      "size_bytes": 607,
+      "sha256": "327D423132BB1B0F0B0352CB7C01A17C0E22BD3ABAB7C24375922D94B91530EA"
+    },
+    {
+      "role": "canonical_data",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\RunPatch_auxMAE_clipSigma_ctx128_mae_log.csv",
+      "filename": "RunPatch_auxMAE_clipSigma_ctx128_mae_log.csv",
+      "size_bytes": 2034,
+      "sha256": "70C9970DF2962519AFC29D06CF2690E2BF9ACF892DAE7F47C44C2949618F58B8"
+    },
+    {
+      "role": "canonical_data",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\fishhead_ho_audit_outputs_v5_2\\fishhead_metrics_v5_2_20251029_163938.csv",
+      "filename": "fishhead_metrics_v5_2_20251029_163938.csv",
+      "size_bytes": 887,
+      "sha256": "EE95DE975DCC5932C80671B1BE696B9F2F21153295DAA3F987C481FCB2C3F06D"
+    },
+    {
+      "role": "canonical_data",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\fishhead_ho_audit_outputs_v5_3\\fishhead_metrics_v5_3_20251029_171130.csv",
+      "filename": "fishhead_metrics_v5_3_20251029_171130.csv",
+      "size_bytes": 1294,
+      "sha256": "45357B8A02A6F7A7C58900F21CCECA8AED7CB6033A93F1E4E91F8EF0C24C4AE2"
+    },
+    {
+      "role": "canonical_data",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\fishhead_synth_audit_outputs_v1_0\\fishhead_synth_metrics_v1_0_20251029_174320.csv",
+      "filename": "fishhead_synth_metrics_v1_0_20251029_174320.csv",
+      "size_bytes": 1296,
+      "sha256": "DCC37E47F0B9968E661C0194CC6019CFCD03B70864D6590BAAA02A2D7C57AC1B"
+    },
+    {
+      "role": "canonical_data",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\ho_poc_outputs\\gatetuner_metrics.csv",
+      "filename": "gatetuner_metrics.csv",
+      "size_bytes": 510,
+      "sha256": "6DD8031A06FA76BD9BC19CD7A6372DEA354F6FF6222AA2253681913E705457CC"
+    },
+    {
+      "role": "canonical_data",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\ho_poc_outputs\\metrics.csv",
+      "filename": "metrics.csv",
+      "size_bytes": 927,
+      "sha256": "CA7B78B1D42CFC0FC941CB0DA22356A5DEE1C52DD830B65C59E1B30BB2FF71C5"
+    },
+    {
+      "role": "canonical_data",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\ho_poc_outputs\\val_outputs.csv",
+      "filename": "val_outputs.csv",
+      "size_bytes": 16982,
+      "sha256": "B2DEA6CB7F8E040816AFA0B531B8E2AC9C0A342D2512AD4617914C613DC46DA0"
+    },
+    {
+      "role": "canonical_data",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\ho_sig_out\\summary.csv",
+      "filename": "summary.csv",
+      "size_bytes": 281,
+      "sha256": "E0C682A4485FB16681D6B59E4EFD6AE4823FD68DBF09E2BF7E2B02621F667FA4"
+    },
+    {
+      "role": "canonical_data",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\ho_sig_out\\trial_metrics_bootstrap.csv",
+      "filename": "trial_metrics_bootstrap.csv",
+      "size_bytes": 203299,
+      "sha256": "CA7DE94870CEC3167F961788507C429B896492882777885D2A25BD360E3C58A3"
+    },
+    {
+      "role": "canonical_data",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\hybrid_fisheye_audit_outputs_v1_1\\hybrid_fisheye_metrics_v1_1_20251029_181339.csv",
+      "filename": "hybrid_fisheye_metrics_v1_1_20251029_181339.csv",
+      "size_bytes": 1623,
+      "sha256": "C63240C111BE61D5AE330C7697F6BE7CC6E5B9FC6791D605509992C09116021D"
+    },
+    {
+      "role": "canonical_data",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\hybrid_fisheye_audit_outputs_v1_1\\HybridAudit_v1_1_pretrain_ON_ctx128_forecaster_log.csv",
+      "filename": "HybridAudit_v1_1_pretrain_ON_ctx128_forecaster_log.csv",
+      "size_bytes": 7330,
+      "sha256": "2FE6814EAAC3BAFE5FC1319F38F5E0847FDF018809D8552098238EB272268FC0"
+    },
+    {
+      "role": "canonical_data",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\hybrid_fisheye_audit_outputs_v1_1\\HybridAudit_v1_1_pretrain_ON_ctx128_mae_log.csv",
+      "filename": "HybridAudit_v1_1_pretrain_ON_ctx128_mae_log.csv",
+      "size_bytes": 2043,
+      "sha256": "5CA21EBBCB11A2D02071A69318BEF519DE797D15D90BD77CBF19EE023A746036"
+    },
+    {
+      "role": "canonical_data",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\runlogs\\preds_variant0_seed20251030_20251030_205654.csv",
+      "filename": "preds_variant0_seed20251030_20251030_205654.csv",
+      "size_bytes": 26372,
+      "sha256": "F291EFDB0ABE419390EBE7A8CB31F9F818DEFB44C82C2D96557096D13ADBBB4E"
+    },
+    {
+      "role": "canonical_data",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\runlogs\\preds_variant1_seed20251031_20251030_205659.csv",
+      "filename": "preds_variant1_seed20251031_20251030_205659.csv",
+      "size_bytes": 26380,
+      "sha256": "0FD2C2CC115089B99FE9292C7622A1ED5A77AF0A6806B9B9B5E43B39D85091BF"
+    },
+    {
+      "role": "canonical_data",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\runlogs\\preds_variant2_seed20251032_20251030_205652.csv",
+      "filename": "preds_variant2_seed20251032_20251030_205652.csv",
+      "size_bytes": 26387,
+      "sha256": "A8870196018F7EC548BD94FC22F24E6E3DE488D3A000124F854D9263A108116D"
+    },
+    {
+      "role": "canonical_data",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\runlogs\\preds_variant3_seed20251033_20251030_205707.csv",
+      "filename": "preds_variant3_seed20251033_20251030_205707.csv",
+      "size_bytes": 26400,
+      "sha256": "52D2FACE1FC21FC69AB20C759897F67783D1627F10F69550DCBC37276F1BD138"
+    },
+    {
+      "role": "canonical_data",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\runlogs\\preds_variant4_seed20251034_20251030_205658.csv",
+      "filename": "preds_variant4_seed20251034_20251030_205658.csv",
+      "size_bytes": 26384,
+      "sha256": "4BB2951160CC05CB1574A05A6EE189FD6775466D3E2F90DAB9C94C8F1BD0CECD"
+    },
+    {
+      "role": "manifest",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\artifact_manifest.json",
+      "filename": "artifact_manifest.json",
+      "size_bytes": 32234,
+      "sha256": "08ADFA8FAA1BD8131425FCEB60E057D501DC71C4031906589F64CEFF16414B9C"
+    },
+    {
+      "role": "manifest",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\default_manifest.json",
+      "filename": "default_manifest.json",
+      "size_bytes": 842,
+      "sha256": "EE83DE13361605AC86C87EAF56317D74D314AB54F2837253572C466445FD8D3D"
+    },
+    {
+      "role": "manifest",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\fishhead_synthetic_manifest.json",
+      "filename": "fishhead_synthetic_manifest.json",
+      "size_bytes": 300,
+      "sha256": "9DE75ECF6EB0F2CDEAD49D8B4E1A8B5BD23E7F4288DE7C47BFA468E05B14B0C3"
+    },
+    {
+      "role": "manifest",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\ho_manifest.json",
+      "filename": "ho_manifest.json",
+      "size_bytes": 1291,
+      "sha256": "483AF48C11B57D7D2968C4208C50CBDFCF368A81C5ED46806D1947EF7A55685C"
+    },
+    {
+      "role": "manifest",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\ho2bann_manifest.json",
+      "filename": "ho2bann_manifest.json",
+      "size_bytes": 1450,
+      "sha256": "C081942113D26B841671EEC8129872F4600AFC95233C37CE76B01344EBAD1549"
+    },
+    {
+      "role": "manifest",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\hybrid_fisheye_prob_ann_manifest.json",
+      "filename": "hybrid_fisheye_prob_ann_manifest.json",
+      "size_bytes": 12604,
+      "sha256": "1C50D92DCDDB87B8FDA1AEA1BC1BD40D201700AB13DBD6DF785A81504D859B98"
+    },
+    {
+      "role": "manifest",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\hybrid_fisheye_prob_ann_poc_manifest.json",
+      "filename": "hybrid_fisheye_prob_ann_poc_manifest.json",
+      "size_bytes": 299,
+      "sha256": "2DD360A1601F011D4EFF99548293B26ECA8F58366DBC11C62EFEFFF52D2CC45F"
+    },
+    {
+      "role": "manifest",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\hybrid_fisheye_prob_ann_v1.1_audit_2025-10-25_manifest.json",
+      "filename": "hybrid_fisheye_prob_ann_v1.1_audit_2025-10-25_manifest.json",
+      "size_bytes": 8681,
+      "sha256": "AF4ACCC8122630F5B60636DA9AA817344B925DACFA46461A55C4DF3F6DFD8DAC"
+    },
+    {
+      "role": "manifest",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\RunA_pretrain_ON_ctx128_manifest.json",
+      "filename": "RunA_pretrain_ON_ctx128_manifest.json",
+      "size_bytes": 1913,
+      "sha256": "D560C9D1B2439D57CDF84B0A59C29D976691440D2A395B2A892E405722325561"
+    },
+    {
+      "role": "manifest",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\RunFix_non_destructive_ctx128_manifest.json",
+      "filename": "RunFix_non_destructive_ctx128_manifest.json",
+      "size_bytes": 12362,
+      "sha256": "5CDF79F91B9E3DFD294C911FDC42F626AB32533137039DA7AA052E8B72C14749"
+    },
+    {
+      "role": "manifest",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\RunPatch_auxMAE_clipSigma_ctx128_manifest.json",
+      "filename": "RunPatch_auxMAE_clipSigma_ctx128_manifest.json",
+      "size_bytes": 2009,
+      "sha256": "6B9CD96FAE1D952375021149686862A856F2B7CE96CFAFB17BCA1B4735635550"
+    },
+    {
+      "role": "manifest",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\default_metrics.json",
+      "filename": "default_metrics.json",
+      "size_bytes": 343,
+      "sha256": "C808A2B49343DC268D2AE706E3385D81666AE9C30999A1EF6D2634BFFF73B63A"
+    },
+    {
+      "role": "manifest",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\fishhead_adapter_inputs.json",
+      "filename": "fishhead_adapter_inputs.json",
+      "size_bytes": 376,
+      "sha256": "4589CC6CBDF2CCBB35870CF4A253C4FDC3B9481E21280071868ED17FD4F1871B"
+    },
+    {
+      "role": "manifest",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\hybrid_fisheye_prob_ann_mu_only_interim.json",
+      "filename": "hybrid_fisheye_prob_ann_mu_only_interim.json",
+      "size_bytes": 263,
+      "sha256": "9F4DDEE1B63361896AAFEC0DE55573FA9724B539BFAC37A84E333673C92ADF81"
+    },
+    {
+      "role": "manifest",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\RUNLOG_2bANN2_HO_20251023_225829.json",
+      "filename": "RUNLOG_2bANN2_HO_20251023_225829.json",
+      "size_bytes": 890,
+      "sha256": "DFC0BFDD2935EFA7BE7E8ED2E07844101F8D40F03D084169617BC8854F2B9550"
+    },
+    {
+      "role": "manifest",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\RUNLOG_2bANN2_HO_20251023_232132.json",
+      "filename": "RUNLOG_2bANN2_HO_20251023_232132.json",
+      "size_bytes": 994,
+      "sha256": "A5DC8AE453A89407D5976B7455E34564A7474529F2A6F07B9FBD1C3EC57AA725"
+    },
+    {
+      "role": "manifest",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\RUNLOG_2bANN2_HO_20251028_154848.json",
+      "filename": "RUNLOG_2bANN2_HO_20251028_154848.json",
+      "size_bytes": 879,
+      "sha256": "DE414797BC28AF7EB8B8A80CDB614B191F4FF2A67A8C54F305CA909F96D1240D"
+    },
+    {
+      "role": "manifest",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\RUNLOG_2bANN2_HO_v3_forecast_20251023_235404.json",
+      "filename": "RUNLOG_2bANN2_HO_v3_forecast_20251023_235404.json",
+      "size_bytes": 1030,
+      "sha256": "3A2B10FC10C6755884016C0D14E6728D29B9A03995D0F689F542945DEEF63A46"
+    },
+    {
+      "role": "manifest",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\RUNLOG_2bANN2_HO_v5_heavy_20251024_002343.json",
+      "filename": "RUNLOG_2bANN2_HO_v5_heavy_20251024_002343.json",
+      "size_bytes": 1817,
+      "sha256": "A990A7E6050488F8693C4E48EE2FABE0A3236B44A4F4547FA96F0A3C77B7FD8A"
+    },
+    {
+      "role": "manifest",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\RUNLOG_2bANN2_HO_v5.1_heavy_20251029_130659.json",
+      "filename": "RUNLOG_2bANN2_HO_v5.1_heavy_20251029_130659.json",
+      "size_bytes": 2018,
+      "sha256": "413FF4D2425909FD7F255BF5CF313983C8387B4CE7DB35A219AAF470CD083143"
+    },
+    {
+      "role": "manifest",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\RUNLOG_2bANN2_HO_v5.1_heavy_20251029_140455.json",
+      "filename": "RUNLOG_2bANN2_HO_v5.1_heavy_20251029_140455.json",
+      "size_bytes": 2002,
+      "sha256": "45D239CA3565459466EFA26B4CDA9D10D8F82451B112D020A193A321827512B9"
+    },
+    {
+      "role": "manifest",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\RUNLOG_2bANN2_HO_v5.1_heavy_20251029_140904.json",
+      "filename": "RUNLOG_2bANN2_HO_v5.1_heavy_20251029_140904.json",
+      "size_bytes": 1997,
+      "sha256": "FCC1A663217065583E5749FC60C71B7BE734B96FADE331FBF529100F1A040BC6"
+    },
+    {
+      "role": "manifest",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\RUNLOG_2bANN2_HO_v5.1_heavy_20251029_140936.json",
+      "filename": "RUNLOG_2bANN2_HO_v5.1_heavy_20251029_140936.json",
+      "size_bytes": 1999,
+      "sha256": "49E53B217DC01CF84A2F7FE9A798C22DE11928C08AF6A7266C8C44C36BB77F8A"
+    },
+    {
+      "role": "manifest",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\RUNLOG_2bANN2_HO_v5.1_heavy_20251029_141003.json",
+      "filename": "RUNLOG_2bANN2_HO_v5.1_heavy_20251029_141003.json",
+      "size_bytes": 2019,
+      "sha256": "B230313296E6A6397B1648CCE2BCF32445C31B1D4F560312671FE820B9F3A73A"
+    },
+    {
+      "role": "manifest",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\RUNLOG_2bANN2_HO_v5.1_heavy_20251029_141033.json",
+      "filename": "RUNLOG_2bANN2_HO_v5.1_heavy_20251029_141033.json",
+      "size_bytes": 1998,
+      "sha256": "D922309494EA36B280FD84C8F65BED8559AA3B1584577C73E7F59BA58474C065"
+    },
+    {
+      "role": "manifest",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\RUNLOG_2bANN2_HO_v5.1_heavy_20251029_141048.json",
+      "filename": "RUNLOG_2bANN2_HO_v5.1_heavy_20251029_141048.json",
+      "size_bytes": 2000,
+      "sha256": "BBB6729B76EF8DE49FB86DED1D4E77560EE51F17CCF0DB8C6F8F034E36C3E8F5"
+    },
+    {
+      "role": "manifest",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\RUNLOG_2bANN2_HO_v5.1_heavy_20251029_145242.json",
+      "filename": "RUNLOG_2bANN2_HO_v5.1_heavy_20251029_145242.json",
+      "size_bytes": 2020,
+      "sha256": "746FC790ACA1E028677561113C3564D605FA2DD9BCB802B2EBC91FAF18FD61BC"
+    },
+    {
+      "role": "manifest",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\RUNLOG_2bANN2_HO_v5.1_heavy_20251029_150254.json",
+      "filename": "RUNLOG_2bANN2_HO_v5.1_heavy_20251029_150254.json",
+      "size_bytes": 2018,
+      "sha256": "D340F7500491C8D2242E8256802D5E726CB3D3BF521CCE821CC2B4523ED82EE9"
+    },
+    {
+      "role": "manifest",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\RUNLOG_2bANN2_HO_v5.1_heavy_20251029_150810.json",
+      "filename": "RUNLOG_2bANN2_HO_v5.1_heavy_20251029_150810.json",
+      "size_bytes": 2001,
+      "sha256": "089074D87A39B36C4A7DA5821153A135EE2CE344E11E3A89AECE44A67B1B17C4"
+    },
+    {
+      "role": "manifest",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\RUNLOG_2bANN2_HO_v5.1_heavy_20251029_152459.json",
+      "filename": "RUNLOG_2bANN2_HO_v5.1_heavy_20251029_152459.json",
+      "size_bytes": 1998,
+      "sha256": "45FA98A65D680191630173F1AEE9F7A84EE5223217A8D9F391C2F82026E52615"
+    },
+    {
+      "role": "manifest",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\RUNLOG_2bANN2_HO_v5.1_heavy_20251029_155233.json",
+      "filename": "RUNLOG_2bANN2_HO_v5.1_heavy_20251029_155233.json",
+      "size_bytes": 2016,
+      "sha256": "7495A3AA5CE5FC896AE60B1F8D529076683C4BCC923CE502ECE8835C02DDC7BC"
+    },
+    {
+      "role": "manifest",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\runlog_checks_20251029_141234.json",
+      "filename": "runlog_checks_20251029_141234.json",
+      "size_bytes": 1940,
+      "sha256": "04C0A013F352FE85F6FAC851628E2D3E26A9149FDC0C93C288B9CC00A09610B4"
+    },
+    {
+      "role": "manifest",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\fishhead_ho_audit_outputs_v5_2\\fishhead_runlog_v5_2_20251029_163938.json",
+      "filename": "fishhead_runlog_v5_2_20251029_163938.json",
+      "size_bytes": 1691,
+      "sha256": "E186AB55EDE18094D9868918A69CD34893848BB2E6EE3EE1BD26FB2739A5C870"
+    },
+    {
+      "role": "manifest",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\fishhead_ho_audit_outputs_v5_3\\fishhead_runlog_v5_3_20251029_171130.json",
+      "filename": "fishhead_runlog_v5_3_20251029_171130.json",
+      "size_bytes": 2188,
+      "sha256": "32D8309A57B166015619210084F0A0DDD963C0212CD53F301CA692CEEACC6C3E"
+    },
+    {
+      "role": "manifest",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\fishhead_synth_audit_outputs_v1_0\\fishhead_synth_runlog_v1_0_20251029_174320.json",
+      "filename": "fishhead_synth_runlog_v1_0_20251029_174320.json",
+      "size_bytes": 2119,
+      "sha256": "65CBF2F047BCF37C26ED67A4B455431EB41CF6F031FA94D2A6858B73B05D2635"
+    },
+    {
+      "role": "manifest",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\ho_sig_out\\results.json",
+      "filename": "results.json",
+      "size_bytes": 1309,
+      "sha256": "6DD8705278352A605FD063CA7DB6F0DB1DFED2D00DE6BD5E4022F74FF55F0389"
+    },
+    {
+      "role": "manifest",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\hybrid_fisheye_audit_outputs_v1_1\\hybrid_fisheye_runlog_v1_1_20251029_181339.json",
+      "filename": "hybrid_fisheye_runlog_v1_1_20251029_181339.json",
+      "size_bytes": 3655,
+      "sha256": "0643CD4DC1A364FE8E2A8F0A729E7F533953DB3A1846CFF2F61AF9BF2F3FDD3A"
+    },
+    {
+      "role": "manifest",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\runlogs\\RUN_train_phase2b2_HO_reinstated_v0_20251030_205241.json",
+      "filename": "RUN_train_phase2b2_HO_reinstated_v0_20251030_205241.json",
+      "size_bytes": 833,
+      "sha256": "6DC65EC973A6E3399912CBD0881ACB2B2BC9446DD11D3E817BCEE918832F8187"
+    },
+    {
+      "role": "manifest",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\runlogs\\RUN_train_phase2b2_HO_reinstated_v0_20251030_205654.json",
+      "filename": "RUN_train_phase2b2_HO_reinstated_v0_20251030_205654.json",
+      "size_bytes": 1609,
+      "sha256": "42A61723C1DA09A1CDE44C8BB18F98802549A260EFD3B55756C1996FCC254349"
+    },
+    {
+      "role": "manifest",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\runlogs\\RUN_train_phase2b2_HO_reinstated_v1_20251030_205246.json",
+      "filename": "RUN_train_phase2b2_HO_reinstated_v1_20251030_205246.json",
+      "size_bytes": 833,
+      "sha256": "59ACB07EC89406CC45105EBB588DBDA9062A13D3AD87D24DA2E58C93B395183E"
+    },
+    {
+      "role": "manifest",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\runlogs\\RUN_train_phase2b2_HO_reinstated_v1_20251030_205659.json",
+      "filename": "RUN_train_phase2b2_HO_reinstated_v1_20251030_205659.json",
+      "size_bytes": 1611,
+      "sha256": "63A50B2F8B6B78691DA46E62B09E9EF4A15921AB32AE3456F856597135ECEC48"
+    },
+    {
+      "role": "manifest",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\runlogs\\RUN_train_phase2b2_HO_reinstated_v2_20251030_205239.json",
+      "filename": "RUN_train_phase2b2_HO_reinstated_v2_20251030_205239.json",
+      "size_bytes": 831,
+      "sha256": "9F9FAEC8A2C699AFFBD38B4C130507C7CFBBE3451462609E286122EA20949CF6"
+    },
+    {
+      "role": "manifest",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\runlogs\\RUN_train_phase2b2_HO_reinstated_v2_20251030_205652.json",
+      "filename": "RUN_train_phase2b2_HO_reinstated_v2_20251030_205652.json",
+      "size_bytes": 1609,
+      "sha256": "E131A11C7997CC3DC648486437871DF84BE5E4D2020D2FDC8E8764BB5BC5A21D"
+    },
+    {
+      "role": "manifest",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\runlogs\\RUN_train_phase2b2_HO_reinstated_v3_20251030_205250.json",
+      "filename": "RUN_train_phase2b2_HO_reinstated_v3_20251030_205250.json",
+      "size_bytes": 831,
+      "sha256": "CA8239D05392F04470DE65D7D8A7E1E2CEFCB7F372F59694A3134FD139FF15A9"
+    },
+    {
+      "role": "manifest",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\runlogs\\RUN_train_phase2b2_HO_reinstated_v3_20251030_205707.json",
+      "filename": "RUN_train_phase2b2_HO_reinstated_v3_20251030_205707.json",
+      "size_bytes": 1610,
+      "sha256": "0AC19E9DAE8226EC6522187E21156FD2948F162D568B23254EA12CAEDC5324BA"
+    },
+    {
+      "role": "manifest",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\runlogs\\RUN_train_phase2b2_HO_reinstated_v4_20251030_205245.json",
+      "filename": "RUN_train_phase2b2_HO_reinstated_v4_20251030_205245.json",
+      "size_bytes": 832,
+      "sha256": "DDE9A79BED295040288336454CC8C20F80971BCD58695E65EA4541CAD91BF2AD"
+    },
+    {
+      "role": "manifest",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\runlogs\\RUN_train_phase2b2_HO_reinstated_v4_20251030_205658.json",
+      "filename": "RUN_train_phase2b2_HO_reinstated_v4_20251030_205658.json",
+      "size_bytes": 1610,
+      "sha256": "2110ECF0323FB997954E6244AEFAFA6ADBA7B4F36E93C990C55D89A38C46AC6E"
+    },
+    {
+      "role": "manifest",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\runlogs\\RUN_train_phase2b2_HO_reinstated_v5_20251030_205233.json",
+      "filename": "RUN_train_phase2b2_HO_reinstated_v5_20251030_205233.json",
+      "size_bytes": 832,
+      "sha256": "065895B22A3814EFBD55BD86C20AEEED1065832CF8020BE1163E12A3491D48B0"
+    },
+    {
+      "role": "manifest",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\runlogs\\RUN_train_phase2b2_HO_reinstated_v6_20251030_205244.json",
+      "filename": "RUN_train_phase2b2_HO_reinstated_v6_20251030_205244.json",
+      "size_bytes": 834,
+      "sha256": "ACA90C10EE1A3FA22C857E798456AD6B2E8E7CCD6864F470F06A2047DA90C47E"
+    },
+    {
+      "role": "manifest",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\runlogs\\RUN_train_phase2b2_HO_reinstated_v7_20251030_205237.json",
+      "filename": "RUN_train_phase2b2_HO_reinstated_v7_20251030_205237.json",
+      "size_bytes": 834,
+      "sha256": "8F55AB7CBD9880E75BF63C6E017BB9A19ABBC43743F995236A38F2A2B543D374"
+    },
+    {
+      "role": "manifest",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\runlogs\\RUN_train_phase2b2_HO_reinstated_v8_20251030_205241.json",
+      "filename": "RUN_train_phase2b2_HO_reinstated_v8_20251030_205241.json",
+      "size_bytes": 831,
+      "sha256": "764EB4A84DA8A464335FEEF72D65F5D6744D5A3D65AF58DDAD64FA8D539AC310"
+    },
+    {
+      "role": "manifest",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\runlogs\\RUN_train_phase2b2_HO_reinstated_v9_20251030_205239.json",
+      "filename": "RUN_train_phase2b2_HO_reinstated_v9_20251030_205239.json",
+      "size_bytes": 833,
+      "sha256": "3DD2DB9F4DF9E621D544053300D8695A2725EB30FC14171F47A19785AD572F46"
+    },
+    {
+      "role": "audit_ledger",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\audit_ledger.csv",
+      "filename": "audit_ledger.csv",
+      "size_bytes": 4874,
+      "sha256": "D5E0902BB5D9608FD1B8317F0D464CB83489DDF8E3B2423F525B4E400D34A430"
+    },
+    {
+      "role": "model_code",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\audit_fishhead_all.py",
+      "filename": "audit_fishhead_all.py",
+      "size_bytes": 2070,
+      "sha256": "F7742CEEF5D353B89399A97513CF46999C3483D335769E16468A5FA111390FE3"
+    },
+    {
+      "role": "model_code",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\bootstrap_ho_paths_and_patch.py",
+      "filename": "bootstrap_ho_paths_and_patch.py",
+      "size_bytes": 619,
+      "sha256": "BF06A3AB70A7B334CE386412B9212BFECF9A51A48248821816BB0913D7BD4C24"
+    },
+    {
+      "role": "model_code",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\check_shapes_and_samples.py",
+      "filename": "check_shapes_and_samples.py",
+      "size_bytes": 2142,
+      "sha256": "7D7B60CC9B31B37077BACC837E940043552C5BB6A2A22112E4C3EF37B2C67866"
+    },
+    {
+      "role": "model_code",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\Default.py",
+      "filename": "Default.py",
+      "size_bytes": 9871,
+      "sha256": "F9774492947DE9305E6F93C69980887F2AEDD0DFB930C74AFCF6F0EA8FF767BC"
+    },
+    {
+      "role": "model_code",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\fishhead_demo.py",
+      "filename": "fishhead_demo.py",
+      "size_bytes": 3153,
+      "sha256": "D3D02D62EF85D1287EA0C64A05DA9B39736E18FC4FD2D2C5DB61E2F9C76705DA"
+    },
+    {
+      "role": "model_code",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\fishhead_financial_synthetic_audit_v1_0_20251029.py",
+      "filename": "fishhead_financial_synthetic_audit_v1_0_20251029.py",
+      "size_bytes": 13855,
+      "sha256": "CE52665898467F605A23088F885A196D322F95AB89C4294562287F7AD0F7F5BA"
+    },
+    {
+      "role": "model_code",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\fishhead_financial_synthetic_demo_with_indicators.py",
+      "filename": "fishhead_financial_synthetic_demo_with_indicators.py",
+      "size_bytes": 7108,
+      "sha256": "FBD5B509258F744F5134FBC617765853FFA3C3B8DF9A3FFDDE2F6B63CBAAE228"
+    },
+    {
+      "role": "model_code",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\fishhead_financial_synthetic_demo.py",
+      "filename": "fishhead_financial_synthetic_demo.py",
+      "size_bytes": 6160,
+      "sha256": "AD037DEE83E2E3F610757299DF11616D9052388E21160FF87C529789A1A55AA6"
+    },
+    {
+      "role": "model_code",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\fishhead_financial_synthetic_full_demo.py",
+      "filename": "fishhead_financial_synthetic_full_demo.py",
+      "size_bytes": 6430,
+      "sha256": "2E9F78FD6A97F411A247FF83B95EBF2E040152FA48CACEA01EA4F9D4E3779D72"
+    },
+    {
+      "role": "model_code",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\fishhead_ho_audit_v5_1.py",
+      "filename": "fishhead_ho_audit_v5_1.py",
+      "size_bytes": 13235,
+      "sha256": "2447CEB40E68579C0C7A2AFE67527A44820904E7FCF419B2B62AB865962D2762"
+    },
+    {
+      "role": "model_code",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\fishhead_ho_audit_v5_2_20251029.py",
+      "filename": "fishhead_ho_audit_v5_2_20251029.py",
+      "size_bytes": 12228,
+      "sha256": "835D19695D58EDDA825C37DBCB234AB8438B7217382C8066A7604EDDF59F18F7"
+    },
+    {
+      "role": "model_code",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\fishhead_ho_audit_v5_3_20251029.py",
+      "filename": "fishhead_ho_audit_v5_3_20251029.py",
+      "size_bytes": 12732,
+      "sha256": "FF73DCD708CB29C8289008D844353C3D576C640ED4E918128DAA0708B636C689"
+    },
+    {
+      "role": "model_code",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\fishhead_ho_poc_split.py",
+      "filename": "fishhead_ho_poc_split.py",
+      "size_bytes": 17097,
+      "sha256": "AEDD4F34FFB3D6548B7E8A818243892A5739B3D6EA9FE4476EC2FBFF50AC1357"
+    },
+    {
+      "role": "model_code",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\fishhead_ho_poc.py",
+      "filename": "fishhead_ho_poc.py",
+      "size_bytes": 11004,
+      "sha256": "C1317F129FB424ED745FB765EC4C40431519879B3471457FAB43A7C1B4A4497D"
+    },
+    {
+      "role": "model_code",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\fishhead_pure_model_event_config_demo.py",
+      "filename": "fishhead_pure_model_event_config_demo.py",
+      "size_bytes": 7734,
+      "sha256": "BBFABEDD3E06F9FAA5CC171E6E9ABC9B9C3263A088691A24B17E867B2B1C9E2D"
+    },
+    {
+      "role": "model_code",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\fishhead_train_demo.py",
+      "filename": "fishhead_train_demo.py",
+      "size_bytes": 4457,
+      "sha256": "5BDF1436B94B81CA0DA0188826851DF862621222B55A33FFAC2F21ABA8C00673"
+    },
+    {
+      "role": "model_code",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\fishhead_train_plot_demo.py",
+      "filename": "fishhead_train_plot_demo.py",
+      "size_bytes": 5092,
+      "sha256": "9511CD0F4692FCA77FC0F8CB9C8A445CF914DC05DA40CD4176A59659DC354978"
+    },
+    {
+      "role": "model_code",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\fishhead_vs_naive_demo.py",
+      "filename": "fishhead_vs_naive_demo.py",
+      "size_bytes": 5287,
+      "sha256": "3007AFE34B860C1AB29C2C186DD9E810A6D9807028D29A7A8AC0707F5C9900FB"
+    },
+    {
+      "role": "model_code",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\fishhead_with_gate_tuner.py",
+      "filename": "fishhead_with_gate_tuner.py",
+      "size_bytes": 0,
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "role": "model_code",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\gate_tuner_demo.py",
+      "filename": "gate_tuner_demo.py",
+      "size_bytes": 2132,
+      "sha256": "861A04ED09D8C074F6E04AE3D5FCB19B68B009EFDE5DE6092527A3824E19621C"
+    },
+    {
+      "role": "model_code",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\gate_tuner_integration.py",
+      "filename": "gate_tuner_integration.py",
+      "size_bytes": 2354,
+      "sha256": "0A38F0BE17DBC52248564488DE749036FDA9B22030F634A0A93EB301E42DF570"
+    },
+    {
+      "role": "model_code",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\gatetuner_train.py",
+      "filename": "gatetuner_train.py",
+      "size_bytes": 5418,
+      "sha256": "0BDAF22F607FEDB79C0A1C58CD10E886BE8AAD12782C0855F2D43F786066B0C9"
+    },
+    {
+      "role": "model_code",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\ho_manifest.py",
+      "filename": "ho_manifest.py",
+      "size_bytes": 1467,
+      "sha256": "C7FA8BFABF477A7E2E1A657C382720EBFD9DCB8D11891CDC5B0D4398BDD1675E"
+    },
+    {
+      "role": "model_code",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\HO_run_delta.py",
+      "filename": "HO_run_delta.py",
+      "size_bytes": 9315,
+      "sha256": "62F7D980A5A4CDFB566548B7D2B15AA7A7E5C84D746AE499776FE55105CFD741"
+    },
+    {
+      "role": "model_code",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\ho_structure_significance_harness.py",
+      "filename": "ho_structure_significance_harness.py",
+      "size_bytes": 18102,
+      "sha256": "963D1F8E3AAC8576D5F2B61D6B56194ED3C054B5925DD1F0A6C8AB7F5D90A0C3"
+    },
+    {
+      "role": "model_code",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\hybrid_fisheye_prob_ann_audit_v1_1_20251029.py",
+      "filename": "hybrid_fisheye_prob_ann_audit_v1_1_20251029.py",
+      "size_bytes": 21108,
+      "sha256": "81532C748C26B652DAC5892A485444D6F4A63073A28461834F5B0D0CAF09362B"
+    },
+    {
+      "role": "model_code",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\hybrid_fisheye_prob_ann_patch_fix.py",
+      "filename": "hybrid_fisheye_prob_ann_patch_fix.py",
+      "size_bytes": 17174,
+      "sha256": "200ACA4C3745CA8A2915C8B6FDBD820A0BC0C5D256565804AC6F831B7042A526"
+    },
+    {
+      "role": "model_code",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\hybrid_fisheye_prob_ann_patch_run.py",
+      "filename": "hybrid_fisheye_prob_ann_patch_run.py",
+      "size_bytes": 14823,
+      "sha256": "4DC5B5224BD85AE4749954FB835A7C1B00C9D14622096AAD8B4CCB0DFCA445E6"
+    },
+    {
+      "role": "model_code",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\hybrid_fisheye_prob_ann_poc.py",
+      "filename": "hybrid_fisheye_prob_ann_poc.py",
+      "size_bytes": 12956,
+      "sha256": "FE971D6772E1E00F51816F7E66DDC83A5BD986A714AD7A9B34C24FE3B7863B8B"
+    },
+    {
+      "role": "model_code",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\hybrid_fisheye_prob_ann_v1.1_audit_2025-10-25.py",
+      "filename": "hybrid_fisheye_prob_ann_v1.1_audit_2025-10-25.py",
+      "size_bytes": 12216,
+      "sha256": "A55AEBB1DC9ED7191845FFBADA2DB324CB2B40E94254BD9C6E398C91BA142CBA"
+    },
+    {
+      "role": "model_code",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\hybrid_fisheye_prob_ann.py",
+      "filename": "hybrid_fisheye_prob_ann.py",
+      "size_bytes": 18185,
+      "sha256": "009A2D35AB79B0B69B146B00B23218882B7D4267F8FFD042DF1E3DA8286F45B8"
+    },
+    {
+      "role": "model_code",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\inspect_alignment.py",
+      "filename": "inspect_alignment.py",
+      "size_bytes": 2030,
+      "sha256": "A02F50924BFBC13CC109424F7FDECD6ED72CF50DCA0D4CC2A2461F62A402C0E3"
+    },
+    {
+      "role": "model_code",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\inspect_metrics.py",
+      "filename": "inspect_metrics.py",
+      "size_bytes": 887,
+      "sha256": "B8402C8BFFC6E1639A61D055ECE2B27935983B00E7B184E7D53C029E93C506F8"
+    },
+    {
+      "role": "model_code",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\inspect_splits_dates.py",
+      "filename": "inspect_splits_dates.py",
+      "size_bytes": 1032,
+      "sha256": "90159D4F5ABD19E51F0516229BC561C06D74614867F87B456BF4CA64B6EFB234"
+    },
+    {
+      "role": "model_code",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\inspect_target_variance.py",
+      "filename": "inspect_target_variance.py",
+      "size_bytes": 1974,
+      "sha256": "5CBAC503909DE880AFACD20461B8D09AEDD27AC19382F9FCF2A53BF2F95522E0"
+    },
+    {
+      "role": "model_code",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\metrics_2bANN2_run3439c642.py",
+      "filename": "metrics_2bANN2_run3439c642.py",
+      "size_bytes": 1712,
+      "sha256": "391BEA0A477C79B1DFF805B3D20F75DC5153E3299CC697F08DA8718EA0C7B19D"
+    },
+    {
+      "role": "model_code",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\recom_1.py",
+      "filename": "recom_1.py",
+      "size_bytes": 496,
+      "sha256": "A36705126B53B5CE31BAD15DC6CBF79CD25A152C99FEFDACFA3146975473308C"
+    },
+    {
+      "role": "model_code",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\recompute_r2_and_metrics.py",
+      "filename": "recompute_r2_and_metrics.py",
+      "size_bytes": 2316,
+      "sha256": "708DF1C777EC26F3E7F6DAAD1EF646DAEC5A9DA57B64FF9DA8BED45F4635F6C2"
+    },
+    {
+      "role": "model_code",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\sanity_correlations.py",
+      "filename": "sanity_correlations.py",
+      "size_bytes": 1759,
+      "sha256": "0E8A90CCCFB02EB9C5886899B605AC3CA39E84208152C69FB022F272416F7B46"
+    },
+    {
+      "role": "model_code",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\train_phase2b2_5080_HO.py",
+      "filename": "train_phase2b2_5080_HO.py",
+      "size_bytes": 4635,
+      "sha256": "D2E9EABAADDB8022A87DADD7FCA70F407DAC9D5D7D15D6390CB4979DF5EB4723"
+    },
+    {
+      "role": "model_code",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\train_phase2b2_HO_reinstated.py",
+      "filename": "train_phase2b2_HO_reinstated.py",
+      "size_bytes": 12925,
+      "sha256": "C33F984381BC9A3CB68422432CE55B3CF8C4DE5576FA42A8BDBC86AFEB8B8FD5"
+    },
+    {
+      "role": "model_code",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\train_phase2b2_HO_v2.py",
+      "filename": "train_phase2b2_HO_v2.py",
+      "size_bytes": 3127,
+      "sha256": "58F252A7F343FBBB3638892D4B7F113581F066750F1E3382A59E4C019819B93B"
+    },
+    {
+      "role": "model_code",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\train_phase2b2_HO_v3_forecast.py",
+      "filename": "train_phase2b2_HO_v3_forecast.py",
+      "size_bytes": 3529,
+      "sha256": "9670D11321E8913F647D3C41D639220FEE3C07FD7C0D072894CC5A8226B89C47"
+    },
+    {
+      "role": "model_code",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\train_phase2b2_HO_v5_heavy_v5.1.py",
+      "filename": "train_phase2b2_HO_v5_heavy_v5.1.py",
+      "size_bytes": 8677,
+      "sha256": "78DECAD2F85BC45F8C9C82AF5E496D89C735370E8EAE8B74D21E05F2F5D6D5DE"
+    },
+    {
+      "role": "model_code",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\train_phase2b2_HO_v5_heavy.py",
+      "filename": "train_phase2b2_HO_v5_heavy.py",
+      "size_bytes": 6556,
+      "sha256": "6D14EEDE2E8E052D1AC37F93D67DFE73C588E1E99B9074D814169CBCF9C00722"
+    },
+    {
+      "role": "model_code",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\train_phase2b2_HO.py",
+      "filename": "train_phase2b2_HO.py",
+      "size_bytes": 4635,
+      "sha256": "D2E9EABAADDB8022A87DADD7FCA70F407DAC9D5D7D15D6390CB4979DF5EB4723"
+    },
+    {
+      "role": "model_code",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\verify_csv_integrity.py",
+      "filename": "verify_csv_integrity.py",
+      "size_bytes": 3056,
+      "sha256": "8F36802141C3FDC99AE4ABCB4AA7ACF1E6D4810CE83E28730D8C0D438C0702F9"
+    },
+    {
+      "role": "model_code",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\what_a_cunt_u_are_1.py",
+      "filename": "what_a_cunt_u_are_1.py",
+      "size_bytes": 336,
+      "sha256": "1F3C8BAAEA84F45006126B592E3F68F132FF40345ABBEFA846094820CFEA8836"
+    },
+    {
+      "role": "weights",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\fishhead_ho_audit_outputs_v5_2\\fishhead_model_v5_2_20251029_163938.pt",
+      "filename": "fishhead_model_v5_2_20251029_163938.pt",
+      "size_bytes": 97115,
+      "sha256": "D0FE765F8851301020236D0AEE2490A1593A7DD1E94907AD4277099D12A57BCD"
+    },
+    {
+      "role": "weights",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\fishhead_ho_audit_outputs_v5_3\\fishhead_model_v5_3_20251029_171130.pt",
+      "filename": "fishhead_model_v5_3_20251029_171130.pt",
+      "size_bytes": 97115,
+      "sha256": "9DB1912BB16B24388640584B649591B2032CD98262B89545E95F46CE886899AD"
+    },
+    {
+      "role": "weights",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\fishhead_synth_audit_outputs_v1_0\\fishhead_synth_model_v1_0_20251029_174320.pt",
+      "filename": "fishhead_synth_model_v1_0_20251029_174320.pt",
+      "size_bytes": 60383,
+      "sha256": "413881589FAEFD1396D20ADCE1C5415673467CC5927454D0670C7BC775A765E2"
+    },
+    {
+      "role": "gating_trace",
+      "path": null,
+      "filename": null,
+      "size_bytes": 0,
+      "sha256": null
+    },
+    {
+      "role": "run_logs",
+      "path": null,
+      "filename": null,
+      "size_bytes": 0,
+      "sha256": null
+    },
+    {
+      "role": "config",
+      "path": null,
+      "filename": null,
+      "size_bytes": 0,
+      "sha256": null
+    },
+    {
+      "role": "preproc_scripts",
+      "path": null,
+      "filename": null,
+      "size_bytes": 0,
+      "sha256": null
+    },
+    {
+      "role": "stdout",
+      "path": null,
+      "filename": null,
+      "size_bytes": 0,
+      "sha256": null
+    }
+  ],
+  "environment": {
+    "timestamp": "2025-10-31T12:33:14.3605193+11:00",
+    "pwd": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080",
+    "user": "loweb",
+    "os": "Microsoft Windows 11 Pro",
+    "powershell_version": "7.5.3"
+  }
+}

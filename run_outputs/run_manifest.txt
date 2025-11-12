@@ -1,0 +1,12 @@
+run_id: canonical_2025-11-12T09:58:55.808938Z
+timestamp: 2025-11-12T09:58:55.808938Z
+runner: canonical_train_2bANN2_HO.py
+commit_sha: 71f1b45
+canonical_entrypoint_sha: d93ae1582be3bbc0b57eabdf73307d5c58dc5060b7475644e8a9367f6d56328c
+target_impl_sha: 41d6c9d1aaeeeecc5c5016e267842dd6df0f68dfd1476a3e78471f9782552fc8
+train_file_hash: 04cc097bd744e1262ad885596c79c34d167f0a8e04b4d2dda919edb149709186
+seed: 42
+epochs: 2
+batch_size: 32
+outdir: C:\Users\loweb\AI_Financial_Sims\HO\HO 1st time 5080\run_outputs
+smoke_io: run_outputs\smoke_io_ok.txt

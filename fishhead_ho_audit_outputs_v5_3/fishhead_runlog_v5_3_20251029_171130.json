@@ -1,0 +1,62 @@
+{
+  "timestamp": "20251029_171130",
+  "csv_path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\hoxnc_full.csv",
+  "outdir": "fishhead_ho_audit_outputs_v5_3",
+  "splits": {
+    "train": [
+      0,
+      3599
+    ],
+    "val": [
+      3609,
+      4805
+    ],
+    "test": [
+      4810,
+      6007
+    ]
+  },
+  "metrics_csv": "fishhead_ho_audit_outputs_v5_3\\fishhead_metrics_v5_3_20251029_171130.csv",
+  "model_path": "fishhead_ho_audit_outputs_v5_3\\fishhead_model_v5_3_20251029_171130.pt",
+  "metrics": {
+    "rmse_naive_val": 1.6692757053472762,
+    "mae_naive_val": 1.103821039199829,
+    "r2_naive_val": -1.1920928955078125e-07,
+    "rmse_naive_test": 2.9689110963178664,
+    "mae_naive_test": 2.1423890590667725,
+    "r2_naive_test": -0.0010682344436645508,
+    "rmse_fish_forced_val": 1.6758141858970184,
+    "mae_fish_forced_val": 1.1081085205078125,
+    "r2_fish_forced_val": -0.007849454879760742,
+    "rmse_fish_forced_test": 2.9767430368375503,
+    "mae_fish_forced_test": 2.1478350162506104,
+    "r2_fish_forced_test": -0.00635683536529541,
+    "rmse_fish_g30_val": 1.6677619752312443,
+    "mae_fish_g30_val": 1.102684497833252,
+    "r2_fish_g30_val": 0.0018126368522644043,
+    "abstention_g30_val": 0.9657190635451505,
+    "rmse_fish_g30_test": 2.969577232352075,
+    "mae_fish_g30_test": 2.142753839492798,
+    "r2_fish_g30_test": -0.0015175342559814453,
+    "abstention_g30_test": 0.974937343358396,
+    "rmse_fish_g10_val": 1.6720568834283982,
+    "mae_fish_g10_val": 1.1026955842971802,
+    "r2_fish_g10_val": -0.003335118293762207,
+    "abstention_g10_val": 0.7048494983277592,
+    "rmse_fish_g10_test": 2.976615364626519,
+    "mae_fish_g10_test": 2.1476564407348633,
+    "r2_fish_g10_test": -0.0062705278396606445,
+    "abstention_g10_test": 0.5572263993316625,
+    "coverage_val_q10_q90": 0.7073578595317725,
+    "coverage_test_q10_q90": 0.429406850459482,
+    "brier_val": 0.2383902570201702,
+    "brier_test": 0.269229821019301,
+    "n_train": 3599,
+    "n_val": 1196,
+    "n_test": 1197,
+    "window": 128,
+    "event_rel_threshold": 0.02,
+    "purge_steps": 5,
+    "embargo_steps": 5
+  }
+}

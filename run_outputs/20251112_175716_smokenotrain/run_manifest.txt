@@ -1,0 +1,5 @@
+run_id: run_outputs/20251112_175716_smokenotrain
+timestamp: 2025-11-12T17:57:16.8850050+11:00
+runner: canonical_train_2bANN2_HO.py
+commit_sha: 2f3c73a
+entrypoint_sha: E56E4D2F84026536ED56D60DBF12AA93CB97E2C865EAEAA7E7E2E7147EA4B303

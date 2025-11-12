@@ -1,0 +1,8 @@
+2025-11-08 23:59:59.848627: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-11-09 00:00:01.542575: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+RUN_ERROR: feature_fallback_failed name 'features' is not defined
+Traceback (most recent call last):
+  File "C:\Users\loweb\AI_Financial_Sims\HO\HO 1st time 5080\deterministic_inference.py", line 62, in <module>
+    if not features:
+           ^^^^^^^^
+NameError: name 'features' is not defined

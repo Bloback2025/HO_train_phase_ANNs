@@ -1,0 +1,73 @@
+<@'
+import json, argparse
+from pathlib import Path
+import pandas as pd
+import tensorflow as tf
+from sklearn.metrics import mean_absolute_error, r2_score
+
+def ensure_lags(df: pd.DataFrame, base_cols, max_lag: int):
+    for col in base_cols:
+        if col not in df.columns:
+            raise ValueError(f"Missing base column: {col}")
+        for k in range(1, max_lag + 1):
+            lag_col = f"{col}_lag{k}"
+            if lag_col not in df.columns:
+                df[lag_col] = df[col].shift(k)
+    return df
+
+def ensure_target(df: pd.DataFrame, base_close="Close", target_col="Close_t+1"):
+    if target_col not in df.columns:
+        if base_close not in df.columns:
+            raise ValueError(f"Missing base column for target: {base_close}")
+        df[target_col] = df[base_close].shift(-1)
+    return df
+
+def chronological_split(X, y, test_frac=0.15):
+    n = len(X)
+    test_n = int(round(test_frac * n))
+    return (X.iloc[:-test_n], X.iloc[-test_n:], y.iloc[:-test_n], y.iloc[-test_n:])
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--manifest", required=True)
+    ap.add_argument("--csv", default="./hoxnc_full.csv")
+    ap.add_argument("--model", default="./models/best.keras")
+    ap.add_argument("--test_frac", type=float, default=0.15)
+    args = ap.parse_args()
+
+    man = json.loads(Path(args.manifest).read_text(encoding="utf-8"))
+    features = man["features"]
+    target = man["target"]
+
+    base_cols = ["Open","High","Low","Close"]
+    max_lag = max(int(f.split("_lag")[-1]) for f in features if "_lag" in f) if any("_lag" in f for f in features) else 0
+
+    df = pd.read_csv(args.csv)
+
+    # Build engineered inputs
+    df = ensure_lags(df, base_cols, max_lag)
+    df = ensure_target(df, base_close="Close", target_col=target)
+
+    # Drop NaNs from shifting and align
+    df = df.dropna().reset_index(drop=True)
+
+    # Select features exactly in manifest order
+    missing = [c for c in features if c not in df.columns]
+    if missing:
+        raise ValueError(f"Missing columns after lag construction: {missing}")
+    X = df[features].astype(float)
+    y = df[target].astype(float)
+
+    X_train, X_test, y_train, y_test = chronological_split(X, y, test_frac=args.test_frac)
+
+    model = tf.keras.models.load_model(args.model)
+    y_pred = model.predict(X_test, verbose=0).reshape(-1)
+
+    mae = mean_absolute_error(y_test, y_pred)
+    r2  = r2_score(y_test, y_pred)
+    print(f"[METRICS] test_mae={mae:.6f} r2_ann={r2:.6f}")
+
+if __name__ == "__main__":
+    main()
+'@ | Set-Content ".\deterministic_inference.py" -Encoding utf8
+>

@@ -34,7 +34,7 @@ def emit_manifest(outdir, manifest):
     mf = os.path.join(outdir, 'run_manifest.txt')
     with open(mf,'w', encoding='utf8') as f:
         for k,v in manifest.items():
-            f.write(f\"{k}: {v}\\n\")
+            f.write(f"{k}: {v}\n")
     return mf
 
 def main(argv=None):
@@ -83,7 +83,7 @@ def main(argv=None):
             hdr = f.readline().strip()
         test_file = os.path.join(args.outdir, 'smoke_io_ok.txt')
         with open(test_file,'w',encoding='utf8') as tf:
-            tf.write('SMOKE_IO_OK\\n')
+            tf.write('SMOKE_IO_OK\n')
         manifest['smoke_io'] = test_file
         mf = emit_manifest(args.outdir, manifest)
         print('SMOKE NO-TRAIN OK; manifest:', mf)
@@ -130,10 +130,10 @@ def main(argv=None):
     # runner.log header for screen-readers
     rl = os.path.join(args.outdir, 'runner.log')
     with open(rl,'w',encoding='utf8') as rlo:
-        rlo.write(f\"RUNNER SUMMARY: canonical_train_2bANN2_HO; commit={commit}; entry_sha={entry_sha}\\n\")
-        rlo.write(f\"START: {start}\\n\")
-        rlo.write('COMMAND: ' + ' '.join(sys.argv) + '\\n')
-        rlo.write('MANIFEST: ' + mf + '\\n')
+        rlo.write(f"RUNNER SUMMARY: canonical_train_2bANN2_HO; commit={commit}; entry_sha={entry_sha}\n")
+        rlo.write(f"START: {start}\n")
+        rlo.write('COMMAND: ' + ' '.join(sys.argv) + '\n')
+        rlo.write('MANIFEST: ' + mf + '\n')
     print('COMPLETE; manifest:', mf)
     sys.exit(0)
 

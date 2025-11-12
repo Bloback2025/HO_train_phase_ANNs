@@ -1,0 +1,13 @@
+{
+  "artifact": "target_calibrator.pkl",
+  "type": "LinearRegressionAffineCalibrator",
+  "coef": [
+    0.0609201155602932
+  ],
+  "intercept": -3.2319717,
+  "created_by": "calibration-session",
+  "note": "Apply as y_calibrated = coef[0] * y_pred + intercept",
+  "apply_target_calibrator": true,
+  "approved_by": "repo_maintainer",
+  "approved_at": "2025-11-10T06:47:34.558472Z"
+}

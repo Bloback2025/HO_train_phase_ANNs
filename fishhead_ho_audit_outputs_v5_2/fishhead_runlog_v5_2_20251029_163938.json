@@ -1,0 +1,52 @@
+{
+  "timestamp": "20251029_163938",
+  "csv_path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\hoxnc_full.csv",
+  "outdir": "fishhead_ho_audit_outputs_v5_2",
+  "splits": {
+    "train": [
+      0,
+      3599
+    ],
+    "val": [
+      3609,
+      4805
+    ],
+    "test": [
+      4810,
+      6007
+    ]
+  },
+  "metrics_csv": "fishhead_ho_audit_outputs_v5_2\\fishhead_metrics_v5_2_20251029_163938.csv",
+  "model_path": "fishhead_ho_audit_outputs_v5_2\\fishhead_model_v5_2_20251029_163938.pt",
+  "metrics": {
+    "rmse_fish_val": 1.6758141858970184,
+    "mae_fish_val": 1.1081085205078125,
+    "r2_fish_val": -0.007849454879760742,
+    "mape_fish_val_pct": 169054.62646484375,
+    "rmse_naive_val": 1.6692757053472762,
+    "mae_naive_val": 1.103821039199829,
+    "r2_naive_val": -1.1920928955078125e-07,
+    "mape_naive_val_pct": 98.41136932373047,
+    "coverage_val_q10_q90": 0.7073578595317725,
+    "brier_val": 0.2383902570201702,
+    "abstention_val_gate<0.3": 0.9657190635451505,
+    "rmse_fish_test": 2.9767430368375503,
+    "mae_fish_test": 2.1478350162506104,
+    "r2_fish_test": -0.00635683536529541,
+    "mape_fish_test_pct": 105410.77880859375,
+    "rmse_naive_test": 2.9689110963178664,
+    "mae_naive_test": 2.1423890590667725,
+    "r2_naive_test": -0.0010682344436645508,
+    "mape_naive_test_pct": 99.41520690917969,
+    "coverage_test_q10_q90": 0.429406850459482,
+    "brier_test": 0.269229821019301,
+    "abstention_test_gate<0.3": 0.974937343358396,
+    "n_train": 3599,
+    "n_val": 1196,
+    "n_test": 1197,
+    "window": 128,
+    "event_rel_threshold": 0.02,
+    "purge_steps": 5,
+    "embargo_steps": 5
+  }
+}

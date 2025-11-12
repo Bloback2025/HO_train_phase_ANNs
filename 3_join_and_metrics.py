@@ -1,0 +1,40 @@
+# 3_join_and_metrics.py
+import pandas as pd
+import numpy as np
+
+preds_p = r"runlogs\preds_variant2_seed20251032_20251030_205652.csv"
+val_p = r"hoxnc_validation.csv"
+
+preds = pd.read_csv(preds_p, parse_dates=["date"], dayfirst=False)
+val = pd.read_csv(val_p, parse_dates=["Date"], dayfirst=False)
+
+# normalize date column names
+preds.rename(columns={"date":"Date"}, inplace=True)
+# ensure matching date formats (keep date part only)
+preds["Date"] = pd.to_datetime(preds["Date"]).dt.date
+val["Date"] = pd.to_datetime(val["Date"]).dt.date
+
+# pick validation column named Close
+# BROKEN: if "Close" not in val.columns:
+    raise SystemExit("Validation file missing Close column")
+
+merged = preds.merge(val[["Date","Close"]], on="Date", how="left", indicator=True)
+
+matched = merged[merged["_merge"]=="both"].copy()
+unmatched_preds = merged[merged["_merge"]!="both"].copy()
+
+# compute numeric errors where matched
+matched["y_true"] = pd.to_numeric(matched["Close"], errors="coerce")
+matched["y_pred"] = pd.to_numeric(matched["y_pred"], errors="coerce")
+matched = matched.dropna(subset=["y_true","y_pred"])
+
+res = matched["y_pred"] - matched["y_true"]
+mae = np.mean(np.abs(res))
+rmse = np.sqrt(np.mean(res**2))
+
+print("rows_preds=%d" % len(preds))
+print("rows_val=%d" % len(val))
+print("matched_rows=%d" % len(matched))
+print("unmatched_preds=%d" % len(unmatched_preds))
+print(f"MAE={mae:.6f}")
+print(f"RMSE={rmse:.6f}")

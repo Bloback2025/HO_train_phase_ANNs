@@ -1,0 +1,9 @@
+{
+  "run_name": "hybrid_fisheye_prob_ann",
+  "stage": "mu_only_pretrain",
+  "train_mean": 0.0,
+  "mae_model_p1": 2.1062448024749756,
+  "mae_persistence": 2.1062510013580322,
+  "paired_ttest_t": 0.003855739363291967,
+  "paired_ttest_p": 0.996924195920489
+}

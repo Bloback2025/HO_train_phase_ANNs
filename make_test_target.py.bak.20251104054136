@@ -1,0 +1,8 @@
+﻿import pandas as pd
+df = pd.read_csv(r".\hoxnc_testing.csv")
+if "Close_t+1" not in df.columns and "Close" in df.columns:
+    df["Close_t+1"] = df["Close"].shift(-1)
+    df.to_csv(r".\hoxnc_testing_with_target.csv", index=False)
+    print("[OK] wrote hoxnc_testing_with_target.csv rows=", len(df))
+else:
+    print("[SKIP] Close_t+1 present or Close missing")

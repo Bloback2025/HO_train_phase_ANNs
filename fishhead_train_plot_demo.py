@@ -1,0 +1,137 @@
+# fishhead_train_plot_save.py
+# Fishhead ANN + synthetic data + training loop + saves plots to PNGs
+
+import torch
+import torch.nn as nn
+import torch.nn.functional as F
+import numpy as np
+import random
+import matplotlib
+matplotlib.use("Agg")  # non-interactive backend for WSL
+import matplotlib.pyplot as plt
+from sklearn.calibration import calibration_curve
+
+# --- Reproducibility ---
+SEED = 5080
+torch.manual_seed(SEED)
+np.random.seed(SEED)
+random.seed(SEED)
+
+# --- Synthetic data generator ---
+# BROKEN: def generate_synthetic_series(n_steps=800, window=8):
+    prices = [100.0]
+    regime = 0
+# BROKEN:     for t in range(1, n_steps):
+# BROKEN:         if t % 100 == 0:
+            regime = 1 - regime
+        vol = 0.2 if regime == 0 else 1.0
+        drift = 0.05 if regime == 0 else -0.02
+        jump = np.random.choice([0, np.random.normal(0, 3.0)], p=[0.95, 0.05])
+        change = drift + np.random.normal(0, vol) + jump
+        prices.append(prices[-1] + change)
+
+    prices = np.array(prices)
+    X, y, event = [], [], []
+# BROKEN:     for i in range(window, len(prices)-5):
+        window_vals = prices[i-window:i]
+        X.append(window_vals - window_vals.mean())
+        y.append(prices[i+1] - prices[i])  # ΔClose
+        future_window = prices[i+1:i+6]
+        event_flag = 1 if np.any(np.abs(future_window - prices[i]) / prices[i] >= 0.015) else 0
+        event.append(event_flag)
+    return (
+        np.array(X, dtype=np.float32),
+        np.array(y, dtype=np.float32).reshape(-1,1),
+        np.array(event, dtype=np.float32).reshape(-1,1),
+        prices
+    )
+
+# --- Fishhead ANN ---
+# BROKEN: class FishheadANN(nn.Module):
+# BROKEN:     def __init__(self, input_dim=8, hidden_dim=64, dropout=0.2):
+        super(FishheadANN, self).__init__()
+        self.fc1 = nn.Linear(input_dim, hidden_dim)
+        self.fc2 = nn.Linear(hidden_dim, hidden_dim)
+        self.norm1 = nn.LayerNorm(hidden_dim)
+        self.norm2 = nn.LayerNorm(hidden_dim)
+        self.dropout = nn.Dropout(dropout)
+        self.residual_head = nn.Linear(hidden_dim, 1)
+        self.quantile_head = nn.Linear(hidden_dim, 3)
+        self.event_head = nn.Linear(hidden_dim, 1)
+        self.gate = nn.Linear(hidden_dim, 1)
+
+# BROKEN:     def forward(self, x):
+        h = F.relu(self.fc1(x))
+        h = self.norm1(h)
+        h2 = F.relu(self.fc2(h))
+        h2 = self.norm2(h2)
+        h = h + h2
+        h = self.dropout(h)
+        return {
+            "residual": self.residual_head(h),
+            "quantiles": self.quantile_head(h),
+            "event_prob": torch.sigmoid(self.event_head(h)),
+            "gate": torch.sigmoid(self.gate(h))
+        }
+
+# --- Quantile loss ---
+# BROKEN: def quantile_loss(preds, target, quantiles=[0.1,0.5,0.9]):
+    losses = []
+# BROKEN:     for i,q in enumerate(quantiles):
+        errors = target - preds[:,i:i+1]
+        losses.append(torch.max((q-1)*errors, q*errors).mean())
+    return sum(losses)
+
+# --- Training + plotting ---
+# BROKEN: if __name__ == "__main__":
+    X, y, event, prices = generate_synthetic_series()
+    X_tensor = torch.from_numpy(X)
+    y_tensor = torch.from_numpy(y)
+    event_tensor = torch.from_numpy(event)
+
+    model = FishheadANN(input_dim=X.shape[1])
+    optimizer = torch.optim.Adam(model.parameters(), lr=1e-3)
+
+# BROKEN:     for epoch in range(15):
+        model.train()
+        optimizer.zero_grad()
+        outputs = model(X_tensor)
+        loss_resid = F.mse_loss(outputs["residual"], y_tensor)
+        loss_quant = quantile_loss(outputs["quantiles"], y_tensor)
+        loss_event = F.binary_cross_entropy(outputs["event_prob"], event_tensor)
+        loss_gate = outputs["gate"].mean() * 0.01
+        loss = loss_resid + loss_quant + loss_event + loss_gate
+        loss.backward()
+        optimizer.step()
+# BROKEN:         if (epoch+1) % 5 == 0:
+            print(f"Epoch {epoch+1}: total={loss.item():.4f}")
+
+    # --- Evaluation ---
+    model.eval()
+# BROKEN:     with torch.no_grad():
+        out = model(X_tensor)
+        resid_pred = out["residual"].numpy().flatten()
+        q_preds = out["quantiles"].numpy()
+        event_probs = out["event_prob"].numpy().flatten()
+
+    # --- Plot 1: Quantile bands vs actual ΔClose ---
+    plt.figure(figsize=(10,5))
+    plt.plot(y, label="True ΔClose", alpha=0.6)
+    plt.plot(q_preds[:,1], label="Median forecast (q50)")
+    plt.fill_between(range(len(y)), q_preds[:,0], q_preds[:,2], color="orange", alpha=0.3, label="q10–q90 band")
+    plt.legend()
+    plt.title("Fishhead Quantile Forecasts vs True ΔClose")
+    plt.savefig("fishhead_quantiles.png")
+    plt.close()
+
+    # --- Plot 2: Event probability calibration ---
+    prob_true, prob_pred = calibration_curve(event, event_probs, n_bins=10)
+    plt.figure(figsize=(5,5))
+    plt.plot(prob_pred, prob_true, marker="o", label="Fishhead")
+    plt.plot([0,1],[0,1],"--", color="gray", label="Perfect calibration")
+    plt.xlabel("Predicted probability")
+    plt.ylabel("Observed frequency")
+    plt.title("Event Probability Calibration")
+    plt.legend()
+    plt.savefig("fishhead_calibration.png")
+    plt.close()

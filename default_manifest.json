@@ -1,0 +1,32 @@
+{
+  "run_id": 1761282491,
+  "date": "2025-10-24",
+  "timestamp_utc": "2025-10-24T05:08:11+00:00",
+  "seed": 77,
+  "context_len": 512,
+  "features_per_t": 4,
+  "embed_dim": 64,
+  "attn_dim": 128,
+  "attn_heads": 4,
+  "mlp_widths": [
+    512,
+    512,
+    256
+  ],
+  "dropout": 0.2,
+  "l2": 0.0001,
+  "mask_ratio": 0.15,
+  "epochs_pre": 15,
+  "epochs_ft": 40,
+  "batch_pre": 64,
+  "batch_ft": 128,
+  "val_split_pre": 0.1,
+  "val_split_ft": 0.2,
+  "vol_kernel": 9,
+  "pretrain_best_ckpt": "default_pretrain_best.keras",
+  "finetune_best_ckpt": "default_finetune_best.keras",
+  "pretrain_val_loss_last": 1.1385211944580078,
+  "finetune_val_loss_last": 1.7294503450393677,
+  "forecaster_json_hash": "bcd6017aa13f52cc76eba6f40bc637a0d4f76a5726f29ac24cdf75ee5a8ab840",
+  "closure": "sealed_2025-10-24T05:08:11+00:00"
+}

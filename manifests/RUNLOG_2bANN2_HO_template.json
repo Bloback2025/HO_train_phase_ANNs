@@ -1,0 +1,96 @@
+{
+  "run_id": "2025-11-12T12:30:00Z--<your-run-id>",
+  "timestamp": "2025-11-12T12:30:00Z",
+  "runner": "<operator-or-ci-id>",
+  "manifest_sha": "<MANIFEST_SHA>",
+  "manifest_path": "manifests/compliant_manifest.json",
+  "dataset_hashes": {
+    "training": "<TRAINING_CSV_SHA256>",
+    "validation": "<VALIDATION_CSV_SHA256>",
+    "testing": "<TESTING_CSV_SHA256>"
+  },
+  "model_artifact": {
+    "model_path": "ho_artifact_outputs/2bANN2_HO_model.keras",
+    "model_sha": "<MODEL_SHA256>",
+    "model_size_bytes": <MODEL_SIZE_BYTES>
+  },
+  "scaler_sidecar": {
+    "scaler_path": "ho_artifact_outputs/scaler.json",
+    "scaler_sha": "<SCALER_SIDE_CAR_SHA256>",
+    "feature_order": ["Open","High","Low"]
+  },
+  "feature_order": ["Open","High","Low"],
+  "target_spec": {
+    "name": "Close",
+    "shift": -1,
+    "alignment_rule": "predict Close_t+1; dataset sorted by time_col then shift(-1) then dropna"
+  },
+  "seeds": {
+    "python_hash_seed": 0,
+    "random_seed": 0,
+    "numpy_seed": 0,
+    "tensorflow_seed": 0
+  },
+  "environment": {
+    "python_version": "<PYTHON_VERSION>",
+    "packages": {
+      "tensorflow": "<TF_VERSION>",
+      "numpy": "<NUMPY_VERSION>",
+      "scikit-learn": "<SKLEARN_VERSION>",
+      "pandas": "<PANDAS_VERSION>"
+    },
+    "gpu": "<GPU_OR_CPU>",
+    "cudnn_version": "<CUDNN_VERSION>",
+    "docker_image": "<OPTIONAL_DOCKER_IMAGE>"
+  },
+  "baseline_metrics": {
+    "naive_today_to_tomorrow": {"MAE": "<NAIVE_MAE>", "R2": "<NAIVE_R2>", "n": "<N_TEST>"},
+    "persist_last": {"MAE": null, "R2": null, "n": null},
+    "rolling_mean_w5": {"MAE": null, "R2": null, "n": null},
+    "autoregressive_ols_lags3": {"MAE": null, "R2": null, "n": null}
+  },
+  "model_metrics": {
+    "MAE": "<MODEL_MAE>",
+    "RMSE": "<MODEL_RMSE>",
+    "R2": "<MODEL_R2>",
+    "n": "<N_TEST>",
+    "notes": ""
+  },
+  "null_controls": {
+    "null_target": {
+      "n_runs": 30,
+      "r2_mean": null,
+      "r2_std": null,
+      "r2_values_sample": []
+    },
+    "null_features": {
+      "n_runs": 30,
+      "r2_mean": null,
+      "r2_std": null,
+      "r2_values_sample": []
+    }
+  },
+  "leakage_scan": {
+    "top_correlations": [
+      {"column": "<COL1>", "abs_corr_with_target": "<VAL1>"},
+      {"column": "<COL2>", "abs_corr_with_target": "<VAL2>"}
+    ],
+    "hard_flags": [],
+    "soft_review": []
+  },
+  "preds": {
+    "preds_path": "ho_artifact_outputs/preds_run1.json",
+    "preds_sha": "<PREDS_SHA256>",
+    "preds_canonicalization": {"round_decimals": 9, "sort": "none"}
+  },
+  "smoke_predict": {
+    "run1": {"preds_sha": "<PREDS_SHA256_RUN1>", "metrics": {"MAE": "<MODEL_MAE_RUN1>", "R2": "<MODEL_R2_RUN1>"}},
+    "run2": {"preds_sha": "<PREDS_SHA256_RUN2>", "metrics": {"MAE": "<MODEL_MAE_RUN2>", "R2": "<MODEL_R2_RUN2>"}},
+    "identical_preds_sha": false
+  },
+  "leakage_analysis_conclusion": "REVIEW_REQUIRED",
+  "soundness_pass": false,
+  "closure_decision": "FAIL",
+  "closure_note": "Fill fields above with real hashes and metrics; run null controls and baselines; re-run smoke_predict.",
+  "audit_ledger_row": ""
+}

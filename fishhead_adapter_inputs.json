@@ -1,0 +1,13 @@
+{
+  "collected_at": "2025-10-27T22:45:41.9160253+11:00",
+  "adapter_type": "pytorch",
+  "model_path_or_url": null,
+  "endpoint_check": null,
+  "preprocessing": null,
+  "input_columns": null,
+  "alignment": "\u001a",
+  "invocation": "exit",
+  "canonical_csv": null,
+  "csv_columns": null,
+  "out_dir": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080"
+}

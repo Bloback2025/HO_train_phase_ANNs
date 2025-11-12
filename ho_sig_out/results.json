@@ -1,0 +1,42 @@
+{
+  "run_id": "3439c642-834a-4259-a71a-2777d007bda2",
+  "run_start": "2025-10-27T06:39:28.440367Z",
+  "csv_path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\hoxnc_full.csv",
+  "csv_sha256": "0364f0b3e5b8cd158a8d2796215d70c73fcbe24a5fce1750b24c094bc4cb5f73",
+  "code_sha256": "963d1f8e3aac8576d5f2b61d6b56194ed3c054b5925dd1f0a6c8ab7f5d90a0c3",
+  "params": {
+    "mode": "bootstrap",
+    "trials": 1000,
+    "permutations": 500,
+    "runs_per_feature": 50,
+    "variations": 50,
+    "features": null,
+    "col": "Close"
+  },
+  "tests_run": [
+    "bootstrap"
+  ],
+  "metrics": {
+    "bootstrap": {
+      "diff_rmse_mean": -34.195851243390614,
+      "diff_rmse_median": -33.51774768422217,
+      "diff_rmse_ci": [
+        -105.13247116292283,
+        34.80388500194872
+      ],
+      "empirical_p_pos": 0.825,
+      "n_trials": 1000,
+      "trial_csv": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\ho_sig_out\\trial_metrics_bootstrap.csv"
+    }
+  },
+  "debug_checks": {},
+  "run_end": "2025-10-27T06:39:29.484497Z",
+  "provenance": {
+    "timestamp": "2025-10-27T06:39:29.484497Z",
+    "script": "ho_structure_significance_harness.py",
+    "python_version": "3.13.9",
+    "numpy": "2.3.4",
+    "pandas": "2.3.3"
+  },
+  "closure": "sealed"
+}

@@ -1,0 +1,7 @@
+{
+  "backup": ".\\deterministic_inference.py.bak.20251108-235911",
+  "note": "Added CSV-derived features fallback and selective dropna (idempotent)",
+  "sha256": "32595fede81407b370707f73a2dccd0e8fca82526d10fa1b430a7daf47c1ec98",
+  "time": "20251108-235911",
+  "patched_file": ".\\deterministic_inference.py"
+}

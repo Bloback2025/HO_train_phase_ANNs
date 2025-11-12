@@ -1,0 +1,50 @@
+# 4_parse_dates_validate.py
+import pandas as pd
+from dateutil import parser
+
+p = r"hoxnc_validation.csv"
+df = pd.read_csv(p, usecols=["Date"])
+
+def try_parse(s):
+    try:
+        # force dayfirst parsing for strings like 29-Dec-00; prefer century 1900->2000 rule handled below
+        dt = parser.parse(s, dayfirst=True, yearfirst=False)
+        # if year looks like 1900s for two-digit years, map to 2000s when reasonable
+        y = dt.year
+        if y < 100:  # safety if parser returns two-digit year
+            y = 1900 + y
+            if y < 1950:
+                y = 2000 + (dt.year % 100)
+        return dt.date()
+    except Exception as e:
+        return None
+
+df["parsed"] = df["Date"].astype(str).apply(try_parse)
+
+print("=== SAMPLE ORIGINAL -> PARSED (first 20 rows) ===")
+sample = df.head(20)
+for i, r in sample.iterrows():
+    print(f"{r['Date']} -> {r['parsed']}")
+
+print("=== PARSE SUMMARY ===")
+total = len(df)
+n_parsed = df["parsed"].notna().sum()
+n_null = total - n_parsed
+print(f"rows={total}")
+print(f"parsed={n_parsed}")
+print(f"failed_parses={n_null}")
+
+print("=== PARSED RANGE ===")
+if n_parsed:
+    mn = df["parsed"].min()
+    mx = df["parsed"].max()
+    print(f"min_parsed={mn}")
+    print(f"max_parsed={mx}")
+else:
+    print("min_parsed=None")
+    print("max_parsed=None")
+
+print("=== DISTINCT EXAMPLES OF FAILED PARSES (up to 10) ===")
+failed = df[df["parsed"].isna()]["Date"].drop_duplicates().head(10).tolist()
+for v in failed:
+    print(v)

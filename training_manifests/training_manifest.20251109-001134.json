@@ -1,0 +1,15 @@
+{
+  "timestamp": "2025-11-09T00:11:34",
+  "train_rows": 4693,
+  "val_rows": 522,
+  "test_rows": 920,
+  "manifest_used": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\hoxnc_training.with_base_and_lags.manifest.json",
+  "manifest_sha256": "d658326e456fb17d361118ebf446458665400690f2d82f6049b41c5c27f7a678",
+  "csv_used": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\hoxnc_full.csv",
+  "csv_sha256": "0364f0b3e5b8cd158a8d2796215d70c73fcbe24a5fce1750b24c094bc4cb5f73",
+  "model_path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\models\\ohlc_best.keras",
+  "model_input_dim": 4,
+  "epochs_ran": 50,
+  "test_mae": 0.9764649223659346,
+  "test_r2": 0.9871704828239598
+}

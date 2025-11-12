@@ -1,0 +1,22 @@
+{
+  "canonical_model_path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\2bANN2_HO_model.keras",
+  "n_features": 4,
+  "n_samples": 5000,
+  "notes": "Stress test canonical vs reconstructed (untrained) ANN on synthetic tasks",
+  "reconstructed_model_path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\ann_stresstest_outputs\\reconstructed_ann.keras",
+  "run_started": "2025-11-09T10:51:20.039625Z",
+  "scaler_path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\scaler.pkl",
+  "seed": 20251109,
+  "tasks": [
+    "nominal",
+    "add_noise_small",
+    "add_noise_large",
+    "missing_features",
+    "scale_mismatch",
+    "concept_drift",
+    "adversarial",
+    "temporal_reorder",
+    "heavy_tail_shock"
+  ],
+  "trials_per_task": 5
+}

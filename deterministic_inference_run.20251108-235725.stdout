@@ -1,0 +1,27 @@
+2025-11-08 23:57:26.425531: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-11-08 23:57:28.127200: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+RUN_LOG: start hoxnc_full.tmp.20251108-235725.csv
+2025-11-08 23:57:29.338566: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE3 SSE4.1 SSE4.2 AVX AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Traceback (most recent call last):
+  File "C:\Users\loweb\AI_Financial_Sims\HO\HO 1st time 5080\deterministic_inference.py", line 90, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\loweb\AI_Financial_Sims\HO\HO 1st time 5080\deterministic_inference.py", line 79, in main
+    y_pred = model.predict(X_test, verbose=0).reshape(-1)
+             ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\loweb\AI_Financial_Sims\PyLibs\Lib\site-packages\keras\src\utils\traceback_utils.py", line 122, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\loweb\AI_Financial_Sims\PyLibs\Lib\site-packages\keras\src\layers\input_spec.py", line 227, in assert_input_compatibility
+    raise ValueError(
+    ...<5 lines>...
+    )
+ValueError: Exception encountered when calling Sequential.call().
+
+Input 0 of layer "dense" is incompatible with the layer: expected axis -1 of input shape to have value 24, but received input with shape (32, 0)
+
+Arguments received by Sequential.call():
+  ò inputs=tf.Tensor(shape=(32, 0), dtype=float32)
+  ò training=False
+  ò mask=None
+  ò kwargs=<class 'inspect._empty'>

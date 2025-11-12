@@ -1,0 +1,7 @@
+{
+  "patch_time": "20251108-233521",
+  "sha256": "2093f7b1e526bad3a470bd1f733df71984c7ae7b6782ebfab86bd56805b4f4c9",
+  "patched_file": ".\\deterministic_inference.py",
+  "note": "Inserted deterministic Close_t+1 creation when missing; added RUN_COMPLETE helper",
+  "backup": ".\\deterministic_inference.py.bak.20251108-233521"
+}

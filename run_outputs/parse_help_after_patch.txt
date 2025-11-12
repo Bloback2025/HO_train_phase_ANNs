@@ -1,0 +1,4 @@
+  File "C:\Users\loweb\AI_Financial_Sims\HO\HO 1st time 5080\canonical_train_2bANN2_HO.py", line 134
+    rlo.write(f\"START: {start}\n\")
+                ^
+SyntaxError: unexpected character after line continuation character

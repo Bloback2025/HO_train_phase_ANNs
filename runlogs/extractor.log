@@ -1,0 +1,52 @@
+{"step":"test","msg":"LOG_FUNC_OK","pid":4572,"time":"2025-11-01T21:39:59.7642080+11:00","level":"INFO"}
+{"step":"main","pid":22436,"msg":"START","time":"2025-11-01T22:00:37.0390080+11:00","extra":{"run":"20251101-220037"},"level":"INFO"}
+{"step":"lock","pid":22436,"msg":"LOCK_ACQUIRED","time":"2025-11-01T22:00:37.1196748+11:00","extra":{"file":"C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\runlogs\\extractor.lock"},"level":"INFO"}
+{"step":"extract","pid":22436,"msg":"DEF_NOT_FOUND","time":"2025-11-01T22:00:37.3625916+11:00","extra":{"file":"C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\train_phase2b2_HO_reinstated.py"},"level":"ERROR"}
+{"step":"main","pid":22436,"msg":"FAILED","time":"2025-11-01T22:00:37.3834672+11:00","extra":{"run":"20251101-220037","errors":"DEF_NOT_FOUND"},"level":"ERROR"}
+{"step":"manifest","pid":22436,"msg":"MANIFEST_WRITTEN","time":"2025-11-01T22:00:37.4744453+11:00","extra":{"file":"C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\runlogs\\RUN_20251101-220037.json"},"level":"INFO"}
+{"step":"lock","pid":22436,"msg":"LOCK_RELEASED","time":"2025-11-01T22:00:37.4815873+11:00","extra":{"file":"C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\runlogs\\extractor.lock"},"level":"INFO"}
+{"step":"main","level":"INFO","time":"2025-11-01T22:01:24.2713385+11:00","extra":{"run":"20251101-220124"},"pid":17508,"msg":"START"}
+{"step":"lock","level":"INFO","time":"2025-11-01T22:01:24.4063374+11:00","extra":{"file":"C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\runlogs\\extractor.lock"},"pid":17508,"msg":"LOCK_ACQUIRED"}
+{"step":"extract","level":"ERROR","time":"2025-11-01T22:01:24.6063368+11:00","extra":{"file":"C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\train_phase2b2_HO_reinstated.py"},"pid":17508,"msg":"DEF_NOT_FOUND"}
+{"step":"main","level":"ERROR","time":"2025-11-01T22:01:24.6233396+11:00","extra":{"errors":"DEF_NOT_FOUND","run":"20251101-220124"},"pid":17508,"msg":"FAILED"}
+{"step":"manifest","level":"INFO","time":"2025-11-01T22:01:24.7080221+11:00","extra":{"file":"C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\runlogs\\RUN_20251101-220124.json"},"pid":17508,"msg":"MANIFEST_WRITTEN"}
+{"step":"lock","level":"INFO","time":"2025-11-01T22:01:24.7150184+11:00","extra":{"file":"C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\runlogs\\extractor.lock"},"pid":17508,"msg":"LOCK_RELEASED"}
+{"extra":{"run":"20251101-221850"},"time":"2025-11-01T22:18:50.3975236+11:00","pid":16768,"level":"INFO","msg":"START","step":"main"}
+{"extra":{"file":"C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\runlogs\\extractor.lock"},"time":"2025-11-01T22:18:50.4452531+11:00","pid":16768,"level":"INFO","msg":"LOCK_ACQUIRED","step":"lock"}
+{"extra":{"file":"C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\train_phase2b2_HO_reinstated.py"},"time":"2025-11-01T22:18:50.4594482+11:00","pid":16768,"level":"ERROR","msg":"DEF_NOT_FOUND","step":"extract"}
+{"extra":{"run":"20251101-221850","errors":"DEF_NOT_FOUND"},"time":"2025-11-01T22:18:50.4759157+11:00","pid":16768,"level":"ERROR","msg":"FAILED","step":"main"}
+{"extra":{"file":"C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\runlogs\\RUN_20251101-221850.json"},"time":"2025-11-01T22:18:50.4926912+11:00","pid":16768,"level":"INFO","msg":"MANIFEST_WRITTEN","step":"manifest"}
+{"extra":{"file":"C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\runlogs\\extractor.lock"},"time":"2025-11-01T22:18:50.4995986+11:00","pid":16768,"level":"INFO","msg":"LOCK_RELEASED","step":"lock"}
+{"extra":{"run":"20251101-222355"},"step":"main","level":"INFO","pid":19724,"msg":"START","time":"2025-11-01T22:23:55.5984758+11:00"}
+{"extra":{"file":"C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\runlogs\\extractor.lock"},"step":"lock","level":"INFO","pid":19724,"msg":"LOCK_ACQUIRED","time":"2025-11-01T22:23:55.6391820+11:00"}
+{"extra":{"file":"C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\train_phase2b2_HO_reinstated.py"},"step":"extract","level":"ERROR","pid":19724,"msg":"DEF_NOT_FOUND","time":"2025-11-01T22:23:55.6517841+11:00"}
+{"extra":{"run":"20251101-222355","errors":"DEF_NOT_FOUND"},"step":"main","level":"ERROR","pid":19724,"msg":"FAILED","time":"2025-11-01T22:23:55.6612668+11:00"}
+{"extra":{"file":"C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\runlogs\\RUN_20251101-222355.json"},"step":"manifest","level":"INFO","pid":19724,"msg":"MANIFEST_WRITTEN","time":"2025-11-01T22:23:55.6751386+11:00"}
+{"extra":{"file":"C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\runlogs\\extractor.lock"},"step":"lock","level":"INFO","pid":19724,"msg":"LOCK_RELEASED","time":"2025-11-01T22:23:55.6820495+11:00"}
+{"msg":"START","step":"main","time":"2025-11-01T22:25:48.7437392+11:00","level":"INFO","extra":{"run":"20251101-222548"},"pid":3000}
+{"msg":"LOCK_ACQUIRED","step":"lock","time":"2025-11-01T22:25:48.7827715+11:00","level":"INFO","extra":{"file":"C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\runlogs\\extractor.lock"},"pid":3000}
+{"msg":"DEF_NOT_FOUND","step":"extract","time":"2025-11-01T22:25:48.7942931+11:00","level":"ERROR","extra":{"file":"C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\train_phase2b2_HO_reinstated.py"},"pid":3000}
+{"msg":"FAILED","step":"main","time":"2025-11-01T22:25:48.8034883+11:00","level":"ERROR","extra":{"errors":"DEF_NOT_FOUND","run":"20251101-222548"},"pid":3000}
+{"msg":"MANIFEST_WRITTEN","step":"manifest","time":"2025-11-01T22:25:48.8172494+11:00","level":"INFO","extra":{"file":"C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\runlogs\\RUN_20251101-222548.json"},"pid":3000}
+{"msg":"LOCK_RELEASED","step":"lock","time":"2025-11-01T22:25:48.8240876+11:00","level":"INFO","extra":{"file":"C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\runlogs\\extractor.lock"},"pid":3000}
+{"time":"2025-11-01T22:27:15.1874299+11:00","msg":"START","pid":21556,"step":"main","extra":{"run":"20251101-222715"},"level":"INFO"}
+{"time":"2025-11-01T22:27:15.2187999+11:00","msg":"LOCK_ACQUIRED","pid":21556,"step":"lock","extra":{"file":"C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\runlogs\\extractor.lock"},"level":"INFO"}
+{"time":"2025-11-01T22:27:15.2667503+11:00","msg":"MANIFEST_WRITTEN","pid":21556,"step":"manifest","extra":{"file":"C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\runlogs\\RUN_20251101-222715.json"},"level":"INFO"}
+{"time":"2025-11-01T22:27:15.3356259+11:00","msg":"NOT_CONFIRMED_24","pid":21556,"step":"confirm","extra":{"count":2000},"level":"WARN"}
+{"time":"2025-11-01T22:27:15.3391113+11:00","msg":"COMPLETE","pid":21556,"step":"main","extra":{"run":"20251101-222715","confirmed24":false},"level":"INFO"}
+{"time":"2025-11-01T22:27:15.3686126+11:00","msg":"MANIFEST_WRITTEN","pid":21556,"step":"manifest","extra":{"file":"C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\runlogs\\RUN_20251101-222715.json"},"level":"INFO"}
+{"time":"2025-11-01T22:27:15.3749946+11:00","msg":"LOCK_RELEASED","pid":21556,"step":"lock","level":"INFO"}
+{"time":"2025-11-01T22:27:55.8644375+11:00","msg":"START","extra":{"run":"20251101-222755"},"step":"main","level":"INFO","pid":16172}
+{"time":"2025-11-01T22:27:55.8956726+11:00","msg":"LOCK_ACQUIRED","extra":{"file":"C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\runlogs\\extractor.lock"},"step":"lock","level":"INFO","pid":16172}
+{"time":"2025-11-01T22:27:55.9413617+11:00","msg":"MANIFEST_WRITTEN","extra":{"file":"C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\runlogs\\RUN_20251101-222755.json"},"step":"manifest","level":"INFO","pid":16172}
+{"time":"2025-11-01T22:27:55.9874459+11:00","msg":"NOT_CONFIRMED_24","extra":{"count":2000},"step":"confirm","level":"WARN","pid":16172}
+{"time":"2025-11-01T22:27:55.9905065+11:00","msg":"COMPLETE","extra":{"run":"20251101-222755","confirmed24":false},"step":"main","level":"INFO","pid":16172}
+{"time":"2025-11-01T22:27:56.0186247+11:00","msg":"MANIFEST_WRITTEN","extra":{"file":"C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\runlogs\\RUN_20251101-222755.json"},"step":"manifest","level":"INFO","pid":16172}
+{"step":"lock","pid":16172,"msg":"LOCK_RELEASED","level":"INFO","time":"2025-11-01T22:27:56.0246373+11:00"}
+{"msg":"START","time":"2025-11-01T22:29:04.9994620+11:00","level":"INFO","step":"main","pid":12300,"extra":{"run":"20251101-222904"}}
+{"msg":"LOCK_ACQUIRED","time":"2025-11-01T22:29:05.0316591+11:00","level":"INFO","step":"lock","pid":12300,"extra":{"file":"C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\runlogs\\extractor.lock"}}
+{"msg":"MANIFEST_WRITTEN","time":"2025-11-01T22:29:05.0729145+11:00","level":"INFO","step":"manifest","pid":12300,"extra":{"file":"C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\runlogs\\RUN_20251101-222904.json"}}
+{"pid":12300,"msg":"CONFIRMED_24_CREATED","time":"2025-11-01T22:29:05.0860385+11:00","level":"INFO","step":"confirm"}
+{"msg":"COMPLETE","time":"2025-11-01T22:29:05.0892340+11:00","level":"INFO","step":"main","pid":12300,"extra":{"confirmed24":true,"run":"20251101-222904"}}
+{"msg":"MANIFEST_WRITTEN","time":"2025-11-01T22:29:05.1034831+11:00","level":"INFO","step":"manifest","pid":12300,"extra":{"file":"C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\runlogs\\RUN_20251101-222904.json"}}
+{"pid":12300,"msg":"LOCK_RELEASED","time":"2025-11-01T22:29:05.1101952+11:00","level":"INFO","step":"lock"}

@@ -1,0 +1,28 @@
+###DIAG_RUN_START###
+print('###DIAG: START')
+
+
+
+# ###DIAG_APPEND_START###
+try:
+    print("###DIAG: POST_INJECT_GLOBALS", sorted(list(globals().keys())))
+except Exception as _e:
+    print("###DIAG: POST_INJECT_GLOBALS_ERROR", _e)
+# attempt to call common entrypoints if present
+if "main" in globals() and callable(globals()["main"]):
+    print("###DIAG: CALL_MAIN")
+    try:
+        globals()["main"]()
+    except SystemExit as _sx:
+        print("###DIAG: MAIN_EXIT", _sx)
+    except Exception as _ex:
+        print("###DIAG: MAIN_ERROR", _ex)
+elif "run" in globals() and callable(globals()["run"]):
+    print("###DIAG: CALL_RUN")
+    try:
+        globals()["run"]()
+    except Exception as _ex:
+        print("###DIAG: RUN_ERROR", _ex)
+else:
+    print("###DIAG: NO_MAIN_OR_RUN")
+# ###DIAG_APPEND_END###

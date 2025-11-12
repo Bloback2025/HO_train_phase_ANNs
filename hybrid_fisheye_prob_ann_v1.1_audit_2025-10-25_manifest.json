@@ -1,0 +1,250 @@
+{
+  "run_name": "hybrid_fisheye_prob_ann_v1.1_audit_2025-10-25",
+  "params": {
+    "date_fmt": "%d-%b-%y",
+    "context_len": 128,
+    "features_per_t": 4,
+    "embed_dim": 64,
+    "attn_dim": 128,
+    "attn_heads": 4,
+    "dropout": 0.2,
+    "l2_weight": 0.0001,
+    "seed": 77,
+    "epochs_p1": 16,
+    "epochs_p2": 16,
+    "batch": 64,
+    "lr": 0.001
+  },
+  "files": {
+    "train_path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\hoxnc_training.csv",
+    "val_path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\hoxnc_validation.csv",
+    "test_path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\hoxnc_testing.csv",
+    "train_sha256": "04cc097bd744e1262ad885596c79c34d167f0a8e04b4d2dda919edb149709186",
+    "val_sha256": "39389b5d46fde2f372171501b61d3300f0c9913cfe0a2c783b792566bb1b07b9",
+    "test_sha256": "d7e75485054836422f7f4311def959ccd01bcdaba614326f16e3ac2be89c216a",
+    "df_train_sha256": "66f45b15c12304c68dc5333a0b3bfeee06ccb2594027fa3cbcba43752bc465b1",
+    "df_val_sha256": "fcb30c29bca0bcd8f4d30be7e2d3baea922ffee30c6e83d3d67a1092f153e8da",
+    "df_test_sha256": "c70c1f2e23b48adeb00dd9b7a7f35d9647ab54e55c1a5a037ed62c18c84504d3"
+  },
+  "metrics": {
+    "final_train_loss": 3.6742441654205322,
+    "final_val_loss": 4.121210098266602,
+    "test_nll": 5.173068046569824,
+    "persistence_comparison": {
+      "persistence_mae": 2.1062510013580322,
+      "model_mae": 11.034505844116211,
+      "absolute_improvement": -8.928254842758179,
+      "relative_improvement": -4.238932034691769,
+      "paired_ttest_t": -36.6291785335636,
+      "paired_ttest_p": 2.074437543561702e-199
+    }
+  },
+  "debug_checks": {
+    "date_checks_head": [
+      {
+        "split": "train",
+        "dates_head": [
+          "1982-01-06 00:00:00",
+          "1982-01-07 00:00:00",
+          "1982-01-08 00:00:00",
+          "1982-01-11 00:00:00",
+          "1982-01-12 00:00:00",
+          "1982-01-13 00:00:00",
+          "1982-01-14 00:00:00",
+          "1982-01-15 00:00:00",
+          "1982-01-18 00:00:00",
+          "1982-01-19 00:00:00",
+          "1982-01-20 00:00:00",
+          "1982-01-21 00:00:00"
+        ]
+      },
+      {
+        "split": "val",
+        "dates_head": [
+          "2000-01-04 00:00:00",
+          "2000-01-05 00:00:00",
+          "2000-01-06 00:00:00",
+          "2000-01-07 00:00:00",
+          "2000-01-10 00:00:00",
+          "2000-01-11 00:00:00",
+          "2000-01-12 00:00:00",
+          "2000-01-13 00:00:00",
+          "2000-01-14 00:00:00",
+          "2000-01-18 00:00:00",
+          "2000-01-19 00:00:00",
+          "2000-01-20 00:00:00"
+        ]
+      },
+      {
+        "split": "test",
+        "dates_head": [
+          "2001-01-02 00:00:00",
+          "2001-01-03 00:00:00",
+          "2001-01-04 00:00:00",
+          "2001-01-05 00:00:00",
+          "2001-01-08 00:00:00",
+          "2001-01-09 00:00:00",
+          "2001-01-10 00:00:00",
+          "2001-01-11 00:00:00",
+          "2001-01-12 00:00:00",
+          "2001-01-16 00:00:00",
+          "2001-01-17 00:00:00",
+          "2001-01-18 00:00:00"
+        ]
+      }
+    ],
+    "diagnostic_head": [
+      {
+        "window_end_date": "2001-07-05 00:00:00",
+        "target_date": "2001-07-06 00:00:00",
+        "window_last_close": 72.38999938964844,
+        "target_close": 73.77999877929688,
+        "persistence_close": 72.38999938964844,
+        "mu": 88.2081069946289,
+        "log_var": 8.011006355285645
+      },
+      {
+        "window_end_date": "2001-07-06 00:00:00",
+        "target_date": "2001-07-09 00:00:00",
+        "window_last_close": 73.77999877929688,
+        "target_close": 72.79000091552734,
+        "persistence_close": 73.77999877929688,
+        "mu": 88.1311264038086,
+        "log_var": 8.003874778747559
+      },
+      {
+        "window_end_date": "2001-07-09 00:00:00",
+        "target_date": "2001-07-10 00:00:00",
+        "window_last_close": 72.79000091552734,
+        "target_close": 72.33000183105469,
+        "persistence_close": 72.79000091552734,
+        "mu": 88.07311248779297,
+        "log_var": 7.998583793640137
+      },
+      {
+        "window_end_date": "2001-07-10 00:00:00",
+        "target_date": "2001-07-11 00:00:00",
+        "window_last_close": 72.33000183105469,
+        "target_close": 70.58999633789062,
+        "persistence_close": 72.33000183105469,
+        "mu": 88.00897979736328,
+        "log_var": 7.992640495300293
+      },
+      {
+        "window_end_date": "2001-07-11 00:00:00",
+        "target_date": "2001-07-12 00:00:00",
+        "window_last_close": 70.58999633789062,
+        "target_close": 70.66999816894531,
+        "persistence_close": 70.58999633789062,
+        "mu": 87.92703247070312,
+        "log_var": 7.985147953033447
+      },
+      {
+        "window_end_date": "2001-07-12 00:00:00",
+        "target_date": "2001-07-13 00:00:00",
+        "window_last_close": 70.66999816894531,
+        "target_close": 68.73999786376953,
+        "persistence_close": 70.66999816894531,
+        "mu": 87.76908111572266,
+        "log_var": 7.970355033874512
+      },
+      {
+        "window_end_date": "2001-07-13 00:00:00",
+        "target_date": "2001-07-16 00:00:00",
+        "window_last_close": 68.73999786376953,
+        "target_close": 68.80999755859375,
+        "persistence_close": 68.73999786376953,
+        "mu": 87.58942413330078,
+        "log_var": 7.953796863555908
+      },
+      {
+        "window_end_date": "2001-07-16 00:00:00",
+        "target_date": "2001-07-17 00:00:00",
+        "window_last_close": 68.80999755859375,
+        "target_close": 68.69000244140625,
+        "persistence_close": 68.80999755859375,
+        "mu": 87.49595642089844,
+        "log_var": 7.943854331970215
+      },
+      {
+        "window_end_date": "2001-07-17 00:00:00",
+        "target_date": "2001-07-18 00:00:00",
+        "window_last_close": 68.69000244140625,
+        "target_close": 67.25,
+        "persistence_close": 68.69000244140625,
+        "mu": 87.36685943603516,
+        "log_var": 7.932004451751709
+      },
+      {
+        "window_end_date": "2001-07-18 00:00:00",
+        "target_date": "2001-07-19 00:00:00",
+        "window_last_close": 67.25,
+        "target_close": 66.80000305175781,
+        "persistence_close": 67.25,
+        "mu": 87.22638702392578,
+        "log_var": 7.919126510620117
+      },
+      {
+        "window_end_date": "2001-07-19 00:00:00",
+        "target_date": "2001-07-20 00:00:00",
+        "window_last_close": 66.80000305175781,
+        "target_close": 68.11000061035156,
+        "persistence_close": 66.80000305175781,
+        "mu": 87.04487609863281,
+        "log_var": 7.902461528778076
+      },
+      {
+        "window_end_date": "2001-07-20 00:00:00",
+        "target_date": "2001-07-23 00:00:00",
+        "window_last_close": 68.11000061035156,
+        "target_close": 68.38999938964844,
+        "persistence_close": 68.11000061035156,
+        "mu": 86.92108917236328,
+        "log_var": 7.890975475311279
+      },
+      {
+        "window_end_date": "2001-07-23 00:00:00",
+        "target_date": "2001-07-24 00:00:00",
+        "window_last_close": 68.38999938964844,
+        "target_close": 68.7699966430664,
+        "persistence_close": 68.38999938964844,
+        "mu": 86.81688690185547,
+        "log_var": 7.881054878234863
+      },
+      {
+        "window_end_date": "2001-07-24 00:00:00",
+        "target_date": "2001-07-25 00:00:00",
+        "window_last_close": 68.7699966430664,
+        "target_close": 70.87000274658203,
+        "persistence_close": 68.7699966430664,
+        "mu": 86.7403335571289,
+        "log_var": 7.872540473937988
+      },
+      {
+        "window_end_date": "2001-07-25 00:00:00",
+        "target_date": "2001-07-26 00:00:00",
+        "window_last_close": 70.87000274658203,
+        "target_close": 71.88999938964844,
+        "persistence_close": 70.87000274658203,
+        "mu": 86.67972564697266,
+        "log_var": 7.866265773773193
+      },
+      {
+        "window_end_date": "2001-07-26 00:00:00",
+        "target_date": "2001-07-27 00:00:00",
+        "window_last_close": 71.88999938964844,
+        "target_close": 71.30999755859375,
+        "persistence_close": 71.88999938964844,
+        "mu": 86.60723876953125,
+        "log_var": 7.859532356262207
+      }
+    ]
+  },
+  "provenance": {
+    "timestamp": "2025-10-25 19:06:06",
+    "python_version": "3.13.9",
+    "numpy": "2.3.4",
+    "pandas": "2.3.3",
+    "tensorflow": "2.20.0"
+  }
+}

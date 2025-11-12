@@ -1,0 +1,109 @@
+2025-11-09 00:11:22.585236: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-11-09 00:11:24.299807: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-11-09 00:11:25.511027: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE3 SSE4.1 SSE4.2 AVX AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Epoch 1/50
+147/147 - 1s - 5ms/step - loss: 3509.1216 - val_loss: 11858.5762
+Epoch 2/50
+147/147 - 0s - 1ms/step - loss: 1679.0996 - val_loss: 5146.9722
+Epoch 3/50
+147/147 - 0s - 1ms/step - loss: 588.6782 - val_loss: 23529.7109
+Epoch 4/50
+147/147 - 0s - 1ms/step - loss: 397.1900 - val_loss: 20798.7969
+Epoch 5/50
+147/147 - 0s - 1ms/step - loss: 207.2981 - val_loss: 13512.8643
+Epoch 6/50
+147/147 - 0s - 1ms/step - loss: 69.5770 - val_loss: 7830.6436
+Epoch 7/50
+147/147 - 0s - 1ms/step - loss: 16.7006 - val_loss: 5194.8667
+Epoch 8/50
+147/147 - 0s - 1ms/step - loss: 5.6311 - val_loss: 4219.1328
+Epoch 9/50
+147/147 - 0s - 1ms/step - loss: 3.7269 - val_loss: 3752.3853
+Epoch 10/50
+147/147 - 0s - 1ms/step - loss: 3.0434 - val_loss: 3464.2244
+Epoch 11/50
+147/147 - 0s - 1ms/step - loss: 2.6894 - val_loss: 3226.8010
+Epoch 12/50
+147/147 - 0s - 1ms/step - loss: 2.4961 - val_loss: 3068.3967
+Epoch 13/50
+147/147 - 0s - 1ms/step - loss: 2.3520 - val_loss: 2943.4927
+Epoch 14/50
+147/147 - 0s - 1ms/step - loss: 2.2116 - val_loss: 2831.0566
+Epoch 15/50
+147/147 - 0s - 1ms/step - loss: 2.0675 - val_loss: 2726.7930
+Epoch 16/50
+147/147 - 0s - 1ms/step - loss: 1.9182 - val_loss: 2630.1262
+Epoch 17/50
+147/147 - 0s - 1ms/step - loss: 1.7667 - val_loss: 2531.6226
+Epoch 18/50
+147/147 - 0s - 1ms/step - loss: 1.6197 - val_loss: 2433.6411
+Epoch 19/50
+147/147 - 0s - 1ms/step - loss: 1.4808 - val_loss: 2343.7371
+Epoch 20/50
+147/147 - 0s - 1ms/step - loss: 1.3609 - val_loss: 2269.0928
+Epoch 21/50
+147/147 - 0s - 1ms/step - loss: 1.2681 - val_loss: 2202.7751
+Epoch 22/50
+147/147 - 0s - 1ms/step - loss: 1.2024 - val_loss: 2151.1780
+Epoch 23/50
+147/147 - 0s - 1ms/step - loss: 1.1569 - val_loss: 2110.4763
+Epoch 24/50
+147/147 - 0s - 1ms/step - loss: 1.1257 - val_loss: 2073.7979
+Epoch 25/50
+147/147 - 0s - 1ms/step - loss: 1.1046 - val_loss: 2049.9207
+Epoch 26/50
+147/147 - 0s - 1ms/step - loss: 1.0888 - val_loss: 2029.2289
+Epoch 27/50
+147/147 - 0s - 1ms/step - loss: 1.0759 - val_loss: 2015.1068
+Epoch 28/50
+147/147 - 0s - 1ms/step - loss: 1.0647 - val_loss: 2005.0347
+Epoch 29/50
+147/147 - 0s - 1ms/step - loss: 1.0540 - val_loss: 1999.1827
+Epoch 30/50
+147/147 - 0s - 1ms/step - loss: 1.0443 - val_loss: 1993.3948
+Epoch 31/50
+147/147 - 0s - 1ms/step - loss: 1.0358 - val_loss: 1982.4490
+Epoch 32/50
+147/147 - 0s - 1ms/step - loss: 1.0275 - val_loss: 1979.3230
+Epoch 33/50
+147/147 - 0s - 1ms/step - loss: 1.0199 - val_loss: 1975.0668
+Epoch 34/50
+147/147 - 0s - 1ms/step - loss: 1.0129 - val_loss: 1970.9496
+Epoch 35/50
+147/147 - 0s - 1ms/step - loss: 1.0066 - val_loss: 1966.7854
+Epoch 36/50
+147/147 - 0s - 1ms/step - loss: 1.0009 - val_loss: 1965.0906
+Epoch 37/50
+147/147 - 0s - 1ms/step - loss: 0.9958 - val_loss: 1962.6331
+Epoch 38/50
+147/147 - 0s - 1ms/step - loss: 0.9914 - val_loss: 1956.8823
+Epoch 39/50
+147/147 - 0s - 1ms/step - loss: 0.9877 - val_loss: 1953.6366
+Epoch 40/50
+147/147 - 0s - 1ms/step - loss: 0.9845 - val_loss: 1947.6708
+Epoch 41/50
+147/147 - 0s - 1ms/step - loss: 0.9818 - val_loss: 1948.1885
+Epoch 42/50
+147/147 - 0s - 1ms/step - loss: 0.9795 - val_loss: 1946.0668
+Epoch 43/50
+147/147 - 0s - 1ms/step - loss: 0.9774 - val_loss: 1938.7406
+Epoch 44/50
+147/147 - 0s - 1ms/step - loss: 0.9757 - val_loss: 1933.8539
+Epoch 45/50
+147/147 - 0s - 1ms/step - loss: 0.9742 - val_loss: 1931.9624
+Epoch 46/50
+147/147 - 0s - 1ms/step - loss: 0.9726 - val_loss: 1926.7019
+Epoch 47/50
+147/147 - 0s - 1ms/step - loss: 0.9715 - val_loss: 1918.1444
+Epoch 48/50
+147/147 - 0s - 1ms/step - loss: 0.9704 - val_loss: 1910.0424
+Epoch 49/50
+147/147 - 0s - 1ms/step - loss: 0.9691 - val_loss: 1905.0382
+Epoch 50/50
+147/147 - 0s - 1ms/step - loss: 0.9682 - val_loss: 1907.3319
+
+[1m 1/29[0m [37m====================[0m [1m0s[0m 30ms/step
+[1m29/29[0m [32m====================[0m[37m[0m [1m0s[0m 1ms/step 
+TRAINING_COMPLETE: model_saved=C:\Users\loweb\AI_Financial_Sims\HO\HO 1st time 5080\models\ohlc_best.keras
+[METRICS] test_mae=0.976465 test_r2=0.987170

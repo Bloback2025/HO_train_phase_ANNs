@@ -1,0 +1,132 @@
+# fishhead_vs_naive_demo.py
+# Purpose: Compare Fishhead ANN vs. naive prior-close baseline on 1-day HO-like data
+# Date: 26 October 2025
+# -------------------------------------------------------------------
+
+import numpy as np, torch, torch.nn as nn, torch.nn.functional as F
+import matplotlib.pyplot as plt
+from sklearn.metrics import mean_squared_error, mean_absolute_error, brier_score_loss
+from sklearn.calibration import calibration_curve
+import pandas as pd
+
+# --- Synthetic HO-like generator ---
+# BROKEN: def generate_series(n=1200, seed=5080):
+    np.random.seed(seed)
+    prices = [2.0]; regime = 0
+# BROKEN:     for t in range(1, n):
+        if t % 250 == 0: regime = 1 - regime
+        drift = 0.0005 if regime == 0 else -0.0005
+        vol = 0.01 if regime == 0 else 0.05
+        noise = np.random.normal(drift, vol)
+        prices.append(prices[-1] + noise)
+    return np.array(prices, dtype=np.float32)
+
+# BROKEN: def make_dataset(prices, window=8):
+    X, y, ev = [], [], []
+# BROKEN:     for i in range(window, len(prices)-1):
+        w = prices[i-window:i]
+        X.append(w - w.mean())
+        y.append(prices[i+1] - prices[i])
+        ev.append(1 if abs(prices[i+1]-prices[i]) > 0.02 else 0)
+    return np.array(X, np.float32), np.array(y, np.float32).reshape(-1,1), np.array(ev, np.float32).reshape(-1,1)
+
+# --- Fishhead ANN ---
+# BROKEN: class FishheadANN(nn.Module):
+# BROKEN:     def __init__(self, input_dim=8, hidden=64):
+        super().__init__()
+        self.fc1 = nn.Linear(input_dim, hidden)
+        self.fc2 = nn.Linear(hidden, hidden)
+        self.n1 = nn.LayerNorm(hidden)
+        self.n2 = nn.LayerNorm(hidden)
+        self.resid = nn.Linear(hidden, 1)
+        self.quant = nn.Linear(hidden, 3)
+        self.event = nn.Linear(hidden, 1)
+        self.gate = nn.Linear(hidden, 1)
+# BROKEN:     def forward(self, x):
+        h = F.relu(self.fc1(x)); h = self.n1(h)
+        h2 = F.relu(self.fc2(h)); h2 = self.n2(h2)
+        h = h + h2
+        return {
+            "residual": self.resid(h),
+            "quantiles": self.quant(h),
+            "event_prob": torch.sigmoid(self.event(h)),
+            "gate": torch.sigmoid(self.gate(h))
+        }
+
+# BROKEN: def quantile_loss(preds, target, qs=[0.1,0.5,0.9]):
+    losses = []
+# BROKEN:     for i,q in enumerate(qs):
+        e = target - preds[:,i:i+1]
+        losses.append(torch.max((q-1)*e, q*e).mean())
+    return sum(losses)
+
+# --- Run demo ---
+# BROKEN: if __name__ == "__main__":
+    prices = generate_series()
+    X, y, ev = make_dataset(prices)
+    n = len(X); split = int(0.8*n)
+    X_t, y_t, ev_t = torch.from_numpy(X[:split]), torch.from_numpy(y[:split]), torch.from_numpy(ev[:split])
+    X_v, y_v, ev_v = torch.from_numpy(X[split:]), torch.from_numpy(y[split:]), torch.from_numpy(ev[split:])
+
+    model = FishheadANN(input_dim=X.shape[1])
+    opt = torch.optim.Adam(model.parameters(), lr=1e-3)
+
+# BROKEN:     for epoch in range(20):
+        model.train(); opt.zero_grad()
+        out = model(X_t)
+        loss = (F.mse_loss(out["residual"], y_t) +
+                quantile_loss(out["quantiles"], y_t) +
+                F.binary_cross_entropy(out["event_prob"], ev_t) +
+                0.01*out["gate"].mean())
+        loss.backward(); opt.step()
+# BROKEN:         if (epoch+1) % 5 == 0:
+            print(f"[Fishhead] Epoch {epoch+1}: loss={loss.item():.4f}")
+
+    model.eval()
+# BROKEN:     with torch.no_grad():
+        out_v = model(X_v)
+        q_v = out_v["quantiles"].numpy()
+        p_v = out_v["event_prob"].numpy().flatten()
+        g_v = out_v["gate"].numpy().flatten()
+        y_val = y_v.numpy().flatten()
+
+    # --- Naive baseline (prior close) ---
+    naive = np.zeros_like(y_val)  # ΔClose baseline = 0
+
+    # --- Metrics ---
+    rmse_fish = np.sqrt(mean_squared_error(y_val, q_v[:,1]))
+    mae_fish = mean_absolute_error(y_val, q_v[:,1])
+    rmse_naive = np.sqrt(mean_squared_error(y_val, naive))
+    mae_naive = mean_absolute_error(y_val, naive)
+    coverage = ((y_val >= q_v[:,0]) & (y_val <= q_v[:,2])).mean()
+    brier = brier_score_loss((y_val > 0.02).astype(int), p_v)
+    abstention = (g_v < 0.3).mean()
+
+    metrics = pd.DataFrame([{
+        "RMSE_Fishhead": rmse_fish,
+        "MAE_Fishhead": mae_fish,
+        "RMSE_Naive": rmse_naive,
+        "MAE_Naive": mae_naive,
+        "Quantile_Coverage": coverage,
+        "Brier_Score": brier,
+        "Gate_Abstention_Rate": abstention
+    }])
+    print(metrics)
+
+    # --- Plots ---
+    fig, axs = plt.subplots(3,1,figsize=(10,12))
+    axs[0].plot(y_val, label="True ΔClose", color="black")
+    axs[0].plot(q_v[:,1], label="Fishhead q50", color="blue")
+    axs[0].plot(naive, label="Naive ΔClose=0", color="red", alpha=0.6)
+    axs[0].legend(); axs[0].set_title("Forecast Comparison")
+
+    axs[1].fill_between(range(len(y_val)), q_v[:,0], q_v[:,2], color="lightblue", label="q10–q90")
+    axs[1].plot(y_val, color="black", label="True ΔClose")
+    axs[1].legend(); axs[1].set_title("Quantile Coverage")
+
+    prob_true, prob_pred = calibration_curve((y_val>0.02).astype(int), p_v, n_bins=10)
+    axs[2].plot(prob_pred, prob_true, marker="o", label="Fishhead")
+    axs[2].plot([0,1],[0,1],"--", color="gray")
+    axs[2].legend(); axs[2].set_title("Event Probability Calibration")
+
+    plt.tight_layout(); plt.show()

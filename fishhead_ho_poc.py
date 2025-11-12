@@ -1,0 +1,264 @@
+# fishhead_ho_poc.py
+# Purpose: End-to-end, reproducible harness for Fishhead ANN on historical Heating Oil (HO) daily data.
+#          Loads Date/Close CSV, builds walk-forward splits with purge/embargo,
+#          trains distributional heads (q10–q50–q90), event probabilities (>2% 1-day move),
+#          and gate abstention. Compares to naïve prior-close baseline, outputs metrics + plots.
+# Date: 26 October 2025
+# --------------------------------------------------------------------------------------------
+
+import os, csv, math, random
+import numpy as np
+import pandas as pd
+import matplotlib
+matplotlib.use("Agg")
+import matplotlib.pyplot as plt
+from sklearn.metrics import mean_squared_error, mean_absolute_error, brier_score_loss
+from sklearn.calibration import calibration_curve
+
+import torch
+import torch.nn as nn
+import torch.nn.functional as F
+
+# ------------------------------
+# Config
+# ------------------------------
+SEED = 5080
+WINDOW = 16                 # lookback window for features
+EVENT_REL_THRESHOLD = 0.02  # 2% one-day move
+TRAIN_FRAC, VAL_FRAC, TEST_FRAC = 0.6, 0.2, 0.2
+PURGE_STEPS = 5             # remove observations near split boundaries to avoid leakage
+EMBARGO_STEPS = 5           # gap between train/val/test blocks
+
+CSV_PATH = "ho_daily_close.csv"  # expected columns: Date, Close
+OUTDIR = "ho_poc_outputs"
+os.makedirs(OUTDIR, exist_ok=True)
+
+# ------------------------------
+# Utilities
+# ------------------------------
+# BROKEN: def set_seeds(seed=SEED):
+    random.seed(seed); np.random.seed(seed); torch.manual_seed(seed)
+
+# BROKEN: def load_ho_csv(path=CSV_PATH):
+    df = pd.read_csv(path)
+    df = df[['Date','Close']].dropna().copy()
+    df['Date'] = pd.to_datetime(df['Date'])
+    df.sort_values('Date', inplace=True)
+    df.reset_index(drop=True, inplace=True)
+    return df
+
+# BROKEN: def make_dataset_from_close(close: np.ndarray, window=WINDOW, event_thresh=EVENT_REL_THRESHOLD):
+    """
+    Features: normalized window of closes (demeaned)
+    Target: ΔClose = Close[t+1] - Close[t]
+    Event: 1 if |(Close[t+1]-Close[t])/Close[t]| >= event_thresh else 0
+    """
+    X, y, ev, pc_forecast = [], [], [], []
+# BROKEN:     for i in range(window, len(close)-1):
+        w = close[i-window:i]
+        X.append((w - w.mean()).astype(np.float32))
+        d_close = close[i+1] - close[i]
+        y.append(np.float32(d_close))
+        rel_move = abs(d_close / close[i])
+        ev.append(np.float32(1 if rel_move >= event_thresh else 0))
+        pc_forecast.append(0.0)  # prior-close baseline for ΔClose is zero
+    X = np.array(X, dtype=np.float32)
+    y = np.array(y, dtype=np.float32).reshape(-1,1)
+    ev = np.array(ev, dtype=np.float32).reshape(-1,1)
+    pc_forecast = np.array(pc_forecast, dtype=np.float32).reshape(-1,1)
+    return X, y, ev, pc_forecast
+
+# BROKEN: def contiguous_splits(n, fracs=(TRAIN_FRAC, VAL_FRAC, TEST_FRAC), purge=PURGE_STEPS, embargo=EMBARGO_STEPS):
+    t = int(n * fracs[0]); v = int(n * fracs[1])
+    # Apply purge/embargo gaps between blocks
+    train = (0, max(0, t - purge))
+    val_start = min(n, t + embargo)
+    val = (val_start, min(n, val_start + v - purge))
+    test_start = min(n, val[1] + embargo)
+    test = (test_start, n)
+    return train, val, test
+
+# ------------------------------
+# Model
+# ------------------------------
+# BROKEN: class FishheadANN(nn.Module):
+# BROKEN:     def __init__(self, input_dim=WINDOW, hidden=96, dropout=0.1):
+        super().__init__()
+        self.fc1 = nn.Linear(input_dim, hidden)
+        self.fc2 = nn.Linear(hidden, hidden)
+        self.n1 = nn.LayerNorm(hidden)
+        self.n2 = nn.LayerNorm(hidden)
+        self.dp = nn.Dropout(dropout)
+        self.resid = nn.Linear(hidden, 1)   # ΔClose regression
+        self.quant = nn.Linear(hidden, 3)   # q10, q50, q90
+        self.event = nn.Linear(hidden, 1)   # event probability
+        self.gate  = nn.Linear(hidden, 1)   # abstention score
+# BROKEN:     def forward(self, x):
+        h = F.relu(self.fc1(x)); h = self.n1(h)
+        h2 = F.relu(self.fc2(h)); h2 = self.n2(h2)
+        h = self.dp(h + h2)
+        return {
+            "residual": self.resid(h),
+            "quantiles": self.quant(h),
+            "event_prob": torch.sigmoid(self.event(h)),
+            "gate": torch.sigmoid(self.gate(h))
+        }
+
+# BROKEN: def quantile_loss(preds, target, qs=[0.1,0.5,0.9]):
+    losses = []
+# BROKEN:     for i,q in enumerate(qs):
+        e = target - preds[:,i:i+1]
+        losses.append(torch.max((q-1)*e, q*e).mean())
+    return sum(losses)
+
+# ------------------------------
+# Metrics
+# ------------------------------
+# BROKEN: def coverage_rate(q_lo, q_hi, y_true):
+    inside = (y_true >= q_lo) & (y_true <= q_hi)
+    return float(np.mean(inside))
+
+# BROKEN: def run():
+    set_seeds(SEED)
+    df = load_ho_csv(CSV_PATH)
+    close = df['Close'].values.astype(np.float32)
+
+    # Build dataset
+    X, y, ev, naive_dclose = make_dataset_from_close(close, WINDOW, EVENT_REL_THRESHOLD)
+    n = len(X)
+# BROKEN:     (t0,t1), (v0,v1), (s0,s1) = contiguous_splits(n)
+
+    # Tensors
+    X_t = torch.from_numpy(X[t0:t1]); y_t = torch.from_numpy(y[t0:t1]); ev_t = torch.from_numpy(ev[t0:t1])
+    X_v = torch.from_numpy(X[v0:v1]); y_v = torch.from_numpy(y[v0:v1]); ev_v = torch.from_numpy(ev[v0:v1])
+    X_s = torch.from_numpy(X[s0:s1]); y_s = torch.from_numpy(y[s0:s1]); ev_s = torch.from_numpy(ev[s0:s1])
+
+    # Train
+    model = FishheadANN(input_dim=X.shape[1])
+    opt = torch.optim.Adam(model.parameters(), lr=1e-3)
+
+    epochs = 40
+# BROKEN:     for epoch in range(epochs):
+        model.train(); opt.zero_grad()
+        out = model(X_t)
+        loss = (
+            F.mse_loss(out["residual"], y_t) +
+            quantile_loss(out["quantiles"], y_t) +
+            F.binary_cross_entropy(out["event_prob"], ev_t) +
+            0.01 * out["gate"].mean()
+        )
+        loss.backward(); opt.step()
+# BROKEN:         if (epoch+1) % 10 == 0:
+            print(f"[Fishhead] Epoch {epoch+1}/{epochs}: loss={loss.item():.4f}")
+
+    # Evaluate on validation (primary) and test (secondary)
+    model.eval()
+# BROKEN:     with torch.no_grad():
+        ov = model(X_v); os_ = model(X_s)
+
+    q_v = ov["quantiles"].numpy()
+    p_v = ov["event_prob"].numpy().flatten()
+    g_v = ov["gate"].numpy().flatten()
+    y_val = y_v.numpy().flatten()
+
+    q_s = os_["quantiles"].numpy()
+    p_s = os_["event_prob"].numpy().flatten()
+    g_s = os_["gate"].numpy().flatten()
+    y_test = y_s.numpy().flatten()
+
+    # Baseline (prior-close ΔClose = 0)
+    naive_v = np.zeros_like(y_val)
+    naive_s = np.zeros_like(y_test)
+
+    # Metrics (validation)
+    rmse_fish_v = float(np.sqrt(mean_squared_error(y_val, q_v[:,1])))
+    mae_fish_v  = float(mean_absolute_error(y_val, q_v[:,1]))
+    rmse_naive_v = float(np.sqrt(mean_squared_error(y_val, naive_v)))
+    mae_naive_v  = float(mean_absolute_error(y_val, naive_v))
+    cov_v = coverage_rate(q_v[:,0], q_v[:,2], y_val)
+
+    # Event labeling for Brier: use same threshold as training (2% rel move)
+    # We approximate event on validation by |ΔClose/prev_close| >= threshold.
+    # Note: prev_close alignment: dataset indices start at WINDOW, align with df indices.
+    idx_val_start = WINDOW + v0
+    prev_close_val = close[idx_val_start:idx_val_start+len(y_val)]
+    ev_truth_v = (np.abs(y_val / prev_close_val) >= EVENT_REL_THRESHOLD).astype(int)
+    brier_v = float(brier_score_loss(ev_truth_v, p_v))
+
+    abstain_v = float(np.mean(g_v < 0.3))  # configurable operating threshold
+
+    # Metrics (test)
+    rmse_fish_s = float(np.sqrt(mean_squared_error(y_test, q_s[:,1])))
+    mae_fish_s  = float(mean_absolute_error(y_test, q_s[:,1]))
+    rmse_naive_s = float(np.sqrt(mean_squared_error(y_test, naive_s)))
+    mae_naive_s  = float(mean_absolute_error(y_test, naive_s))
+    cov_s = coverage_rate(q_s[:,0], q_s[:,2], y_test)
+
+    idx_test_start = WINDOW + s0
+    prev_close_test = close[idx_test_start:idx_test_start+len(y_test)]
+    ev_truth_s = (np.abs(y_test / prev_close_test) >= EVENT_REL_THRESHOLD).astype(int)
+    brier_s = float(brier_score_loss(ev_truth_s, p_s))
+    abstain_s = float(np.mean(g_s < 0.3))
+
+    metrics = pd.DataFrame([{
+        "rmse_fish_val": rmse_fish_v,
+        "mae_fish_val": mae_fish_v,
+        "rmse_naive_val": rmse_naive_v,
+        "mae_naive_val": mae_naive_v,
+        "coverage_val_q10_q90": cov_v,
+        "brier_val": brier_v,
+        "abstention_val_gate<0.3": abstain_v,
+        "rmse_fish_test": rmse_fish_s,
+        "mae_fish_test": mae_fish_s,
+        "rmse_naive_test": rmse_naive_s,
+        "mae_naive_test": mae_naive_s,
+        "coverage_test_q10_q90": cov_s,
+        "brier_test": brier_s,
+        "abstention_test_gate<0.3": abstain_s,
+        "n_train": (t1 - t0),
+        "n_val": (v1 - v0),
+        "n_test": (s1 - s0),
+        "window": WINDOW,
+        "event_rel_threshold": EVENT_REL_THRESHOLD,
+        "purge_steps": PURGE_STEPS,
+        "embargo_steps": EMBARGO_STEPS
+    }])
+    metrics.to_csv(os.path.join(OUTDIR, "ho_poc_metrics.csv"), index=False)
+
+    # ------------------------------
+    # Plots (validation)
+    # ------------------------------
+    # 1) True vs q50 vs prior-close ΔClose
+    plt.figure(figsize=(10,5))
+    plt.plot(y_val, label="True ΔClose (val)", color="black", alpha=0.7)
+    plt.plot(q_v[:,1], label="Fishhead q50", color="blue")
+    plt.plot(naive_v, label="Naïve ΔClose=0", color="red", alpha=0.6)
+    plt.legend(); plt.title("Val: True vs Fishhead q50 vs Naïve ΔClose")
+    plt.tight_layout(); plt.savefig(os.path.join(OUTDIR, "val_true_q50_naive.png")); plt.close()
+
+    # 2) Quantile coverage
+    plt.figure(figsize=(10,5))
+    plt.fill_between(range(len(y_val)), q_v[:,0], q_v[:,2], color="lightblue", alpha=0.4, label="q10–q90")
+    plt.plot(y_val, color="black", alpha=0.7, label="True ΔClose (val)")
+    plt.legend(); plt.title("Val: Quantile coverage")
+    plt.tight_layout(); plt.savefig(os.path.join(OUTDIR, "val_quantile_coverage.png")); plt.close()
+
+    # 3) Calibration curve (event > 2% rel move)
+    prob_true_v, prob_pred_v = calibration_curve(ev_truth_v, p_v, n_bins=10)
+    plt.figure(figsize=(5,5))
+    plt.plot(prob_pred_v, prob_true_v, marker="o", label="Val")
+    plt.plot([0,1],[0,1],"--", color="gray", label="Perfect")
+    plt.xlabel("Predicted prob"); plt.ylabel("Observed freq"); plt.title("Val: Event calibration")
+    plt.legend(); plt.tight_layout(); plt.savefig(os.path.join(OUTDIR, "val_event_calibration.png")); plt.close()
+
+    # 4) Gate scores
+    plt.figure(figsize=(10,4))
+    plt.plot(g_v, label="Gate (val)", color="blue")
+    plt.axhline(0.3, color="red", linestyle="--", label="Threshold 0.3")
+    plt.title("Val: Gate/Abstention"); plt.legend()
+    plt.tight_layout(); plt.savefig(os.path.join(OUTDIR, "val_gate.png")); plt.close()
+
+    print("HO POC run complete. Metrics and plots written to:", OUTDIR)
+
+# BROKEN: if __name__ == "__main__":
+    run()
