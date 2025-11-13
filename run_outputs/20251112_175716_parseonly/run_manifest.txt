@@ -1,5 +1,7 @@
-run_id: run_outputs/20251112_175716_parseonly
-timestamp: 2025-11-12T17:57:16.8429384+11:00
+run_id: .\run_outputs\20251112_175716_parseonly
+timestamp: 2025-11-13T14:51:13.3581511+11:00
 runner: canonical_train_2bANN2_HO.py
-commit_sha: 2f3c73a
-entrypoint_sha: E56E4D2F84026536ED56D60DBF12AA93CB97E2C865EAEAA7E7E2E7147EA4B303
+commit_sha: 5f0b6f1
+canonical_entrypoint_sha: D93AE1582BE3BBC0B57EABDF73307D5C58DC5060B7475644E8A9367F6D56328C
+train_file_hash: 
+preds_sha: MISSING

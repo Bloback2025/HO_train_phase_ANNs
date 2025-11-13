@@ -1,0 +1,4 @@
+C:\Users\loweb\AI_Financial_Sims\HO\HO 1st time 5080\canonical_train_2bANN2_HO.py:42: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  start = datetime.utcnow().isoformat() + 'Z'
+ERROR: missing train-file 
+ALIAS FORWARD: C:\Users\loweb\AI_Financial_Sims\PyLibs\Scripts\python.exe C:\Users\loweb\AI_Financial_Sims\HO\HO 1st time 5080\canonical_train_2bANN2_HO.py --train-file  --outdir .\run_outputs\20251112_175716_parseonly --epochs 1 --seed 42
