@@ -1,7 +1,11 @@
-run_id: .\run_outputs\20251112_175716_smokenotrain
-timestamp: 2025-11-13T14:56:49.1841115+11:00
+run_id: 20251112_175716_smokenotrain
+timestamp: 2025-11-13T15:34:58.3633627+11:00
 runner: canonical_train_2bANN2_HO.py
-commit_sha: 2ea28bd
+commit_sha: 9a557e7
 canonical_entrypoint_sha: D93AE1582BE3BBC0B57EABDF73307D5C58DC5060B7475644E8A9367F6D56328C
-train_file_hash: 04CC097BD744E1262AD885596C79C34D167F0A8E04B4D2DDA919EDB149709186
+train_file_path: --outdir
+train_file_hash: MISSING
+seed: MISSING
+epochs: MISSING
+mode: MISSING
 preds_sha: MISSING
