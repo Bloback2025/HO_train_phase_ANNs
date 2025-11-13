@@ -1,4 +1,4 @@
-  File "C:\Users\loweb\AI_Financial_Sims\HO\HO 1st time 5080\canonical_train_2bANN2_HO.py", line 37
-    f.write(f\"{k}: {v}\\n\")
-              ^
-SyntaxError: unexpected character after line continuation character
+RUNNER SUMMARY: canonical_train_2bANN2_HO; commit=6bb277e; entry_sha=d93ae1582be3bbc0b57eabdf73307d5c58dc5060b7475644e8a9367f6d56328c
+START: 2025-11-13T04:03:38.944867Z
+COMMAND: C:\Users\loweb\AI_Financial_Sims\HO\HO 1st time 5080\canonical_train_2bANN2_HO.py --train-file C:\Users\loweb\AI_Financial_Sims\HO\HO 1st time 5080\hoxnc_training.csv --outdir .\run_outputs\20251112_175716_smoke_e1 --epochs 1 --seed 42
+MANIFEST: .\run_outputs\20251112_175716_smoke_e1\run_manifest.txt
