@@ -1,0 +1,25 @@
+{
+  "artifact": "2bANN2_HO_model.keras",
+  "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\ho_artifact_outputs\\2bANN2_HO_model.keras",
+  "sha256": "E462009ADC5D763961C89107928B32CBA59586225AC6C97C649F9387C48C9877",
+  "input_shape": [
+    null,
+    4
+  ],
+  "layer_names": [
+    "features",
+    "dense_1",
+    "dropout_1",
+    "dense_2",
+    "dropout_2",
+    "dense_3",
+    "dropout_3",
+    "regression_output"
+  ],
+  "total_params": 50885,
+  "trainable_params": 16961,
+  "non_trainable_params": 0,
+  "optimizer_params": 33924,
+  "inspected_by": "inspect_model.py",
+  "inspected_at": "2025-11-13T09:57:21Z"
+}
