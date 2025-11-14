@@ -1,0 +1,63 @@
+inspection_time: 2025-11-13T10:28:29.481540Z
+model_path: C:\Users\loweb\AI_Financial_Sims\HO\HO 1st time 5080\ho_artifact_outputs\2bANN2_HO_model.keras
+model_file_sha256: E462009ADC5D763961C89107928B32CBA59586225AC6C97C649F9387C48C9877
+
+Model summary:
+Model: "2bANN2_HO_model"
++--------------------------------------------------------------------------+
+| Layer (type)                    | Output Shape           |       Param # |
+|---------------------------------+------------------------+---------------|
+| features (InputLayer)           | (None, 4)              |             0 |
+|---------------------------------+------------------------+---------------|
+| dense_1 (Dense)                 | (None, 64)             |           320 |
+|---------------------------------+------------------------+---------------|
+| dropout_1 (Dropout)             | (None, 64)             |             0 |
+|---------------------------------+------------------------+---------------|
+| dense_2 (Dense)                 | (None, 128)            |         8,320 |
+|---------------------------------+------------------------+---------------|
+| dropout_2 (Dropout)             | (None, 128)            |             0 |
+|---------------------------------+------------------------+---------------|
+| dense_3 (Dense)                 | (None, 64)             |         8,256 |
+|---------------------------------+------------------------+---------------|
+| dropout_3 (Dropout)             | (None, 64)             |             0 |
+|---------------------------------+------------------------+---------------|
+| regression_output (Dense)       | (None, 1)              |            65 |
++--------------------------------------------------------------------------+
+ Total params: 16,961 (66.25 KB)
+ Trainable params: 16,961 (66.25 KB)
+ Non-trainable params: 0 (0.00 B)
+
+
+Layers and weight shapes:
+000 | name: features | class: InputLayer
+    weights_count: 0
+001 | name: dense_1 | class: Dense
+    weights_count: 2
+      w0 shape: (4, 64) dtype: float32
+      w1 shape: (64,) dtype: float32
+002 | name: dropout_1 | class: Dropout
+    weights_count: 0
+003 | name: dense_2 | class: Dense
+    weights_count: 2
+      w0 shape: (64, 128) dtype: float32
+      w1 shape: (128,) dtype: float32
+004 | name: dropout_2 | class: Dropout
+    weights_count: 0
+005 | name: dense_3 | class: Dense
+    weights_count: 2
+      w0 shape: (128, 64) dtype: float32
+      w1 shape: (64,) dtype: float32
+006 | name: dropout_3 | class: Dropout
+    weights_count: 0
+007 | name: regression_output | class: Dense
+    weights_count: 2
+      w0 shape: (64, 1) dtype: float32
+      w1 shape: (1,) dtype: float32
+
+calculated_total_params: 16961
+trainable_params: 16961
+non_trainable_params: 0
+
+prediction_shape: (1, 1)
+
+wrote model config to: C:\Users\loweb\AI_Financial_Sims\HO\HO 1st time 5080\ho_artifact_outputs\inspect_model_config.json
