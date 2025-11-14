@@ -1,0 +1,1 @@
+2025-11-14T12:59:38 | 5659c47 | tag=v.A1 | seed=20251113 | model_sha=c7c54bb8c0f54cb21c9f75c4846efad4f9a14fdcb882f0e92d01b6803997458d | preds_sha=<missing> | runlog_sha=34881560632adddbd5b8e23699eb503f59772d4ff5d004ec29b0bf6a12e0e3f2 | note=canonical_runner_v.A1
