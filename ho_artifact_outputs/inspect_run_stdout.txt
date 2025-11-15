@@ -1,0 +1,7 @@
+2025-11-13 21:28:26.060680: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-11-13 21:28:27.947282: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+C:\Users\loweb\AI_Financial_Sims\HO\HO 1st time 5080\inspect_model.py:22: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  out.write(f"inspection_time: {datetime.datetime.utcnow().isoformat()}Z\n")
+2025-11-13 21:28:29.486725: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE3 SSE4.1 SSE4.2 AVX AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Inspection complete -> C:\Users\loweb\AI_Financial_Sims\HO\HO 1st time 5080\ho_artifact_outputs\inspect_model_output.txt
