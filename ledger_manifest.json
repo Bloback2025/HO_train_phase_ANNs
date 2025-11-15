@@ -1,0 +1,32 @@
+{
+  "timestamp": "'+ $TIMESTAMP + '",
+  "commit_short": "'+ $COMMIT + '",
+  "tag": "unknown",
+  "seed": "'+ $SEED + '",
+  "canonical_name": "'+ $CANON + '",
+  "note": "'+ $NOTE + '",
+  "model_file": "2bANN2_HO_model_copied_20251115_153149.keras",
+  "model_sha": "'+ $M_SHA + '",
+  "preds_sha": "'+ $PRED_SHA + '",
+  "runlog_sha": "'+ $run_sha + '",
+  "env_sha": "'+ $ENV_SHA + '",
+  "det_check_sha": "'+ $DET_SHA + '",
+  "readme": {
+    "filename_local": "'+ $README_NAME + '",
+    "path_local": "'+ ($README_LOCAL -replace '\\','\\\\') + '",
+    "path_external": "'+ ($README_F -replace '\\','\\\\') + '",
+    "sha256": "'+ ((Get-FileHash -Algorithm SHA256 -Path $README_LOCAL).Hash.ToLower()) + '"
+  },
+  "manifest": {
+    "path_local": "'+ ($localManifest -replace '\\','\\\\') + '",
+    "path_external": "'+ ($fManifest -replace '\\','\\\\') + '",
+    "sha256": "'+ ((Get-FileHash -Algorithm SHA256 -Path $localManifest).Hash.ToLower()) + '"
+  },
+  "paths": {
+    "preds": "'+ ($ARTOUT + '\preds_canonical.json' -replace '\\','\\\\') + '",
+    "det_check": "'+ ($ARTOUT + '\det_check.json' -replace '\\','\\\\') + '",
+    "env_freeze": "'+ ($ARTOUT + '\env_freeze.txt' -replace '\\','\\\\') + '",
+    "model": "'+ ($MODEL -replace '\\','\\\\') + '",
+    "runlog": "'+ ($run.FullName -replace '\\','\\\\') + '"
+  }
+}

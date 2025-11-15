@@ -1,0 +1,11 @@
+{
+  "title": "UPDATES_15.11.25.txt",
+  "preds_sha": "a2292f17eef8b1363950898562572cfb4db6f7d36b2d3719b3db4e7e9819f169",
+  "model_sha": "1dd60ebdd19cd064e61ca7308d47185515d352eb6846bac003dba9ab29250412",
+  "env_sha": "b4ddad5f23c05eb760d2ce6a7f2a59f55fb44413b97b6c700c36d70bb61a0d6d",
+  "det_check_sha": "9bda23ee585f35b79849da619ab7fcd68f136579219be9621ccf2d7c1253e421",
+  "readme_sha": "ad9c02bf6f784c2b39084e0ad3573a8f315f99cd655c5a230da6b3a7e94b4ce1",
+  "runlog_sha": "2bb7b03fb056c1975a871cfa8a9e44fa829aaa048d245cf4595268f53cfb6b1b",
+  "created": "2025-11-15T15:58:04.554271",
+  "canonical_provenance": "2025-11-15T15:58:04.554271 | ebd55aa | train_phase2b2_HO.1A"
+}
