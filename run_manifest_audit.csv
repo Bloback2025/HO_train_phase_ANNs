@@ -1,0 +1,20 @@
+run_id,missing_fields,file_path
+20251112_175350_parseonly,canonical_entrypoint_sha;train_file_hash;preds_sha;seed;epochs;mode,C:\Users\loweb\AI_Financial_Sims\HO\HO 1st time 5080\run_outputs\20251112_175350_parseonly\run_manifest.txt
+20251112_175350_smoke_e1,canonical_entrypoint_sha;train_file_hash;preds_sha;seed;epochs;mode,C:\Users\loweb\AI_Financial_Sims\HO\HO 1st time 5080\run_outputs\20251112_175350_smoke_e1\run_manifest.txt
+20251112_175350_smoke_e2,canonical_entrypoint_sha;train_file_hash;preds_sha;seed;epochs;mode,C:\Users\loweb\AI_Financial_Sims\HO\HO 1st time 5080\run_outputs\20251112_175350_smoke_e2\run_manifest.txt
+20251112_175350_smokenotrain,canonical_entrypoint_sha;train_file_hash;preds_sha;seed;epochs;mode,C:\Users\loweb\AI_Financial_Sims\HO\HO 1st time 5080\run_outputs\20251112_175350_smokenotrain\run_manifest.txt
+20251112_175654_parseonly,canonical_entrypoint_sha;train_file_hash;preds_sha;seed;epochs;mode,C:\Users\loweb\AI_Financial_Sims\HO\HO 1st time 5080\run_outputs\20251112_175654_parseonly\run_manifest.txt
+20251112_175654_smoke_e1,canonical_entrypoint_sha;train_file_hash;preds_sha;seed;epochs;mode,C:\Users\loweb\AI_Financial_Sims\HO\HO 1st time 5080\run_outputs\20251112_175654_smoke_e1\run_manifest.txt
+20251112_175654_smoke_e2,canonical_entrypoint_sha;train_file_hash;preds_sha;seed;epochs;mode,C:\Users\loweb\AI_Financial_Sims\HO\HO 1st time 5080\run_outputs\20251112_175654_smoke_e2\run_manifest.txt
+20251112_175654_smokenotrain,canonical_entrypoint_sha;train_file_hash;preds_sha;seed;epochs;mode,C:\Users\loweb\AI_Financial_Sims\HO\HO 1st time 5080\run_outputs\20251112_175654_smokenotrain\run_manifest.txt
+20251112_175716_parseonly,seed;epochs;mode,C:\Users\loweb\AI_Financial_Sims\HO\HO 1st time 5080\run_outputs\20251112_175716_parseonly\run_manifest.txt
+20251112_175716_smoke_e1,seed;epochs;mode,C:\Users\loweb\AI_Financial_Sims\HO\HO 1st time 5080\run_outputs\20251112_175716_smoke_e1\run_manifest.txt
+20251112_175716_smoke_e2,seed;epochs;mode,C:\Users\loweb\AI_Financial_Sims\HO\HO 1st time 5080\run_outputs\20251112_175716_smoke_e2\run_manifest.txt
+20251112_175716_smokenotrain,seed;epochs;mode,C:\Users\loweb\AI_Financial_Sims\HO\HO 1st time 5080\run_outputs\20251112_175716_smokenotrain\run_manifest.txt
+20251112-165755,ALL_FIELDS_MISSING,C:\Users\loweb\AI_Financial_Sims\HO\HO 1st time 5080\run_outputs\20251112-165755\run_manifest.txt
+20251112-165824,ALL_FIELDS_MISSING,C:\Users\loweb\AI_Financial_Sims\HO\HO 1st time 5080\run_outputs\20251112-165824\run_manifest.txt
+20251112-165958,ALL_FIELDS_MISSING,C:\Users\loweb\AI_Financial_Sims\HO\HO 1st time 5080\run_outputs\20251112-165958\run_manifest.txt
+20251112-170158,ALL_FIELDS_MISSING,C:\Users\loweb\AI_Financial_Sims\HO\HO 1st time 5080\run_outputs\20251112-170158\run_manifest.txt
+20251112-170208,ALL_FIELDS_MISSING,C:\Users\loweb\AI_Financial_Sims\HO\HO 1st time 5080\run_outputs\20251112-170208\run_manifest.txt
+"2025-11-15T20:33:47","2bANN2_HO","preds_2bANN2_HO_20251115_202242.fixed.csv","<PRED_SHA>","<RUNLOG_SHA>","deterministic seed=315; linear-calibration m=0.664392926441475 b=26.64701100712133"
+"2025-11-15T20:34:38","2bANN2_HO","preds_2bANN2_HO_20251115_202242.fixed.csv","EF7E7647FC2352AC1701543601C280FE4FE222DA24B0757D9A8731CB31BD3132","<RUNLOG_SHA>","deterministic seed=315; linear-calibration m=0.664392926441475 b=26.64701100712133"
