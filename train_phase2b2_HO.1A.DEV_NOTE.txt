@@ -6,3 +6,4 @@ note: deterministic Keras scaffold for 1A development; canonical train_phase2b2_
 SMOKE RUN: created_at: 2025-11-16T17:43:22.8259622+11:00 | model: 2bANN2_HO_model.keras | preds: ho_artifact_outputs/preds_canonical.json | preds_sha: 24bc834af45a62fbdece1df3149031e90d71e4b4fd5907b12223fd1e6c364d35
 SMOKE RUN: created_at: 2025-11-16T17:45:52.8879966+11:00 | model: 2bANN2_HO_model.keras | preds: ho_artifact_outputs/preds_canonical.json | preds_sha: 24bc834af45a62fbdece1df3149031e90d71e4b4fd5907b12223fd1e6c364d35
 PROVENANCE CHECK: verified push 2025-11-16T17:47:57.5243041+11:00
+PROVENANCE CHECK: verified push and tag dev_scaffold_HO.1A | verified_at: 2025-11-16T17:49:21.9298068+11:00
