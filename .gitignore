@@ -3,3 +3,6 @@ ho_artifact_outputs/
 scaler.pkl
 scaler_sidecar.json
 2bANN2_HO_model.keras
+
+# local artifact archive
+ho_artifact_outputs/retired/
