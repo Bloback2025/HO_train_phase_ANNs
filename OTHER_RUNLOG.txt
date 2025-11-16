@@ -1,0 +1,1 @@
+SCALER_INTEGRITY_OK | {"train": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\hoxnc_training.csv", "val": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\hoxnc_validation.csv", "features_count": 3, "max_abs_diff": 0.0}
