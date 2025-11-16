@@ -10,15 +10,29 @@ Usage example:
     --model models/ohlc_best.keras \
     --deterministic-inference \
     --deterministic-seed 315
+
+This module is importable and provides infer_with_model(model_path: Path, seed: int, output_folder: Path)
+which:
+  - runs deterministic inference using Keras/TF,
+  - writes preds JSON atomically to output_folder,
+  - writes a single-line preds SHA sidecar (preds.json.sha256.txt),
+  - returns metadata dict: {"preds_path": str, "preds_sha": str, "metrics": {...}}.
+
+The CLI remains compatible with previous usage but now delegates to infer_with_model for deterministic inference.
 """
 from __future__ import annotations
+
 import argparse
 import json
 import os
 import pickle
 import sys
+import tempfile
+import shutil
+import tarfile
+import traceback
 from pathlib import Path
-from typing import List, Optional, Tuple
+from typing import List, Optional, Tuple, Dict, Any
 
 import hashlib
 import random
@@ -31,8 +45,26 @@ from sklearn.preprocessing import StandardScaler
 TEST_FRAC = 0.15
 VAL_FRAC = 0.10
 
+# --- Small I/O / audit utilities (atomic writes + single-line sidecar) ---
 def eprint(*args, **kwargs):
     print(*args, file=sys.stderr, **kwargs)
+
+def atomic_write_json(path: Path, obj: Any) -> None:
+    path = Path(path)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    fd, tmp = tempfile.mkstemp(dir=str(path.parent), prefix=path.name + ".tmp.")
+    try:
+        with os.fdopen(fd, "w", encoding="utf8") as f:
+            json.dump(obj, f, sort_keys=True, indent=2)
+            f.flush()
+            os.fsync(f.fileno())
+        shutil.move(tmp, str(path))
+    finally:
+        if os.path.exists(tmp):
+            try:
+                os.remove(tmp)
+            except Exception:
+                pass
 
 def file_sha256(path: Path) -> str:
     h = hashlib.sha256()
@@ -41,6 +73,37 @@ def file_sha256(path: Path) -> str:
             h.update(chunk)
     return h.hexdigest()
 
+def write_sha_sidecar(path: Path, algo: str = "sha256") -> str:
+    path = Path(path)
+    if not path.exists():
+        raise FileNotFoundError(str(path))
+    h = hashlib.new(algo)
+    if path.is_file():
+        with path.open("rb") as f:
+            for chunk in iter(lambda: f.read(8192), b""):
+                h.update(chunk)
+    else:
+        tmp = Path(tempfile.NamedTemporaryFile(delete=False, suffix=".tar.gz").name)
+        try:
+            with tarfile.open(tmp, "w:gz") as tar:
+                for p in sorted(path.rglob("*")):
+                    if p.is_file():
+                        arcname = p.relative_to(path).as_posix()
+                        tar.add(p, arcname=arcname)
+            with tmp.open("rb") as f:
+                for chunk in iter(lambda: f.read(8192), b""):
+                    h.update(chunk)
+        finally:
+            try:
+                tmp.unlink()
+            except Exception:
+                pass
+    hexv = h.hexdigest().lower()
+    side = path.with_name(path.name + ".sha256.txt")
+    side.write_text(hexv, encoding="ascii")
+    return hexv
+
+# --- Feature and CSV helpers (preserve original behavior) ---
 def load_manifest_features(manifest_path: Optional[Path]) -> Optional[List[str]]:
     if not manifest_path:
         return None
@@ -98,7 +161,157 @@ def safe_cast_float(df: pd.DataFrame, cols: List[str]) -> pd.DataFrame:
                 df[c] = df[c]
     return df
 
-def main():
+# --- Deterministic inference API function (importable) ---
+def infer_with_model(model_path: Path, seed: int, output_folder: Path, *,
+                     manifest_path: Optional[Path] = None, target_col: str = "Close_t+1",
+                     csv_fallback: Optional[Path] = None,
+                     scaler_path: Optional[Path] = None) -> Dict[str, Any]:
+    """
+    Run deterministic inference using model_path and seed.
+    Writes atomic JSON preds to output_folder/preds.json and a preds SHA sidecar.
+    Returns metadata dict: {"preds_path": str, "preds_sha": str, "metrics": {...}}
+    """
+    output_folder = Path(output_folder)
+    output_folder.mkdir(parents=True, exist_ok=True)
+
+    # Fix seeds deterministically
+    os.environ["PYTHONHASHSEED"] = str(int(seed))
+    random.seed(int(seed))
+    np.random.seed(int(seed))
+    try:
+        tf.random.set_seed(int(seed))
+    except Exception:
+        pass
+    os.environ.setdefault("TF_DETERMINISTIC_OPS", "1")
+
+    # csv_fallback required for standalone use
+    if csv_fallback is None:
+        raise RuntimeError("infer_with_model requires csv_fallback when called standalone to load test data")
+
+    csv_path = Path(csv_fallback)
+    if not csv_path.exists():
+        raise FileNotFoundError(str(csv_path))
+
+    # Load CSV
+    df = pd.read_csv(csv_path)
+    features = load_manifest_features(manifest_path)
+
+    max_lag = 0
+    if features:
+        for f in features:
+            if "_lag" in f:
+                try:
+                    max_lag = max(max_lag, int(f.split("_lag")[-1]))
+                except Exception:
+                    pass
+    else:
+        cols = list(df.columns)
+        for c in cols:
+            if "_lag" in c:
+                try:
+                    max_lag = max(max_lag, int(c.split("_lag")[-1]))
+                except Exception:
+                    pass
+
+    if not features:
+        fallback_csv_path = csv_path
+        features = conservative_feature_fallback(fallback_csv_path, target_col, max_lag)
+
+    # Robust target creation and propagation
+    def _propagate_target(df_frame: Optional[pd.DataFrame], name: str) -> Optional[pd.DataFrame]:
+        if df_frame is None:
+            return None
+        if target_col in df_frame.columns:
+            eprint("RUN_INFO: target_present_in", name, target_col, "rows=", len(df_frame))
+            return df_frame
+        if "Close" in df_frame.columns:
+            try:
+                df_copy = df_frame.copy()
+                df_copy[target_col] = df_copy["Close"].shift(-1)
+                before = len(df_copy)
+                df_copy = df_copy.dropna(subset=[target_col]).reset_index(drop=True)
+                after = len(df_copy)
+                eprint("RUN_INFO: created_target_in", name, target_col, f"rows_before={before}", f"rows_after={after}")
+                return df_copy
+            except Exception as e:
+                eprint("RUN_WARN: target_creation_failed_in", name, str(e))
+                return df_frame
+        eprint("RUN_WARN: cannot_create_target_no_Close_in", name)
+        return df_frame
+
+    # Build dataset splits in combined-mode (csv contains all) — caller may supply pre-split CSVs in CLI
+    # The infer_with_model API expects csv_fallback to be the combined CSV for standalone calls
+    df_work = df.copy()
+    # if caller wants more control they can precompute splits and call the harness instead
+
+    # Create target if missing
+    if target_col not in df_work.columns and "Close" in df_work.columns:
+        try:
+            df_work[target_col] = df_work["Close"].shift(-1)
+            eprint("RUN_INFO: created_target_in_combined", target_col, "rows=", len(df_work))
+        except Exception as e:
+            eprint("RUN_WARN: target_creation_failed", str(e))
+
+    required_cols = list(features) + ([target_col] if (target_col in df_work.columns) else [])
+    try:
+        df_work = df_work.dropna(axis=0, subset=required_cols).reset_index(drop=True)
+    except Exception as e:
+        raise RuntimeError(f"selective_dropna_failed: {e}")
+
+    df_work = safe_cast_float(df_work, [c for c in required_cols if c in df_work.columns])
+    missing = [c for c in features if c not in df_work.columns]
+    if missing:
+        raise RuntimeError(f"missing_after_preprocessing: {missing}")
+
+    # Build X/y and chronological split
+    X = df_work[features].astype(float).values
+    y = df_work[target_col].astype(float).values if target_col in df_work.columns else None
+    X_train, X_val, X_test, y_train, y_val, y_test = chronological_split(X, y if y is not None else np.zeros((len(X),)), TEST_FRAC, VAL_FRAC)
+
+    # Load or fit scaler
+    scaler = None
+    if scaler_path:
+        sp = Path(scaler_path)
+        if sp.exists():
+            try:
+                with sp.open("rb") as fh:
+                    scaler = pickle.load(fh)
+                eprint("RUN_INFO: loaded_scaler", str(sp))
+            except Exception as e:
+                eprint("RUN_WARN: failed_loading_scaler", str(e))
+
+    if scaler is None:
+        try:
+            scaler = StandardScaler().fit(X_train)
+            eprint("RUN_INFO: fitted_fallback_scaler_on_train")
+        except Exception as e:
+            eprint("RUN_WARN: scaler_fit_failed", str(e))
+
+    X_test_s = scaler.transform(X_test) if scaler is not None else X_test
+
+    # Load model and predict
+    model = tf.keras.models.load_model(str(model_path))
+    preds = model.predict(X_test_s, verbose=0).reshape(-1).tolist() if X_test_s is not None else []
+
+    # Write preds atomically and sidecar
+    preds_path = Path(output_folder) / "preds.json"
+    atomic_write_json(preds_path, {"preds": preds})
+    preds_sha = write_sha_sidecar(preds_path)
+
+    # Compute metrics if y_test available
+    metrics: Dict[str, float] = {}
+    if y_test is not None and len(preds) == len(y_test):
+        arr_p = np.array(preds, dtype=float)
+        arr_y = np.array(y_test, dtype=float)
+        mae = float(np.mean(np.abs(arr_p - arr_y)))
+        r2 = float(r2_score(arr_y, arr_p))
+        metrics["mae"] = mae
+        metrics["r2"] = r2
+
+    return {"preds_path": str(preds_path), "preds_sha": preds_sha, "metrics": metrics}
+
+# --- Original CLI behavior preserved; delegate to infer_with_model if deterministic flag set ---
+def main(argv: Optional[List[str]] = None) -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--manifest", type=str, default=None, help="Manifest JSON path (optional)")
     parser.add_argument("--csv", type=str, default="hoxnc_full.csv", help="Input CSV for inference (fallback)")
@@ -111,28 +324,51 @@ def main():
     parser.add_argument("--val-frac", type=float, default=VAL_FRAC, help="Val fraction (combined-mode)")
     parser.add_argument("--deterministic-inference", action="store_true", help="Enable deterministic inference and log deterministic_meta")
     parser.add_argument("--deterministic-seed", type=int, default=315, help="Seed for deterministic inference (default 315)")
-    args = parser.parse_args()
+    parser.add_argument("--scaler-path", type=str, default=None, help="Optional scaler pickle path")
+    args = parser.parse_args(argv)
 
+    manifest_path = Path(args.manifest) if args.manifest else None
+    target_col = args.target
+    model_path = Path(args.model)
+
+    deterministic_meta = {"deterministic": False}
+    if args.deterministic_inference:
+        SEED = int(args.deterministic_seed)
+        deterministic_meta = {
+            "deterministic": True,
+            "seed": SEED,
+            "tf_deterministic_ops": os.environ.get("TF_DETERMINISTIC_OPS", "<unset>")
+        }
+    eprint("RUN_INFO: deterministic_meta", json.dumps(deterministic_meta))
+
+    # Determine CSV input to use for inference: prefer explicit test-csv, else fallback combined csv
+    csv_input: Optional[Path] = None
+    if args.test_csv:
+        csv_input = Path(args.test_csv)
+    elif args.csv:
+        csv_input = Path(args.csv)
+
+    if args.deterministic_inference:
+        if csv_input is None or not csv_input.exists():
+            eprint("RUN_ERROR: csv_not_found", str(csv_input))
+            print("RUN_COMPLETE: FAILURE")
+            return 1
+        try:
+            out = infer_with_model(model_path, SEED, Path.cwd() / "deterministic_inference_outputs",
+                                   manifest_path=manifest_path, target_col=target_col,
+                                   csv_fallback=csv_input, scaler_path=Path(args.scaler_path) if args.scaler_path else None)
+            eprint("RUN_INFO: inference_result", json.dumps(out))
+            print("RUN_COMPLETE: SUCCESS")
+            return 0
+        except Exception as exc:
+            eprint("RUN_ERROR: inference_failed", str(exc))
+            eprint(traceback.format_exc())
+            print("RUN_COMPLETE: FAILURE")
+            return 2
+
+    # If not deterministic inference mode: fall back to original behavior (quick combined-mode inference)
     try:
-        manifest_path = Path(args.manifest) if args.manifest else None
-        target_col = args.target
-        model_path = Path(args.model)
-
-        deterministic_meta = {"deterministic": False}
-        if args.deterministic_inference:
-            SEED = int(args.deterministic_seed)
-            random.seed(SEED)
-            np.random.seed(SEED)
-            tf.random.set_seed(SEED)
-            os.environ.setdefault("TF_DETERMINISTIC_OPS", "1")
-            deterministic_meta = {
-                "deterministic": True,
-                "seed": SEED,
-                "tf_deterministic_ops": os.environ.get("TF_DETERMINISTIC_OPS", "<unset>")
-            }
-        eprint("RUN_INFO: deterministic_meta", json.dumps(deterministic_meta))
-
-        # Load CSV(s)
+        # Load CSV(s) as before
         if args.train_csv and args.test_csv:
             train_path = Path(args.train_csv)
             val_path = Path(args.val_csv) if args.val_csv else None
@@ -150,15 +386,9 @@ def main():
                 "test": {"path": str(test_path.resolve()), "sha256": file_sha256(test_path)}
             }))
 
-            try:
-                df_train = pd.read_csv(train_path)
-                df_val = pd.read_csv(val_path) if val_path else None
-                df_test = pd.read_csv(test_path)
-            except Exception as e:
-                eprint("RUN_ERROR: csv_read_failed", str(e))
-                print("RUN_COMPLETE: FAILURE")
-                return 1
-
+            df_train = pd.read_csv(train_path)
+            df_val = pd.read_csv(val_path) if val_path else None
+            df_test = pd.read_csv(test_path)
             df = pd.concat([d for d in [df_train, df_val, df_test] if d is not None], ignore_index=True)
         else:
             csv_path = Path(args.csv)
@@ -167,16 +397,9 @@ def main():
                 print("RUN_COMPLETE: FAILURE")
                 return 1
             eprint("RUN_INFO: dataset", json.dumps({"csv": {"path": str(csv_path.resolve()), "sha256": file_sha256(csv_path)}}))
-            try:
-                df = pd.read_csv(csv_path)
-            except Exception as e:
-                eprint("RUN_ERROR: csv_read_failed", str(e))
-                print("RUN_COMPLETE: FAILURE")
-                return 1
-            df_train = df_val = df_test = None
+            df = pd.read_csv(csv_path)
 
         features = load_manifest_features(manifest_path)
-
         max_lag = 0
         if features:
             for f in features:
@@ -310,7 +533,7 @@ def main():
             X_train, X_val, X_test, y_train, y_val, y_test = chronological_split(X, y, test_frac=args.test_frac, val_frac=args.val_frac)
 
         scaler = None
-        scaler_path = Path("models") / "scaler.pkl"
+        scaler_path = Path(args.scaler_path) if getattr(args, "scaler_path", None) else Path("models") / "scaler.pkl"
         if scaler_path.exists():
             try:
                 with scaler_path.open("rb") as fh:
@@ -357,6 +580,7 @@ def main():
 
     except Exception as exc:
         eprint("RUN_ERROR: unhandled_exception", str(exc))
+        eprint(traceback.format_exc())
         print("RUN_COMPLETE: FAILURE")
         return 1
 
