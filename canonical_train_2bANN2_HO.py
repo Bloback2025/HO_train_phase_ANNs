@@ -131,7 +131,7 @@ def main(argv=None):
     rl = os.path.join(args.outdir, 'runner.log')
     with open(rl,'w',encoding='utf8') as rlo:
         rlo.write(f"RUNNER SUMMARY: canonical_train_2bANN2_HO; commit={commit}; entry_sha={entry_sha}\n")
-        rlo.write(f"START: {start}\n")
+        rlo.write(f\"START: {start}\n\")
         rlo.write('COMMAND: ' + ' '.join(sys.argv) + '\n')
         rlo.write('MANIFEST: ' + mf + '\n')
     print('COMPLETE; manifest:', mf)

@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 """
 train_phase2b2_HO.py
-CANONICAL_NAME = "train_phase2b2_HO"
 2bANN.2 Hybrid Architecture - Heating Oil (HO) dataset
 Audit-safe training script with explicit train/val/test splits
 Produces: scaler.pkl, scaler_sidecar.json when --scaler_only; full training writes RUNLOG JSON and artifacts
@@ -221,4 +220,3 @@ def main(argv=None):
 
 if __name__ == "__main__":
     sys.exit(main())
-

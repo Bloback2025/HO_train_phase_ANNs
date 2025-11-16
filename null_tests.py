@@ -61,7 +61,6 @@ from sklearn.metrics import r2_score
 # NULL-INPUT
 X_rand = np.random.normal(size=X_eval.shape)
 y_pred = model.predict(X_rand).reshape(-1)
-# If a target scaler exists in artifacts, attempt a safe inverse-transform of predictions try:     import pickle     from pathlib import Path     artp = Path(r"ho_artifact_outputs")     sc_sidecar = artp / "scaler_sidecar.json"     tsc_p = artp / "target_scaler.pkl"     use_alt_as_target = False     if sc_sidecar.exists():         import json         meta = json.load(open(sc_sidecar,"r"))         if meta.get("target_scaled", False):             use_alt_as_target = True     if -not tsc_p.exists() -and use_alt_as_target:         alt = artp / "scaler.pkl"         if alt.exists():             tsc_p = alt     if tsc_p.exists():         tsc = pickle.load(open(tsc_p,"rb"))         try:             y_pred_unscaled = tsc.inverse_transform(y_pred.reshape(-1,1)).reshape(-1)             y_pred = y_pred_unscaled             print("INFO: applied target inverse_transform from", tsc_p)         except Exception as _e:             try:                 y_pred = tsc.inverse_transform(y_pred)                 print("INFO: applied target inverse_transform (direct) from", tsc_p)             except Exception as __e:                 print("WARN: target inverse_transform failed:", __e) except Exception as e:     print("INFO: no target scaler applied or error while applying it:", e)
 print("null-input R2:", r2_score(y_eval, y_pred))
 
 # NULL-TARGET (shuffle)
@@ -73,5 +72,4 @@ print("null-target (shuffled) R2:", r2_score(y_shuf, y_pred))
 X_rand = np.random.normal(size=X_eval.shape)
 y_rand = np.random.normal(size=y_eval.shape)
 y_pred = model.predict(X_rand).reshape(-1)
-print("fully-random R2:", r2_score(y_rand, y_pred))
 print("fully-random R2:", r2_score(y_rand, y_pred))
