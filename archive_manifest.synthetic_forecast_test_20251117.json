@@ -1,0 +1,7 @@
+{
+  "action":"archive_canonical_promotion",
+  "archive_name":"canonical_promotion.synthetic_forecast_test_20251117.20251117T173753.zip",
+  "archive_sha256":"1F47F17188ABA0DAAA059FDB549F696AF84C5BBF37E52498C1DBAD9145AE02E5",
+  "actor":"repo_maintainer",
+  "created_at":"2025-11-17T17:37:53+11:00"
+}
