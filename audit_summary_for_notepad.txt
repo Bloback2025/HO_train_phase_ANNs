@@ -1,0 +1,59 @@
+Audit summary reopened: 2025-11-16T23:49:17.6607534+11:00
+
+Promotion gate run for run_20251116T210003_2A
+Train CSV: C:\Users\loweb\AI_Financial_Sims\HO\HO 1st time 5080\ho_artifact_outputs\retired\hoxnc_training.preprocessed.csv
+Test  CSV: C:\Users\loweb\AI_Financial_Sims\HO\HO 1st time 5080\ho_artifact_outputs\retired\hoxnc_validation.csv
+Run dir : C:\Users\loweb\AI_Financial_Sims\HO\HO 1st time 5080\ho_artifact_outputs\run_20251116T210003_2A
+Started  : 2025-11-16T21:31:46.1223493+11:00
+
+ERROR: Python gate failed. See console output.
+
+
+--- LOG TAIL APPENDED: 2025-11-16T23:51:17.2107272+11:00 ---
+
+=== CAPTURE START: 2025-11-16T21:32:46.9705072+11:00 ===
+--- INPUT FILES ---
+FOUND: C:\Users\loweb\AI_Financial_Sims\HO\HO 1st time 5080\ho_artifact_outputs\retired\hoxnc_training.preprocessed.csv  size=199894  modified=16/11/2025 9:31:36 PM
+FOUND: C:\Users\loweb\AI_Financial_Sims\HO\HO 1st time 5080\ho_artifact_outputs\retired\hoxnc_validation.csv  size=8035  modified=16/11/2025 5:33:32 PM
+FOUND: C:\Users\loweb\AI_Financial_Sims\HO\HO 1st time 5080\ho_artifact_outputs\run_20251116T210003_2A\run_promotion_gate_with_train.py  size=3628  modified=16/11/2025 9:31:46 PM
+--- PYTHON INFO ---
+Python 3.13.9
+C:\Users\loweb\AI_Financial_Sims\PyLibs\Scripts\python.exe
+3.13.9 (tags/v3.13.9:8183fa5, Oct 14 2025, 14:09:13) [MSC v.1944 64 bit (AMD64)]
+--- KEY PACKAGES ---
+  File "<string>", line 6
+    out.append(f'{p} {getattr(m,\
+                             ^
+SyntaxError: '(' was never closed
+--- RUNNING PYTHON GATE SCRIPT ---
+Traceback (most recent call last):
+  File "C:\Users\loweb\AI_Financial_Sims\PyLibs\Lib\site-packages\pandas\core\indexes\base.py", line 3812, in get_loc
+    return self._engine.get_loc(casted_key)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "pandas/_libs/index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7088, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7096, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'Date_dow'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\loweb\AI_Financial_Sims\HO\HO 1st time 5080\ho_artifact_outputs\run_20251116T210003_2A\run_promotion_gate_with_train.py", line 31, in <module>
+    Xte, yte = prepare_xy(test, target_col)
+               ~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\loweb\AI_Financial_Sims\HO\HO 1st time 5080\ho_artifact_outputs\run_20251116T210003_2A\run_promotion_gate_with_train.py", line 28, in prepare_xy
+    y = df[target].values
+        ~~^^^^^^^^
+  File "C:\Users\loweb\AI_Financial_Sims\PyLibs\Lib\site-packages\pandas\core\frame.py", line 4113, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "C:\Users\loweb\AI_Financial_Sims\PyLibs\Lib\site-packages\pandas\core\indexes\base.py", line 3819, in get_loc
+    raise KeyError(key) from err
+KeyError: 'Date_dow'
+PYTHON_EXIT_CODE: 1
+
+--- END LOG TAIL ---
+
+
+PROMOTE_CORRECT: train_phase2b2_HO.1B.py reconciled SHA 203281DF403B7DF3F8B3BEC28EA4BD6F2B9BF69DB0CE7A2970C0FD2636137532; manifest run_manifest.canonical_promotion.synthetic_forecast_test_20251117.json added; tag audit/synthetic_forecast_test_20251117-correction-20251117T173753
+PROMOTE_CORRECT_ARCHIVE: canonical_promotion.synthetic_forecast_test_20251117.20251117T173753.zip sha256 1F47F17188ABA0DAAA059FDB549F696AF84C5BBF37E52498C1DBAD9145AE02E5
