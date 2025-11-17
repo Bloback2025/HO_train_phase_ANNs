@@ -1,0 +1,27 @@
+{
+  "action": "final_promote_1A",
+  "run_id": "' + $run + '",
+  "promoted_script": "train_phase2b2_HO.1B.py",
+  "promoted_script_run_sha256": "' + $script_run_sha + '",
+  "created_at": "' + (Get-Date -Format o) + '",
+  "actor": "repo_maintainer",
+  "final_artifacts": {
+    "preds_model": {
+      "path": "ho_artifact_outputs/' + $run + '/preds_model.json",
+      "sha256": "' + $preds_sha + '"
+    },
+    "promotion_gate_summary": {
+      "path": "ho_artifact_outputs/' + $run + '/promotion_gate_summary.json",
+      "sha256": "' + $summary_sha + '"
+    },
+    "model_weights": {
+      "path": "ho_artifact_outputs/' + $run + '/model_weights.h5",
+      "sha256": null
+    },
+    "scaler": {
+      "path": "ho_artifact_outputs/' + $run + '/scaler.joblib",
+      "sha256": ' + (if ($scaler_sha) { '"' + $scaler_sha + '"' } else { "null" }) + '
+    }
+  },
+  "notes": "1A training produced scaler and preds; model_weights absent. Manifest recorded by operator."
+}
