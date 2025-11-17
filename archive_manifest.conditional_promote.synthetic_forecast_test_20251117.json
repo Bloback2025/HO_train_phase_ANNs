@@ -1,9 +1,24 @@
 {
-  "run_id": "synthetic_forecast_test_20251117",
   "action": "conditional_promote_1B",
-  "condition": "Requires TensorFlow verification on TF-capable host; Keras weights and scaler must be produced and SHAs validated before final promotion",
+  "run_id": "synthetic_forecast_test_20251117",
   "promoted_script": "train_phase2b2_HO.1B.py",
+  "promoted_script_sha256": "203281DF403B7DF3F8B3BEC28EA4BD6F2B9BF69DB0CE7A2970C0FD2636137532",
+  "condition": "Requires TensorFlow verification on TF-capable host; Keras weights and scaler must be produced and SHAs validated before final promotion",
+  "created_at": "2025-11-17T18:29:08+11:00",
   "actor": "repo_maintainer",
-  "created_at": "2025-11-17T18:29:07.7828093+11:00",
-  "promoted_script_sha256": "203281DF403B7DF3F8B3BEC28EA4BD6F2B9BF69DB0CE7A2970C0FD2636137532"
+  "finalized_at": "2025-11-17T18:30:27+11:00",
+  "final_artifacts": {
+    "model_weights": {
+      "path": "ho_artifact_outputs/{run_id}/model_weights.h5",
+      "sha256": null
+    },
+    "scaler": {
+      "path": "ho_artifact_outputs/{run_id}/scaler.joblib",
+      "sha256": null
+    },
+    "promotion_gate_summary": {
+      "path": "ho_artifact_outputs/{run_id}/promotion_gate_summary.json",
+      "sha256": null
+    }
+  }
 }
