@@ -13,7 +13,7 @@
   },
   "training": {
     "script": "train_phase2b2_HO.1B.py",
-    "script_sha": "B0C93E0BC6535A8EB5281E573B45193AD59B988F9414B85270EEA7792B265EFB"
+    "script_sha": "203281DF403B7DF3F8B3BEC28EA4BD6F2B9BF69DB0CE7A2970C0FD2636137532"
   },
   "outputs": {},
   "checks": {},
