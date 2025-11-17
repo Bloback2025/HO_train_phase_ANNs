@@ -1,0 +1,31 @@
+{
+  "action": "canonical_promotion_and_archive",
+  "run_id": "synthetic_forecast_test_20251117",
+  "stage": "2A",
+  "promoted_script": "train_phase2b2_HO.1B.py",
+  "promoted_script_sha256": "203281DF403B7DF3F8B3BEC28EA4BD6F2B9BF69DB0CE7A2970C0FD2636137532",
+  "original_promoted_sha256": "B0C93E0BC6535A8EB5281E573B45193AD59B988F9414B85270EEA7792B265EFB",
+  "manifest_path": "run_manifest.run_20251116T210003_2A.json",
+  "manifest_backup": "run_manifest.run_20251116T210003_2A.json.backup",
+  "canonical_manifest_written": "run_manifest.canonical_promotion.synthetic_forecast_test_20251117.json",
+  "archive": {
+    "filename": "canonical_promotion.synthetic_forecast_test_20251117.20251117T173753.zip",
+    "sha256": "1F47F17188ABA0DAAA059FDB549F696AF84C5BBF37E52498C1DBAD9145AE02E5",
+    "includes": [
+      "train_phase2b2_HO.1B.py",
+      "train_phase2b2_HO.1B.py.sha256.txt",
+      "run_manifest.run_20251116T210003_2A.json.backup",
+      "audit_summary_for_notepad.txt"
+    ]
+  },
+  "git": {
+    "branch": "canonical/2bANN2_HO_20251111",
+    "current_commit": "bf85f83",
+    "prior_commit_referenced": "60f3cde",
+    "promotion_tag": "audit/synthetic_forecast_test_20251117-20251117T171256",
+    "correction_tag": "audit/synthetic_forecast_test_20251117-correction-20251117T173753"
+  },
+  "actor": "repo_maintainer",
+  "notes": "Promoted 1B to canonical; on-disk SHA differed from initially recorded SHA so manifest patched and corrective tag created; archive produced and audit line appended.",
+  "created_at": "2025-11-17T17:37:53+11:00"
+}
