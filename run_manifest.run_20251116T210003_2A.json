@@ -12,8 +12,8 @@
     "script_sha": "MISSING_IF_NOT_APPLICABLE"
   },
   "training": {
-    "script": "train_phase2b2_HO.1A.py",
-    "script_sha": "2565966A028ED181174E5308C6DEE5234E94F192EB0A9694B0035C7665E129CA"
+    "script": "train_phase2b2_HO.1B.py",
+    "script_sha": "B0C93E0BC6535A8EB5281E573B45193AD59B988F9414B85270EEA7792B265EFB"
   },
   "outputs": {},
   "checks": {},
