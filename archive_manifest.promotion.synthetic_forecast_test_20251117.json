@@ -1,0 +1,27 @@
+{
+  "action": "final_promote_1B",
+  "run_id": "tfval_run_20251117T205510",
+  "promoted_script": "train_phase2b2_HO.1B.py",
+  "promoted_script_run_sha256": "2387130409d02556b5f7e0cf8367c906edf41550c2576830602dc4f118194c88",
+  "created_at": "' + (Get-Date -Format o) + '",
+  "actor": "repo_maintainer",
+  "final_artifacts": {
+    "preds_model": {
+      "path": "ho_artifact_outputs/tfval_run_20251117T205510/preds_model.json",
+      "sha256": "c4fbf8434468ab2a1f19c079b24421c23b0a08c7be530a9407a6a4fb97097942"
+    },
+    "promotion_gate_summary": {
+      "path": "ho_artifact_outputs/tfval_run_20251117T205510/promotion_gate_summary.json",
+      "sha256": "16472fd998079050a83bd3282b9d2c477b3e1c5bbef311e4ac40d5fa728e0221"
+    },
+    "model_weights": {
+      "path": "ho_artifact_outputs/tfval_run_20251117T205510/model_weights.h5",
+      "sha256": null
+    },
+    "scaler": {
+      "path": "ho_artifact_outputs/tfval_run_20251117T205510/scaler.joblib",
+      "sha256": null
+    }
+  },
+  "notes": "Keras model weights and scaler not produced on this run; preds and promotion summary verified and recorded."
+}
