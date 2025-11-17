@@ -1,5 +1,5 @@
 {
-  "run_id": "run_20251116T210003_2A",
+  "run_id": "synthetic_forecast_test_20251117",
   "stage": "2A",
   "commit": "60f3cde",
   "branch": "canonical/2bANN2_HO_20251111",
@@ -13,7 +13,7 @@
   },
   "training": {
     "script": "train_phase2b2_HO.1A.py",
-    "script_sha": "9966CA74C7A978214DE014E09E4DEC9B5EB4F015204C2D15DFBE44EF9FA8F81E"
+    "script_sha": "2565966A028ED181174E5308C6DEE5234E94F192EB0A9694B0035C7665E129CA"
   },
   "outputs": {},
   "checks": {},
