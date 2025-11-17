@@ -1,0 +1,9 @@
+{
+  "run_id": "synthetic_forecast_test_20251117",
+  "action": "conditional_promote_1B",
+  "condition": "Requires TensorFlow verification on TF-capable host; Keras weights and scaler must be produced and SHAs validated before final promotion",
+  "promoted_script": "train_phase2b2_HO.1B.py",
+  "actor": "repo_maintainer",
+  "created_at": "2025-11-17T18:29:07.7828093+11:00",
+  "promoted_script_sha256": "203281DF403B7DF3F8B3BEC28EA4BD6F2B9BF69DB0CE7A2970C0FD2636137532"
+}
