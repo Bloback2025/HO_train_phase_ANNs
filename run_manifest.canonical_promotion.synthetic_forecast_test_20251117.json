@@ -1,0 +1,21 @@
+{  
+  "run_id": "synthetic_forecast_test_20251117",
+  "stage": "2A",
+  "commit": "60f3cde",
+  "branch": "canonical/2bANN2_HO_20251111",
+  "actor": "repo_maintainer",
+  "created_at": "2025-11-16T21:00:03.2677836+11:00",
+  "seed": 20251113,
+  "inputs": {},
+  "preprocessing": {
+    "script": "scripts/preprocess.py",
+    "script_sha": "MISSING_IF_NOT_APPLICABLE"
+  },
+  "training": {
+    "script": "train_phase2b2_HO.1B.py",
+    "script_sha": "203281DF403B7DF3F8B3BEC28EA4BD6F2B9BF69DB0CE7A2970C0FD2636137532"
+  },
+  "outputs": {},
+  "checks": {},
+  "notes": "Auto-generated run_manifest for canonical promotion to 2A."
+}
