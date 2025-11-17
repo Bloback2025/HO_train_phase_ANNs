@@ -1,47 +1,53 @@
 #!/usr/bin/env python3
-"""train_phase2b2_HO.1A.py
+"""
+train_phase2b2_HO.1A.py
+Canonical train/inference pipeline (audit-grade).
 
-Canonical train script (audit-grade). Produces promotion_gate_summary.json and preds_model.json,
-writes SHA256 sidecars, and is deterministic by default.
+Produces:
+ - ho_artifact_outputs/<run_id>/preds_model.json
+ - ho_artifact_outputs/<run_id>/promotion_gate_summary.json
+ - SHA256 sidecars for produced artifacts and the script itself
+ - run_manifest.<run_id>.patched.json (local manifest patch)
 
 Usage examples:
   python train_phase2b2_HO.1A.py --mode synthetic
   python train_phase2b2_HO.1A.py --mode live --train-csv path/to/train.csv --test-csv path/to/test.csv --target target_column
 """
+from __future__ import annotations
 
+import argparse
+import datetime
+import hashlib
+import json
 import os
 import sys
-import json
-import argparse
-import hashlib
-import datetime
 from pathlib import Path
 
 import numpy as np
 import pandas as pd
-from sklearn.neural_network import MLPRegressor
 from sklearn.linear_model import LinearRegression
-from sklearn.metrics import r2_score, mean_absolute_error, mean_squared_error
+from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 from sklearn.model_selection import train_test_split
+from sklearn.neural_network import MLPRegressor
 
 # -----------------------
 # Deterministic helpers
 # -----------------------
-def now_iso():
+def now_iso() -> str:
     return datetime.datetime.now(datetime.timezone.utc).astimezone().isoformat()
 
-def ensure_dir(p):
-    Path(p).mkdir(parents=True, exist_ok=True)
+def ensure_dir(p: Path) -> None:
+    p.mkdir(parents=True, exist_ok=True)
 
-def sha256_of_file(path):
+def sha256_of_file(path: str) -> str:
     h = hashlib.sha256()
     with open(path, "rb") as f:
         for chunk in iter(lambda: f.read(8192), b""):
             h.update(chunk)
     return h.hexdigest()
 
-def write_json_atomic(obj, path):
-    tmp = str(path) + ".tmp"
+def write_json_atomic(obj, path: str) -> None:
+    tmp = path + ".tmp"
     with open(tmp, "w", encoding="utf8") as f:
         json.dump(obj, f, indent=2, ensure_ascii=False)
     os.replace(tmp, path)
@@ -68,7 +74,7 @@ def make_random(seed=20251117, n_samples=2000, n_features=10):
     df["target"] = y
     return df
 
-def load_csv(path):
+def load_csv(path: str) -> pd.DataFrame:
     return pd.read_csv(path)
 
 # -----------------------
@@ -83,8 +89,11 @@ def compute_metrics(y_true, y_pred):
     return {"r2": r2, "mae": mae, "rmse": rmse, "residual_mean": residual_mean, "n_test": int(len(y_true))}
 
 def train_model(X_train, y_train, seed=20251117, max_iter=500):
-    model = MLPRegressor(hidden_layer_sizes=(64,32), activation="relu",
-                         solver="adam", random_state=seed, max_iter=max_iter)
+    model = MLPRegressor(hidden_layer_sizes=(64, 32),
+                         activation="relu",
+                         solver="adam",
+                         random_state=seed,
+                         max_iter=max_iter)
     model.fit(X_train, y_train)
     return model
 
@@ -96,13 +105,13 @@ def fallback_linear(X_train, y_train):
 # -----------------------
 # Preflight checks
 # -----------------------
-def preflight_checks(df_train, df_test, target):
+def preflight_checks(df_train: pd.DataFrame, df_test: pd.DataFrame, target: str):
     errors = []
     if target not in df_train.columns:
         errors.append(f"target '{target}' not in train columns")
     if target not in df_test.columns:
         errors.append(f"target '{target}' not in test columns")
-    # Duplicate check using a hash of feature columns to avoid huge memory
+    # lightweight duplicate detection (string-joined feature rows)
     feats_train = df_train.drop(columns=[target]).astype(str).agg("|".join, axis=1)
     feats_test = df_test.drop(columns=[target]).astype(str).agg("|".join, axis=1)
     dup = set(feats_train).intersection(set(feats_test))
@@ -144,7 +153,7 @@ def run(args):
             print(" -", e)
         sys.exit(3)
 
-    # Prepare matrices
+    # Prepare data matrices
     X_train = df_train.drop(columns=[args.target]).values
     y_train = df_train[args.target].values
     X_test = df_test.drop(columns=[args.target]).values
@@ -184,7 +193,6 @@ def run(args):
     # Compute SHA sidecars for preds and summary
     preds_sha = sha256_of_file(str(preds_path))
     summary_sha = sha256_of_file(str(summary_path))
-    (str(preds_path) + ".sha256.txt")
     with open(str(preds_path) + ".sha256.txt", "w", encoding="ascii") as f:
         f.write(preds_sha)
     with open(str(summary_path) + ".sha256.txt", "w", encoding="ascii") as f:
