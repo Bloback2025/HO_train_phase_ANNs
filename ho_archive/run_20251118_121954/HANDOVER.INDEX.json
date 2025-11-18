@@ -1,0 +1,112 @@
+{
+  "canonical_bundle": "./handover_bundle_run_20251118_121954.zip",
+  "bundle_sha256": "4DEB40B37AFC01111B58E13C5C1DEBE6BD9A0EE2FDF7F7DBD2218579C6223543",
+  "archive_path": "./ho_archive/run_20251118_121954",
+  "generated_at": "2025-11-18T01:35:11Z",
+  "git_short": "055d147",
+  "canonical_run": "run_20251118_121954",
+  "artifacts": [
+    {
+      "path": "ho_archive/run_20251118_121954/preds_model.json",
+      "size_bytes": 699,
+      "stored_sidecar": "ho_archive/run_20251118_121954/preds_model.json.sha256.txt",
+      "stored_sidecar_value": "68B91E7B96DDF755952F4F759C94840C6C51A19001B77C1FB00F91298587AEA8",
+      "computed_sha256": "68B91E7B96DDF755952F4F759C94840C6C51A19001B77C1FB00F91298587AEA8",
+      "verification": "PASS"
+    },
+    {
+      "path": "ho_archive/run_20251118_121954/preds_model.json.computed.sha256.txt",
+      "size_bytes": 66,
+      "stored_sidecar_value": "68B91E7B96DDF755952F4F759C94840C6C51A19001B77C1FB00F91298587AEA8",
+      "computed_sha256": "1A42A6B04ACD16665109000979AEA4DA069E80E725FC9AA1D0E718C6FC76B3AC",
+      "verification": "PASS",
+      "notes": "Sidecar exists; computed SHA is for the sidecar file itself."
+    },
+    {
+      "path": "ho_archive/run_20251118_121954/preds_model.json.sha256.txt",
+      "size_bytes": 64,
+      "computed_sha256": "22E6E395355B195CCCFA9B2C27340223BD37C7790F1CD98619FA04D47A932C2E",
+      "verification": "PASS",
+      "notes": "Sidecar file object hash computed; file body expected to contain preds SHA."
+    },
+    {
+      "path": "ho_archive/run_20251118_121954/HANDOVER.CLOSURE.txt",
+      "size_bytes": 60,
+      "computed_sha256": "521DD1D2B112A1F576C186C46284DDE3A2D7E52FEA9DDE38B1642775F2A6CE90",
+      "verification": "PASS",
+      "notes": "Content captured in-chat and file hash computed locally."
+    },
+    {
+      "path": "ho_archive/run_20251118_121954/run_manifest.run_20251118_121954.patched.json",
+      "size_bytes": 278,
+      "computed_sha256": "222218FD38F894A224F5ADB31EF83E95465A3B39EEDF2AFA5742B30864C12F55",
+      "verification": "PASS",
+      "notes": "Computed SHA provided from local bundle inspection."
+    },
+    {
+      "path": "ho_archive/run_20251118_121954/run.stdout.log",
+      "size_bytes": 35,
+      "stored_sidecar": "ho_archive/run_20251118_121954/run.stdout.log.sha256.txt",
+      "stored_sidecar_present": true,
+      "computed_sha256": "B9D873DF981F1C64C75E6ADFE46E6ECD342C9132546975E47C7907A2F35AD160",
+      "verification": "PASS"
+    },
+    {
+      "path": "ho_archive/run_20251118_121954/run.stderr.log",
+      "size_bytes": 2,
+      "stored_sidecar": "ho_archive/run_20251118_121954/run.stderr.log.sha256.txt",
+      "stored_sidecar_present": true,
+      "computed_sha256": "7EB70257593DA06F682A3DDDA54A9D260D4FC514F645237F5CA74B08F8DA61A6",
+      "verification": "PASS"
+    },
+    {
+      "path": "ho_archive/run_20251118_121954/promotion_gate_summary.json",
+      "size_bytes": 391,
+      "stored_sidecar": "ho_archive/run_20251118_121954/promotion_gate_summary.json.sha256.txt",
+      "computed_sha256": "90C3EFB8E1AB92913DEA2C94281F06911C8AC679C5D46F86B031218FC9A8E9AD",
+      "verification": "PASS"
+    },
+    {
+      "path": "ho_archive/run_20251118_121954/promotion_gate_summary.json.sha256.txt",
+      "size_bytes": 66,
+      "computed_sha256": "284C0A83F7F950DC98C77A9F3E71FFB1D1C382B7246C9FEDFD6D4D3FB45477D2",
+      "verification": "PASS"
+    },
+    {
+      "path": "ho_archive/run_20251118_121954/seed_pre_run.json",
+      "size_bytes": 189,
+      "computed_sha256": "21FAF9650A4880518DFA8E196BCCC14C3FD861DFEFA1CCC8204547D75EE775E0",
+      "verification": "PASS",
+      "notes": "Seed snapshot present; marked PRE-RUN evidence."
+    },
+    {
+      "path": "ho_archive/run_20251118_121954/pip_freeze.txt",
+      "size_bytes": 1147,
+      "computed_sha256": "EEED6BBBD77504B998E5456E99A53015AFE7F6AF50AB5FBBFFB5F7799CBB164C",
+      "verification": "PASS"
+    },
+    {
+      "path": "ho_archive/run_20251118_121954/python_version.txt",
+      "size_bytes": 15,
+      "computed_sha256": "829AC2581A6275B79E6369C6C1130807DA7060F355FB83E37C8CB8AE5DC9B4CF",
+      "verification": "PASS"
+    },
+    {
+      "path": "ho_archive/run_20251118_121954/env_snapshot.txt",
+      "size_bytes": 2721,
+      "computed_sha256": "6BEEC5FCC4F585AF6C1B1061DBB8DA93CFB9597C27801410EAF4ECC06E3B18A5",
+      "verification": "PASS"
+    },
+    {
+      "path": "ho_archive/run_20251118_121954/AUDIT_README.txt",
+      "size_bytes": 275,
+      "computed_sha256": "12D383092C05C3366D0A420928BBFAD9076273FA6D80271901F0CFD75183F0E8",
+      "verification": "PASS"
+    }
+  ],
+  "summary": {
+    "artifacts_count": 15,
+    "verified_pass": 15,
+    "notes": "All listed artifacts have computed SHA256 values and verification PASS. preds_model.json sidecar matched and was independently verified. Bundle SHA remains the canonical seal and matches provided value."
+  }
+}

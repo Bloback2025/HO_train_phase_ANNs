@@ -1,0 +1,1 @@
+bf85f834f4d7a9b0f6cb1769f303821092a0f3d2 repo_maintainer Mon Nov 17 17:36:48 2025 +1100 Reconcile promoted train_phase2b2_HO.1B.py: add on-disk script and sha sidecar; record manifest update
