@@ -137,6 +137,6 @@
   "summary": {
     "verified_pass": 20,
     "artifacts_count": 20,
-    "notes": "Patched by finalize: preds and script entries"
+    "notes": "Patched by finalize: preds, script and printable entries; git=f34e0ec"
   }
 }
