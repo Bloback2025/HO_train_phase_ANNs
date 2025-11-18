@@ -1,0 +1,13 @@
+{
+  "input_metadata": {
+    "notes": "auto-generated for smoke run",
+    "source": "synthetic"
+  },
+  "notes": "Deterministic synthetic run for handover; replace training block for production.",
+  "preds_path": "ho_artifact_outputs\\run_20251118_121954\\preds_model.json",
+  "preds_sha256": "03DE1E5C3BBB4D13FC9F0BA543B718AB439C5AE1331AAC6CFA46421359860666",
+  "run_id": "run_20251118_121954",
+  "seed": 20251117,
+  "timestamp_utc": "2025-11-18T17:31:41.332536+11:00",
+  "version": "1.0.0-canonical"
+}

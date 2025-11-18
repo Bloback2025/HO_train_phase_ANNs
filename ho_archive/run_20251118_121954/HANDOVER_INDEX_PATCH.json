@@ -1,0 +1,9 @@
+{
+  "patch_at": "2025-11-18T02:41:28.9245202Z",
+  "added_files": [
+    "FINAL_AUDIT_SUMMARY.txt",
+    "RELEASE_NOTE.txt",
+    "HANDOVER_INDEX_PATCH.json"
+  ],
+  "notes": "This patch file records the final human-readable audit summary and release note. For full audit, compute SHA for any RECORDED items if required."
+}

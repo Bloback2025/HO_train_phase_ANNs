@@ -1,0 +1,8 @@
+{
+  "run_id": "run_20251118_121954",
+  "patched_at": "2025-11-18T12:20:01.525354+11:00",
+  "outputs": {
+    "preds": "ho_artifact_outputs\\run_20251118_121954\\preds_model.json",
+    "summary": "ho_artifact_outputs\\run_20251118_121954\\promotion_gate_summary.json"
+  }
+}

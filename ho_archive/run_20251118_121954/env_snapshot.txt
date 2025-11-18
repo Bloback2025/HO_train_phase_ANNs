@@ -1,0 +1,53 @@
+
+Name                           Value
+----                           -----
+ALLUSERSPROFILE                C:\ProgramData
+APPDATA                        C:\Users\loweb\AppData\Roaming
+CommonProgramFiles             C:\Program Files\Common Files
+CommonProgramFiles(x86)        C:\Program Files (x86)\Common Files
+CommonProgramW6432             C:\Program Files\Common Files
+COMPUTERNAME                   DESKTOP-OODJQVE
+ComSpec                        C:\Windows\system32\cmd.exe
+CUDA_PATH                      C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.1
+CUDA_PATH_V12_1                C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.1
+CUDA_PATH_V12_3                C:\Temp\cudnn_extract
+DriverData                     C:\Windows\System32\Drivers\DriverData
+EFC_8052_1262719628            1
+EFC_8052_1592913036            1
+EFC_8052_2283032206            1
+EFC_8052_2775293581            1
+EFC_8052_344590478             1
+EFC_8052_3789132940            1
+FPS_BROWSER_APP_PROFILE_STRING Internet Explorer
+FPS_BROWSER_USER_PROFILE_STRI… Default
+HOMEDRIVE                      C:
+HOMEPATH                       \Users\loweb
+LOCALAPPDATA                   C:\Users\loweb\AppData\Local
+LOGONSERVER                    \\DESKTOP-OODJQVE
+NUMBER_OF_PROCESSORS           12
+OneDrive                       C:\Users\loweb\OneDrive
+OS                             Windows_NT
+Path                           C:\Program Files\PowerShell\7;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12…
+PATHEXT                        .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW;.CPL
+POWERSHELL_DISTRIBUTION_CHANN… MSI:Windows 10 Pro
+PROCESSOR_ARCHITECTURE         AMD64
+PROCESSOR_IDENTIFIER           AMD64 Family 25 Model 80 Stepping 0, AuthenticAMD
+PROCESSOR_LEVEL                25
+PROCESSOR_REVISION             5000
+ProgramData                    C:\ProgramData
+ProgramFiles                   C:\Program Files
+ProgramFiles(x86)              C:\Program Files (x86)
+ProgramW6432                   C:\Program Files
+PSModulePath                   C:\Users\loweb\Documents\PowerShell\Modules;C:\Program Files\PowerShell\Modules;c:\p…
+PUBLIC                         C:\Users\Public
+SESSIONNAME                    Console
+SystemDrive                    C:
+SystemRoot                     C:\Windows
+TEMP                           C:\Users\loweb\AppData\Local\Temp
+TMP                            C:\Users\loweb\AppData\Local\Temp
+USERDOMAIN                     DESKTOP-OODJQVE
+USERDOMAIN_ROAMINGPROFILE      DESKTOP-OODJQVE
+USERNAME                       loweb
+USERPROFILE                    C:\Users\loweb
+windir                         C:\Windows
+

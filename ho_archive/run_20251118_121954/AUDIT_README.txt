@@ -4,3 +4,5 @@ preds_sha: 68B91E7B96DDF755952F4F759C94840C6C51A19001B77C1FB00F91298587AEA8
 archive: .\ho_archive\run_20251118_121954
 generated: 2025-11-18T01:37:39.4407350Z
 Bundle seal: per-file computed SHA values were not recomputed in-chat; canonical seal is bundle SHA 4DEB40B37AFC01111B58E13C5C1DEBE6BD9A0EE2FDF7F7DBD2218579C6223543 (sealed 2025-11-18T01:35:11Z).
+Final audit summary written: FINAL_AUDIT_SUMMARY.txt; verification_timestamp=2025-11-18T02:41:28.9245202Z
+Bundle finalized and copy verified on F:\handover_20251118_run_20251118_121954; bundle_sha256=4DEB40B37AFC01111B58E13C5C1DEBE6BD9A0EE2FDF7F7DBD2218579C6223543; verifier=Brian Lowe; timestamp=2025-11-18T02:48:09.2154433Z

@@ -1,0 +1,17 @@
+{
+  "run_id": "run_20251118_121954",
+  "mode": "synthetic",
+  "created_at": "2025-11-18T12:20:01.515388+11:00",
+  "metrics": {
+    "r2": 0.998890123518495,
+    "mae": 0.09838097741395746,
+    "rmse": 0.11328343596933702,
+    "n_test": 30
+  },
+  "n_features": 4,
+  "model_used": "LinearRegression",
+  "script": {
+    "path": "train_phase2b2_HO.1B.py",
+    "sha256": null
+  }
+}
