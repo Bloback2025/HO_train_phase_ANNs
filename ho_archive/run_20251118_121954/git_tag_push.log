@@ -1,0 +1,15 @@
+tag handover_final_20251118_123749
+Tagger: repo_maintainer <repo_maintainer@example.com>
+Date:   Tue Nov 18 12:37:49 2025 +1100
+
+Final handover canonical run run_20251118_121954
+
+commit 055d1479585d7544818db5d11b8a06189ed0edef
+Author: repo_maintainer <repo_maintainer@example.com>
+Date:   Mon Nov 17 21:09:48 2025 +1100
+
+    FINAL_PROMOTE_1A: record preds+scaler for tftrain_1A_20251117T210505; model_weights absent
+
+ ...motion.synthetic_forecast_test_1A_20251117.json | 27 ++++++++++++++++++++++
+ ...hetic_forecast_test_1A_20251117.json.sha256.txt |  1 +
+ 2 files changed, 28 insertions(+)
