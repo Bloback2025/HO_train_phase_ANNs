@@ -10,3 +10,4 @@ PROMOTE entry for run_20251118_121954:
 - Git tag: audit/run_20251118_121954-promote (pushed to origin)
 CLOSE: run_20251118_121954 — promoted and validated; see HANDOVER.CLOSURE.txt and handover_claude_report.txt
 CLOSED-ARCHIVE: run_20251118_121954 archived to .\ho_archive\run_20251118_121954_20251120 on 2025-11-20 17:58:45Z
+FINAL_SIGNOFF: run_20251118_121954 archived and restored; restore commit f5156cf2bc73f59c8c1fdec009b7640f7c4e4144
