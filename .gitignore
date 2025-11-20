@@ -12,3 +12,6 @@ ho_artifact_outputs/retired/
 
 # local artifact archive
 ho_artifact_outputs/retired/
+train_phase2b2_HO.1B.py.bak
+train_phase2b2_HO.1B.py.bak2
+train_phase2b2_HO.1Bi.py
