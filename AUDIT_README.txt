@@ -8,3 +8,4 @@ PROMOTE entry for run_20251118_121954:
 - Patched manifest: C:\Users\loweb\AI_Financial_Sims\HO\HO 1st time 5080\ho_artifact_outputs\run_20251118_121954\run_manifest.run_20251118_121954.patched.json
 - Manifest SHA256: 77d833d9c9f48a5aeeb2445c2e8b8bd92365a5a584474a72b18a6c15784f1c0b
 - Git tag: audit/run_20251118_121954-promote (pushed to origin)
+CLOSE: run_20251118_121954 — promoted and validated; see HANDOVER.CLOSURE.txt and handover_claude_report.txt
