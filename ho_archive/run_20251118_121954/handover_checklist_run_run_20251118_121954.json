@@ -1,0 +1,20 @@
+{
+  "run_id": "run_20251118_121954",
+  "timestamp": "2025-11-18T17:24:00+11:00",
+  "git": "a000b7c",
+  "verification": "PASS",
+  "artifacts": [
+    { "name": "archive_folder", "status": "PASS", "path": "./ho_archive/run_20251118_121954" },
+    { "name": "bundle_zip", "status": "PASS", "path": "ho_archive/run_20251118_121954/handover_bundle_run_20251118_121954.zip", "sha256": "4DEB40B37AFC01111B58E13C5C1DEBE6BD9A0EE2FDF7F7DBD2218579C6223543" },
+    { "name": "bundle_for_claude", "status": "PASS", "path": ".\\\\for_claude\\\\handover_bundle_run_20251118_121954.zip" },
+    { "name": "bundle_f_drive", "status": "PASS", "path": "F:\\\\handover_20251118_run_20251118_121954\\\\handover_bundle_run_20251118_121954.zip" },
+    { "name": "script", "status": "PASS", "path": "train_phase2b2_HO.1B.py", "sha256": "1B19359F619C519D4AD4611E1A6DFCAD40209A5DF2989C6D939E549DF89A07CE" },
+    { "name": "predictions", "status": "PASS", "path": "ho_artifact_outputs/run_20251118_121954/preds_model.json", "sha256": "03DE1E5C3BBB4D13FC9F0BA543B718AB439C5AE1331AAC6CFA46421359860666" },
+    { "name": "printable_txt", "status": "PASS", "path": "ho_archive/run_20251118_121954/handover_printable_run_run_20251118_121954.txt", "sha256": "39C5671955D6C2D7BE8DD4F389B41A31D0ACC7B173E0098C3845D067F837BBBA" },
+    { "name": "printable_pdf", "status": "PASS", "path": "ho_archive/run_20251118_121954/handover_printable_run_20251118_121954.pdf", "sha256": "39C5671955D6C2D7BE8DD4F389B41A31D0ACC7B173E0098C3845D067F837BBBA" },
+    { "name": "handover_index", "status": "PASS", "path": "ho_archive/run_20251118_121954/HANDOVER.INDEX.json", "artifacts_count": 20, "verified_pass": 20 },
+    { "name": "audit_readme_append", "status": "PASS", "path": "./AUDIT_README.txt", "line_included": "CANONICAL_HANDOVER run=run_20251118_121954" },
+    { "name": "closure_file", "status": "PASS", "path": ".\\\\captured_runs\\\\run_20251118_121954\\\\HANDOVER.CLOSURE.txt" },
+    { "name": "git_push", "status": "PASS", "remote_branch": "canonical/2bANN2_HO_20251111", "commit": "a000b7c" }
+  ]
+}
