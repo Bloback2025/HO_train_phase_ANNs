@@ -9,3 +9,4 @@ PROMOTE entry for run_20251118_121954:
 - Manifest SHA256: 77d833d9c9f48a5aeeb2445c2e8b8bd92365a5a584474a72b18a6c15784f1c0b
 - Git tag: audit/run_20251118_121954-promote (pushed to origin)
 CLOSE: run_20251118_121954 — promoted and validated; see HANDOVER.CLOSURE.txt and handover_claude_report.txt
+CLOSED-ARCHIVE: run_20251118_121954 archived to .\ho_archive\run_20251118_121954_20251120 on 2025-11-20 17:58:45Z
