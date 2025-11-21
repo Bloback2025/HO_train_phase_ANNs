@@ -1,5 +1,5 @@
 RUN_ID: deterministic_infer_run_20251121_183911
-DATE_UTC: 2025-11-21T07:39:11.9201371Z
-PRED_FILE: none_detected_in_output_folder
-OUTPUT_FOLDER_IN_REPO: C:\Users\loweb\AI_Financial_Sims\HO\HO 1st time 5080\deterministic_infer_outputs_run
+DATE_UTC: 2025-11-21T07:52:57.4203892Z
+PRED_FILE: deterministic_infer_outputs_explicit\preds.json
+PRED_SHA256: 3BE5DF4DAC52C33D8F02BC13B4E73A20030161157871FC87E3D5E3ADF587DF64
 ACCEPTANCE: outputs packaged and checksummed
