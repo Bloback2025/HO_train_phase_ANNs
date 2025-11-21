@@ -1,0 +1,12 @@
+[
+  {
+    "path": "HANDOVER.INDEX.json",
+    "fullpath": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\ho_archive\\deterministic_infer_run_20251121_183911\\HANDOVER.INDEX.json",
+    "sha256": "D4EF5E3AC276C82E423EA4F79A550E6DA0333E17AB9DE932E522A464D1AC183B"
+  },
+  {
+    "path": "output_shas.json",
+    "fullpath": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\ho_archive\\deterministic_infer_run_20251121_183911\\output_shas.json",
+    "sha256": "DBE2D0CA010BF2D443BD584E9E92053FF169B65EE03AF1D4694DD0AD73005AC4"
+  }
+]
