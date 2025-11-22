@@ -1,0 +1,14 @@
+{
+  "run_started": "2025-11-15T15:25:59.274283",
+  "mae": 27.345091960248222,
+  "rmse": 36.04607298024025,
+  "r2": -8.174350103671966,
+  "model_path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\2bANN2_HO_model.keras",
+  "scaler_path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\scaler.pkl",
+  "artifact_tag": "2bANN.2_HO",
+  "notes": "Hybrid regression HO run",
+  "preds_sha": "a2292f17eef8b1363950898562572cfb4db6f7d36b2d3719b3db4e7e9819f169",
+  "commit_short": "ebd55aa",
+  "canonical_name": "train_phase2b2_HO.1A",
+  "runlog_sha": "2a8c235dcd972f926f475f7ec299e9be6e7d44c960414df9682de40ac0290b3e"
+}

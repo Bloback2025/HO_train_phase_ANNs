@@ -1,0 +1,426 @@
+[
+  {
+    "original_path": "2bANN2_HO_model.keras",
+    "retired_path": "retired_ANN_files\\2bANN2_HO_model.keras",
+    "sha256": "047BADE814E15E62BE6917DCB168FCC81DBA609C609F9C54E5A3A743DEF8AA5B",
+    "size_bytes": 61862,
+    "moved_by": "loweb",
+    "moved_at_utc": "2025-11-22T06:08:54.8736703Z"
+  },
+  {
+    "original_path": "ho_artifact_outputs\\2bANN2_HO_model.keras",
+    "retired_path": "retired_ANN_files\\ho_artifact_outputs\\2bANN2_HO_model.keras",
+    "sha256": "E462009ADC5D763961C89107928B32CBA59586225AC6C97C649F9387C48C9877",
+    "size_bytes": 243886,
+    "moved_by": "loweb",
+    "moved_at_utc": "2025-11-22T06:08:54.9487731Z"
+  },
+  {
+    "original_path": "ho_artifact_outputs\\RUNLOG_2bANN2_HO_20251109_212442.json",
+    "retired_path": "retired_ANN_files\\ho_artifact_outputs\\RUNLOG_2bANN2_HO_20251109_212442.json",
+    "sha256": "55F046E620633ED7E68D2151F809B75525D25094DA47BFEC8F9E2697EAC88FC4",
+    "size_bytes": 8,
+    "moved_by": "loweb",
+    "moved_at_utc": "2025-11-22T06:08:54.9905143Z"
+  },
+  {
+    "original_path": "ho_artifact_outputs\\RUNLOG_2bANN2_HO_20251114_124728.json",
+    "retired_path": "retired_ANN_files\\ho_artifact_outputs\\RUNLOG_2bANN2_HO_20251114_124728.json",
+    "sha256": "34881560632ADDDBD5B8E23699EB503F59772D4FF5D004EC29B0BF6A12E0E3F2",
+    "size_bytes": 412,
+    "moved_by": "loweb",
+    "moved_at_utc": "2025-11-22T06:08:55.0660762Z"
+  },
+  {
+    "original_path": "ho_artifact_outputs\\RUNLOG_2bANN2_HO_20251114_130500.json",
+    "retired_path": "retired_ANN_files\\ho_artifact_outputs\\RUNLOG_2bANN2_HO_20251114_130500.json",
+    "sha256": "ED656E848D6778DF5A29F7A241C895E52E452D49E827FC6706EA0106B4AEB9A9",
+    "size_bytes": 414,
+    "moved_by": "loweb",
+    "moved_at_utc": "2025-11-22T06:08:55.1376006Z"
+  },
+  {
+    "original_path": "ho_artifact_outputs\\RUNLOG_2bANN2_HO_20251114_131240.json",
+    "retired_path": "retired_ANN_files\\ho_artifact_outputs\\RUNLOG_2bANN2_HO_20251114_131240.json",
+    "sha256": "DA9E6BB85B7B6F82AA0B005AB7BD2E0E54A65DFAB2FFD23C49118B7F044ED8FA",
+    "size_bytes": 527,
+    "moved_by": "loweb",
+    "moved_at_utc": "2025-11-22T06:08:55.2114058Z"
+  },
+  {
+    "original_path": "ho_artifact_outputs\\RUNLOG_2bANN2_HO_20251114_131500.json",
+    "retired_path": "retired_ANN_files\\ho_artifact_outputs\\RUNLOG_2bANN2_HO_20251114_131500.json",
+    "sha256": "E1094DE3E468415E72FB6DC1A59AC567CB5C3C362E50C39F5E33F754CAC7FBB7",
+    "size_bytes": 414,
+    "moved_by": "loweb",
+    "moved_at_utc": "2025-11-22T06:08:55.2799743Z"
+  },
+  {
+    "original_path": "ho_artifact_outputs\\RUNLOG_2bANN2_HO_20251114_131854.json",
+    "retired_path": "retired_ANN_files\\ho_artifact_outputs\\RUNLOG_2bANN2_HO_20251114_131854.json",
+    "sha256": "B18E6FF8182330BA096CF4E820F235FAF72591AF0D7462664599AFDBE1004C03",
+    "size_bytes": 406,
+    "moved_by": "loweb",
+    "moved_at_utc": "2025-11-22T06:08:55.3529809Z"
+  },
+  {
+    "original_path": "ho_artifact_outputs\\RUNLOG_2bANN2_HO_20251114_132101.json",
+    "retired_path": "retired_ANN_files\\ho_artifact_outputs\\RUNLOG_2bANN2_HO_20251114_132101.json",
+    "sha256": "7E3867D873A27FA98B52285C303E54DF80555C3C80BA5BF113EB9FDFC4D9E351",
+    "size_bytes": 405,
+    "moved_by": "loweb",
+    "moved_at_utc": "2025-11-22T06:08:55.4232983Z"
+  },
+  {
+    "original_path": "ho_artifact_outputs\\RUNLOG_2bANN2_HO_20251114_132149.json",
+    "retired_path": "retired_ANN_files\\ho_artifact_outputs\\RUNLOG_2bANN2_HO_20251114_132149.json",
+    "sha256": "EB3C4BD68C846415CD7BCD2E5AB87E8102427D450B868B998DBBBD7D436EC029",
+    "size_bytes": 403,
+    "moved_by": "loweb",
+    "moved_at_utc": "2025-11-22T06:08:55.4969053Z"
+  },
+  {
+    "original_path": "ho_artifact_outputs\\RUNLOG_2bANN2_HO_20251114_133210.json",
+    "retired_path": "retired_ANN_files\\ho_artifact_outputs\\RUNLOG_2bANN2_HO_20251114_133210.json",
+    "sha256": "DA9B2FD1BDEE70A2C49BF3956701D49E1EAAE64B77C1620BEBA45AE6CAF68563",
+    "size_bytes": 491,
+    "moved_by": "loweb",
+    "moved_at_utc": "2025-11-22T06:08:55.5679556Z"
+  },
+  {
+    "original_path": "ho_artifact_outputs\\RUNLOG_2bANN2_HO_20251114_161725.json",
+    "retired_path": "retired_ANN_files\\ho_artifact_outputs\\RUNLOG_2bANN2_HO_20251114_161725.json",
+    "sha256": "8D8EFE256B966C762A821996009AA243F4AE1D7A81FF1E8A6E0F3E2230AC4DEE",
+    "size_bytes": 407,
+    "moved_by": "loweb",
+    "moved_at_utc": "2025-11-22T06:08:55.6407408Z"
+  },
+  {
+    "original_path": "ho_artifact_outputs\\RUNLOG_2bANN2_HO_20251114_161814.json",
+    "retired_path": "retired_ANN_files\\ho_artifact_outputs\\RUNLOG_2bANN2_HO_20251114_161814.json",
+    "sha256": "555573D67496165D49CC143767E7B76E3BE3D3ED8540025488703D75CA3F623B",
+    "size_bytes": 646,
+    "moved_by": "loweb",
+    "moved_at_utc": "2025-11-22T06:08:55.7131278Z"
+  },
+  {
+    "original_path": "ho_artifact_outputs\\RUNLOG_2bANN2_HO_20251115_152559.json",
+    "retired_path": "retired_ANN_files\\ho_artifact_outputs\\RUNLOG_2bANN2_HO_20251115_152559.json",
+    "sha256": "115B8B3F43F4451840B9567D909394F6DDE236DE6ED5EC3F77F36CEC247FBA24",
+    "size_bytes": 735,
+    "moved_by": "loweb",
+    "moved_at_utc": "2025-11-22T06:08:55.7852400Z"
+  },
+  {
+    "original_path": "ho_artifact_outputs\\retired\\2bANN2_HO_model_copied_20251115_153149.keras",
+    "retired_path": "retired_ANN_files\\ho_artifact_outputs\\retired\\2bANN2_HO_model_copied_20251115_153149.keras",
+    "sha256": "1DD60EBDD19CD064E61CA7308D47185515D352EB6846BAC003DBA9AB29250412",
+    "size_bytes": 243886,
+    "moved_by": "loweb",
+    "moved_at_utc": "2025-11-22T06:08:55.8213540Z"
+  },
+  {
+    "original_path": "ho_artifact_outputs\\retired\\2bANN2_HO_model_copied_20251115_153149.keras.sha256.txt",
+    "retired_path": "retired_ANN_files\\ho_artifact_outputs\\retired\\2bANN2_HO_model_copied_20251115_153149.keras.sha256.txt",
+    "sha256": "BEF0F07987E4C1AF07EE4C09D8A2B42EEC1A108C05BB34DC04765F7FC211EEDE",
+    "size_bytes": 66,
+    "moved_by": "loweb",
+    "moved_at_utc": "2025-11-22T06:08:55.8576176Z"
+  },
+  {
+    "original_path": "ho_artifact_outputs\\retired\\2bANN2_HO_model.keras",
+    "retired_path": "retired_ANN_files\\ho_artifact_outputs\\retired\\2bANN2_HO_model.keras",
+    "sha256": "E462009ADC5D763961C89107928B32CBA59586225AC6C97C649F9387C48C9877",
+    "size_bytes": 243886,
+    "moved_by": "loweb",
+    "moved_at_utc": "2025-11-22T06:08:55.8944638Z"
+  },
+  {
+    "original_path": "ho_artifact_outputs\\retired\\2bANN2_HO_model.keras.sha256.txt",
+    "retired_path": "retired_ANN_files\\ho_artifact_outputs\\retired\\2bANN2_HO_model.keras.sha256.txt",
+    "sha256": "31E43F263F47FB7FF6EE909029FCEBC822257776CABC42D51E894A85C7CA19B8",
+    "size_bytes": 66,
+    "moved_by": "loweb",
+    "moved_at_utc": "2025-11-22T06:08:55.9303507Z"
+  },
+  {
+    "original_path": "ho_artifact_outputs\\retired_project_20251121_152447\\ho_artifact_outputs\\2bANN2_HO_model_copied_20251115_153149.keras.sha256.txt",
+    "retired_path": "retired_ANN_files\\ho_artifact_outputs\\retired_project_20251121_152447\\ho_artifact_outputs\\2bANN2_HO_model_copied_20251115_153149.keras.sha256.txt",
+    "sha256": "BEF0F07987E4C1AF07EE4C09D8A2B42EEC1A108C05BB34DC04765F7FC211EEDE",
+    "size_bytes": 66,
+    "moved_by": "loweb",
+    "moved_at_utc": "2025-11-22T06:08:55.9758372Z"
+  },
+  {
+    "original_path": "ho_artifact_outputs\\retired_project_20251121_152447\\ho_artifact_outputs\\2bANN2_HO_model_metadata.txt",
+    "retired_path": "retired_ANN_files\\ho_artifact_outputs\\retired_project_20251121_152447\\ho_artifact_outputs\\2bANN2_HO_model_metadata.txt",
+    "sha256": "53998A8E4860BBB1F52C2FA26146F71A38528ED6EDCA393EE81AEDFA6CD2F7DB",
+    "size_bytes": 9482,
+    "moved_by": "loweb",
+    "moved_at_utc": "2025-11-22T06:08:56.0210233Z"
+  },
+  {
+    "original_path": "ho_artifact_outputs\\retired_project_20251121_152447\\ho_artifact_outputs\\2bANN2_HO_model.keras.sha256.txt",
+    "retired_path": "retired_ANN_files\\ho_artifact_outputs\\retired_project_20251121_152447\\ho_artifact_outputs\\2bANN2_HO_model.keras.sha256.txt",
+    "sha256": "D5BF4AC7A202C85BB977182D7F81206DA4EC87C03D31CEAC293108D777FBC5AF",
+    "size_bytes": 66,
+    "moved_by": "loweb",
+    "moved_at_utc": "2025-11-22T06:08:56.0697163Z"
+  },
+  {
+    "original_path": "ho_artifact_outputs\\retired_project_20251121_152447\\ho_artifact_outputs\\RUNLOG_2bANN2_HO_20251109_212442.json.bak",
+    "retired_path": "retired_ANN_files\\ho_artifact_outputs\\retired_project_20251121_152447\\ho_artifact_outputs\\RUNLOG_2bANN2_HO_20251109_212442.json.bak",
+    "sha256": "35EE767357E1BF46FBAC2B473E51CA588C16EB0C3B17EF4C0859B0CF7192C5CD",
+    "size_bytes": 405,
+    "moved_by": "loweb",
+    "moved_at_utc": "2025-11-22T06:08:56.1127369Z"
+  },
+  {
+    "original_path": "ho_artifact_outputs\\retired_project_20251121_152447\\ho_artifact_outputs\\RUNLOG_2bANN2_HO_20251114_124728.json.bak.20251114_125937",
+    "retired_path": "retired_ANN_files\\ho_artifact_outputs\\retired_project_20251121_152447\\ho_artifact_outputs\\RUNLOG_2bANN2_HO_20251114_124728.json.bak.20251114_125937",
+    "sha256": "1961F38F3EA7CC6C20B5708C20829D00BE06E3DBE9347967182CB379C0ABFFA8",
+    "size_bytes": 405,
+    "moved_by": "loweb",
+    "moved_at_utc": "2025-11-22T06:08:56.1588348Z"
+  },
+  {
+    "original_path": "ho_artifact_outputs\\retired_project_20251121_152447\\ho_artifact_outputs\\RUNLOG_2bANN2_HO_20251114_130500.json.bak.20251114_131106",
+    "retired_path": "retired_ANN_files\\ho_artifact_outputs\\retired_project_20251121_152447\\ho_artifact_outputs\\RUNLOG_2bANN2_HO_20251114_130500.json.bak.20251114_131106",
+    "sha256": "0F9FA535F9FC7D2E9D6AED59FD22D135E43A6A0215E69C32C9D9F3030D2E720F",
+    "size_bytes": 405,
+    "moved_by": "loweb",
+    "moved_at_utc": "2025-11-22T06:08:56.2057085Z"
+  },
+  {
+    "original_path": "ho_artifact_outputs\\retired_project_20251121_152447\\ho_artifact_outputs\\RUNLOG_2bANN2_HO_20251114_131240.json.bak.20251116_084541",
+    "retired_path": "retired_ANN_files\\ho_artifact_outputs\\retired_project_20251121_152447\\ho_artifact_outputs\\RUNLOG_2bANN2_HO_20251114_131240.json.bak.20251116_084541",
+    "sha256": "E42E5AA4984ED699ABCE5481D077E2D04510806591DFFB3ABB721A4F3AB49AED",
+    "size_bytes": 405,
+    "moved_by": "loweb",
+    "moved_at_utc": "2025-11-22T06:08:56.2500400Z"
+  },
+  {
+    "original_path": "ho_artifact_outputs\\retired_project_20251121_152447\\ho_artifact_outputs\\RUNLOG_2bANN2_HO_20251114_131240.json.bak.20251116_103125",
+    "retired_path": "retired_ANN_files\\ho_artifact_outputs\\retired_project_20251121_152447\\ho_artifact_outputs\\RUNLOG_2bANN2_HO_20251114_131240.json.bak.20251116_103125",
+    "sha256": "DA9E6BB85B7B6F82AA0B005AB7BD2E0E54A65DFAB2FFD23C49118B7F044ED8FA",
+    "size_bytes": 527,
+    "moved_by": "loweb",
+    "moved_at_utc": "2025-11-22T06:08:56.2967780Z"
+  },
+  {
+    "original_path": "ho_artifact_outputs\\retired_project_20251121_152447\\ho_artifact_outputs\\RUNLOG_2bANN2_HO_20251114_131240.json.bak.20251116_103247",
+    "retired_path": "retired_ANN_files\\ho_artifact_outputs\\retired_project_20251121_152447\\ho_artifact_outputs\\RUNLOG_2bANN2_HO_20251114_131240.json.bak.20251116_103247",
+    "sha256": "DA9E6BB85B7B6F82AA0B005AB7BD2E0E54A65DFAB2FFD23C49118B7F044ED8FA",
+    "size_bytes": 527,
+    "moved_by": "loweb",
+    "moved_at_utc": "2025-11-22T06:08:56.3351132Z"
+  },
+  {
+    "original_path": "ho_artifact_outputs\\retired_project_20251121_152447\\ho_artifact_outputs\\RUNLOG_2bANN2_HO_20251114_131240.json.bak.20251116_103417",
+    "retired_path": "retired_ANN_files\\ho_artifact_outputs\\retired_project_20251121_152447\\ho_artifact_outputs\\RUNLOG_2bANN2_HO_20251114_131240.json.bak.20251116_103417",
+    "sha256": "DA9E6BB85B7B6F82AA0B005AB7BD2E0E54A65DFAB2FFD23C49118B7F044ED8FA",
+    "size_bytes": 527,
+    "moved_by": "loweb",
+    "moved_at_utc": "2025-11-22T06:08:56.3696646Z"
+  },
+  {
+    "original_path": "ho_artifact_outputs\\retired_project_20251121_152447\\ho_artifact_outputs\\RUNLOG_2bANN2_HO_20251114_131500.json.bak.20251114_131527",
+    "retired_path": "retired_ANN_files\\ho_artifact_outputs\\retired_project_20251121_152447\\ho_artifact_outputs\\RUNLOG_2bANN2_HO_20251114_131500.json.bak.20251114_131527",
+    "sha256": "928631336DC45E82B0F7531BB86E0A290CA0BFD4FE53E69231D3F5DE2ECBDCAF",
+    "size_bytes": 405,
+    "moved_by": "loweb",
+    "moved_at_utc": "2025-11-22T06:08:56.4133520Z"
+  },
+  {
+    "original_path": "ho_artifact_outputs\\retired_project_20251121_152447\\ho_artifact_outputs\\RUNLOG_2bANN2_HO_20251114_131500.json.bak.20251114_131735",
+    "retired_path": "retired_ANN_files\\ho_artifact_outputs\\retired_project_20251121_152447\\ho_artifact_outputs\\RUNLOG_2bANN2_HO_20251114_131500.json.bak.20251114_131735",
+    "sha256": "E1094DE3E468415E72FB6DC1A59AC567CB5C3C362E50C39F5E33F754CAC7FBB7",
+    "size_bytes": 414,
+    "moved_by": "loweb",
+    "moved_at_utc": "2025-11-22T06:08:56.4583922Z"
+  },
+  {
+    "original_path": "ho_artifact_outputs\\retired_project_20251121_152447\\ho_artifact_outputs\\RUNLOG_2bANN2_HO_20251114_161814.json.bak.20251114_184445",
+    "retired_path": "retired_ANN_files\\ho_artifact_outputs\\retired_project_20251121_152447\\ho_artifact_outputs\\RUNLOG_2bANN2_HO_20251114_161814.json.bak.20251114_184445",
+    "sha256": "142721AE459EF05BF82CC6C3CDED20692EB403EF144D3350E4CFDA8649B00E7B",
+    "size_bytes": 492,
+    "moved_by": "loweb",
+    "moved_at_utc": "2025-11-22T06:08:56.5024111Z"
+  },
+  {
+    "original_path": "ho_artifact_outputs\\retired_project_20251121_152447\\ho_artifact_outputs\\RUNLOG_2bANN2_HO_20251115_152559.json.bak.20251115_152740",
+    "retired_path": "retired_ANN_files\\ho_artifact_outputs\\retired_project_20251121_152447\\ho_artifact_outputs\\RUNLOG_2bANN2_HO_20251115_152559.json.bak.20251115_152740",
+    "sha256": "6C9413BBCBE613331833DD77438DFD2396325008CB29BA35E78BBF09F665FAAC",
+    "size_bytes": 405,
+    "moved_by": "loweb",
+    "moved_at_utc": "2025-11-22T06:08:56.5489090Z"
+  },
+  {
+    "original_path": "ho_artifact_outputs\\retired_project_20251121_152447\\ho_artifact_outputs\\RUNLOG_2bANN2_HO_20251115_152559.json.bak.20251115_154419",
+    "retired_path": "retired_ANN_files\\ho_artifact_outputs\\retired_project_20251121_152447\\ho_artifact_outputs\\RUNLOG_2bANN2_HO_20251115_152559.json.bak.20251115_154419",
+    "sha256": "9867331E58F74513FEEBC1947B0C985EFEAAE9BFD6202F8509FB40B8D2CD9227",
+    "size_bytes": 407,
+    "moved_by": "loweb",
+    "moved_at_utc": "2025-11-22T06:08:56.5933697Z"
+  },
+  {
+    "original_path": "ho_artifact_outputs\\retired_project_20251121_152447\\ho_artifact_outputs\\RUNLOG_2bANN2_HO_20251115_152559.json.bak.20251115_155626",
+    "retired_path": "retired_ANN_files\\ho_artifact_outputs\\retired_project_20251121_152447\\ho_artifact_outputs\\RUNLOG_2bANN2_HO_20251115_152559.json.bak.20251115_155626",
+    "sha256": "B8931855EC2E604424E6A58ED2D0337684F1E72E9DF248D155DBBB5A96D05C72",
+    "size_bytes": 534,
+    "moved_by": "loweb",
+    "moved_at_utc": "2025-11-22T06:08:56.6383405Z"
+  },
+  {
+    "original_path": "ho_artifact_outputs\\retired_project_20251121_152447\\ho_artifact_outputs\\RUNLOG_2bANN2_HO_20251115_152559.json.bak.20251115_155804",
+    "retired_path": "retired_ANN_files\\ho_artifact_outputs\\retired_project_20251121_152447\\ho_artifact_outputs\\RUNLOG_2bANN2_HO_20251115_152559.json.bak.20251115_155804",
+    "sha256": "B8931855EC2E604424E6A58ED2D0337684F1E72E9DF248D155DBBB5A96D05C72",
+    "size_bytes": 534,
+    "moved_by": "loweb",
+    "moved_at_utc": "2025-11-22T06:08:56.6752791Z"
+  },
+  {
+    "original_path": "ho_artifact_outputs\\retired_project_20251121_152447\\ho_artifact_outputs\\RUNLOG_2bANN2_HO_20251115_152559.json.bak.20251115_160422",
+    "retired_path": "retired_ANN_files\\ho_artifact_outputs\\retired_project_20251121_152447\\ho_artifact_outputs\\RUNLOG_2bANN2_HO_20251115_152559.json.bak.20251115_160422",
+    "sha256": "B8931855EC2E604424E6A58ED2D0337684F1E72E9DF248D155DBBB5A96D05C72",
+    "size_bytes": 534,
+    "moved_by": "loweb",
+    "moved_at_utc": "2025-11-22T06:08:56.7107302Z"
+  },
+  {
+    "original_path": "ho_artifact_outputs\\retired_project_20251121_152447\\ho_artifact_outputs\\RUNLOG_2bANN2_HO_20251115_152559.json.bak.20251115_160523",
+    "retired_path": "retired_ANN_files\\ho_artifact_outputs\\retired_project_20251121_152447\\ho_artifact_outputs\\RUNLOG_2bANN2_HO_20251115_152559.json.bak.20251115_160523",
+    "sha256": "87151E31DBD2461B2D9B5B15997D255652370B1E5E5FC14DE20A8ECE1EBD03F5",
+    "size_bytes": 536,
+    "moved_by": "loweb",
+    "moved_at_utc": "2025-11-22T06:08:56.7534041Z"
+  },
+  {
+    "original_path": "ho_artifact_outputs\\retired_project_20251121_152447\\ho_artifact_outputs\\RUNLOG_2bANN2_HO_20251115_152559.json.bak.20251115_162219",
+    "retired_path": "retired_ANN_files\\ho_artifact_outputs\\retired_project_20251121_152447\\ho_artifact_outputs\\RUNLOG_2bANN2_HO_20251115_152559.json.bak.20251115_162219",
+    "sha256": "83460432EC7A25A1E8C29A5D7A61EC31E3F244D5FB654976010DE6D7D9EB5AC2",
+    "size_bytes": 651,
+    "moved_by": "loweb",
+    "moved_at_utc": "2025-11-22T06:08:56.7980110Z"
+  },
+  {
+    "original_path": "manifests\\RUNLOG_2bANN2_HO_template.json",
+    "retired_path": "retired_ANN_files\\manifests\\RUNLOG_2bANN2_HO_template.json",
+    "sha256": "7F386B7C72C7AF8CF303B84C813712EC986C9F73E28C5E117DB0BE05A123E30E",
+    "size_bytes": 3048,
+    "moved_by": "loweb",
+    "moved_at_utc": "2025-11-22T06:08:56.8762727Z"
+  },
+  {
+    "original_path": "retired_ANN_files\\2bANN2_HO_model_v3_forecast.keras",
+    "retired_path": "retired_ANN_files\\retired_ANN_files\\2bANN2_HO_model_v3_forecast.keras",
+    "sha256": "BBC2C8C3C23773A624DC02594743B3F7F9A77E9D4B0903B8B6D914917C114F64",
+    "size_bytes": 79164,
+    "moved_by": "loweb",
+    "moved_at_utc": "2025-11-22T06:08:56.9470217Z"
+  },
+  {
+    "original_path": "retired_ANN_files\\2bANN2_HO_model_v5_heavy_20251024_002343.keras",
+    "retired_path": "retired_ANN_files\\retired_ANN_files\\2bANN2_HO_model_v5_heavy_20251024_002343.keras",
+    "sha256": "3E2D2C4EE2D9F58FE0D1449FAF68F4AF5A18E454DEA18E737C1A32FAAB84A118",
+    "size_bytes": 8632334,
+    "moved_by": "loweb",
+    "moved_at_utc": "2025-11-22T06:08:57.0458113Z"
+  },
+  {
+    "original_path": "retired_ANN_files\\2bANN2_HO_model_v5.1_heavy_20251029_130659.keras",
+    "retired_path": "retired_ANN_files\\retired_ANN_files\\2bANN2_HO_model_v5.1_heavy_20251029_130659.keras",
+    "sha256": "E0D0D1ED5A3B48BD9A977C397C0554D53A4ABE00AA4006C75C6F7AFFFF3F78A2",
+    "size_bytes": 8632334,
+    "moved_by": "loweb",
+    "moved_at_utc": "2025-11-22T06:08:57.1383468Z"
+  },
+  {
+    "original_path": "retired_ANN_files\\2bANN2_HO_model_v5.1_heavy_20251029_140455.keras",
+    "retired_path": "retired_ANN_files\\retired_ANN_files\\2bANN2_HO_model_v5.1_heavy_20251029_140455.keras",
+    "sha256": "C05680FB8F5F33BA0B7078B6F84EABF89F75383E154C1E4C04C9E6E621B272A1",
+    "size_bytes": 8632334,
+    "moved_by": "loweb",
+    "moved_at_utc": "2025-11-22T06:08:57.2349058Z"
+  },
+  {
+    "original_path": "retired_ANN_files\\2bANN2_HO_model_v5.1_heavy_20251029_140904.keras",
+    "retired_path": "retired_ANN_files\\retired_ANN_files\\2bANN2_HO_model_v5.1_heavy_20251029_140904.keras",
+    "sha256": "B742FFA6902A0E1A704E0E0E6BF366D15FC43B843A53FFFFDB77F0420A196364",
+    "size_bytes": 8632334,
+    "moved_by": "loweb",
+    "moved_at_utc": "2025-11-22T06:08:57.3295529Z"
+  },
+  {
+    "original_path": "retired_ANN_files\\2bANN2_HO_model_v5.1_heavy_20251029_140936.keras",
+    "retired_path": "retired_ANN_files\\retired_ANN_files\\2bANN2_HO_model_v5.1_heavy_20251029_140936.keras",
+    "sha256": "4F2A616771F3B9A9DE0EC4F3C509DBF10F3A46C995CFB4EEAB3CE843A92EC317",
+    "size_bytes": 8632334,
+    "moved_by": "loweb",
+    "moved_at_utc": "2025-11-22T06:08:57.4241726Z"
+  },
+  {
+    "original_path": "retired_ANN_files\\2bANN2_HO_model_v5.1_heavy_20251029_141003.keras",
+    "retired_path": "retired_ANN_files\\retired_ANN_files\\2bANN2_HO_model_v5.1_heavy_20251029_141003.keras",
+    "sha256": "362D0F621FC5E0DA2004C25731BBEF3EFBFEC74E0188C094A79E65BA4DD90A7B",
+    "size_bytes": 8632334,
+    "moved_by": "loweb",
+    "moved_at_utc": "2025-11-22T06:08:57.5228222Z"
+  },
+  {
+    "original_path": "retired_ANN_files\\2bANN2_HO_model_v5.1_heavy_20251029_141033.keras",
+    "retired_path": "retired_ANN_files\\retired_ANN_files\\2bANN2_HO_model_v5.1_heavy_20251029_141033.keras",
+    "sha256": "4A5A8F322A8CD1542F991ED7F0962332C47443B1E37D7CEB9087A3A5D8EE5DC7",
+    "size_bytes": 8632334,
+    "moved_by": "loweb",
+    "moved_at_utc": "2025-11-22T06:08:57.6172637Z"
+  },
+  {
+    "original_path": "retired_ANN_files\\2bANN2_HO_model_v5.1_heavy_20251029_141048.keras",
+    "retired_path": "retired_ANN_files\\retired_ANN_files\\2bANN2_HO_model_v5.1_heavy_20251029_141048.keras",
+    "sha256": "75A5CEE419A4BB2E753451869F7062B8111BCA7505F967E239F7CD29C0473392",
+    "size_bytes": 8632334,
+    "moved_by": "loweb",
+    "moved_at_utc": "2025-11-22T06:08:57.7133178Z"
+  },
+  {
+    "original_path": "retired_ANN_files\\2bANN2_HO_model_v5.1_heavy_20251029_145242.keras",
+    "retired_path": "retired_ANN_files\\retired_ANN_files\\2bANN2_HO_model_v5.1_heavy_20251029_145242.keras",
+    "sha256": "3B288A9F8BB4A3E172FEA3B13F62D6D55600A3DBD03138834829C839C8574FE9",
+    "size_bytes": 8632334,
+    "moved_by": "loweb",
+    "moved_at_utc": "2025-11-22T06:08:57.8102849Z"
+  },
+  {
+    "original_path": "retired_ANN_files\\2bANN2_HO_model_v5.1_heavy_20251029_150254.keras",
+    "retired_path": "retired_ANN_files\\retired_ANN_files\\2bANN2_HO_model_v5.1_heavy_20251029_150254.keras",
+    "sha256": "576EFCCBF5B494F6C63FA534EF88B43E7F0932BD6DDF3A71295F4B094B6F27A8",
+    "size_bytes": 8632334,
+    "moved_by": "loweb",
+    "moved_at_utc": "2025-11-22T06:08:57.9041814Z"
+  },
+  {
+    "original_path": "retired_ANN_files\\2bANN2_HO_model_v5.1_heavy_20251029_150810.keras",
+    "retired_path": "retired_ANN_files\\retired_ANN_files\\2bANN2_HO_model_v5.1_heavy_20251029_150810.keras",
+    "sha256": "BA15058C15D4FA09F04D5BDC9EDEFFFFBD9974286F5F8F6F503E6F7B7543307B",
+    "size_bytes": 8632334,
+    "moved_by": "loweb",
+    "moved_at_utc": "2025-11-22T06:08:58.0012753Z"
+  },
+  {
+    "original_path": "retired_ANN_files\\2bANN2_HO_model_v5.1_heavy_20251029_152459.keras",
+    "retired_path": "retired_ANN_files\\retired_ANN_files\\2bANN2_HO_model_v5.1_heavy_20251029_152459.keras",
+    "sha256": "69C45129AB3ECE0774E2A2C1B5534FAC3725C8B0ECE659FD9D81DEFBDD7F8C04",
+    "size_bytes": 8632334,
+    "moved_by": "loweb",
+    "moved_at_utc": "2025-11-22T06:08:58.0973758Z"
+  },
+  {
+    "original_path": "retired_ANN_files\\2bANN2_HO_model_v5.1_heavy_20251029_155233.keras",
+    "retired_path": "retired_ANN_files\\retired_ANN_files\\2bANN2_HO_model_v5.1_heavy_20251029_155233.keras",
+    "sha256": "07352BBD6E22BA52306322C25BB4A91675E60E981FA708E2CFE80DCD879354B6",
+    "size_bytes": 8632334,
+    "moved_by": "loweb",
+    "moved_at_utc": "2025-11-22T06:08:58.1929964Z"
+  }
+]
