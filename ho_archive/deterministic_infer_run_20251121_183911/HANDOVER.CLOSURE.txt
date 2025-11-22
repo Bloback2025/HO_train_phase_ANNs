@@ -6,4 +6,3 @@ ACCEPTANCE: outputs packaged and checksummed
 
 CANONICAL_TAG: canonical/2bANN2_HO_20251111-e7b020c
 
-CANONICAL_TAG: canonical/2bANN2_HO_20251111-e7b020c
