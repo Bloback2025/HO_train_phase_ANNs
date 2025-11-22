@@ -1,0 +1,168 @@
+Archival manifest recreated at: 2025-11-22T14:23:25.0296847+11:00
+Packaged commit referenced: e7b020c
+
+266cc805c8f69308f1ccc4d9409b4705dde1c901  2bANN2.HO.py
+266cc805c8f69308f1ccc4d9409b4705dde1c901  2bANN2.HO.py.bak
+115c8aeda332c7ea9532ea65f2f797fc95ac740e  2bANN2_HO_model_v3_forecast.keras
+09217bc73577d98184229f089ec63cfc84583982  2bANN2_HO_model_v5.1_heavy_20251029_130659.keras
+472e7ce2c9c87c0a16fa2ee3b2b0db263ea9a793  2bANN2_HO_model_v5.1_heavy_20251029_140455.keras
+fcc3c948e74d587dcf1b3f68e03d6aa454388b81  2bANN2_HO_model_v5.1_heavy_20251029_140904.keras
+7903e67485ca537768f700c2b456c154df41651a  2bANN2_HO_model_v5.1_heavy_20251029_140936.keras
+8f1abbe0a58af9d1607604a7f199b7d6bcd2eddc  2bANN2_HO_model_v5.1_heavy_20251029_141003.keras
+ae4d6424c589cdafd948072cbe84762e3234842c  2bANN2_HO_model_v5.1_heavy_20251029_141033.keras
+4c0d9cd650a0a103761cc9859a074f7b779ab287  2bANN2_HO_model_v5.1_heavy_20251029_141048.keras
+54170a5c4b43c1da49ad4bbe2335990a7845535c  2bANN2_HO_model_v5.1_heavy_20251029_145242.keras
+78e5a0af252b23f90a098f41eac5b27f761dfa04  2bANN2_HO_model_v5.1_heavy_20251029_150254.keras
+1662f8dc96fd95a9a3e4d8390abe7522fe8cb978  2bANN2_HO_model_v5.1_heavy_20251029_150810.keras
+b0168dd3c28489783829d3780db376b349545863  2bANN2_HO_model_v5.1_heavy_20251029_152459.keras
+74c12067528fff30e3e0d8a4b71f446c16b7fe26  2bANN2_HO_model_v5.1_heavy_20251029_155233.keras
+a677bf5b9fa796d442829da2f75eb6b4227aeeae  2bANN2_HO_model_v5_heavy_20251024_002343.keras
+266cc805c8f69308f1ccc4d9409b4705dde1c901  retired_ANN_files/2bANN2.HO.py
+115c8aeda332c7ea9532ea65f2f797fc95ac740e  retired_ANN_files/2bANN2_HO_model_v3_forecast.keras
+09217bc73577d98184229f089ec63cfc84583982  retired_ANN_files/2bANN2_HO_model_v5.1_heavy_20251029_130659.keras
+472e7ce2c9c87c0a16fa2ee3b2b0db263ea9a793  retired_ANN_files/2bANN2_HO_model_v5.1_heavy_20251029_140455.keras
+fcc3c948e74d587dcf1b3f68e03d6aa454388b81  retired_ANN_files/2bANN2_HO_model_v5.1_heavy_20251029_140904.keras
+7903e67485ca537768f700c2b456c154df41651a  retired_ANN_files/2bANN2_HO_model_v5.1_heavy_20251029_140936.keras
+8f1abbe0a58af9d1607604a7f199b7d6bcd2eddc  retired_ANN_files/2bANN2_HO_model_v5.1_heavy_20251029_141003.keras
+ae4d6424c589cdafd948072cbe84762e3234842c  retired_ANN_files/2bANN2_HO_model_v5.1_heavy_20251029_141033.keras
+4c0d9cd650a0a103761cc9859a074f7b779ab287  retired_ANN_files/2bANN2_HO_model_v5.1_heavy_20251029_141048.keras
+54170a5c4b43c1da49ad4bbe2335990a7845535c  retired_ANN_files/2bANN2_HO_model_v5.1_heavy_20251029_145242.keras
+78e5a0af252b23f90a098f41eac5b27f761dfa04  retired_ANN_files/2bANN2_HO_model_v5.1_heavy_20251029_150254.keras
+1662f8dc96fd95a9a3e4d8390abe7522fe8cb978  retired_ANN_files/2bANN2_HO_model_v5.1_heavy_20251029_150810.keras
+b0168dd3c28489783829d3780db376b349545863  retired_ANN_files/2bANN2_HO_model_v5.1_heavy_20251029_152459.keras
+74c12067528fff30e3e0d8a4b71f446c16b7fe26  retired_ANN_files/2bANN2_HO_model_v5.1_heavy_20251029_155233.keras
+a677bf5b9fa796d442829da2f75eb6b4227aeeae  retired_ANN_files/2bANN2_HO_model_v5_heavy_20251024_002343.keras
+226633bf6c640fb38f0c083e06778a089bf1b2d7  retired_ANN_files/RunA_pretrain_ON_ctx128_forecaster_best.keras
+95608c94610038bac3181dcd68a535a36873c2bc  retired_ANN_files/RunA_pretrain_ON_ctx128_mae_best.keras
+3052b9040b881b089a52c0c0790ea0b9c5e58dd4  retired_ANN_files/RunFix_non_destructive_ctx128_forecaster_best.keras
+28304645dacf52b621a98cf8bf0e33c64c093f30  retired_ANN_files/RunFix_non_destructive_ctx128_mae_best.keras
+6c54e360ed06318d32483f02d22bc3c9148ff218  retired_ANN_files/RunPatch_auxMAE_clipSigma_ctx128_forecaster_best.keras
+eafb7a5abc8730bf005759b20806c901868464d8  retired_ANN_files/RunPatch_auxMAE_clipSigma_ctx128_mae_best.keras
+0eed01261fcb8504584fa9c2ed79976f16be8a77  retired_ANN_files/hoxnc_full.csv
+8758f0a54d81bfad8fb856d95156f5629ff15aa8  retired_ANN_files/hoxnc_full.tmp.20251108-225822.csv
+8758f0a54d81bfad8fb856d95156f5629ff15aa8  retired_ANN_files/hoxnc_full.tmp.20251108-230035.csv
+8758f0a54d81bfad8fb856d95156f5629ff15aa8  retired_ANN_files/hoxnc_full.tmp.20251108-234528.csv
+8758f0a54d81bfad8fb856d95156f5629ff15aa8  retired_ANN_files/hoxnc_full.tmp.20251108-235725.csv
+8758f0a54d81bfad8fb856d95156f5629ff15aa8  retired_ANN_files/hoxnc_full.tmp.20251108-235958.csv
+8758f0a54d81bfad8fb856d95156f5629ff15aa8  retired_ANN_files/hoxnc_full.tmp.20251109-000122.csv
+8758f0a54d81bfad8fb856d95156f5629ff15aa8  retired_ANN_files/hoxnc_full.tmp.20251109-000244.csv
+fd6807a5aca735c1f1756cce9376963393441727  retired_ANN_files/hoxnc_full.with_target.csv
+e8943bc99d857b5047722ed7ca8dcebf7c7e1358  retired_ANN_files/hoxnc_testing_with_target_lagged.csv
+3e72cb1a0b93ccc0ef2332c2cfc0edf735308d2f  retired_ANN_files/hoxnc_testing_with_target_lagged_trimmed.csv
+f6d09a9f2eef62c09503198a10a4e700eff390dc  retired_ANN_files/hoxnc_training.lagged24.csv
+bcc01752acfc1d2ebc2b93625fd0d9ffac586edb  retired_ANN_files/hoxnc_training.with_base_and_lags.csv
+d035bc855d1840b6a664c48a8f4779c7e3da1a88  retired_ANN_files/hoxnc_training.with_base_and_lags.manifest.json
+558a1ef0e4618ed47c2f2225b706581cbe6444bd  retired_ANN_files/make_test_lags.py
+070e513b18e792c2f7510bd39c1278de1563e930  retired_ANN_files/make_test_target.py
+11bbe8df40d52996076706da5dc10eeadcf1004a  retired_ANN_files/make_test_trim.py
+6387e4991c2a11c72d993f8617c4a8b196978611  retired_ANN_files/metrics_2bANN2_run3439c642.csv
+911cf2c5b96fc94c04b9c324fbf6e1671f2f9784  retired_ANN_files/metrics_2bANN2_run3439c642.py
+0779aeded59f1e71bf95e4ffd6af33d29e792d92  retired_ANN_files/recom_1.py
+4dd4da77add4233c3670aac54d786a1bd9af98af  retired_ANN_files/target_processing_writer.py
+f05b8b520c338770b0aa40242df536d768d92ddb  retired_ANN_files/tb_heavy_v5.1_20251029_130659/train/events.out.tfevents.1761703619.DESKTOP-OODJQVE.28600.0.v2
+c9581b98ffb8d8af5f1364546a11a753df0d67a8  retired_ANN_files/tb_heavy_v5.1_20251029_130659/validation/events.out.tfevents.1761703622.DESKTOP-OODJQVE.28600.1.v2
+2ff4234740a45b95c414220c241781b647257711  retired_ANN_files/tb_heavy_v5.1_20251029_140455/train/events.out.tfevents.1761707095.DESKTOP-OODJQVE.10732.0.v2
+8c45fb4170692536ba2ba979bb7944c848bf5120  retired_ANN_files/tb_heavy_v5.1_20251029_140455/validation/events.out.tfevents.1761707097.DESKTOP-OODJQVE.10732.1.v2
+218632119842200566ceac07723ec67929a00466  retired_ANN_files/tb_heavy_v5.1_20251029_140904/train/events.out.tfevents.1761707344.DESKTOP-OODJQVE.28164.0.v2
+59eef8306cd6ed8b0978861cee5dee0051036844  retired_ANN_files/tb_heavy_v5.1_20251029_140904/validation/events.out.tfevents.1761707347.DESKTOP-OODJQVE.28164.1.v2
+6bbbc6cad4bb57bc3e1b80e18fe2cd34d981b48d  retired_ANN_files/tb_heavy_v5.1_20251029_140936/train/events.out.tfevents.1761707376.DESKTOP-OODJQVE.20624.0.v2
+2d7888a9b7f21fc72fa181327bfad127e5db3ea2  retired_ANN_files/tb_heavy_v5.1_20251029_140936/validation/events.out.tfevents.1761707378.DESKTOP-OODJQVE.20624.1.v2
+5224356589729d0ac727b19367984a11376e7e7c  retired_ANN_files/tb_heavy_v5.1_20251029_141003/train/events.out.tfevents.1761707403.DESKTOP-OODJQVE.21952.0.v2
+a2df0542a7afe8050f7f3d65ba467edcbb6015c8  retired_ANN_files/tb_heavy_v5.1_20251029_141003/validation/events.out.tfevents.1761707406.DESKTOP-OODJQVE.21952.1.v2
+ddec7a9f979b224181f566b94273731419fe066b  retired_ANN_files/tb_heavy_v5.1_20251029_141033/train/events.out.tfevents.1761707433.DESKTOP-OODJQVE.16856.0.v2
+0af3b4f896ce3b020f56e659af7e94839e8bcbdf  retired_ANN_files/tb_heavy_v5.1_20251029_141033/validation/events.out.tfevents.1761707436.DESKTOP-OODJQVE.16856.1.v2
+5176bcf5e51c18fee0efe0cbd08241d323d2716b  retired_ANN_files/tb_heavy_v5.1_20251029_141048/train/events.out.tfevents.1761707448.DESKTOP-OODJQVE.3444.0.v2
+6989607d5319ff49ac51f7d39fd748e09170cc8d  retired_ANN_files/tb_heavy_v5.1_20251029_141048/validation/events.out.tfevents.1761707450.DESKTOP-OODJQVE.3444.1.v2
+141614c2d6f4c2290a4448529b4b9366982d2aba  retired_ANN_files/tb_heavy_v5.1_20251029_145242/train/events.out.tfevents.1761709962.DESKTOP-OODJQVE.13488.0.v2
+1894bd11fc95bb5faff07c41a1fd3a337a5bc503  retired_ANN_files/tb_heavy_v5.1_20251029_145242/validation/events.out.tfevents.1761709965.DESKTOP-OODJQVE.13488.1.v2
+d02627391a3ac052d53b1f3e0b01f722ffcb4efd  retired_ANN_files/tb_heavy_v5.1_20251029_150254/train/events.out.tfevents.1761710574.DESKTOP-OODJQVE.20444.0.v2
+ac74b88021277755baa49f10ee70d349276586b0  retired_ANN_files/tb_heavy_v5.1_20251029_150254/validation/events.out.tfevents.1761710576.DESKTOP-OODJQVE.20444.1.v2
+bbd64183904a30249b59ddf18b1cdd8f783651f2  retired_ANN_files/tb_heavy_v5.1_20251029_150810/train/events.out.tfevents.1761710890.DESKTOP-OODJQVE.11796.0.v2
+63624ca256023f878c414c1f78355412d1a246fe  retired_ANN_files/tb_heavy_v5.1_20251029_150810/validation/events.out.tfevents.1761710892.DESKTOP-OODJQVE.11796.1.v2
+343f5a40dc66025a891d360c919efd9e63ebfe9f  retired_ANN_files/tb_heavy_v5.1_20251029_152459/train/events.out.tfevents.1761711899.DESKTOP-OODJQVE.12956.0.v2
+3baae5f9ef44561015f37e6bb4f81e93888a8599  retired_ANN_files/tb_heavy_v5.1_20251029_152459/validation/events.out.tfevents.1761711901.DESKTOP-OODJQVE.12956.1.v2
+078edd3999292e26ffc02d747e9b83e3835c09d5  retired_ANN_files/tb_heavy_v5.1_20251029_155233/train/events.out.tfevents.1761713553.DESKTOP-OODJQVE.10528.0.v2
+925742a6272ddd79a16a4540807637860ee97436  retired_ANN_files/tb_heavy_v5.1_20251029_155233/validation/events.out.tfevents.1761713555.DESKTOP-OODJQVE.10528.1.v2
+de1f18ca52d8a9cb3b776a5a6dcb02416b8f7038  retired_ANN_files/tb_heavy_v5_20251024_001712/train/events.out.tfevents.1761225432.DESKTOP-OODJQVE.20400.0.v2
+b243ddefbe2001b56380eae51fd73d1795fb78bc  retired_ANN_files/tb_heavy_v5_20251024_001712/validation/events.out.tfevents.1761225435.DESKTOP-OODJQVE.20400.1.v2
+c8de00363c25ea7843a1281c79790d9eb8307628  retired_ANN_files/tb_heavy_v5_20251024_002343/train/events.out.tfevents.1761225823.DESKTOP-OODJQVE.19980.0.v2
+22c5bd98c88253334efde59cb90cb38f5701d1ec  retired_ANN_files/tb_heavy_v5_20251024_002343/validation/events.out.tfevents.1761225826.DESKTOP-OODJQVE.19980.1.v2
+185fc52e136b6ef02b0c114ce7ec7f9b0d5e2765  retired_ANN_files/train_ann.py
+9a3f33755c2a21478b5be03f64057d4e4083214b  retired_ANN_files/train_ann__deprecated_to_2bANN2_HO.py
+55556a23dd26a1eab79fdb41bbf3cc8cf0c647a6  retired_ANN_files/train_ohlc.py
+0a9b689f8f86cb527372e4e32b32bea764f407dc  retired_ANN_files/train_phase2b2_5080_HO.py
+d9a5e0a98baf6a0e1626d8edd693300c216e9cc2  retired_ANN_files/train_phase2b2_HO.1A.py.sha256.txt
+00bcbc339297cde84c195878b2a84c0d77309c75  retired_ANN_files/train_phase2b2_HO.py.bak
+1d89428aa677cb6c41acb725acaa7c705d9178ec  retired_ANN_files/train_phase2b2_HO.py.bak.20251104054136
+765536a9b719378293d847288e0643df8b6fd5c2  retired_ANN_files/train_phase2b2_HO_reinstated.py
+a1e672e55f79d645c79a614943693c13c3dad3f1  retired_ANN_files/train_phase2b2_HO_reinstated.py.bak.20251104054136
+0e14e37c6a3fe4d170cea1058a05b9b4aab97eb1  retired_ANN_files/train_phase2b2_HO_v2.py
+9d254983a0b9b9b0b83e15047ede8c8f7fe8e46c  retired_ANN_files/train_phase2b2_HO_v2.py.bak.20251104054136
+1ea01fea616b55786677b095dab8cfc097268ed8  retired_ANN_files/train_phase2b2_HO_v3_forecast.py
+19f2dc7bd7540a8e67be95ec332cd7c4d1520eff  retired_ANN_files/train_phase2b2_HO_v3_forecast.py.bak.20251104054136
+56701fba6d5b3529271e60dac339b799207de1d0  retired_ANN_files/train_phase2b2_HO_v5_heavy.py
+fe339194905b3b3ae3e581fa5158efc9643b54a3  retired_ANN_files/train_phase2b2_HO_v5_heavy.py.bak.20251104054136
+baa1046b14a58cc5b8a757b90da7da9b003c698f  retired_ANN_files/train_phase2b2_HO_v5_heavy_v5.1.py
+2d5e4a05a62516939f1d7440c70073f8b63959e2  retired_ANN_files/train_phase2b2_HO_v5_heavy_v5.1.py.bak.20251104054136
+b580889724d7a221d319f82475602ca65b4b52d6  retired_ANN_files/verify_csv_integrity.py
+2025-10-23T23:54:04.4806249+11:00  79164  2bANN2_HO_model_v3_forecast.keras
+2025-10-24T00:23:51.8860687+11:00  8632334  2bANN2_HO_model_v5_heavy_20251024_002343.keras
+2025-10-29T13:07:28.3327523+11:00  8632334  2bANN2_HO_model_v5.1_heavy_20251029_130659.keras
+2025-10-29T14:05:03.7568050+11:00  8632334  2bANN2_HO_model_v5.1_heavy_20251029_140455.keras
+2025-10-29T14:09:29.9703294+11:00  8632334  2bANN2_HO_model_v5.1_heavy_20251029_140904.keras
+2025-10-29T14:09:58.1954632+11:00  8632334  2bANN2_HO_model_v5.1_heavy_20251029_140936.keras
+2025-10-29T14:10:28.0869846+11:00  8632334  2bANN2_HO_model_v5.1_heavy_20251029_141003.keras
+2025-10-29T14:10:42.9401673+11:00  8632334  2bANN2_HO_model_v5.1_heavy_20251029_141033.keras
+2025-10-29T14:11:10.8430676+11:00  8632334  2bANN2_HO_model_v5.1_heavy_20251029_141048.keras
+2025-10-29T14:53:05.5615959+11:00  8632334  2bANN2_HO_model_v5.1_heavy_20251029_145242.keras
+2025-10-29T15:03:17.1605102+11:00  8632334  2bANN2_HO_model_v5.1_heavy_20251029_150254.keras
+2025-10-29T15:08:17.9795288+11:00  8632334  2bANN2_HO_model_v5.1_heavy_20251029_150810.keras
+2025-10-29T15:25:08.1556487+11:00  8632334  2bANN2_HO_model_v5.1_heavy_20251029_152459.keras
+2025-10-29T15:52:57.7472459+11:00  8632334  2bANN2_HO_model_v5.1_heavy_20251029_155233.keras
+2025-11-10T18:06:26.6495843+11:00  1931  2bANN2.HO.py
+2025-11-22T14:23:29.0035646+11:00  11777  ARCHIVAL_MANIFEST_2bANN2.txt
+2025-11-17T15:06:38.8937192+11:00  198508  hoxnc_full.csv
+2025-11-17T15:06:38.8947191+11:00  238997  hoxnc_full.tmp.20251108-225822.csv
+2025-11-17T15:06:38.8947191+11:00  238997  hoxnc_full.tmp.20251108-230035.csv
+2025-11-17T15:06:38.8957197+11:00  238997  hoxnc_full.tmp.20251108-234528.csv
+2025-11-17T15:06:38.8957197+11:00  238997  hoxnc_full.tmp.20251108-235725.csv
+2025-11-17T15:06:38.8967195+11:00  238997  hoxnc_full.tmp.20251108-235958.csv
+2025-11-17T15:06:38.8967195+11:00  238997  hoxnc_full.tmp.20251109-000122.csv
+2025-11-17T15:06:38.8977188+11:00  238997  hoxnc_full.tmp.20251109-000244.csv
+2025-11-17T15:06:38.8977188+11:00  238965  hoxnc_full.with_target.csv
+2025-11-17T15:06:38.9010489+11:00  211444  hoxnc_testing_with_target_lagged_trimmed.csv
+2025-11-17T15:06:38.9010489+11:00  211990  hoxnc_testing_with_target_lagged.csv
+2025-11-17T15:06:38.9041308+11:00  698750  hoxnc_training.lagged24.csv
+2025-11-17T15:06:38.9055908+11:00  798090  hoxnc_training.with_base_and_lags.csv
+2025-11-17T15:06:38.9055908+11:00  177  hoxnc_training.with_base_and_lags.manifest.json
+2025-11-04T16:41:36.6294371+11:00  548  make_test_lags.py
+2025-11-04T16:41:36.6304374+11:00  389  make_test_target.py
+2025-11-04T15:47:59.0291893+11:00  346  make_test_trim.py
+2025-11-17T15:06:38.9096354+11:00  299  metrics_2bANN2_run3439c642.csv
+2025-11-04T16:41:36.6414349+11:00  1722  metrics_2bANN2_run3439c642.py
+2025-10-29T14:55:59.5843698+11:00  496  recom_1.py
+2025-10-24T18:29:19.5156552+11:00  7250900  RunA_pretrain_ON_ctx128_forecaster_best.keras
+2025-10-24T18:28:57.7583929+11:00  5241515  RunA_pretrain_ON_ctx128_mae_best.keras
+2025-10-24T19:01:28.6020194+11:00  7253900  RunFix_non_destructive_ctx128_forecaster_best.keras
+2025-10-24T19:01:16.4751233+11:00  5241515  RunFix_non_destructive_ctx128_mae_best.keras
+2025-10-24T18:39:30.6631269+11:00  7253900  RunPatch_auxMAE_clipSigma_ctx128_forecaster_best.keras
+2025-10-24T18:39:17.5545314+11:00  5241515  RunPatch_auxMAE_clipSigma_ctx128_mae_best.keras
+2025-11-11T17:31:27.2357363+11:00  3928  target_processing_writer.py
+2025-11-12T17:57:16.5130434+11:00  634  train_ann__deprecated_to_2bANN2_HO.py
+2025-11-12T21:33:03.8645066+11:00  512  train_ann.py
+2025-11-09T00:10:40.9856394+11:00  4371  train_ohlc.py
+2025-11-04T16:41:36.6824342+11:00  4737  train_phase2b2_5080_HO.py
+2025-11-04T16:41:36.7044416+11:00  61958  train_phase2b2_HO_reinstated.py
+2025-11-04T16:41:36.7044416+11:00  61928  train_phase2b2_HO_reinstated.py.bak.20251104054136
+2025-11-04T16:41:36.7154346+11:00  3177  train_phase2b2_HO_v2.py
+2025-11-04T16:41:36.7154346+11:00  3127  train_phase2b2_HO_v2.py.bak.20251104054136
+2025-11-04T16:41:36.7274353+11:00  3579  train_phase2b2_HO_v3_forecast.py
+2025-11-04T16:41:36.7274353+11:00  3529  train_phase2b2_HO_v3_forecast.py.bak.20251104054136
+2025-11-04T16:41:36.7494337+11:00  8827  train_phase2b2_HO_v5_heavy_v5.1.py
+2025-11-04T16:41:36.7494337+11:00  8677  train_phase2b2_HO_v5_heavy_v5.1.py.bak.20251104054136
+2025-11-04T16:41:36.7384353+11:00  6644  train_phase2b2_HO_v5_heavy.py
+2025-11-04T16:41:36.7384353+11:00  6556  train_phase2b2_HO_v5_heavy.py.bak.20251104054136
+2025-11-17T14:52:53.4615781+11:00  66  train_phase2b2_HO.1A.py.sha256.txt
+2025-11-09T20:50:26.6727226+11:00  9041  train_phase2b2_HO.py.bak
+2025-11-04T16:41:36.6874344+11:00  4635  train_phase2b2_HO.py.bak.20251104054136
+2025-11-04T17:41:35.0737465+11:00  3063  verify_csv_integrity.py
