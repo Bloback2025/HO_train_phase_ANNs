@@ -1,7 +1,22 @@
-{
-  "path": "output_shas.json",
-  "fullpath": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\deterministic_infer_outputs_run\\output_shas.json",
-  "size": 0,
-  "last_write": "2025-11-21T18:23:40.9141653+11:00",
-  "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
-}
+[
+  {
+    "path": "ho_archive\\deterministic_infer_run_20251121_183911\\archive_manifest_shas.json",
+    "sha256": "9063BD426472F49CDCA2F0772E00AC0C1D6EFBE01624F824D31DF663290841C3"
+  },
+  {
+    "path": "ho_archive\\deterministic_infer_run_20251121_183911\\HANDOVER.CLOSURE.txt",
+    "sha256": "B302738BD895D0AFD217DBE462A4A7FD4537FB980AE4949877A85F0087E62042"
+  },
+  {
+    "path": "ho_archive\\deterministic_infer_run_20251121_183911\\HANDOVER.INDEX.json",
+    "sha256": "D4EF5E3AC276C82E423EA4F79A550E6DA0333E17AB9DE932E522A464D1AC183B"
+  },
+  {
+    "path": "ho_archive\\deterministic_infer_run_20251121_183911\\output_shas.json",
+    "sha256": "DBE2D0CA010BF2D443BD584E9E92053FF169B65EE03AF1D4694DD0AD73005AC4"
+  },
+  {
+    "path": "ho_archive\\deterministic_infer_run_20251121_183911\\preds.json",
+    "sha256": "3BE5DF4DAC52C33D8F02BC13B4E73A20030161157871FC87E3D5E3ADF587DF64"
+  }
+]
