@@ -1,0 +1,11 @@
+﻿import json, pandas as pd
+m = json.load(open(r".\manifest_2bANN.2HO.json"))
+features = m["features"]
+df = pd.read_csv(r".\hoxnc_testing_with_target.csv")
+# BROKEN: for lagged in sorted([c for c in features if "_lag" in c]):
+    base,_,lag = lagged.partition("_lag")
+    lag_n = int(lag)
+# BROKEN:     if lagged not in df.columns and base in df.columns:
+        df[lagged] = df[base].shift(lag_n)
+df.to_csv(r".\hoxnc_testing_with_target_lagged.csv", index=False)
+print("[OK] wrote hoxnc_testing_with_target_lagged.csv rows=", len(df))

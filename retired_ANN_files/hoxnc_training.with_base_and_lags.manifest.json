@@ -1,0 +1,10 @@
+{
+  "target": "Close_t+1",
+  "note": "Canonical OHLC manifest for retrain; idempotent overwrite",
+  "features": [
+    "Open",
+    "High",
+    "Low",
+    "Close"
+  ]
+}

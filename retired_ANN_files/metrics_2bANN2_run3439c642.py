@@ -1,0 +1,49 @@
+import pandas as pd
+import numpy as np
+from tensorflow.keras.models import load_model
+from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
+from datetime import datetime
+import csv
+
+# === Step 1: Load CSV and model ===
+csv_path = r"C:\Users\loweb\AI_Financial_Sims\HO\HO 1st time 5080\hoxnc_full.csv"
+model_path = r"C:\Users\loweb\AI_Financial_Sims\HO\HO 1st time 5080\2bANN2_HO_model.keras"
+
+df = pd.read_csv(csv_path)
+model = load_model(model_path)
+
+# === Step 2: Prepare numeric inputs ===
+X = df.select_dtypes(include=[np.number]).drop(columns=["Close"]).values
+y = df["Close"].values
+
+X_shifted = X[:-1]
+y_shifted = y[1:]
+
+# === Step 3: Predict and compute metrics ===
+y_pred = model.predict(X_shifted).flatten()
+
+mse = mean_squared_error(y_shifted, y_pred)
+mae = mean_absolute_error(y_shifted, y_pred)
+r2 = r2_score(y_shifted, y_pred)
+
+print("MSE:", mse)
+print("MAE:", mae)
+print("R²:", r2)
+
+# === Step 4: Log results ===
+metrics_path = r"C:\Users\loweb\AI_Financial_Sims\HO\HO 1st time 5080\metrics_2bANN2_run3439c642.csv"
+
+# BROKEN: with open(metrics_path, mode='w', newline='') as file:
+    writer = csv.DictWriter(file, fieldnames=[
+        "run_id", "model_sha256", "csv_sha256", "MSE", "MAE", "R2", "timestamp"
+    ])
+    writer.writeheader()
+    writer.writerow({
+        "run_id": "3439c642-834a-4259-a71a-2777d007bda2",
+        "model_sha256": "df1f24c0c3dd69ffbe169d3d0bf13faeba9fa1e18f333ada690afc36116162a2",
+        "csv_sha256": "0364f0b3e5b8cd158a8d2796215d70c73fcbe24a5fce1750b24c094bc4cb5f73",
+        "MSE": mse,
+        "MAE": mae,
+        "R2": r2,
+        "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    })
