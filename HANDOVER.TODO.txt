@@ -1,0 +1,74 @@
+Project root: C:\Users\loweb\AI_Financial_Sims\HO\HO 1st time 5080
+Last packaged run: deterministic_infer_run_20251121_183911 (ho_archive\deterministic_infer_run_20251121_183911)
+Commit: e7b020c (origin/canonical/2bANN2_HO_20251111)
+Claude fragment copied to: F:\handover_fragments\HANDOVER.FRAGMENT.for_Claude.json
+
+Immediate verification items
+1) Confirm commit and remote:
+   git fetch origin
+   git branch -r --contains e7b020c
+
+2) Inspect committed closure file:
+   Get-Content .\ho_archive\deterministic_infer_run_20251121_183911\HANDOVER.CLOSURE.txt
+
+3) Confirm preds file and SHA:
+   Get-Content .\deterministic_infer_outputs_explicit\preds.json -TotalCount 20
+   Get-FileHash .\deterministic_infer_outputs_explicit\preds.json -Algorithm SHA256
+
+4) Record package manifest SHAs to ledger:
+   Get-ChildItem -Path "ho_archive\deterministic_infer_run_20251121_183911" -Recurse -File | ForEach-Object { .FullName; Get-FileHash .FullName -Algorithm SHA256 } 
+
+Next-run preparation
+- Ensure manifests\ho_input_manifest.json exists if deterministic input required
+- CSV fallback: hoxnc_testing_with_target.csv at project root if needed
+- Model expected: models\placeholder_compatible.keras (confirm or replace)
+- Output folder: deterministic_infer_outputs_explicit
+- venv Python: C:\Users\loweb\AI_Financial_Sims\PyLibs\Scripts\python.exe
+
+Inference (safe wrapper pattern)
+- Create explicit output folder and run wrapper using absolute paths:
+  model_path, manifest_path "manifests\ho_input_manifest.json", csv_fallback full path, seed 42, output_folder full path
+- After run: paste wrapper JSON single-line output and any traceback lines
+
+Packaging & handover (atomic steps)
+1) Verify preds present and SHA computed
+2) Run packaging block to write output_shas.json, append HANDOVER.INDEX.json, copy package to ho_archive\<runid>, write archive_manifest_shas.json and HANDOVER.CLOSURE.txt, print PACKAGED path; items_packaged; preds sha
+3) If git shows no changes: write timestamped HANDOVER.CLOSURE.txt inside package, git add HANDOVER.INDEX.json and package folder, commit, push
+4) Create annotated tag <runid>-<short_commit> and git push origin <tag>
+
+Files and hashes to preserve (examples)
+- preds: deterministic_infer_outputs_explicit\preds.json — SHA256 3BE5DF4DAC52C33D8F02BC13B4E73A20030161157871FC87E3D5E3ADF587DF64
+- archive_manifest_shas.json — SHA256 9063BD42...841C3
+- HANDOVER.CLOSURE.txt (package) — SHA256 B302738B...2042
+- HANDOVER.INDEX.json (package copy) — SHA256 D4EF5E3A...83B
+- output_shas.json (package) — SHA256 DBE2D0CA...05AC4
+- HANDOVER.FRAGMENT.for_Claude.json on F:\ — SHA256 067DF6B7...AFE5
+
+Known anomalies and fixes
+- Broken literal filename created earlier: move into canonical output folder as preds_from_broken_name_<ts>.json if present
+- Restore manifests\ho_input_manifest.json before run to avoid CSV fallback if determinism required
+- Monitor TensorFlow runtime warnings; fail if fatal errors occur
+
+Expected outputs to paste back
+- After inference: single-line JSON from wrapper and any traceback
+- After packaging: three summary lines — PACKAGED path; items_packaged; preds.json sha or "No preds.json"
+- After forced commit: one-line git log output (commit header)
+- After tag push: git --no-pager show output line for the tag
+
+Minimal recovery plan
+1) If preds missing: re-run inference with explicit output_folder and force writing preds.json
+2) If HANDOVER.INDEX.json fails: manually append JSON entry and re-run packaging
+3) If git commit yields "no changes": update HANDOVER.CLOSURE.txt inside package and commit again
+
+Operational conventions
+- Use absolute paths in wrapper Python strings
+- Use deterministic seed 42 and record it
+- Keep one canonical output folder per run
+- Compute and record SHA256 for preds and packaged files; include in HANDOVER.CLOSURE.txt and HANDOVER.FRAGMENT.for_Claude.json
+
+First three tasks (exact order)
+1) Re-run verification commands (commit/tag on remote; verify closure file)
+2) Restore manifests\ho_input_manifest.json if needed, then run safe wrapper and paste output
+3) Package outputs, commit, push tag, and copy HANDOVER.FRAGMENT.for_Claude.json to F:\handover_fragments
+
+"End of TODO"
