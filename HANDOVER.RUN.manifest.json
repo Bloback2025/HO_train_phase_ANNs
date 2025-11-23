@@ -88,7 +88,7 @@
         "remediation_note": "HANDOVER.READABLE/REMEDIATION_NOTE.txt"
       },
       "provenance": {
-        "commit": "92d41bf38646e7fbfbd4b233e03a76a484f870ab",
+        "commit": "45748b68b2f4cb9eb0adac8565d9f013aed921f3",
         "branch": "main"
       }
     }
