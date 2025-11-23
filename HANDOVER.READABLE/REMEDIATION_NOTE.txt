@@ -1,0 +1,5 @@
+Remediation run performed: created minimal deterministic smoke runner scripts/run_smoke.py and executed FIX_AND_RUN_SMOKE.ps1.
+Result: deterministic_inference_outputs/preds.json written; SHA256: 82569964d2d06e47553330fd88d3d6b742a627e7b96560cb92a74b9e08dddb33
+Verification artifacts: F:\CLAUDE_MESSAGES\auto_verify_summary.json ; F:\CLAUDE_MESSAGES\smoke_run_output.log
+Action required: reviewer to append formal PASS closure to HANDOVER.RUN.manifest.json after confirming preds are correct.
+Timestamp (local): 2025-11-23T21:56:39.7954807+11:00
