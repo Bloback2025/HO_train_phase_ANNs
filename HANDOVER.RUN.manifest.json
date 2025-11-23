@@ -71,6 +71,8 @@
       "actor": "Brian Lowe",
       "notes": "Canonical dataset SHAs recorded; README created in HO_train_phase_ANNs"
     },
-    "closure_entries": []
+    "closure_entries": [
+      null
+    ]
   }
 }

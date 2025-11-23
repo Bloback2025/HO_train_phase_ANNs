@@ -1,10 +1,5 @@
 {
-  "file_name": "HANDOVER.RUN.manifest.json",
-  "absolute_path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO_train_phase_ANNs\\HANDOVER.RUN.manifest.json",
-  "manifest_id": "run-HO-20251123T155800-7F3C9D",
-  "computed_sha256": "AE918A2548E4902DE69FFDC07101C3436FC5D2FED16B47F3C42DBA3257591CD0",
-  "size_bytes": 3080,
-  "last_write": "2025-11-23T16:38:25.1733259+11:00",
-  "generated_at": "2025-11-23T16:45:29.1044986+11:00",
-  "note": "Recorded current manifest as canonical; sidecars updated"
+  "updated_at": "2025-11-23T21:05:22.3316915+11:00",
+  "manifest_sha256": "FF567E8E10AFEF9A32EE98D6C9C38023CC8D05A3A2229C4231F748C5C4D40256",
+  "file_name": "HANDOVER.RUN.manifest.json"
 }
