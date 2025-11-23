@@ -72,7 +72,25 @@
       "notes": "Canonical dataset SHAs recorded; README created in HO_train_phase_ANNs"
     },
     "closure_entries": [
-      null
+      {
+        "outputs": {
+          "preds_sha256": "1342b00587c163c7bef36a8739d4db7f281bf3b76b1e867af8a6add504c49f54",
+          "preds_path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO_train_phase_ANNs\\deterministic_inference_outputs\\preds.json"
+        },
+        "finished_at": "2025-11-23T21:27:14.5099229+11:00",
+        "run_id": "run-HO-20251123T155800-7F3C9D",
+        "actor": "automated_restore_for_readable_repo",
+        "started_at": "2025-11-23T21:27:14.5098755+11:00",
+        "verifier": {
+          "timestamp": "2025-11-23T21:27:14.5118524+11:00",
+          "signature": "AUTO_SIG_596795",
+          "actor": "claude@automated"
+        },
+        "smoke_run": {
+          "verdict": "FAIL",
+          "note": "Automated additional smoke-run logged in F:\\CLAUDE_MESSAGES\\smoke_run_output.log"
+        }
+      }
     ]
   }
 }
