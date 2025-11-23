@@ -82,13 +82,13 @@
       "notes": "Remediation run executed: minimal deterministic smoke runner created and executed; deterministic_inference_outputs/preds.json produced and SHA recorded. Reviewer must validate prediction correctness before release.",
       "artifacts": {
         "preds_path": "deterministic_inference_outputs/preds.json",
-        "preds_sha256": "82569964d2d06e47553330fd88d3d6b742a627e7b96560cb92a74b9e08dddb33",
+        "preds_sha256": "d837f53ef87def3b355f14ae6d719e4b8a84bfc74514affb5e137605c0d0af43",
         "verify_summary": "F:\\\\CLAUDE_MESSAGES\\\\auto_verify_summary.json",
         "smoke_log": "F:\\\\CLAUDE_MESSAGES\\\\smoke_run_output.log",
         "remediation_note": "HANDOVER.READABLE/REMEDIATION_NOTE.txt"
       },
       "provenance": {
-        "commit": "d4f1b6a0bdd365188d6daddc7c3658e212f5f368",
+        "commit": "92d41bf38646e7fbfbd4b233e03a76a484f870ab",
         "branch": "main"
       }
     }
