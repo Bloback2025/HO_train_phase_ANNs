@@ -82,13 +82,13 @@
         "actor": "automated_restore_for_readable_repo",
         "started_at": "2025-11-23T21:27:14.5098755+11:00",
         "verifier": {
-          "timestamp": "2025-11-23T21:27:14.5118524+11:00",
-          "signature": "AUTO_SIG_596795",
+          "timestamp": "2025-11-23T21:35:18.5925216+11:00",
+          "signature": "AUTO_SIG_580508",
           "actor": "claude@automated"
         },
         "smoke_run": {
           "verdict": "FAIL",
-          "note": "Automated additional smoke-run logged in F:\\CLAUDE_MESSAGES\\smoke_run_output.log"
+          "note": "Automated python search smoke-run"
         }
       }
     ]
