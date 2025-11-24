@@ -26,3 +26,7 @@ ANN_TEST_SUITE_snapshot_*.zip
 2bANN2*
 captured_runs/
 *.keras
+ho_artifact_outputs/
+captured_runs/
+*.keras
+2bANN2*

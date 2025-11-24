@@ -1,9 +1,0 @@
-{
-  "target": "F:\\institutional-evidence\\2bANN2_HO\\20251110",
-  "exported_at": "2025-11-10T22:35:05.2415916+11:00",
-  "summary_sha256": "6633065163DA0B809EBB4FF4438D594F04637AAAC14994DBAA16F3CB37641BC2",
-  "smoke_commit": "c80575ce640b89a2ed4279d1ccfc7a26415b0539",
-  "runlog_commit": "288f4d1bde1ab87aa6e0d3010ad2f181c587ad0b",
-  "archive_sha256": "49F5DC417554C75CA808DABB6586CA6147392CBE2956B7F2546CEE088E321F7E",
-  "tag": "smoke-run-2bANN2-HO-288f4d1"
-}
