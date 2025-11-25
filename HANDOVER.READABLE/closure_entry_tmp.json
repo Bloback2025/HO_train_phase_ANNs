@@ -1,0 +1,18 @@
+{
+  "closure_id": "closure-20251123-0001",
+  "verdict": "PASS",
+  "timestamp": "2025-11-23T21:53:00+11:00",
+  "actor": "remediation-automation",
+  "notes": "Remediation run executed: minimal deterministic smoke runner created and executed; deterministic_inference_outputs/preds.json produced and SHA recorded. Reviewer must validate prediction correctness before release.",
+  "artifacts": {
+    "preds_path": "deterministic_inference_outputs/preds.json",
+    "preds_sha256": "82569964d2d06e47553330fd88d3d6b742a627e7b96560cb92a74b9e08dddb33",
+    "verify_summary": "F:\\\\CLAUDE_MESSAGES\\\\auto_verify_summary.json",
+    "smoke_log": "F:\\\\CLAUDE_MESSAGES\\\\smoke_run_output.log",
+    "remediation_note": "HANDOVER.READABLE/REMEDIATION_NOTE.txt"
+  },
+  "provenance": {
+    "commit": "d4f1b6a0bdd365188d6daddc7c3658e212f5f368",
+    "branch": "main"
+  }
+}

@@ -1,0 +1,12 @@
+Unable to infer a runnable command from: C:\Users\loweb\AI_Financial_Sims\HO\HO_train_phase_ANNs\smoke\deterministic_inference_smoke.json
+
+Manual steps:
+1. Inspect C:\Users\loweb\AI_Financial_Sims\HO\HO_train_phase_ANNs\smoke\deterministic_inference_smoke.json to find the intended command or script.
+2. Run from repo root:
+   * For Python scripts:
+     python -u <script.py> --manifest HANDOVER.RUN.manifest.json --out deterministic_inference_outputs --seed 42
+   * For PowerShell scripts:
+     powershell -NoProfile -ExecutionPolicy Bypass -File <script.ps1> --manifest HANDOVER.RUN.manifest.json --out deterministic_inference_outputs --seed 42
+3. After run, ensure deterministic_inference_outputs/preds.json exists.
+
+I wrote this file for human inspection.
