@@ -1,1 +1,2 @@
 {0} | HO README retirement workflow closed | commits:26f33d5,53017a1 | actor:Brian Lowe | note:provenance normalized and HANDOVER.INDEX appended
+BUNDLE-SEALED run_20251125_1609: closure marker committed, provenance intact
