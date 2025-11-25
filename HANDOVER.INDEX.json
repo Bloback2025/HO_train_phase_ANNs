@@ -1,0 +1,3 @@
+{ "run": "20251125_1609", "status": "BUNDLE-SEALED", "note": "closure marker committed, provenance intact" }
+{ "run": "20251125_1609", "status": "BUNDLE-SEALED", "note": "closure marker committed" }
+{ "provenance": "intact", "hashes": "sealed" }
