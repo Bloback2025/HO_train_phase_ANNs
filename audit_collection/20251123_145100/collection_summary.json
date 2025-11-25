@@ -1,0 +1,12 @@
+{
+  "notes": "This collector reads files only and writes summaries under audit_collection. No commits or file moves are performed.",
+  "retired_summary": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO_train_phase_ANNs\\audit_collection\\20251123_145100\\retired_summary.json",
+  "run_focus": null,
+  "scripts_summary": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO_train_phase_ANNs\\audit_collection\\20251123_145100\\scripts_summary.json",
+  "run_reports": "",
+  "collected_at": "2025-11-23T14:51:00+11:00",
+  "named_targets": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO_train_phase_ANNs\\audit_collection\\20251123_145100\\named_targets.json",
+  "archive_manifests": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO_train_phase_ANNs\\audit_collection\\20251123_145100\\archive_manifests_found.json",
+  "repo_root": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO_train_phase_ANNs",
+  "git_info_file": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO_train_phase_ANNs\\audit_collection\\20251123_145100\\git_info.json"
+}

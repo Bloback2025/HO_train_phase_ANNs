@@ -1,0 +1,24 @@
+{
+  "readable_folder": "F:\\HO_HANDOVER\\LATEST_READABLE_run-HO-20251123T155800-7F3C9D_20251123T171020",
+  "restored_by": "automated_restore_for_readable_repo",
+  "items": [
+    {
+      "name": "HANDOVER.RUN.manifest.json",
+      "src": "F:\\HO_HANDOVER\\LATEST_READABLE_run-HO-20251123T155800-7F3C9D_20251123T171020\\HANDOVER.RUN.manifest.json",
+      "dst": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO_train_phase_ANNs\\HANDOVER.READABLE\\HANDOVER.RUN.manifest.json",
+      "sha": "ae918a2548e4902de69ffdc07101c3436fc5d2fed16b47f3c42dba3257591cd0",
+      "size": 3080,
+      "mtime": "2000-01-01T11:00:00+11:00"
+    },
+    {
+      "name": "HANDOVER.RUN.manifest.json.sha256.txt",
+      "src": "F:\\HO_HANDOVER\\LATEST_READABLE_run-HO-20251123T155800-7F3C9D_20251123T171020\\HANDOVER.RUN.manifest.json.sha256.txt",
+      "dst": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO_train_phase_ANNs\\HANDOVER.READABLE\\HANDOVER.RUN.manifest.json.sha256.txt",
+      "sha": "9b537ee6e20bf65fbb8bcae6c88a24f847df626b66a19b02da4d3f85652aee3f",
+      "size": 66,
+      "mtime": "2000-01-01T11:00:00+11:00"
+    }
+  ],
+  "restored_at": "2025-11-23T21:01:16.9603582+11:00",
+  "restored_into": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO_train_phase_ANNs\\HANDOVER.READABLE"
+}

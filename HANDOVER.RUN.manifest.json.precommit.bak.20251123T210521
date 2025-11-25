@@ -1,0 +1,76 @@
+{
+  "manifest_id": "run-HO-20251123T155800-7F3C9D",
+  "generated_by": "Brian Lowe",
+  "generated_at": "2025-11-23T15:58:00+11:00",
+  "project": "HO",
+  "repo_path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO_train_phase_ANNs",
+  "datasets": {
+    "training": {
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\hoxnc_training.csv",
+      "role": "training",
+      "date_range": "1982-01-06/1999-12-30",
+      "sha256": "04CC097BD744E1262AD885596C79C34D167F0A8E04B4D2DDA919EDB149709186",
+      "size_bytes": 145598,
+      "last_write": "2025-11-17T15:06:38"
+    },
+    "validation": {
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\hoxnc_validation.csv",
+      "role": "validation",
+      "date_range": "2000-01-04/2000-12-29",
+      "sha256": "6A6713BF2968600AACC7341F49D757FD95AEA268127A8B6EB34AA784CACAB511",
+      "size_bytes": 8035,
+      "last_write": "2025-11-17T15:06:38"
+    },
+    "testing": {
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\hoxnc_testing.csv",
+      "role": "testing",
+      "date_range": "2001-01-02/2006-06-16",
+      "sha256": "D7E75485054836422F7F4311DEF959CCD01BCDABA614326F16E3AC2BE89C216A",
+      "size_bytes": 44928,
+      "last_write": "2025-11-17T15:06:38"
+    }
+  },
+  "supporting_files": {
+    "testing_inputs": {
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\hoxnc_testing_inputs.csv",
+      "sha256": "054086D12941F0727C8C36827FC1F4F2858251B06B3EB21DEB9E0A1E1326F54C"
+    },
+    "testing_meta_original": {
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\hoxnc_testing_meta_original.csv",
+      "sha256": "D7E75485054836422F7F4311DEF959CCD01BCDABA614326F16E3AC2BE89C216A"
+    },
+    "testing_with_target": {
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\hoxnc_testing_with_target.csv",
+      "sha256": "748A6606F6BC95625BA4F486DBD3D1A5E9FA3DB10A3EC0CEF0C7618A00E80ACC"
+    },
+    "training_preprocessed": {
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\hoxnc_training.preprocessed.csv",
+      "sha256": "DDD4DC8D6F3F1ED27EC6EAC0F7A8D8A7C77C09F9DA44C387014B8C3B4A087A1E"
+    }
+  },
+  "run_config": {
+    "canonical_order": [
+      "training",
+      "validation",
+      "testing"
+    ],
+    "seed": 123456789,
+    "deterministic_inference": true,
+    "scaler": {
+      "path": "models/scaler.pkl",
+      "note": "If absent, fallback StandardScaler fitted on X_train; record scaler SHA here when present"
+    }
+  },
+  "ann_remark_template": {
+    "name": null,
+    "body_remark": "Include dataset paths, date ranges, SHAs, seed(s), deterministic flags, scaler path+SHA or fallback note, smoke-run pass/fail, error status, and metrics."
+  },
+  "handover": {
+    "created": {
+      "timestamp": "2025-11-23T15:58:00+11:00",
+      "actor": "Brian Lowe",
+      "notes": "Canonical dataset SHAs recorded; README created in HO_train_phase_ANNs"
+    },
+    "closure_entries": []
+  }
+}

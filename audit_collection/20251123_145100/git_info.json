@@ -1,0 +1,7 @@
+{
+  "show_name_only": "0bc5839 Sat Nov 22 22:15:18 2025 +1100 chore: append HANDOVER.CLOSURE for HO README retirement (closure)\nHANDOVER.CLOSURE.txt",
+  "head_short": "0bc5839",
+  "head_full": "0bc58393b15fd678a6859cbb10076d6155a27111",
+  "status": "?? REMOTE_README_FINAL.md\n?? artifacts/\n?? audit_collection/\n?? collect_audit_info.ps1\n?? collect_audit_info_noninteractive.ps1\n?? runlogs/\n?? scripts/\n?? smoke/",
+  "present": true
+}
