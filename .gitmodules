@@ -1,0 +1,3 @@
+[submodule "HO_train_phase_ANNs"]
+	path = HO_train_phase_ANNs
+	url = file:///C:/Users/loweb/AI_Financial_Sims/HO/HO_train_phase_ANNs.git
