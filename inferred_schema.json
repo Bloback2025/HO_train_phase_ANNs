@@ -1,0 +1,11 @@
+{
+  "target": "Close t+1",
+  "features": ["Open","High","Low","Close"],
+  "canonical_order": ["training","validation","testing"],
+  "datasets": {
+    "training": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\hoxnc_training.csv",
+    "validation": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\hoxnc_validation.csv",
+    "testing": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\hoxnc_testing.csv"
+  },
+  "seed": 123456789
+}
