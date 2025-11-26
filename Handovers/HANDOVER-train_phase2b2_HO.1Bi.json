@@ -1,0 +1,16 @@
+{
+  "run": "20251124_112147",
+  "file": "HO_train_phase_ANNs\\train_phase2b2_HO.1Bi.py",
+  "preds_sha256": "2da58a6a4aa06e475b0e251e89bf699178c68c7ac763559a179cc88312953fcc",
+  "file_sha256": "2DA58A6A4AA06E475B0E251E89BF699178C68C7AC763559A179cc88312953FCC",
+  "artifact": "file://\\\\10.0.0.5\\artifacts\\ANN\\run_20251124_112147\\preds_model.json",
+  "timestamp": "2025-11-25T14:33:12.1694170+11:00",
+  "author": "brian",
+  "status": "SEALED",
+  "validation": {
+    "checksum_verified": false,
+    "deterministic_inference_test": "not_run",
+    "notes": []
+  }
+}
+

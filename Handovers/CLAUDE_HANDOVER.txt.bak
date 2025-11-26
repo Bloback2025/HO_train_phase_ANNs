@@ -1,0 +1,37 @@
+Handover for model run 20251124_112147
+-------------------------------------
+Script: HO_train_phase_ANNs\train_phase2b2_HO.1Bi.py
+Author: brian
+Timestamp: 2025-11-25T14:33:12.1694170+11:00
+Status: SEALED
+
+Artifact URI:
+file://\\10.0.0.5\artifacts\ANN\run_20251124_112147\preds_model.json
+
+Hashes:
+preds_sha256: 2da58a6a4aa06e475b0e251e89bf699178c68c7ac763559a179cc88312953fcc
+file_sha256: 2DA58A6A4AA06E475B0E251E89BF699178C68C7AC763559A179cc88312953FCC
+
+Purpose:
+Train HO phase ANN and produce predictions artifact for downstream evaluation.
+
+Operational notes:
+- Data and artifact paths are network mounted at \\10.0.0.5
+- Ensure read access to data and write access to artifact path
+- Recommended Python environment: 3.9+, with numpy, pandas, torch/tensorflow, scikit-learn
+- If running on Windows, ensure UNC paths are accessible to the service account
+
+Files included in handover directory:
+- README-1Bi.md (human readable instructions)
+- HANDOVER-1Bi.json (machine readable metadata)
+- train_phase2b2_HO.1Bi.py (source code in repository)
+
+Suggested actions for Claude automation:
+1. Verify artifact presence and SHA256 checksum.
+2. If artifact valid, copy artifact to target storage or trigger downstream evaluation.
+3. If artifact missing or checksum mismatch, flag for human review and include logs.
+
+Contact:
+brian
+
+End of handover.

@@ -1,0 +1,30 @@
+﻿{
+    "run_id":  "train_phase2b2_HO.1B",
+    "created":  "2025-11-26T10:27:35+11:00",
+    "files":  [
+                  {
+                      "path":  "Handovers/CLAUDE_HANDOVER.txt",
+                      "size":  1380,
+                      "sha256":  "D26FDED27AE3EB7C7E22883105B233DBC713B5C3FFBADEF489047602C773FD1F",
+                      "mtime":  "2025-11-25T10:24:42.3773853Z"
+                  },
+                  {
+                      "path":  "Handovers/CLAUDE_HANDOVER.txt.bak",
+                      "size":  1344,
+                      "sha256":  "617DA5E37AD77A9B50AB1EF360DFA5AF0EDEA77D090F3FD1CCED90B0DDC7F123",
+                      "mtime":  "2025-11-25T06:44:58.2871748Z"
+                  },
+                  {
+                      "path":  "Handovers/HANDOVER-1Bi.json",
+                      "size":  581,
+                      "sha256":  "3E1AE44F3ACF62D53644295A2CEF527FE667004DD38C07FBF91ACB83790B6006",
+                      "mtime":  "2025-11-25T10:24:42.3791315Z"
+                  },
+                  {
+                      "path":  "Handovers/README-1Bi.md",
+                      "size":  267,
+                      "sha256":  "F7FA8E2F435E2BFDDFE6E1EE4FC4781F65F8C81ACC98A427F13EF14A77957AC3",
+                      "mtime":  "2025-11-25T10:24:42.3791315Z"
+                  }
+              ]
+}

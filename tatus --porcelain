@@ -1,0 +1,9 @@
+[33m8aedae8[m[33m ([m[1;33mtag: [m[1;33mv20251124-20251124_112147[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m Merge HANDOVER.INDEX.json: preserve previous entries and include sealed run 20251124_112147
+[33mfdd91ab[m Seal run_20251124_112147: add JSON entry for train_phase2b2_HO.1Bi.py
+[33m753f8a3[m Seal run_20251124_112147: ensure JSON and index contain sealed entry for train_phase2b2_HO.1Bi.py
+[33md8600af[m Ignore local HANDOVER.INDEX backup files
+[33mabb76ad[m Seal run_20251124_112147: corrected row and JSON entry for train_phase2b2_HO.1Bi.py
+[33m96c2318[m Seal run_20251125_1609: update HANDOVER.INDEX with acceptance marker
+[33m54126e2[m Seal run_20251125_1609: append bundle-seal JSON entry to HANDOVER.INDEX.json
+[33medb71ee[m Seal run_20251125_1609: append acceptance and bundle-seal lines to AUDIT_README.txt and HANDOVER.CLOSURE.txt
+[33m65ea418[m Fast-forward submodules HO 1st time 5080 and HO_train_phase_ANNs to origin/main
