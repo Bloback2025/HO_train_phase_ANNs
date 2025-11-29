@@ -34,6 +34,21 @@
       "error": "Model path not found or not provided: .\\models\\ho_best.h5",
       "attempted_command": "python deterministic_inference_v.1C.py --mode deterministic --model .\\models\\ho_best.h5 --train_csv <canonical> --val_csv <canonical> --test_csv <canonical> --outdir .\\captured_runs\\run1 --commodity HO --enforce-sha ...",
       "notes": "Deterministic run aborted because the model artifact .\\models\\ho_best.h5 was not present on disk. No preds produced."
+    },
+    {
+      "run_id": "run_20251129_060056",
+      "mode": "deterministic",
+      "outdir": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\captured_runs\\run_20251129_060056",
+      "commodity": "HO",
+      "status": "SUCCESS",
+      "preds": {
+        "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\captured_runs\\run_20251129_060056\\preds_model.json",
+        "sha_upper": "05B8707134022BC14494E39B5E0E0FB130F98BC2D274BB565B0368F04F7E6BC4",
+        "sha_lower": "05b8707134022bc14494e39b5e0e0fb130f98bc2d274bb565b0368f04f7e6bc4"
+      },
+      "manifest": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\captured_runs\\run_20251129_060056\\run_manifest.run_20251129_060056.inference.json",
+      "timestamp": "2025-11-29T17:01:43.2493979+11:00",
+      "notes": "Deterministic inference completed; preds and SHA recorded."
     }
   ],
   "canonical_inputs": {
