@@ -1,0 +1,70 @@
+{
+  "handover_for": "Claude",
+  "created_by": "loweb",
+  "created_at": "2025-11-29T16:36:16+11:00",
+  "context": {
+    "repo": "HO_train_phase_ANNs",
+    "repo_root": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO_train_phase_ANNs",
+    "branch": "restore/deterministic_inference_e7b020c",
+    "harness": "deterministic_inference_v.1C.py"
+  },
+  "runs": [
+    {
+      "run_id": "smoke_foo",
+      "mode": "synthetic",
+      "outdir": "captured_runs\\smoke_foo",
+      "seed": 20251117,
+      "commodity": "HO",
+      "status": "SUCCESS",
+      "preds": {
+        "path": "captured_runs\\smoke_foo\\preds_model.json",
+        "sha_lower": "6edeab8f35f3bd6551e5170032a666f4449425666f8f4a00035e8df10191202b",
+        "sha_upper": "6EDEAB8F35F3BD6551E5170032A666F4449425666F8F4A00035E8DF10191202B"
+      },
+      "manifest": "captured_runs\\smoke_foo\\run_manifest.smoke_foo.inference.json",
+      "notes": "Synthetic smoke run completed; atomic writes and dual sidecars produced."
+    },
+    {
+      "run_id": "run1",
+      "mode": "deterministic",
+      "outdir": "captured_runs\\run1",
+      "commodity": "HO",
+      "status": "FAILURE",
+      "error": "Model path not found or not provided: .\\models\\ho_best.h5",
+      "attempted_command": "python deterministic_inference_v.1C.py --mode deterministic --model .\\models\\ho_best.h5 --train_csv <canonical> --val_csv <canonical> --test_csv <canonical> --outdir .\\captured_runs\\run1 --commodity HO --enforce-sha ...",
+      "notes": "Deterministic run aborted because the model artifact .\\models\\ho_best.h5 was not present on disk. No preds produced."
+    }
+  ],
+  "canonical_inputs": {
+    "training_csv": {
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO_train_phase_ANNs\\hoxnc_training.csv",
+      "sha_upper": "04CC097BD744E1262AD885596C79C34D167F0A8E04B4D2DDA919EDB149709186"
+    },
+    "validation_csv": {
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO_train_phase_ANNs\\hoxnc_validation.csv",
+      "sha_upper": "39389B5D46FDE2F372171501B61D3300F0C9913CFE0A2C783B792566BB1B07B9"
+    },
+    "testing_csv": {
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO_train_phase_ANNs\\hoxnc_testing.csv",
+      "sha_upper": "D7E75485054836422F7F4311DEF959CCD01BCDABA614326F16E3AC2BE89C216A"
+    }
+  },
+  "logs_and_transcripts": {
+    "powershell_transcript": ".\\logs\\di_run_transcript.log",
+    "stdout_log": ".\\logs\\di_run_stdout.log",
+    "transcript_start": "2025-11-29T16:36:12+11:00",
+    "transcript_end": "2025-11-29T16:36:16+11:00"
+  },
+  "operational_notes": [
+    "Synthetic smoke run is CI-ready: produces preds_model.json, lowercase and uppercase sidecars, and a run manifest.",
+    "Deterministic model run requires a model artifact (SavedModel dir or .h5). Place model at .\\models\\ho_best.h5 or pass --model <path> to run deterministically.",
+    "Timestamps are recorded in manifests; manifests include model_sha_upper when model runs succeed.",
+    "Dual sidecars are written for compatibility with existing tooling (lowercase .sha256.txt and uppercase .SHA256.TXT)."
+  ],
+  "next_steps_for_claude": [
+    "Verify synthetic preds and manifest to confirm harness behavior.",
+    "If deterministic verification is required, provide the model artifact path and re-run the deterministic mode.",
+    "Add CI workflow to run synthetic smoke on PRs and gate deterministic runs to runners that have model artifacts.",
+    "If desired, harmonize sidecar naming conventions across the repo (current harness writes both formats)."
+  ]
+}
