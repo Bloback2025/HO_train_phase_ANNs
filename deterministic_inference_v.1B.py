@@ -23,41 +23,45 @@
 #  - Minimal implicit preprocessing; harness expects caller to supply compatible inputs
 #  - Clear manifest fragment returned for inclusion in HANDOVER artifacts
 
-import os
-import sys
-import json
 import hashlib
-import tempfile
-import shutil
+import json
+import os
 import random
-from pathlib import Path
+import tempfile
 from datetime import datetime
+from pathlib import Path
 from typing import Dict, Optional
+
 
 # Lazy imports to avoid heavy dependencies on import-time
 def _import_optional_deps():
     deps = {}
     try:
         import numpy as np
-        deps['np'] = np
+
+        deps["np"] = np
     except Exception:
-        deps['np'] = None
+        deps["np"] = None
     try:
         import joblib
-        deps['joblib'] = joblib
+
+        deps["joblib"] = joblib
     except Exception:
-        deps['joblib'] = None
+        deps["joblib"] = None
     try:
         import tensorflow as tf
-        deps['tf'] = tf
+
+        deps["tf"] = tf
     except Exception:
-        deps['tf'] = None
+        deps["tf"] = None
     try:
         import pandas as pd
-        deps['pd'] = pd
+
+        deps["pd"] = pd
     except Exception:
-        deps['pd'] = None
+        deps["pd"] = None
     return deps
+
 
 # -------------------------
 # Utilities
@@ -69,6 +73,7 @@ def sha256_file_upper(path: Path, chunk_size: int = 1 << 20) -> str:
             h.update(b)
     return h.hexdigest().upper()
 
+
 def write_atomic_bytes(path: Path, data: bytes):
     path.parent.mkdir(parents=True, exist_ok=True)
     with tempfile.NamedTemporaryFile(dir=path.parent, delete=False) as tf:
@@ -77,29 +82,33 @@ def write_atomic_bytes(path: Path, data: bytes):
         os.fsync(tf.fileno())
     os.replace(tf.name, str(path))
 
+
 def write_atomic_text(path: Path, text: str, encoding: str = "utf-8"):
     write_atomic_bytes(path, text.encode(encoding))
+
 
 def write_sidecar_sha(path: Path, sha: str):
     sidecar = Path(str(path) + ".SHA256.TXT")
     # Format: <SHA>  <relative/path>  (manifest expects uppercase SHA)
     write_atomic_text(sidecar, sha + "\n")
 
+
 def deterministic_seed_all(seed: int):
     random.seed(seed)
     deps = _import_optional_deps()
-    np = deps.get('np')
+    np = deps.get("np")
     if np is not None:
         try:
             np.random.seed(seed)
         except Exception:
             pass
-    tf = deps.get('tf')
+    tf = deps.get("tf")
     if tf is not None:
         try:
             tf.random.set_seed(seed)
         except Exception:
             pass
+
 
 # -------------------------
 # Minimal CSV loader (best-effort)
@@ -111,8 +120,8 @@ def load_csv_features(csv_path: Path, model=None):
     - If not, return a single-row zeros array sized to model input if model provided
     """
     deps = _import_optional_deps()
-    pd = deps.get('pd')
-    np = deps.get('np')
+    pd = deps.get("pd")
+    np = deps.get("np")
     if pd is not None:
         try:
             df = pd.read_csv(csv_path)
@@ -132,7 +141,9 @@ def load_csv_features(csv_path: Path, model=None):
             input_shape = model.input_shape
             if isinstance(input_shape, list):
                 input_shape = input_shape[0]
-            features = input_shape[-1] if input_shape and len(input_shape) >= 2 else 1
+            features = (
+                input_shape[-1] if input_shape and len(input_shape) >= 2 else 1
+            )
             if np is not None:
                 return np.zeros((1, features))
             return [[0.0] * features]
@@ -142,6 +153,7 @@ def load_csv_features(csv_path: Path, model=None):
     if np is not None:
         return np.zeros((1, 1))
     return [[0.0]]
+
 
 # -------------------------
 # Public API
@@ -153,7 +165,7 @@ def infer_with_model(
     seed: int = 20251117,
     scaler_path: Optional[str] = None,
     enforce_shas: Optional[Dict[str, str]] = None,
-    mode: str = "deterministic"
+    mode: str = "deterministic",
 ) -> Dict[str, str]:
     """
     Run deterministic inference and produce auditable outputs.
@@ -184,7 +196,9 @@ def infer_with_model(
             if actual != expected:
                 mismatches.append((k, str(ppath), expected, actual))
     if mismatches:
-        details = "; ".join([f"{k} expected {e} got {a}" for (k,_,e,a) in mismatches])
+        details = "; ".join(
+            [f"{k} expected {e} got {a}" for (k, _, e, a) in mismatches]
+        )
         raise RuntimeError("SHA MISMATCH: " + details)
 
     # Deterministic seeding
@@ -192,7 +206,12 @@ def infer_with_model(
 
     # Synthetic smoke mode
     if mode == "synthetic":
-        preds = {"run_id": outdir.name, "seed": seed, "mode": "synthetic", "preds": [{"id": "SYNTH_1", "score": 0.12345}]}
+        preds = {
+            "run_id": outdir.name,
+            "seed": seed,
+            "mode": "synthetic",
+            "preds": [{"id": "SYNTH_1", "score": 0.12345}],
+        }
         preds_bytes = json.dumps(preds, indent=2).encode("utf-8")
         preds_path = outdir / "preds_model.json"
         write_atomic_bytes(preds_path, preds_bytes)
@@ -204,24 +223,34 @@ def infer_with_model(
             "timestamp": datetime.utcnow().isoformat() + "Z",
             "mode": "synthetic",
             "seed": seed,
-            "input_files": {k: str(Path(v).resolve()) for k, v in input_csvs.items()},
+            "input_files": {
+                k: str(Path(v).resolve()) for k, v in input_csvs.items()
+            },
             "input_shas": enforce_shas or {},
             "outputs": {"preds": str(preds_path), "preds_sha": preds_sha},
         }
         manifest_path = outdir / f"run_manifest.{outdir.name}.inference.json"
         manifest_bytes = json.dumps(manifest, indent=2).encode("utf-8")
         write_atomic_bytes(manifest_path, manifest_bytes)
-        write_sidecar_sha(manifest_path, hashlib.sha256(manifest_bytes).hexdigest().upper())
-        return {"preds_path": str(preds_path), "preds_sha": preds_sha, "manifest": str(manifest_path)}
+        write_sidecar_sha(
+            manifest_path, hashlib.sha256(manifest_bytes).hexdigest().upper()
+        )
+        return {
+            "preds_path": str(preds_path),
+            "preds_sha": preds_sha,
+            "manifest": str(manifest_path),
+        }
 
     # Deterministic inference with model
     deps = _import_optional_deps()
-    tf = deps.get('tf')
-    np = deps.get('np')
-    joblib = deps.get('joblib')
+    tf = deps.get("tf")
+    deps.get("np")
+    joblib = deps.get("joblib")
 
     if tf is None:
-        raise RuntimeError("TensorFlow not available; cannot run deterministic inference in model mode")
+        raise RuntimeError(
+            "TensorFlow not available; cannot run deterministic inference in model mode"
+        )
 
     # Load scaler if provided
     scaler_sha = None
@@ -237,11 +266,13 @@ def infer_with_model(
             except Exception:
                 # fallback: try pickle
                 import pickle
+
                 with open(scaler_p, "rb") as f:
                     scaler_obj = pickle.load(f)
         else:
             # try pickle if joblib not present
             import pickle
+
             with open(scaler_p, "rb") as f:
                 scaler_obj = pickle.load(f)
 
@@ -262,7 +293,12 @@ def infer_with_model(
         raise RuntimeError(f"Failed to load model at {model_p}: {e}")
 
     # Prepare inputs and run inference on test CSV
-    test_csv = Path(input_csvs.get("test") or input_csvs.get("testing") or input_csvs.get("val") or next(iter(input_csvs.values())))
+    test_csv = Path(
+        input_csvs.get("test")
+        or input_csvs.get("testing")
+        or input_csvs.get("val")
+        or next(iter(input_csvs.values()))
+    )
     X_test = load_csv_features(test_csv, model=model)
     # If scaler present, apply transform deterministically
     if scaler_obj is not None:
@@ -280,7 +316,12 @@ def infer_with_model(
         preds_list = [float(x) for x in preds_array]
 
     # Serialize predictions
-    preds = {"run_id": outdir.name, "timestamp": datetime.utcnow().isoformat() + "Z", "seed": seed, "preds": [{"row": i, "score": p} for i, p in enumerate(preds_list)]}
+    preds = {
+        "run_id": outdir.name,
+        "timestamp": datetime.utcnow().isoformat() + "Z",
+        "seed": seed,
+        "preds": [{"row": i, "score": p} for i, p in enumerate(preds_list)],
+    }
     preds_bytes = json.dumps(preds, indent=2).encode("utf-8")
     preds_path = outdir / "preds_model.json"
     write_atomic_bytes(preds_path, preds_bytes)
@@ -297,53 +338,88 @@ def infer_with_model(
         "model_sha": sha256_file_upper(model_p) if model_p.exists() else None,
         "scaler_path": str(scaler_path) if scaler_path else None,
         "scaler_sha": scaler_sha,
-        "input_files": {k: str(Path(v).resolve()) for k, v in input_csvs.items()},
+        "input_files": {
+            k: str(Path(v).resolve()) for k, v in input_csvs.items()
+        },
         "input_shas": enforce_shas or {},
         "outputs": {"preds": str(preds_path), "preds_sha": preds_sha},
     }
     manifest_path = outdir / f"run_manifest.{outdir.name}.inference.json"
     manifest_bytes = json.dumps(manifest, indent=2).encode("utf-8")
     write_atomic_bytes(manifest_path, manifest_bytes)
-    write_sidecar_sha(manifest_path, hashlib.sha256(manifest_bytes).hexdigest().upper())
+    write_sidecar_sha(
+        manifest_path, hashlib.sha256(manifest_bytes).hexdigest().upper()
+    )
 
-    return {"preds_path": str(preds_path), "preds_sha": preds_sha, "manifest": str(manifest_path)}
+    return {
+        "preds_path": str(preds_path),
+        "preds_sha": preds_sha,
+        "manifest": str(manifest_path),
+    }
+
 
 # -------------------------
 # CLI convenience wrapper for smoke runs
 # -------------------------
 if __name__ == "__main__":
     import argparse
-    parser = argparse.ArgumentParser(description="Deterministic inference harness (inference_v.1B)")
-    parser.add_argument("--model", required=False, help="Path to model artifact (h5 or SavedModel dir)")
-    parser.add_argument("--outdir", required=True, help="Output directory for preds and manifest")
-    parser.add_argument("--mode", choices=["deterministic", "synthetic"], default="synthetic", help="Run mode")
-    parser.add_argument("--seed", type=int, default=20251117, help="Deterministic seed")
-    parser.add_argument("--scaler", required=False, help="Optional scaler path (joblib/pickle)")
-    parser.add_argument("--train_csv", required=False, help="Training CSV path")
-    parser.add_argument("--val_csv", required=False, help="Validation CSV path")
+
+    parser = argparse.ArgumentParser(
+        description="Deterministic inference harness (inference_v.1B)"
+    )
+    parser.add_argument(
+        "--model",
+        required=False,
+        help="Path to model artifact (h5 or SavedModel dir)",
+    )
+    parser.add_argument(
+        "--outdir",
+        required=True,
+        help="Output directory for preds and manifest",
+    )
+    parser.add_argument(
+        "--mode",
+        choices=["deterministic", "synthetic"],
+        default="synthetic",
+        help="Run mode",
+    )
+    parser.add_argument(
+        "--seed", type=int, default=20251117, help="Deterministic seed"
+    )
+    parser.add_argument(
+        "--scaler", required=False, help="Optional scaler path (joblib/pickle)"
+    )
+    parser.add_argument(
+        "--train_csv", required=False, help="Training CSV path"
+    )
+    parser.add_argument(
+        "--val_csv", required=False, help="Validation CSV path"
+    )
     parser.add_argument("--test_csv", required=False, help="Test CSV path")
     args = parser.parse_args()
 
     input_csvs = {}
     if args.train_csv:
-        input_csvs['train'] = args.train_csv
+        input_csvs["train"] = args.train_csv
     if args.val_csv:
-        input_csvs['val'] = args.val_csv
+        input_csvs["val"] = args.val_csv
     if args.test_csv:
-        input_csvs['test'] = args.test_csv
+        input_csvs["test"] = args.test_csv
 
     # If no CSVs provided and canonical paths exist, prefer them (best-effort)
     if not input_csvs:
-        canonical_base = Path(r"C:\Users\loweb\AI_Financial_Sims\HO\HO 1st time 5080")
+        canonical_base = Path(
+            r"C:\Users\loweb\AI_Financial_Sims\HO\HO 1st time 5080"
+        )
         cand_train = canonical_base / "hoxnc_training.csv"
         cand_val = canonical_base / "hoxnc_validation.csv"
         cand_test = canonical_base / "hoxnc_testing.csv"
         if cand_train.exists():
-            input_csvs['train'] = str(cand_train)
+            input_csvs["train"] = str(cand_train)
         if cand_val.exists():
-            input_csvs['val'] = str(cand_val)
+            input_csvs["val"] = str(cand_val)
         if cand_test.exists():
-            input_csvs['test'] = str(cand_test)
+            input_csvs["test"] = str(cand_test)
 
     # enforce_shas can be provided here if desired; left empty by default
     enforce_shas = None
@@ -355,6 +431,6 @@ if __name__ == "__main__":
         seed=args.seed,
         scaler_path=args.scaler,
         enforce_shas=enforce_shas,
-        mode=args.mode
+        mode=args.mode,
     )
     print(json.dumps(result, indent=2))

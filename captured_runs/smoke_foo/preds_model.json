@@ -1,0 +1,13 @@
+{
+  "commodity": "HO",
+  "mode": "synthetic",
+  "preds": [
+    {
+      "id": "SYNTH_1",
+      "score": 0.12345
+    }
+  ],
+  "run_id": "smoke_foo",
+  "seed": 20251117,
+  "timestamp": "2025-11-29T04:54:55.449039Z"
+}

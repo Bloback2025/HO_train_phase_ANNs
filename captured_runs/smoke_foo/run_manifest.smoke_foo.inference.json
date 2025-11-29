@@ -1,0 +1,14 @@
+{
+  "commodity": "HO",
+  "input_files": {},
+  "input_shas": {},
+  "mode": "synthetic",
+  "outputs": {
+    "preds": "captured_runs\\smoke_foo\\preds_model.json",
+    "preds_sha_lower": "6edeab8f35f3bd6551e5170032a666f4449425666f8f4a00035e8df10191202b",
+    "preds_sha_upper": "6EDEAB8F35F3BD6551E5170032A666F4449425666F8F4A00035E8DF10191202B"
+  },
+  "run_id": "smoke_foo",
+  "seed": 20251117,
+  "timestamp": "2025-11-29T04:54:55.459733Z"
+}

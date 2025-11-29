@@ -16,5 +16,4 @@ try { $jm = if (Test-Path $repoManifest){ Get-Content $repoManifest -Raw | Conve
 $report.closure_entry = if ($jm -and $jm.handover -and $jm.handover.closure_entries) { $jm.handover.closure_entries[-1] } else { $null }
 $report.timestamp = (Get-Date).ToString("o")
 $report | ConvertTo-Json -Depth 12 | Set-Content -Path (Join-Path $env:TEMP "claude_verify_summary.json") -Encoding UTF8
-Write-Output "WROTE_SUMMARY -> " + (Join-Path $env:TEMP "claude_verify_summary.json")
-$report | ConvertTo-Json -Depth 12 | Write-Output
+

@@ -1,0 +1,351 @@
+{
+  "inspected_at": "2025-11-29T14:07:38.2730910+11:00",
+  "release_findings": [],
+  "temp_dir": "C:\\Users\\loweb\\AppData\\Local\\Temp\\inspect_HO_20251129_140734",
+  "deterministic_inference_in_repo": [
+    {
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO_train_phase_ANNs\\deterministic_inference.py",
+      "sha256": "5bfec11731b0311a824f58f826a0955291f8213b8859037a65e4fcac66b40db1",
+      "sidecar": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO_train_phase_ANNs\\deterministic_inference.sha256"
+    }
+  ],
+  "inspected_files": [
+    {
+      "name": "deterministic_inference_v.1B.py",
+      "relpath": "deterministic_inference_v.1B.py",
+      "fullpath": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO_train_phase_ANNs\\deterministic_inference_v.1B.py",
+      "sha256": "0f4e203a3f27a00edd3cae970e47b25ac6f7d086ca726dd3dccd0607b552603d",
+      "sidecar": null,
+      "last_commit": "353c6a9 2025-11-26 21:40:08 +1100 Brian Lowe chore(recovery): add hardened DI and schema"
+    },
+    {
+      "name": "train_phase2b2_HO.1B.py",
+      "relpath": "train_phase2b2_HO.1B.py",
+      "fullpath": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO_train_phase_ANNs\\train_phase2b2_HO.1B.py",
+      "sha256": "1b19359f619c519d4ad4611e1a6dfcad40209a5df2989c6d939e549df89a07ce",
+      "sidecar": null,
+      "last_commit": "1a26986 2025-11-25 13:41:19 +1100 Brian Lowe Commit nested repo changes: update HANDOVER.READABLE and add canonical training scripts"
+    },
+    {
+      "name": "train_phase2b2_HO.1Bi.py",
+      "relpath": "train_phase2b2_HO.1Bi.py",
+      "fullpath": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO_train_phase_ANNs\\train_phase2b2_HO.1Bi.py",
+      "sha256": "2da58a6a4aa06e475b0e251e89bf699178c68c7ac763559a179cc88312953fcc",
+      "sidecar": null,
+      "last_commit": "1a26986 2025-11-25 13:41:19 +1100 Brian Lowe Commit nested repo changes: update HANDOVER.READABLE and add canonical training scripts"
+    },
+    {
+      "name": "train_phase2b2_HO.1Bi.py",
+      "relpath": "train_phase2b2_HO.1Bi.py",
+      "fullpath": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO_train_phase_ANNs\\train_phase2b2_HO.1Bi.py",
+      "sha256": "2da58a6a4aa06e475b0e251e89bf699178c68c7ac763559a179cc88312953fcc",
+      "sidecar": null,
+      "last_commit": "1a26986 2025-11-25 13:41:19 +1100 Brian Lowe Commit nested repo changes: update HANDOVER.READABLE and add canonical training scripts"
+    },
+    {
+      "name": "hoxnc_training.csv",
+      "relpath": "hoxnc_training.csv",
+      "fullpath": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO_train_phase_ANNs\\hoxnc_training.csv",
+      "sha256": "04cc097bd744e1262ad885596c79c34d167f0a8e04b4d2dda919edb149709186",
+      "sidecar": null,
+      "last_commit": null
+    },
+    {
+      "name": "inspect_local_HO_train_phase_ANNs.ps1",
+      "relpath": "inspect_local_HO_train_phase_ANNs.ps1",
+      "fullpath": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO_train_phase_ANNs\\inspect_local_HO_train_phase_ANNs.ps1",
+      "sha256": "5709a78d3f06e456e756d84ab682f21e80f09bb9761da897651ad64c7821d9b6",
+      "sidecar": null,
+      "last_commit": null
+    },
+    {
+      "name": "train_phase2b2_HO.1A.py",
+      "relpath": "train_phase2b2_HO.1A.py",
+      "fullpath": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO_train_phase_ANNs\\train_phase2b2_HO.1A.py",
+      "sha256": "cf4c31fddaa921a163af020b3fee130d65da11e16f3612c11a42b00c6713b66b",
+      "sidecar": null,
+      "last_commit": "1a26986 2025-11-25 13:41:19 +1100 Brian Lowe Commit nested repo changes: update HANDOVER.READABLE and add canonical training scripts"
+    },
+    {
+      "name": "train_phase2b2_HO.1B.py",
+      "relpath": "train_phase2b2_HO.1B.py",
+      "fullpath": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO_train_phase_ANNs\\train_phase2b2_HO.1B.py",
+      "sha256": "1b19359f619c519d4ad4611e1a6dfcad40209a5df2989c6d939e549df89a07ce",
+      "sidecar": null,
+      "last_commit": "1a26986 2025-11-25 13:41:19 +1100 Brian Lowe Commit nested repo changes: update HANDOVER.READABLE and add canonical training scripts"
+    },
+    {
+      "name": "train_phase2b2_HO.1B.py.sha256",
+      "relpath": "train_phase2b2_HO.1B.py.sha256",
+      "fullpath": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO_train_phase_ANNs\\train_phase2b2_HO.1B.py.sha256",
+      "sha256": "28c8ddcd86173a80f2d6ac71c81bddf87bce9daf804db30f4d2d651cae16b667",
+      "sidecar": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO_train_phase_ANNs\\train_phase2b2_HO.1B.py.sha256",
+      "last_commit": null
+    },
+    {
+      "name": "train_phase2b2_HO.1Bi.py",
+      "relpath": "train_phase2b2_HO.1Bi.py",
+      "fullpath": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO_train_phase_ANNs\\train_phase2b2_HO.1Bi.py",
+      "sha256": "2da58a6a4aa06e475b0e251e89bf699178c68c7ac763559a179cc88312953fcc",
+      "sidecar": null,
+      "last_commit": "1a26986 2025-11-25 13:41:19 +1100 Brian Lowe Commit nested repo changes: update HANDOVER.READABLE and add canonical training scripts"
+    },
+    {
+      "name": "train_phase2b2_HO.1Bi.py.bak_20251124_155812",
+      "relpath": "train_phase2b2_HO.1Bi.py.bak_20251124_155812",
+      "fullpath": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO_train_phase_ANNs\\train_phase2b2_HO.1Bi.py.bak_20251124_155812",
+      "sha256": "27bca4b6cc1c8a605488d790ba924676de4c35a1ac8f98fe6ada0354fd5bac4d",
+      "sidecar": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO_train_phase_ANNs\\train_phase2b2_HO.1Bi.py.sha256",
+      "last_commit": "1a26986 2025-11-25 13:41:19 +1100 Brian Lowe Commit nested repo changes: update HANDOVER.READABLE and add canonical training scripts"
+    },
+    {
+      "name": "train_phase2b2_HO.1Bi.py.bak_20251124_160637",
+      "relpath": "train_phase2b2_HO.1Bi.py.bak_20251124_160637",
+      "fullpath": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO_train_phase_ANNs\\train_phase2b2_HO.1Bi.py.bak_20251124_160637",
+      "sha256": "fbf2a86206b1d0daf10ea0e8a04148173540b5dd8190dfce19e65b7ed5348b2d",
+      "sidecar": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO_train_phase_ANNs\\train_phase2b2_HO.1Bi.py.sha256",
+      "last_commit": "1a26986 2025-11-25 13:41:19 +1100 Brian Lowe Commit nested repo changes: update HANDOVER.READABLE and add canonical training scripts"
+    },
+    {
+      "name": "train_phase2b2_HO.1Bi.py.bak_20251124_161427",
+      "relpath": "train_phase2b2_HO.1Bi.py.bak_20251124_161427",
+      "fullpath": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO_train_phase_ANNs\\train_phase2b2_HO.1Bi.py.bak_20251124_161427",
+      "sha256": "55666b7bc26c7df21323dfda29a65a203662cefe49e8a259e626dd26101eab66",
+      "sidecar": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO_train_phase_ANNs\\train_phase2b2_HO.1Bi.py.sha256",
+      "last_commit": "1a26986 2025-11-25 13:41:19 +1100 Brian Lowe Commit nested repo changes: update HANDOVER.READABLE and add canonical training scripts"
+    },
+    {
+      "name": "train_phase2b2_HO.1Bi.py.sha256",
+      "relpath": "train_phase2b2_HO.1Bi.py.sha256",
+      "fullpath": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO_train_phase_ANNs\\train_phase2b2_HO.1Bi.py.sha256",
+      "sha256": "9cf3fd4bc7f8193b4f3a0efdd3dbadc9108cd3ff919b420e8557c9af4ef484a7",
+      "sidecar": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO_train_phase_ANNs\\train_phase2b2_HO.1Bi.py.sha256",
+      "last_commit": "1a26986 2025-11-25 13:41:19 +1100 Brian Lowe Commit nested repo changes: update HANDOVER.READABLE and add canonical training scripts"
+    },
+    {
+      "name": "constrain.py",
+      "relpath": ".venv\\Lib\\site-packages\\pip\\_vendor\\rich\\constrain.py",
+      "fullpath": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO_train_phase_ANNs\\.venv\\Lib\\site-packages\\pip\\_vendor\\rich\\constrain.py",
+      "sha256": "d5520fb82f0082d296adc9dc42b8c1758a80dc9556cacbba8d9a35aeb87b73b4",
+      "sidecar": null,
+      "last_commit": null
+    },
+    {
+      "name": "constrain.cpython-313.pyc",
+      "relpath": ".venv\\Lib\\site-packages\\pip\\_vendor\\rich\\__pycache__\\constrain.cpython-313.pyc",
+      "fullpath": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO_train_phase_ANNs\\.venv\\Lib\\site-packages\\pip\\_vendor\\rich\\__pycache__\\constrain.cpython-313.pyc",
+      "sha256": "a110a5761c23f416d85c084df0696cfa43172391c50030fcb5cbae4ee7b63d2d",
+      "sidecar": null,
+      "last_commit": null
+    },
+    {
+      "name": "train_phase2b2_HO.1Bi.manifest.json",
+      "relpath": "artifacts\\manifests\\train_phase2b2_HO.1Bi.manifest.json",
+      "fullpath": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO_train_phase_ANNs\\artifacts\\manifests\\train_phase2b2_HO.1Bi.manifest.json",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sidecar": null,
+      "last_commit": "1a26986 2025-11-25 13:41:19 +1100 Brian Lowe Commit nested repo changes: update HANDOVER.READABLE and add canonical training scripts"
+    },
+    {
+      "name": "HANDOVER-train_phase2b2_HO.1Bi.json",
+      "relpath": "Handovers\\HANDOVER-train_phase2b2_HO.1Bi.json",
+      "fullpath": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO_train_phase_ANNs\\Handovers\\HANDOVER-train_phase2b2_HO.1Bi.json",
+      "sha256": "a0fc323427b808842793d3608ddde995c0d665337e8e9b22c4d71c7cabe76f7f",
+      "sidecar": null,
+      "last_commit": "a2b1955 2025-11-26 13:00:41 +1100 Brian Lowe Save local changes to HO_train_phase_ANNs"
+    },
+    {
+      "name": "README-train_phase2b2_HO.1B_infra_current.md",
+      "relpath": "Handovers and READMEs for 1Bi.py\\README-train_phase2b2_HO.1B_infra_current.md",
+      "fullpath": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO_train_phase_ANNs\\Handovers and READMEs for 1Bi.py\\README-train_phase2b2_HO.1B_infra_current.md",
+      "sha256": "7a4d9471607d8498ce495e9c5f640e529b2a5d981fc4413f3e2329cabe71b24f",
+      "sidecar": null,
+      "last_commit": "a2b1955 2025-11-26 13:00:41 +1100 Brian Lowe Save local changes to HO_train_phase_ANNs"
+    },
+    {
+      "name": "README-train_phase2b2_HO.1B_infra_v1.0_20251126.md",
+      "relpath": "Handovers and READMEs for 1Bi.py\\README-train_phase2b2_HO.1B_infra_v1.0_20251126.md",
+      "fullpath": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO_train_phase_ANNs\\Handovers and READMEs for 1Bi.py\\README-train_phase2b2_HO.1B_infra_v1.0_20251126.md",
+      "sha256": "7a4d9471607d8498ce495e9c5f640e529b2a5d981fc4413f3e2329cabe71b24f",
+      "sidecar": null,
+      "last_commit": "a2b1955 2025-11-26 13:00:41 +1100 Brian Lowe Save local changes to HO_train_phase_ANNs"
+    },
+    {
+      "name": "README-train_phase2b2_HO.1B_infra-technical_current.md",
+      "relpath": "Handovers and READMEs for 1Bi.py\\README-train_phase2b2_HO.1B_infra-technical_current.md",
+      "fullpath": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO_train_phase_ANNs\\Handovers and READMEs for 1Bi.py\\README-train_phase2b2_HO.1B_infra-technical_current.md",
+      "sha256": "ec90effa86446fcf582c019b0149b8682f6a9a7540362b40ea34c0c876e9db84",
+      "sidecar": null,
+      "last_commit": "a2b1955 2025-11-26 13:00:41 +1100 Brian Lowe Save local changes to HO_train_phase_ANNs"
+    },
+    {
+      "name": "README-train_phase2b2_HO.1B_infra-technical_v1.0_20251126.md",
+      "relpath": "Handovers and READMEs for 1Bi.py\\README-train_phase2b2_HO.1B_infra-technical_v1.0_20251126.md",
+      "fullpath": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO_train_phase_ANNs\\Handovers and READMEs for 1Bi.py\\README-train_phase2b2_HO.1B_infra-technical_v1.0_20251126.md",
+      "sha256": "ec90effa86446fcf582c019b0149b8682f6a9a7540362b40ea34c0c876e9db84",
+      "sidecar": null,
+      "last_commit": "a2b1955 2025-11-26 13:00:41 +1100 Brian Lowe Save local changes to HO_train_phase_ANNs"
+    },
+    {
+      "name": "README-train_phase2b2_HO.1B_master_current.md",
+      "relpath": "Handovers and READMEs for 1Bi.py\\README-train_phase2b2_HO.1B_master_current.md",
+      "fullpath": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO_train_phase_ANNs\\Handovers and READMEs for 1Bi.py\\README-train_phase2b2_HO.1B_master_current.md",
+      "sha256": "e3b6196c9f284d248333cbe981db2a34046c0e172a80f87635d2e09c415a777e",
+      "sidecar": null,
+      "last_commit": "a2b1955 2025-11-26 13:00:41 +1100 Brian Lowe Save local changes to HO_train_phase_ANNs"
+    },
+    {
+      "name": "README-train_phase2b2_HO.1B_master_v1.0_20251126.md",
+      "relpath": "Handovers and READMEs for 1Bi.py\\README-train_phase2b2_HO.1B_master_v1.0_20251126.md",
+      "fullpath": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO_train_phase_ANNs\\Handovers and READMEs for 1Bi.py\\README-train_phase2b2_HO.1B_master_v1.0_20251126.md",
+      "sha256": "e3b6196c9f284d248333cbe981db2a34046c0e172a80f87635d2e09c415a777e",
+      "sidecar": null,
+      "last_commit": "a2b1955 2025-11-26 13:00:41 +1100 Brian Lowe Save local changes to HO_train_phase_ANNs"
+    },
+    {
+      "name": "README-train_phase2b2_HO.1Bi_master_current.md",
+      "relpath": "Handovers and READMEs for 1Bi.py\\README-train_phase2b2_HO.1Bi_master_current.md",
+      "fullpath": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO_train_phase_ANNs\\Handovers and READMEs for 1Bi.py\\README-train_phase2b2_HO.1Bi_master_current.md",
+      "sha256": "fcec4ec06c462dd0751267c9c936ee0e7133cc7143fa50e1ab0759cf791b858e",
+      "sidecar": null,
+      "last_commit": "a2b1955 2025-11-26 13:00:41 +1100 Brian Lowe Save local changes to HO_train_phase_ANNs"
+    },
+    {
+      "name": "README-train_phase2b2_HO.1Bi_master_v1.0_20251126.md",
+      "relpath": "Handovers and READMEs for 1Bi.py\\README-train_phase2b2_HO.1Bi_master_v1.0_20251126.md",
+      "fullpath": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO_train_phase_ANNs\\Handovers and READMEs for 1Bi.py\\README-train_phase2b2_HO.1Bi_master_v1.0_20251126.md",
+      "sha256": "47cc431e4981f893ddbfc604a868cd81bc6725e531f8e6c829efd79aa3ee746a",
+      "sidecar": null,
+      "last_commit": "a2b1955 2025-11-26 13:00:41 +1100 Brian Lowe Save local changes to HO_train_phase_ANNs"
+    },
+    {
+      "name": "train_phase2b2_HO.1B.manifest.json",
+      "relpath": "manifests\\train_phase2b2_HO.1B.manifest.json",
+      "fullpath": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO_train_phase_ANNs\\manifests\\train_phase2b2_HO.1B.manifest.json",
+      "sha256": "d86b5790deeb0ef6eb6f1bbf1a23086b4e96b318cbd0999e465bfe8a7ff2af88",
+      "sidecar": null,
+      "last_commit": "a2b1955 2025-11-26 13:00:41 +1100 Brian Lowe Save local changes to HO_train_phase_ANNs"
+    },
+    {
+      "name": "train_phase2b2_HO.1Bi.manifest.json",
+      "relpath": "manifests\\train_phase2b2_HO.1Bi.manifest.json",
+      "fullpath": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO_train_phase_ANNs\\manifests\\train_phase2b2_HO.1Bi.manifest.json",
+      "sha256": "45e1b3d33ff3f91bf6a3d77672c48ec76b4b28549e010af4e534c76c10ff3319",
+      "sidecar": null,
+      "last_commit": "a2b1955 2025-11-26 13:00:41 +1100 Brian Lowe Save local changes to HO_train_phase_ANNs"
+    },
+    {
+      "name": "RUNLOG_train_phase2b2_HO.1Bi.json",
+      "relpath": "runlogs\\RUNLOG_train_phase2b2_HO.1Bi.json",
+      "fullpath": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO_train_phase_ANNs\\runlogs\\RUNLOG_train_phase2b2_HO.1Bi.json",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sidecar": null,
+      "last_commit": "1a26986 2025-11-25 13:41:19 +1100 Brian Lowe Commit nested repo changes: update HANDOVER.READABLE and add canonical training scripts"
+    },
+    {
+      "name": "train_phase2b2_HO.1B.py.sha256",
+      "relpath": "sha256sums\\train_phase2b2_HO.1B.py.sha256",
+      "fullpath": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO_train_phase_ANNs\\sha256sums\\train_phase2b2_HO.1B.py.sha256",
+      "sha256": "23c1e041b937b05db5ee86dd7de426f9f9f82ce5cfa11c4b9292499626d33083",
+      "sidecar": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO_train_phase_ANNs\\sha256sums\\train_phase2b2_HO.1B.py.sha256",
+      "last_commit": "a2b1955 2025-11-26 13:00:41 +1100 Brian Lowe Save local changes to HO_train_phase_ANNs"
+    },
+    {
+      "name": "train_phase2b2_HO.1Bi.cpython-313.pyc",
+      "relpath": "__pycache__\\train_phase2b2_HO.1Bi.cpython-313.pyc",
+      "fullpath": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO_train_phase_ANNs\\__pycache__\\train_phase2b2_HO.1Bi.cpython-313.pyc",
+      "sha256": "779648eb028fe254d028c4c94c69c8157f7db46b2025e37d2a6bd036ff2e5180",
+      "sidecar": null,
+      "last_commit": "1a26986 2025-11-25 13:41:19 +1100 Brian Lowe Commit nested repo changes: update HANDOVER.READABLE and add canonical training scripts"
+    },
+    {
+      "name": "deterministic_inference_v.1B.py",
+      "relpath": "deterministic_inference_v.1B.py",
+      "fullpath": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO_train_phase_ANNs\\deterministic_inference_v.1B.py",
+      "sha256": "0f4e203a3f27a00edd3cae970e47b25ac6f7d086ca726dd3dccd0607b552603d",
+      "sidecar": null,
+      "last_commit": "353c6a9 2025-11-26 21:40:08 +1100 Brian Lowe chore(recovery): add hardened DI and schema"
+    },
+    {
+      "name": "deterministic_inference_v.1B.py.sha256",
+      "relpath": "deterministic_inference_v.1B.py.sha256",
+      "fullpath": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO_train_phase_ANNs\\deterministic_inference_v.1B.py.sha256",
+      "sha256": "57d80581212bf317db92fcb08b75228c002be71b0e084ccba4b7be7d3148e46f",
+      "sidecar": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO_train_phase_ANNs\\deterministic_inference_v.1B.py.sha256",
+      "last_commit": null
+    },
+    {
+      "name": "deterministic_inference.py",
+      "relpath": "deterministic_inference.py",
+      "fullpath": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO_train_phase_ANNs\\deterministic_inference.py",
+      "sha256": "5bfec11731b0311a824f58f826a0955291f8213b8859037a65e4fcac66b40db1",
+      "sidecar": null,
+      "last_commit": null
+    },
+    {
+      "name": "CLAUDE_HANDOVER.txt",
+      "relpath": "Handovers\\CLAUDE_HANDOVER.txt",
+      "fullpath": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO_train_phase_ANNs\\Handovers\\CLAUDE_HANDOVER.txt",
+      "sha256": "d26fded27ae3eb7c7e22883105b233dbc713b5c3ffbadef489047602c773fd1f",
+      "sidecar": null,
+      "last_commit": "7380ff1 2025-11-25 21:06:24 +1100 Brian Lowe Add handover artifacts for run 20251124_112147 (1Bi.py)"
+    },
+    {
+      "name": "CLAUDE_HANDOVER.txt.bak",
+      "relpath": "Handovers\\CLAUDE_HANDOVER.txt.bak",
+      "fullpath": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO_train_phase_ANNs\\Handovers\\CLAUDE_HANDOVER.txt.bak",
+      "sha256": "d26fded27ae3eb7c7e22883105b233dbc713b5c3ffbadef489047602c773fd1f",
+      "sidecar": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO_train_phase_ANNs\\Handovers\\CLAUDE_HANDOVER.txt.sha256",
+      "last_commit": "a2b1955 2025-11-26 13:00:41 +1100 Brian Lowe Save local changes to HO_train_phase_ANNs"
+    },
+    {
+      "name": "HANDOVER-1Bi.json",
+      "relpath": "Handovers\\HANDOVER-1Bi.json",
+      "fullpath": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO_train_phase_ANNs\\Handovers\\HANDOVER-1Bi.json",
+      "sha256": "3e1ae44f3acf62d53644295a2cef527fe667004dd38c07fbf91acb83790b6006",
+      "sidecar": null,
+      "last_commit": "7380ff1 2025-11-25 21:06:24 +1100 Brian Lowe Add handover artifacts for run 20251124_112147 (1Bi.py)"
+    },
+    {
+      "name": "HANDOVER-train_phase2b2_HO.1Bi.json",
+      "relpath": "Handovers\\HANDOVER-train_phase2b2_HO.1Bi.json",
+      "fullpath": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO_train_phase_ANNs\\Handovers\\HANDOVER-train_phase2b2_HO.1Bi.json",
+      "sha256": "a0fc323427b808842793d3608ddde995c0d665337e8e9b22c4d71c7cabe76f7f",
+      "sidecar": null,
+      "last_commit": "a2b1955 2025-11-26 13:00:41 +1100 Brian Lowe Save local changes to HO_train_phase_ANNs"
+    },
+    {
+      "name": "HANDOVER-train_phase2b2_HO.1Bi.json.sha256",
+      "relpath": "Handovers\\HANDOVER-train_phase2b2_HO.1Bi.json.sha256",
+      "fullpath": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO_train_phase_ANNs\\Handovers\\HANDOVER-train_phase2b2_HO.1Bi.json.sha256",
+      "sha256": "8988b89ed16facaa0a7dc6358ce62122cba3e0596a8163c79d5229369855c1bc",
+      "sidecar": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO_train_phase_ANNs\\Handovers\\HANDOVER-train_phase2b2_HO.1Bi.json.sha256",
+      "last_commit": null
+    },
+    {
+      "name": "README-1Bi.md",
+      "relpath": "Handovers\\README-1Bi.md",
+      "fullpath": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO_train_phase_ANNs\\Handovers\\README-1Bi.md",
+      "sha256": "f7fa8e2f435e2bfddfe6e1ee4fc4781f65f8c81acc98a427f13ef14a77957ac3",
+      "sidecar": null,
+      "last_commit": "7380ff1 2025-11-25 21:06:24 +1100 Brian Lowe Add handover artifacts for run 20251124_112147 (1Bi.py)"
+    },
+    {
+      "name": "deterministic_inference.py",
+      "relpath": "deterministic_inference.py",
+      "fullpath": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO_train_phase_ANNs\\deterministic_inference.py",
+      "sha256": "5bfec11731b0311a824f58f826a0955291f8213b8859037a65e4fcac66b40db1",
+      "sidecar": null,
+      "last_commit": null
+    }
+  ],
+  "repo_root": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO_train_phase_ANNs",
+  "git_info": {
+    "present": true,
+    "head_short": "353c6a9",
+    "submodules": "",
+    "branch": "di-hardened-recovery",
+    "status": " D HANDOVER.INDEX.json.parseerror.bak\n M HANDOVER.READABLE/CLAUDE_VERIFICATION_SCRIPT.ps1\n D \"HO/HO 1st time 5080/hoxnc_training.with_base_and_lags.manifest.json\"\n D HO_README_status_20251123T153025+11\n D HO_dataset_canonical_index_20251123T161616+11\n M \"Handovers and READMEs for 1Bi.py/TECHNICAL_FOR_CLAUDE_2025-11-24.md\"\n D README.md\n D REMOTE_README_FINAL.md\n D deterministic_inference_outputs/preds.json\n M deterministic_inference_v.1B.py\n D scripts/deterministic_inference.py\n D scripts/run_smoke.py\n D scripts/train_phase2b2_HO.1B.py\n D scripts/train_phase2b2_HO.1Bi.ps1\n D smoke/deterministic_inference_smoke.json\n?? deterministic_inference.py\n?? deterministic_inference_v.1B.py.sha256\n?? hoxnc_testing.csv\n?? hoxnc_training.csv\n?? hoxnc_validation.csv\n?? inspect_local_HO_train_phase_ANNs.ps1\n?? inspect_repo_for_canonical.ps1",
+    "head_full": "353c6a9669e4fd4d0f98deef76cbc48e6ce315e9"
+  }
+}
