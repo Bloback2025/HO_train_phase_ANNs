@@ -1,0 +1,26 @@
+{
+  "model_path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO_train_phase_ANNs\\models\\ho_best.h5",
+  "input_files": {
+    "val": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO_train_phase_ANNs\\hoxnc_validation.csv",
+    "test": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO_train_phase_ANNs\\hoxnc_testing.csv",
+    "train": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO_train_phase_ANNs\\hoxnc_training.csv"
+  },
+  "run_id": "run_20251130_161215",
+  "mode": "deterministic",
+  "scaler_path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO_train_phase_ANNs\\models\\scaler.pkl",
+  "commodity": "HO",
+  "outputs": {
+    "preds_sha_lower": "MISSING",
+    "preds_sha_upper": "MISSING",
+    "preds": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO_train_phase_ANNs\\captured_runs\\run_20251130_161215\\preds_model.json"
+  },
+  "model_sha_upper": "MISSING",
+  "seed": 20251117,
+  "scaler_sha_upper": "MISSING",
+  "timestamp": "2025-11-30T05:12:15.3699402Z",
+  "input_shas": {
+    "val": "6A6713BF2968600AACC7341F49D757FD95AEA268127A8B6EB34AA784CACAB511",
+    "test": "D7E75485054836422F7F4311DEF959CCD01BCDABA614326F16E3AC2BE89C216A",
+    "train": "04CC097BD744E1262AD885596C79C34D167F0A8E04B4D2DDA919EDB149709186"
+  }
+}
