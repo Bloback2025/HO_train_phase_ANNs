@@ -1,0 +1,72 @@
+# Backup originals
+Copy-Item HANDOVER.INDEX HANDOVER.INDEX.bak -ErrorAction SilentlyContinue
+Copy-Item HANDOVER.INDEX.json HANDOVER.INDEX.json.bak -ErrorAction SilentlyContinue
+
+# Exact line to ensure in HANDOVER.INDEX
+$indexLine = 'run_20251124_112147 | HO_train_phase_ANNs\train_phase2b2_HO.1Bi.py | 2da58a6a4aa06e475b0e251e89bf699178c68c7ac763559a179cc88312953fcc | 2DA58A6A4AA06E475B0E251E89BF699178C68C7AC763559A179cc88312953FCC | file://\\10.0.0.5\artifacts\ANN\run_20251124_112147\preds_model.json | 2025-11-25T14:33:12.1694170+11:00 | brian'
+
+# Ensure HANDOVER.INDEX contains exactly that single line (replace existing run_20251124_112147 row or append)
+$idxPath = 'HANDOVER.INDEX'
+$idxContent = ''
+if (Test-Path $idxPath) {
+  $idxContent = Get-Content $idxPath -Raw
+  if ($idxContent -match 'run_20251124_112147') {
+    # Replace the entire line that contains the run id
+    $idxContent = $idxContent -replace '.*run_20251124_112147.*', $indexLine
+  } else {
+    # Append the line
+    $idxContent = $idxContent.TrimEnd() + "`n" + $indexLine
+  }
+  Set-Content -Path $idxPath -Value $idxContent
+} else {
+  # Create file with the line if it doesn't exist
+  Set-Content -Path $idxPath -Value $indexLine
+}
+
+# JSON block to append
+$jsonBlock = @'
+{
+  "run": "20251124_112147",
+  "file": "HO_train_phase_ANNs\\train_phase2b2_HO.1Bi.py",
+  "preds_sha256": "2da58a6a4aa06e475b0e251e89bf699178c68c7ac763559a179cc88312953fcc",
+  "file_sha256": "2DA58A6A4AA06E475B0E251E89BF699178C68C7AC763559A179cc88312953FCC",
+  "artifact": "file://\\\\10.0.0.5\\artifacts\\ANN\\run_20251124_112147\\preds_model.json",
+  "timestamp": "2025-11-25T14:33:12.1694170+11:00",
+  "author": "brian",
+  "status": "SEALED"
+}
+'@
+
+# Append JSON block into HANDOVER.INDEX.json safely
+$jsonPath = 'HANDOVER.INDEX.json'
+if (-not (Test-Path $jsonPath)) {
+  # Create file with the block if it doesn't exist
+  Set-Content -Path $jsonPath -Value $jsonBlock
+} else {
+  $raw = Get-Content $jsonPath -Raw
+  $trim = $raw.Trim()
+  if ($trim.StartsWith('[')) {
+    # It's an array: insert before the final closing bracket
+    # Remove final ']' and trailing whitespace
+    $withoutClose = $trim.TrimEnd() -replace '\]\s*$',''
+    # Decide whether to add a comma
+    if ($withoutClose.Trim().EndsWith(',')) {
+      $new = $withoutClose + "`n" + $jsonBlock + "]"
+    } elseif ($withoutClose.Trim().Length -eq 1) {
+      # empty array like [ ]
+      $new = "[" + "`n" + $jsonBlock + "`n" + "]"
+    } else {
+      $new = $withoutClose + "," + "`n" + $jsonBlock + "]"
+    }
+    Set-Content -Path $jsonPath -Value $new
+  } else {
+    # Not an array: append the block on a new line (user warned earlier about structure)
+    $new = $trim + "`n" + $jsonBlock
+    Set-Content -Path $jsonPath -Value $new
+  }
+}
+
+# Stage, commit, push
+git add HANDOVER.INDEX HANDOVER.INDEX.json
+git commit -m "Seal run_20251124_112147: corrected row and JSON entry for train_phase2b2_HO.1Bi.py"
+git push origin main
