@@ -1,0 +1,19 @@
+{
+  "test_verdicts": {
+    "integration": "UNKNOWN",
+    "unit": "UNKNOWN"
+  },
+  "runlog_id": "RUNLOG_2bANN2_HO_20251109_212442.json",
+  "model_path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\ho_artifact_outputs\\2bANN2_HO_model.keras",
+  "model_sha256": "E462009ADC5D763961C89107928B32CBA59586225AC6C97C649F9387C48C9877",
+  "timestamp": "2025-11-11T12:03:52.9722185+11:00",
+  "dependencies": [
+    "UNKNOWN"
+  ],
+  "notes": "RECREATED_MANIFEST",
+  "commit_sha": "1827ac5",
+  "rng_seed": "0",
+  "branch": "main",
+  "artifact_tag": "UNKNOWN",
+  "env_image_tag": "UNKNOWN_IMAGE:latest"
+}

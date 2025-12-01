@@ -1,0 +1,1 @@
+CLOSURE: run_20251124_112147 sealed, hashes verified, HANDOVER.INDEX entry committed

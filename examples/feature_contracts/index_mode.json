@@ -1,0 +1,4 @@
+{
+  ""target_alignment_mode"": ""index"",
+  ""declared_span_rule"": { ""span_type"": ""fixed_lag"", ""params"": { ""lag_steps"": 5 } }
+}

@@ -1,0 +1,4 @@
+{
+  ""target_alignment_mode"": ""time"",
+  ""declared_span_rule"": { ""span_type"": ""rolling_window"", ""params"": { ""window_steps"": 10 } }
+}

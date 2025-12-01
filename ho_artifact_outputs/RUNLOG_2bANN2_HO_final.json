@@ -1,0 +1,71 @@
+{
+  "run_id": "2bANN2_HO_RUN_20251109T181801",
+  "datetime": "2025-11-09T18:18:01.8605386+11:00",
+  "model_file": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\2bANN2_HO_model.keras",
+  "model_hash": "DF1F24C0C3DD69FFBE169D3D0BF13FAEBA9FA1E18F333ADA690AFC36116162A2",
+  "ordered_feature_names": [
+    "Date",
+    "Open",
+    "High",
+    "Low",
+    "Close"
+  ],
+  "scaler": {
+    "sidecar_present": true,
+    "sidecar_hash": "4137FE1CB629CB3BC79FD6DBC12391CD5A612FB5E055517FC7645872B15486C4",
+    "feature_names": [
+      "Date",
+      "Open",
+      "High",
+      "Low",
+      "Close"
+    ],
+    "type": "none"
+  },
+  "data_files": {
+    "training_csv": {
+      "sha256": "04CC097BD744E1262AD885596C79C34D167F0A8E04B4D2DDA919EDB149709186",
+      "path": "hoxnc_training.csv"
+    },
+    "testing_csv": {
+      "sha256": "D7E75485054836422F7F4311DEF959CCD01BCDABA614326F16E3AC2BE89C216A",
+      "path": "hoxnc_testing.csv"
+    },
+    "validation_csv": {
+      "sha256": "6A6713BF2968600AACC7341F49D757FD95AEA268127A8B6EB34AA784CACAB511",
+      "path": "hoxnc_validation.csv"
+    }
+  },
+  "script": {
+    "sha256": "B2B1F096D9AFDEBB5AFDA144EFC98BA16B26B8402703407465D8DCA93937FD62",
+    "path": "train_phase2b2_HO.py"
+  },
+  "config": {
+    "sha256": null,
+    "path": null
+  },
+  "seed": 42,
+  "environment": {
+    "pandas": null,
+    "python": null,
+    "scikit_learn": null,
+    "tensorflow": null,
+    "numpy": null
+  },
+  "metrics": {
+    "test_rmse": 3.5441,
+    "test_mae": 2.6244,
+    "test_r2": 0.9936,
+    "test_count": null
+  },
+  "notes": {
+    "notes_orig": "Auto-generated RUNLOG: scaler sidecar created; fill environment/script hash if null; run null controls and update ledger.",
+    "target_processing": "none",
+    "replaced_from": "train_phase2b2_HO.py",
+    "lineage_confirmed_at": "2025-11-10T07:05:19.291872Z",
+    "target_processing_written_at": "2025-11-10T07:10:05.43167Z"
+  },
+  "retired_models": [
+    "2bANN2_HO_model_v5.1_heavy_20251029_130659.keras"
+  ]
+}

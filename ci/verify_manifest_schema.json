@@ -1,0 +1,8 @@
+{
+  ""type"": ""object"",
+  ""properties"": {
+    ""approved_code_hashes"": { ""type"": ""array"" },
+    ""SANDBOX_IMAGE_SHA"": { ""type"": ""string"" }
+  },
+  ""required"": [""approved_code_hashes"", ""SANDBOX_IMAGE_SHA""]
+}

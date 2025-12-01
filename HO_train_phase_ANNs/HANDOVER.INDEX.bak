@@ -1,0 +1,10 @@
+﻿2025-11-22T22:03:48+11:00 | README retired/normalized | sha:509BE4B771762FD8BC2137D6DB506E3E75DF0011966D8DB9C290BF1CC5B4580E | actor:Brian Lowe | commit:26f33d5 | pointer:retired_artifacts/HO_readmes/HO_csv_README.pointer.json
+{
+  "active_ann": "train_phase2b2_HO.1Bi.py",
+  "run_id": "run_20251124_045546",
+  "trainer": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\train_phase2b2_HO.1B.py",
+  "trainer_sha": "1B19359F619C519D4AD4611E1A6DFCAD40209A5DF2989C6D939E549DF89A07CE",
+  "timestamp": "2025-11-24T04:55:46.636508Z"
+}
+run_20251124_112147 | HO_train_phase_ANNs\train_phase2b2_HO.1B.py | 1b19359f619c519d4ad4611e1a6dfcad40209a5df2989c6d939e549df89a07ce | 2da58a6a4aa06e475b0e251e89bf699178c68c7ac763559a179cc88312953fcc | file://\\DESKTOP-OODJQVE\Artifacts\ANN\run_20251124_112147\preds_model.json | 2025-11-25T12:30:56.1143287+11:00 | brian
+run_20251124_112147 | HO_train_phase_ANNs\train_phase2b2_HO.1Bi.py | 2da58a6a4aa06e475b0e251e89bf699178c68c7ac763559a179cc88312953fcc |  | file://\\10.0.0.5\artifacts\ANN\run_20251124_112147\preds_model.json | 2025-11-25T14:33:12.1694170+11:00 | brian

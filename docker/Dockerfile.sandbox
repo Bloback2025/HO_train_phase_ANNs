@@ -1,0 +1,5 @@
+# Minimal sandbox Dockerfile (placeholder)
+FROM python:3.11-slim
+WORKDIR /sandbox
+COPY runner.py /sandbox/runner.py
+CMD [""python3"", ""/sandbox/runner.py""]
