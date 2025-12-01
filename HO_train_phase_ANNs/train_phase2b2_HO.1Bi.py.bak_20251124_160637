@@ -1,0 +1,154 @@
+#!/usr/bin/env python3
+# train_phase2b2_HO.1Bi.py
+# Parent script: train_phase2b2_HO.1B.py
+# Parent SHA256: 1B19359F619C519D4AD4611E1A6DFCAD40209A5DF2989C6D939E549DF89A07CE
+# Generated: 2025-11-24T14:47:00+11:00
+import os,sys,json,hashlib,argparse,tempfile
+from datetime import datetime
+from pathlib import Path
+
+# Canonical inputs
+TRAINER_PATH = Path(r"C:\Users\loweb\AI_Financial_Sims\HO\HO 1st time 5080\train_phase2b2_HO.1B.py")
+INFERENCE_PATH = Path(r"C:\Users\loweb\AI_Financial_Sims\HO\deterministic_inference.py")
+HANDOVER_INDEX = Path(r"C:\Users\loweb\AI_Financial_Sims\HO\HANDOVER.INDEX")
+OUTDIR_BASE = Path(r"C:\Users\loweb\AI_Financial_Sims\HO\captured_runs")
+
+# Canonical dataset directory
+DATASET_DIR = Path(r"C:\Users\loweb\AI_Financial_Sims\HO\HO 1st time 5080")
+CANONICAL_CSVS = {
+    "train": DATASET_DIR / "hoxnc_training.csv",
+    "val":   DATASET_DIR / "hoxnc_validation.csv",
+    "test":  DATASET_DIR / "hoxnc_testing.csv",
+}
+
+# Known canonical SHAs
+CANONICAL_SHAS = {
+    "train": "04CC097BD744E1262AD885596C79C34D167F0A8E04B4D2DDA919EDB149709186",
+    "val":   "6A6713BF2968600AACC7341F49D757FD95AEA268127A8B6EB34AA784CACAB511",
+    "test":  "D7E75485054836422F7F4311DEF959CCD01BCDABA614326F16E3AC2BE89C216A",
+}
+
+PARENT_SHA = "1B19359F619C519D4AD4611E1A6DFCAD40209A5DF2989C6D939E549DF89A07CE"
+
+DEFAULT_SEED = 20251117
+PRELIGHT_ENFORCEMENT = "strict"
+RUN_ID_TEMPLATE = "run_{ts}"
+TSFMT = "%Y%m%d_%H%M%S"
+
+def sha256_file_upper(path: Path):
+    h = hashlib.sha256()
+    with open(path, "rb") as f:
+        for b in iter(lambda: f.read(1 << 20), b""):
+            h.update(b)
+    return h.hexdigest().upper()
+
+def write_atomic(path: Path, data: bytes):
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with tempfile.NamedTemporaryFile(dir=path.parent, delete=False) as tf:
+        tf.write(data); tf.flush(); os.fsync(tf.fileno())
+    os.replace(tf.name, str(path))
+
+def write_sidecar_sha(path: Path, sha: str):
+    sidecar = Path(str(path) + ".SHA256.TXT")
+    write_atomic(sidecar, (sha + "\n").encode("ascii"))
+
+def abort(msg: str, code: int = 2):
+    sys.stderr.write("ABORT: " + msg + "\n"); sys.exit(code)
+
+def preflight_check():
+    for k,p in CANONICAL_CSVS.items():
+        if not p.exists():
+            if PRELIGHT_ENFORCEMENT == "strict":
+                abort(f"Missing canonical CSV {k}: {p}")
+            else:
+                sys.stderr.write(f"WARNING: Missing {k} {p}\n")
+    if not TRAINER_PATH.exists():
+        abort(f"Missing trainer script: {TRAINER_PATH}")
+    if not INFERENCE_PATH.exists():
+        abort(f"Missing inference harness: {INFERENCE_PATH}")
+    mismatches = []
+    for k,p in CANONICAL_CSVS.items():
+        if p.exists():
+            actual = sha256_file_upper(p); expected = CANONICAL_SHAS.get(k)
+            if expected and actual != expected:
+                mismatches.append((k, p, expected, actual))
+    if mismatches:
+        details = "; ".join([f"{k} expected {e} got {a}" for (k,_,e,a) in mismatches])
+        if PRELIGHT_ENFORCEMENT == "strict": abort(f"SHA MISMATCH: {details}")
+        elif PRELIGHT_ENFORCEMENT == "gated": abort(f"SHA MISMATCH (gated): {details}")
+        else: sys.stderr.write("SHA MISMATCH (permissive): " + details + "\n")
+
+def synthetic_smoke_run(outdir: Path, seed: int):
+    outdir.mkdir(parents=True, exist_ok=True)
+    preds = {"run_id": str(outdir.name),"seed": seed,"preds":[{"id":"SYNTH_1","score":0.1234},{"id":"SYNTH_2","score":0.5678}]}
+    preds_bytes = json.dumps(preds, indent=2).encode("utf-8")
+    preds_path = outdir / "preds_model.json"; write_atomic(preds_path, preds_bytes)
+    preds_sha = hashlib.sha256(preds_bytes).hexdigest().upper(); write_sidecar_sha(preds_path, preds_sha)
+    manifest = {"run_id": outdir.name,"timestamp": datetime.utcnow().isoformat()+"Z","seed": seed,"mode":"synthetic","trainer_parent": str(TRAINER_PATH),"trainer_parent_sha": PARENT_SHA,"input_files": {k: str(v) for k,v in CANONICAL_CSVS.items()},"input_shas": CANONICAL_SHAS,"outputs": {"preds": str(preds_path),"preds_sha": preds_sha}}
+    manifest_bytes = json.dumps(manifest, indent=2).encode("utf-8"); manifest_path = outdir / f"run_manifest.{outdir.name}.patched.json"; write_atomic(manifest_path, manifest_bytes); write_sidecar_sha(manifest_path, hashlib.sha256(manifest_bytes).hexdigest().upper())
+    closure_line = f"CLOSURE {outdir.name} {datetime.utcnow().isoformat()} SEAL\n"; closure_path = outdir / "HANDOVER.CLOSURE.txt"; write_atomic(closure_path, closure_line.encode("utf-8"))
+    index_record = {"active_ann": "train_phase2b2_HO.1Bi.py","run_id": outdir.name,"trainer": str(TRAINER_PATH),"trainer_sha": PARENT_SHA,"timestamp": datetime.utcnow().isoformat()+"Z"}
+    index_bytes = json.dumps(index_record, indent=2).encode("utf-8"); write_atomic(HANDOVER_INDEX, index_bytes)
+    return {"preds_path": str(preds_path),"preds_sha": preds_sha,"manifest": str(manifest_path),"closure": str(closure_path),"hand_over_index": str(HANDOVER_INDEX)}
+
+def parse_args():
+    p = argparse.ArgumentParser(description="1Bi smoke-first, audit-safe runner")
+    p.add_argument("--seed", type=int, default=DEFAULT_SEED)
+    p.add_argument("--run_id", type=str, default=None)
+    p.add_argument("--outdir", type=str, default=None)
+    p.add_argument("--mode", choices=["synthetic","full"], default="synthetic")
+    p.add_argument("--enforce", choices=["strict","permissive","gated"], default=PRELIGHT_ENFORCEMENT)
+    return p.parse_args()
+
+def main():
+    args = parse_args(); global PRELIGHT_ENFORCEMENT; PRELIGHT_ENFORCEMENT = args.enforce
+    preflight_check()
+    ts = datetime.utcnow().strftime(TSFMT); run_id = args.run_id or RUN_ID_TEMPLATE.format(ts=ts)
+    outdir = Path(args.outdir) if args.outdir else OUTDIR_BASE / run_id
+    if args.mode == "synthetic": summary = synthetic_smoke_run(outdir, args.seed)
+    else: abort("full mode not implemented in draft; use synthetic for smoke runs")
+    print(json.dumps({"status":"ok","run_id": run_id, "artifacts": summary}, indent=2))
+
+if __name__ == "__main__":
+    main()
+"""
+FOOTNOTE: Post-run verification and acceptance (added 2025-11-24)
+
+Quick verifications to run after a synthetic run:
+  1) Verify preds file exists and SHA matches sidecar:
+     p="C:\Users\loweb\AI_Financial_Sims\HO\captured_runs\<run_id>\preds_model.json"
+     Compute SHA and compare to sidecar preds_model.json.SHA256.TXT
+
+  2) Show manifest content and compute its SHA:
+     m="C:\Users\loweb\AI_Financial_Sims\HO\captured_runs\<run_id>\run_manifest.<run_id>.patched.json"
+     Print file and compute SHA256 for archival assertion
+
+  3) Print HANDOVER.CLOSURE contents:
+     HANDOVER.CLOSURE.txt for the run contains the closure line and seals
+
+Atomic actions to persist acceptance and index backup (PowerShell):
+  # Append acceptance lines to AUDIT_README and HANDOVER.CLOSURE
+  $run="<run_id>"
+  $ts=(Get-Date).ToString("o")
+  $preds="C:\Users\loweb\AI_Financial_Sims\HO\captured_runs\$run\preds_model.json"
+  $preds_sha="<preds_sha_upper>"
+  $manifest="C:\Users\loweb\AI_Financial_Sims\HO\captured_runs\$run\run_manifest.$run.patched.json"
+  $accept_line="ACCEPTED $run $ts preds:$preds preds_sha:$preds_sha manifest:$manifest"
+  Add-Content -Path "C:\Users\loweb\AI_Financial_Sims\HO\AUDIT_README.txt" -Value $accept_line
+  Add-Content -Path "C:\Users\loweb\AI_Financial_Sims\HO\captured_runs\$run\HANDOVER.CLOSURE.txt" -Value $accept_line
+
+  # Persist HANDOVER.INDEX backup
+  $index="C:\Users\loweb\AI_Financial_Sims\HO\HANDOVER.INDEX"
+  $bck="C:\Users\loweb\AI_Financial_Sims\HO\HANDOVER.INDEX.bak_$(Get-Date -Format yyyyMMdd_HHmmss)"
+  Copy-Item -Path $index -Destination $bck -Force
+
+Optional single atomic git commit to record acceptance:
+  Set-Location "C:\Users\loweb\AI_Financial_Sims\HO"
+  if(-not (Test-Path ".git")){ git init }
+  git add AUDIT_README.txt captured_runs\<run_id>\* HANDOVER.INDEX
+  git commit -m "accept <run_id>: preds SHA <preds_sha_short>; persist HANDOVER.INDEX backup"
+
+Notes:
+  - Replace <run_id> and <preds_sha_upper> placeholders before running the snippets.
+  - The snippets are provided as audit-safe steps and are included here as a non-executable comment block.
+"""

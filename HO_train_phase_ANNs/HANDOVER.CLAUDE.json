@@ -1,0 +1,70 @@
+{
+  "manifest_ref": {
+    "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO_train_phase_ANNs\\HANDOVER.RUN.manifest.json",
+    "sha256": "AE918A2548E4902DE69FFDC07101C3436FC5D2FED16B47F3C42DBA3257591CD0",
+    "manifest_id": "run-HO-20251123T155800-7F3C9D"
+  },
+  "purpose": "Run canonical HO training using manifest and append closure_entries with outputs' SHAs; export to F:\\HO_HANDOVER",
+  "acceptance_criteria": [
+    "Smoke-run verdict: pass",
+    "Outputs: preds.csv, model.pkl, metrics.json present with uppercase .sha256 sidecars",
+    "Manifest.handover.closure_entries appended and committed",
+    "Git tag created with manifest_id"
+  ],
+  "closure_entries": [
+    {
+      "started_at": null,
+      "run_id": "run-HO-20251123T155800-7F3C9D",
+      "smoke_run": {
+        "notes": null,
+        "verdict": null
+      },
+      "actor": null,
+      "verifier": {
+        "signature": null,
+        "timestamp": null,
+        "actor": null
+      },
+      "notes": "Populate this entry upon run completion with concrete paths and SHAs",
+      "finished_at": null,
+      "outputs": {
+        "preds_path": null,
+        "metrics_path": null,
+        "preds_sha256": null,
+        "metrics_sha256": null,
+        "model_path": null,
+        "model_sha256": null
+      }
+    }
+  ],
+  "handover_id": null,
+  "audit_note": "Follow reproduction checklist in README; after completion append closure_entries and export updated artifacts to F:\\HO_HANDOVER",
+  "generated_at": "2025-11-23T16:38:24+11:00",
+  "canonical_inputs": {
+    "validation": {
+      "sha256": "6A6713BF2968600AACC7341F49D757FD95AEA268127A8B6EB34AA784CACAB511",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\hoxnc_validation.csv"
+    },
+    "testing": {
+      "sha256": "D7E75485054836422F7F4311DEF959CCD01BCDABA614326F16E3AC2BE89C216A",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\hoxnc_testing.csv"
+    },
+    "training": {
+      "sha256": "04CC097BD744E1262AD885596C79C34D167F0A8E04B4D2DDA919EDB149709186",
+      "path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO 1st time 5080\\hoxnc_training.csv"
+    }
+  },
+  "preconditions": [
+    "Access to C: and F: drives",
+    "Python/runtime or container per run instructions",
+    "Canonical CSVs present with matching SHAs"
+  ],
+  "primary_repo_path": "C:\\Users\\loweb\\AI_Financial_Sims\\HO\\HO_train_phase_ANNs",
+  "run_instructions": {
+    "smoke_run": "python run_ann.py --manifest HANDOVER.RUN.manifest.json --smoke --seed 123456789",
+    "verify_hash": "Use Get-FileHash -Path <file> -Algorithm SHA256 | Select -ExpandProperty Hash",
+    "full_run": "python run_ann.py --manifest HANDOVER.RUN.manifest.json --seed 123456789 --out-dir outputs/<manifest_id>"
+  },
+  "generated_by": "Brian Lowe",
+  "project": "HO"
+}
