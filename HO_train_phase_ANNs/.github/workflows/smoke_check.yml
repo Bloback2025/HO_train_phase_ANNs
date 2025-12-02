@@ -1,0 +1,19 @@
+name: Smoke Check
+
+on:
+  push:
+    branches: [ main ]
+  create:
+    tags: [ 'handover-*' ]
+
+jobs:
+  smoke:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Run smoke check
+        shell: pwsh
+        run: |
+          Set-Location ${{ github.workspace }}
+          .\scripts\smoke_check.ps1
