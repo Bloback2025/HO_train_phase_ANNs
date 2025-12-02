@@ -91,6 +91,72 @@
         "commit": "45748b68b2f4cb9eb0adac8565d9f013aed921f3",
         "branch": "main"
       }
+    },
+    {
+      "closure_id": "closure-20251202-0001",
+      "verdict": "PASS",
+      "artifacts": {
+        "preds_path": "deterministic_inference_outputs/preds.json",
+        "preds_sha256": "B77590C0E16FAB13AEA5F365E8DC67FC0A2215B571745A8BA9631E3BB9021B95"
+      },
+      "actor": "Brian Lowe",
+      "timestamp": "2025-12-02T11:42:47",
+      "notes": "Manual reviewer PASS: deterministic preds replaced with HO artifact preds; SHA B77590C0E16FAB13AEA5F365E8DC67FC0A2215B571745A8BA9631E3BB9021B95"
+    },
+    {
+      "closure_id": "closure-20251202-0001",
+      "verdict": "PASS",
+      "artifacts": {
+        "preds_path": "deterministic_inference_outputs/preds.json",
+        "preds_sha256": "B77590C0E16FAB13AEA5F365E8DC67FC0A2215B571745A8BA9631E3BB9021B95"
+      },
+      "actor": "Brian Lowe",
+      "timestamp": "2025-12-02T11:45:16",
+      "notes": "Manual reviewer PASS: deterministic preds replaced with HO artifact preds; SHA B77590C0E16FAB13AEA5F365E8DC67FC0A2215B571745A8BA9631E3BB9021B95"
+    },
+    {
+      "artifacts": {
+        "preds_path": "deterministic_inference_outputs/preds.json",
+        "preds_sha256": "B77590C0E16FAB13AEA5F365E8DC67FC0A2215B571745A8BA9631E3BB9021B95"
+      },
+      "closure_id": "closure-20251202-0001",
+      "actor": "Brian Lowe",
+      "timestamp": "2025-12-02T11:47:29",
+      "notes": "Manual reviewer PASS: deterministic preds replaced with HO artifact preds; SHA B77590C0E16FAB13AEA5F365E8DC67FC0A2215B571745A8BA9631E3BB9021B95",
+      "verdict": "PASS"
+    },
+    {
+      "artifacts": {
+        "preds_path": "deterministic_inference_outputs/preds.json",
+        "preds_sha256": "B77590C0E16FAB13AEA5F365E8DC67FC0A2215B571745A8BA9631E3BB9021B95"
+      },
+      "closure_id": "closure-20251202-114800",
+      "actor": "Brian Lowe",
+      "timestamp": "2025-12-02T11:48:00",
+      "notes": "Manual reviewer PASS: deterministic preds replaced with HO artifact preds; SHA B77590C0E16FAB13AEA5F365E8DC67FC0A2215B571745A8BA9631E3BB9021B95",
+      "verdict": "PASS"
+    },
+    {
+      "artifacts": {
+        "preds_path": "deterministic_inference_outputs/preds.json",
+        "preds_sha256": "B77590C0E16FAB13AEA5F365E8DC67FC0A2215B571745A8BA9631E3BB9021B95"
+      },
+      "closure_id": "closure-20251202-0001",
+      "actor": "Brian Lowe",
+      "timestamp": "2025-12-02T11:48:14",
+      "notes": "Manual reviewer PASS: deterministic preds replaced with HO artifact preds; SHA B77590C0E16FAB13AEA5F365E8DC67FC0A2215B571745A8BA9631E3BB9021B95",
+      "verdict": "PASS"
+    },
+    {
+      "artifacts": {
+        "preds_path": "deterministic_inference_outputs/preds.json",
+        "preds_sha256": "B77590C0E16FAB13AEA5F365E8DC67FC0A2215B571745A8BA9631E3BB9021B95"
+      },
+      "closure_id": "closure-20251202-114829",
+      "actor": "Brian Lowe",
+      "timestamp": "2025-12-02T11:48:29",
+      "notes": "Manual reviewer PASS: deterministic preds replaced with HO artifact preds; SHA B77590C0E16FAB13AEA5F365E8DC67FC0A2215B571745A8BA9631E3BB9021B95",
+      "verdict": "PASS"
     }
   ]
 }
